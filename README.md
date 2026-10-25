@@ -1,54 +1,111 @@
-# Purple Fest Vadodara 2027 — Powered by the Decoded `www.battalion.com` 3D & Next.js Architecture
+# Purple Fest Vadodara 2027
 
-Official 15-page web experience for **Purple Fest Vadodara 2027** (*14–16 January 2027 · Viksit Bharat @ 2047*), engineered on top of the 100% reverse-engineered **`www.battalion.com`** Next.js App Router, GSAP/Lenis/SplitText, and 2x Retina `OffscreenCanvas` 3D sequence architecture using **REA (`morluto/rea`)**.
-
----
-
-## Live Local Servers
-
-1. **PurpleFest Vadodara 2027 inside Battalion (`http://localhost:3000`)**:
-   ```bash
-   cd "d:\argon trial rea\purple fest vadodara"
-   node server.js
-   ```
-2. **Original `www.battalion.com` 1:1 Replica (`http://localhost:3001`)**:
-   ```bash
-   cd "d:\argon trial rea\battalion-original"
-   node server.js
-   ```
+> **India's Landmark Festival of Inclusion, Human Dignity, Assistive Technology, Paralympic Sport, and Universal Design**  
+> *14–16 January 2027 · Vadodara, Gujarat · In Alignment with Viksit Bharat @ 2047*
 
 ---
 
-## All 15 XML Sitemap Routes (`sitemap-0.xml`)
+## Overview
 
-| # | Route | 3D Sequence(s) | PurpleFest Vadodara 2027 Content |
-| :-: | :--- | :---: | :--- |
-| 1 | `/` | `hero`, `dollar`, `leaves` | Home, `₹2,200` Delegate Pass & `Tier A–D` Stall cards, Convenor message, 4 Benefits, 4 Metrics (`10,000+`, `21`, `6 Zones`, `100+`), 4 Zone tabs, Sizer, 4 Steps, 4 Coalition Voices, Tech showcase (`final.mp4`), CTA |
-| 2 | `/about-us` | `stacked_building`, `smile` | Why Purple & Viksit Bharat @ 2047, 4 Foundational Pillars, 6-Milestone Goa-to-Vadodara Timeline (`1893` to `2027`), 8 Organising Committee & Coalition Leadership profiles |
-| 3 | `/programs` | `key`, `leaves` | 3-Day Festival Programme (`14–16 Jan 2027`) & 6 Barrier-Free Experience Zones (`Zone 01`–`Zone 06`) |
-| 4 | `/tier-1-program` | `tier` | Indian Paralympic Champions & Para-Sports Track (`Avani Lekhara`, `Sumit Antil`, `Devendra Jhajharia`, `Sheetal Devi`, `Dr. Deepa Malik`, `Bhavina Patel`, `Mariyappan Thangavelu`, `Praveen Kumar`) |
-| 5 | `/other-services` | `leaves` | All 21 Benchmark Disabilities under the RPwD Act 2016 across 4 clinical/accessibility clusters + Barrier-Free Services |
-| 6 | `/composyte` | Video | GIEN & TISS Inclusive Education Conclave, UDL, NEP 2020 Section 16, Assistive AI & IS 4963 / WCAG 2.1 AA+ Infrastructure |
-| 7 | `/deal-sizer` | Calculator | Interactive Exhibition Stall (`Tier A ₹15K`, `Tier B ₹35K`, `Tier C ₹12K`, `Tier D ₹5.5K`) & Institutional CSR Delegation Sizer (`Decimal.js`) |
-| 8 | `/pricer` | Pricer + `Next-Action` | Interactive Delegate Pass (`₹2,200` mandatory uniform fee) & Exhibitor Stall Pricer |
-| 9 | `/careers` | `careers` | 500+ Volunteer Brigade, Certified ISL Interpreters, Purple Kaleidoscope Artists & GIEN/TISS Academic Presenters |
-| 10 | `/contact` | `contact` | Vadodara Secretariat (MSU Baroda Pavilion & Sayaji Nagar Gruh · Praangan, Old Padra Road), `+91 98250 93918`, `purplefestvadodara@gmail.com` & Registration Form |
-| 11 | `/battalion-tpo` | `hero`, `dollar`, `leaves` | Coalition & Institutional Partners Portal (Universities, NGOs, CSR Schedule VII Foundations, Government Bodies, Special Schools) |
-| 12 | `/programs-tpo` | `key`, `leaves` | Exhibitor Stall Tiers (`Tier B ₹35,000`, `Tier A ₹15,000`, `Tier C ₹12,000`, `Tier D ₹5,500`) & Institutional Tracks |
-| 13 | `/contact-tpo` | `tpo` | Exhibitor Stall Booking & Institutional Partnership Registration Desk |
-| 14 | `/terms-and-conditions` | Legal Template | Delegate (`₹2,200`) & Exhibitor (`Tier A–D`) Terms, RPwD Act 2016 Compliance & Code of Conduct |
-| 15 | `/privacy-policy` | Legal Template | Privacy & Accessibility Data Protection Policy (DPDP Act 2023 & 21 RPwD Accommodation Confidentiality) |
+**Purple Fest Vadodara 2027** brings India's premier festival of inclusion into the cultural and educational capital of Gujarat. Designed to unite persons with disabilities, innovators, researchers, grassroots organizations, caregivers, and policymakers, the festival champions universal accessibility and full inclusion across all **21 Benchmark Disabilities** recognized under India's **Rights of Persons with Disabilities (RPwD) Act 2016**.
+
+This platform provides an editorial-grade, accessible web experience featuring 3D interactive canvases, responsive motion choreography, customizable event registration, automated cryptographic QR credentialing, real-time gate check-ins, and an independent administrative CMS.
 
 ---
 
-## Rebuilding / Updating Content
+## Key Highlights & Architectural Features
 
-To regenerate all 15 HTML routes and `_rsc/*.rsc` React Flight payloads from the structured dataset:
+### 1. Interactive 3D Canvas & Sculptural Preloader
+- **Retina 3D Sequence Canvas**: High-performance WebGL/2D `OffscreenCanvas` rendering layered with fluid scroll-driven transformations.
+- **Hand-Drawn Continuous Ribbon Preloader**: An animated single-line SVG preloader that draws the continuous 3-figure PurpleFest ribbon emblem, 3 floating hearts, and official logo typography (`PURPLE FEST` & `Vadodara`), before gracefully docking into the header.
+
+### 2. Universal Accessibility (WCAG 2.1 / 2.2 AA+ Compliance)
+- **Dedicated Accessibility Panel**: Fast header and footer controls for:
+  - **Text Sizing**: Decrement, display, and increment scaling (`85%` to `150%`).
+  - **High-Contrast Schemes**: Default Light, Obsidian Dark, and High-Contrast Yellow-on-Black.
+  - **Display Tuning**: Highlight links & buttons, wider letter/line spacing, and pause animations.
+  - **TalkBack Screen Reader Audio**: Integrated synthetic voice navigation and screen-reader announcements with continuous heading consolidation.
+- **Barrier-Free Standards**: Strictly follows WCAG 2.1/2.2 AA, IS 4963:2016 physical accessibility standards, and the Harmonised Guidelines for Universal Accessibility in India 2021.
+
+### 3. Viksit Bharat @ 2047 & Paralympic Champions Showcase
+- Dedicated `/viksit-bharat` portal showcasing national accessibility milestones, the Sugamya Bharat Abhiyan (Accessible India Campaign), and felicitations of India's Paralympic champions (Avani Lekhara, Sumit Antil, Devendra Jhajharia, Sheetal Devi, Dr. Deepa Malik).
+
+### 4. Customizable Events, Registration & Ticketing
+- **Standalone Application Portal (`/apply`)**: Distinct tracks for **Exhibition Stalls** (Tier A–D starting from ₹8,500) and **Delegate Passes** (₹2,200 standard access).
+- **Dynamic Events Directory (`/events`)**: Event listings with dynamic registration fields, meal selections, caregiver companion details, and accommodation requests across all 21 RPwD categories.
+- **Scholarship & Fellowship Waivers**: Coupon engine supporting 100% scholarship fee waivers (`DIVYANGJAN100`, `PURPLEFREE27`) and institutional concessions.
+
+### 5. Cryptographic QR Passes & Gate Check-In Desk
+- **Digital Entry Pass (`/pass`)**: Printable and mobile-friendly credential badge displaying attendee data, registered accommodations, and a tamper-proof ISO/IEC 18004 SVG QR code.
+- **Gate Check-In Terminal (`/check-in`)**: Real-time scanner for registration desk staff, verifying attendee status, preventing duplicate admissions, and flashing instant Priority Accessibility Desk alerts.
+
+### 6. Full-Stack Backend & Independent Admin CMS
+- **Native SQLite Persistence**: Zero-dependency SQL persistence powered by `node:sqlite` in `data/purplefest.sqlite`.
+- **Payment Gateway Integration**: Secure Razorpay order creation and HMAC-SHA256 signature verification.
+- **Resend Email Engine**: Dispatches authenticated HTML accreditation letters containing official partner logos and embedded QR badges.
+- **Secretariat Admin CMS (`/admin`)**: Self-service management dashboard to add/edit events, configure custom form fields, view revenue KPIs, and audit check-ins.
+
+### 7. Authentic Imagery & Responsive Design
+- **Authentic Documentary Photography**: Curated real-world photographs from Wikimedia Commons and Press Information Bureau (PIB) India depicting Indian Paralympians, Braille literacy, Indian Sign Language, and assistive technology.
+- **Phone & Tablet Optimized**: Scoped layout optimizations ensuring fluid rendering on standard mobile devices (`390×844`, `360×800`).
+
+---
+
+## Route Directory
+
+| Route | Description |
+| :--- | :--- |
+| `/` | Festival Homepage: Hero, 6 Experience Zones, Impact Metrics, and Community Voices |
+| `/about-us` | Festival Foundation, Goa-to-Vadodara Journey, and Leadership Committee |
+| `/viksit-bharat` | Viksit Bharat @ 2047 National Inclusion Vision & Paralympic Hall of Fame |
+| `/programs` | 3-Day Daily Itinerary (14–16 January 2027) & Zone Guides |
+| `/tier-1-program` | National Para-Sports Championships & Athlete Profiles |
+| `/other-services` | The 21 RPwD Benchmark Disabilities Directory & On-Ground Accommodations |
+| `/composyte` | GIEN & TISS Inclusive Education Conclave & Universal Design for Learning (UDL) |
+| `/careers` | Volunteer Opportunities, ISL Interpreters & Cultural Artists Call |
+| `/contact` | Secretariat Contact Coordinates & Support Desk |
+| `/apply` | Dual Application Portal for Stalls & Delegate Passes |
+| `/events` | Customizable Festival Events Catalog & Dynamic Registration Forms |
+| `/pass` | Digital QR Entry Pass & Audio Credential Badge |
+| `/check-in` | Day-of-Event Gate QR Verification Terminal |
+| `/admin` | Independent Festival Secretariat Management CMS |
+| `/terms-and-conditions` | Registration & Code of Conduct Policies |
+| `/privacy-policy` | Data Protection & RPwD Accommodation Confidentiality |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18.x or 20.x+ (Recommended: Node.js 22 LTS)
+
+### Running the Server
+Clone the repository and launch the local production server:
 
 ```bash
-node build-purplefest-battalion.mjs
+git clone https://github.com/gurarpitzz/Purple-fest-vadodara-2.0.git
+cd Purple-fest-vadodara-2.0
+
+# Start server
+node server.js
 ```
 
-- [`purplefest-content-data.mjs`](./purplefest-content-data.mjs): Master PurpleFest Vadodara 2027 dataset.
-- [`purplefest-route-transformers.mjs`](./purplefest-route-transformers.mjs): AST route transformers for all 15 XML routes.
-- [`legacy-purplefest-backup/`](./legacy-purplefest-backup): Backup of the prior standalone PurpleFest build.
+The application will be accessible at **`http://localhost:3000`**.
+
+### Running System Verification Tests
+To run the automated 13/13 end-to-end integration test suite (verifying SQLite, Razorpay HMAC, QR Tokens, Resend Email templates, and Check-In validation):
+
+```bash
+node tests/full-system-test-suite.mjs
+```
+
+---
+
+## Credits & Attribution
+
+- **Organized By**: Purple Fest Vadodara 2027 Secretariat, in partnership with Praangan, Brotherhood, Global Inclusive Education Network (GIEN), and Goa State Commission for Persons with Disabilities.
+- **Designed & Developed By**: Gurarpit Singh and Mehardeep Singh · Ajeet Graphics.
+
+---
+
+*Together for an Inclusive and Accessible Bharat.*
