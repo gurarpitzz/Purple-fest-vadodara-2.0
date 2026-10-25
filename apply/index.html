@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PurpleFest Apply | Stall &amp; Delegate Registration — Purple Fest Vadodara 2027</title>
+  <meta name="description" content="Official Registration Portal for Purple Fest Vadodara 2027 (14–16 January 2027). Register as an Exhibition Stall (Starting at ₹8,500) or Register as a Delegate (₹2,200)." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/777994872ea449fc-s.p.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-white: #FFFFFF;
+      --navy-900: #1E2952;
+      --navy-700: #33416E;
+      --lavender-card: #E2E1FC;
+      --lavender-card-hover: #D6D4FA;
+      --lavender-card-active: #CBC8F9;
+      --lavender-soft: #F3F2FE;
+      --btn-disabled: #E2E1FC;
+      --purple-primary: #6B21A8;
+      --purple-hover: #581C87;
+      --border-subtle: #B8B6E8;
+      --success-green: #0D8A52;
+      --danger-red: #D92D20;
+      --base-font-size: 16px;
+      --line-height-mult: 1.55;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: var(--base-font-size);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: '__font_7fb336', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: var(--bg-white);
+      color: var(--navy-900);
+      line-height: var(--line-height-mult);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.high-contrast {
+      --bg-white: #0B0E17;
+      --navy-900: #FFFFFF;
+      --navy-700: #E2E8F0;
+      --lavender-card: #1E2640;
+      --lavender-card-hover: #2A3558;
+      --lavender-card-active: #34426E;
+      --lavender-soft: #141A2E;
+      --border-subtle: #64748B;
+      --purple-primary: #A855F7;
+      background-color: #0B0E17;
+      color: #FFFFFF;
+    }
+
+    body.wide-spacing {
+      letter-spacing: 0.03em;
+      --line-height-mult: 1.85;
+    }
+
+    /* Skip Link */
+    .skip-to-content,
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -120px;
+      z-index: 3000;
+      background: #202D59;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 8px 24px rgba(30, 41, 82, 0.35);
+      transition: top 0.15s ease;
+    }
+    .skip-to-content:focus,
+    .skip-to-content:focus-visible,
+    .skip-link:focus,
+    .skip-link:focus-visible {
+      top: 16px;
+      outline: 3px solid #099F9F !important;
+      outline-offset: 3px !important;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #202D59 !important;
+      outline-offset: 3px !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* STEP 1: BATTALION APPLY TOP BAR */
+    .apply-topbar {
+      width: 100%;
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-white);
+    }
+
+    .brand-logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--navy-900);
+    }
+
+    .brand-logo-svg {
+      width: 186px;
+      height: 31px;
+      overflow: visible;
+      display: block;
+    }
+
+    .topbar-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .email-us-link {
+      color: var(--navy-900);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .email-us-link:hover {
+      color: var(--purple-primary);
+    }
+
+    /* STEP 1: CHOICE SCREEN (1:1 Match to apply.battalion.com) */
+    #step-choice {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 24px 80px;
+    }
+
+    .choice-container {
+      width: 100%;
+      max-width: 636px;
+    }
+
+    .choice-heading {
+      color: var(--navy-900);
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 42px;
+    }
+
+    .choice-options {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .choice-card {
+      width: 100%;
+      background-color: var(--lavender-card);
+      color: var(--navy-900);
+      padding: 25px 28px;
+      font-family: inherit;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: left;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .choice-card:hover {
+      background-color: var(--lavender-card-hover);
+    }
+
+    .choice-card.selected {
+      background-color: var(--lavender-card-active);
+      border-color: var(--purple-primary);
+    }
+
+    .choice-card:focus-visible {
+      outline: 3px solid var(--purple-primary);
+      outline-offset: 2px;
+    }
+
+    .choice-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--navy-900);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      background: var(--purple-primary);
+      border-color: var(--purple-primary);
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .choice-card.selected .choice-check {
+      opacity: 1;
+    }
+
+    .choice-footer {
+      margin-top: 56px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .next-btn {
+      background-color: var(--lavender-card);
+      color: var(--navy-900);
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 16px 42px;
+      border: 2px solid var(--navy-900);
+      cursor: pointer;
+      transition: background-color 0.18s ease, color 0.18s ease, transform 0.1s ease;
+    }
+
+    .next-btn.ready {
+      background-color: var(--purple-primary);
+      color: #FFFFFF;
+      border-color: var(--purple-primary);
+    }
+
+    .next-btn.ready:hover {
+      background-color: var(--purple-hover);
+    }
+
+    /* STEP 2A: STALL REGISTRATION PORTAL */
+    #step-stall {
+      display: none;
+      flex: 1;
+      padding: 12px 24px 88px;
+    }
+
+    .portal-shell {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--lavender-soft);
+      color: var(--navy-900);
+      border: 1px solid var(--border-subtle);
+      padding: 10px 18px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 28px;
+      transition: background 0.15s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--lavender-card);
+    }
+
+    .portal-badge {
+      display: inline-block;
+      background: var(--lavender-card);
+      color: var(--purple-primary);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .portal-title {
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--navy-900);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .portal-subtitle {
+      font-size: 17px;
+      color: var(--navy-700);
+      margin-bottom: 32px;
+    }
+
+    .stall-tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .tier-option-card {
+      background: var(--lavender-soft);
+      border: 2px solid var(--border-subtle);
+      padding: 18px 16px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s ease;
+    }
+
+    .tier-option-card:hover {
+      background: var(--lavender-card);
+    }
+
+    .tier-option-card.active {
+      background: var(--lavender-card);
+      border-color: var(--purple-primary);
+    }
+
+    .tier-price {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--purple-primary);
+      margin-bottom: 4px;
+    }
+
+    .tier-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 4px;
+    }
+
+    .tier-desc {
+      font-size: 13px;
+      color: var(--navy-700);
+    }
+
+    .form-card {
+      background: var(--lavender-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 36px;
+    }
+
+    .form-section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 8px;
+    }
+
+    .form-hint {
+      display: block;
+      font-size: 13px;
+      color: var(--navy-700);
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 16px;
+      color: var(--navy-900);
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-subtle);
+      transition: border-color 0.15s ease;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--purple-primary);
+    }
+
+    .form-textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    .submit-primary-btn {
+      width: 100%;
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 18px 32px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s ease;
+    }
+
+    .submit-primary-btn:hover {
+      background: var(--purple-hover);
+    }
+
+    .error-msg {
+      color: var(--danger-red);
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 6px;
+      display: none;
+    }
+
+    /* STEP 2B: DELEGATE REGISTRATION & FULL FAQ PORTAL */
+    #step-delegate {
+      display: none;
+      flex: 1;
+    }
+
+    .delegate-subnav {
+      background: var(--lavender-soft);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .delegate-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .delegate-nav-links a {
+      color: var(--navy-900);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .delegate-nav-links a:hover {
+      color: var(--purple-primary);
+    }
+
+    .a11y-trigger-btn {
+      background: var(--lavender-card);
+      color: var(--navy-900);
+      border: 1.5px solid var(--purple-primary);
+      padding: 8px 16px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .a11y-panel {
+      display: none;
+      background: var(--bg-white);
+      border: 2px solid var(--purple-primary);
+      padding: 20px 28px;
+      margin: 12px 48px;
+      box-shadow: 0 12px 32px rgba(30, 41, 82, 0.12);
+    }
+
+    .a11y-panel.open {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .a11y-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .a11y-chip {
+      background: var(--lavender-soft);
+      color: var(--navy-900);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 14px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .a11y-chip:hover,
+    .a11y-chip.active {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      border-color: var(--purple-primary);
+    }
+
+    .delegate-hero {
+      background: linear-gradient(135deg, #E2E1FC 0%, #F3F2FE 100%);
+      padding: 56px 48px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    body.high-contrast .delegate-hero {
+      background: #141A2E;
+    }
+
+    .delegate-container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .delegate-hero-eyebrow {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--purple-primary);
+      margin-bottom: 8px;
+    }
+
+    .delegate-hero-title {
+      font-size: 46px;
+      font-weight: 600;
+      color: var(--navy-900);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .delegate-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .meta-pill {
+      background: var(--bg-white);
+      border: 1.5px solid var(--purple-primary);
+      padding: 10px 20px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--navy-900);
+    }
+
+    .hero-anchor-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .anchor-btn-primary {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .anchor-btn-secondary {
+      background: var(--bg-white);
+      color: var(--navy-900);
+      border: 1.5px solid var(--navy-900);
+      text-decoration: none;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .intro-paragraphs p {
+      font-size: 17px;
+      color: var(--navy-900);
+      margin-bottom: 16px;
+    }
+
+    .delegate-section {
+      padding: 64px 48px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 28px;
+      letter-spacing: -0.015em;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--lavender-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 22px 26px;
+    }
+
+    .faq-q {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy-900);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 16px;
+      color: var(--navy-700);
+    }
+
+    .faq-a a {
+      color: var(--purple-primary);
+      font-weight: 600;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--purple-primary);
+      flex-shrink: 0;
+    }
+
+    .coupon-row {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .coupon-apply-btn {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      border: none;
+      padding: 0 28px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .total-banner {
+      background: var(--lavender-card);
+      border-left: 5px solid var(--purple-primary);
+      padding: 20px 24px;
+      margin: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* Confirmation Receipt Box */
+    .receipt-box {
+      display: none;
+      background: var(--lavender-soft);
+      border: 2px solid var(--purple-primary);
+      padding: 36px;
+      margin-top: 24px;
+    }
+
+    .receipt-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .qr-badge {
+      width: 128px;
+      height: 128px;
+      background: #FFFFFF;
+      border: 2px solid var(--navy-900);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .delegate-footer {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      padding: 56px 48px;
+    }
+
+    .delegate-footer a {
+      color: var(--lavender-card);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .delegate-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 36px;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+      html, body {
+        max-width: 100vw !important;
+        overflow-x: clip !important;
+      }
+      .apply-topbar {
+        padding: 16px 16px;
+      }
+      .brand-logo-svg {
+        width: 148px;
+        height: auto;
+      }
+      #step-choice {
+        padding: 20px 16px 56px;
+      }
+      .choice-heading {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 28px;
+      }
+      .choice-card {
+        padding: 20px 20px;
+        font-size: 18px;
+      }
+      #step-stall {
+        padding: 12px 16px 64px;
+      }
+      .portal-title {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+      }
+      .delegate-hero-title {
+        font-size: 28px !important;
+        line-height: 1.18 !important;
+      }
+      .section-h2 {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+      }
+      .form-card {
+        padding: 20px 16px;
+      }
+      .a11y-panel {
+        margin: 12px 16px;
+        padding: 16px;
+      }
+      .total-banner {
+        font-size: 18px;
+        padding: 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .coupon-row {
+        flex-wrap: wrap;
+      }
+      .coupon-apply-btn {
+        padding: 12px 20px;
+      }
+      .receipt-box {
+        padding: 20px 16px;
+      }
+      .form-grid-2,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .delegate-hero,
+      .delegate-section,
+      .delegate-subnav,
+      .delegate-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="/_next/static/css/mobile-phone-fixes.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- TOP BAR (Matches apply.battalion.com 1:1) -->
+  <header class="apply-topbar" role="banner">
+    <a href="/" class="brand-logo-link" aria-label="Purple Fest Vadodara 2027 Home">
+      <svg viewBox="0 0 186 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg" aria-hidden="true" focusable="false">
+        <!-- PurpleFest Wordmark (#1E2952) -->
+        <g fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 61.75 8.2C65.71 8.2 67.92 10.5 67.92 13.74C67.92 16.98 65.71 19.25 61.75 19.25H57.04V25.9H53.5V8.2H61.75ZM 57.04 16.24H61.6C63.33 16.24 64.35 15.26 64.35 13.74C64.35 12.2 63.33 11.21 61.6 11.21H57.04V16.24Z"></path>
+          <path d="M 74.32 26.21C76.14 26.21 77.61 25.82 79.63 24.69L79.97 25.9H82.54L82.55 13.2H79.11L79.11 22.19C77.74 22.92 76.69 23.26 75.36 23.26C73.47 23.26 72.75 22.58 72.75 20.73V13.2H69.32V21.6C69.32 24.79 70.86 26.22 74.3 26.22L74.32 26.21Z"></path>
+          <path d="M 84.3 25.91V13.21H86.87L87.23 14.47C89.24 13.29 90.68 12.89 92.29 12.89H93.03V15.84H92.39C90.59 15.84 89.24 16.13 87.73 16.87V25.91H84.3Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 94.26 13.2H97.47L97.7 14.43C99.23 13.29 100.9 12.89 103.01 12.89C107.31 12.89 109.07 14.68 109.07 19.56C109.07 24.41 107.31 26.22 103.01 26.22C100.99 26.22 99.36 25.84 97.7 24.78V29.75H94.26V13.2ZM 102.3 23.38C104.76 23.38 105.6 22.45 105.6 19.56C105.6 16.63 104.76 15.74 102.3 15.74C99.76 15.74 97.7 16.63 97.7 19.56C97.7 22.45 99.76 23.38 102.3 23.38Z"></path>
+          <path d="M 114.26 8.2H110.83V25.9H114.26V8.2Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 123.95 26.23C118.07 26.23 115.93 24.59 115.93 19.59C115.93 14.71 117.93 12.89 123.23 12.89C128.24 12.89 130.21 14.55 130.21 18.82C130.21 19.32 130.19 20.03 130.13 20.67H119.48C119.76 22.9 120.92 23.54 124.11 23.54C126.08 23.54 127.47 23.3 129.22 22.7L129.44 25.43C127.52 26.01 126.08 26.23 123.95 26.23ZM 119.48 18.3H126.83C126.64 16.13 125.75 15.53 123.25 15.53C120.68 15.53 119.7 16.18 119.48 18.3Z"></path>
+          <path d="M 132.32 8.2H144.8V11.21H135.88V15.68H143.22V18.6H135.88V25.9H132.32V8.2Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 153.52 26.23C147.64 26.23 145.5 24.59 145.5 19.59C145.5 14.71 147.5 12.89 152.8 12.89C157.81 12.89 159.78 14.55 159.78 18.82C159.78 19.32 159.75 20.03 159.7 20.67H149.05C149.32 22.9 150.49 23.54 153.68 23.54C155.65 23.54 157.04 23.3 158.79 22.7L159.01 25.43C157.09 26.01 155.65 26.23 153.52 26.23ZM 149.05 18.3H156.4C156.2 16.13 155.32 15.53 152.82 15.53C150.25 15.53 149.27 16.18 149.05 18.3Z"></path>
+          <path d="M 167.56 26.22C164.97 26.22 162.9 25.79 161.27 25.12L161.76 22.53C163.52 23.2 165.54 23.57 167.51 23.57C169.84 23.57 170.63 23.11 170.63 22.15C170.63 21.19 169.93 20.94 166.94 20.61C162.9 20.15 161.58 19.02 161.58 16.68C161.58 14.01 163.6 12.89 167.82 12.89C170.02 12.89 171.95 13.22 173.44 13.76L173.01 16.31C171.34 15.77 169.58 15.51 167.82 15.51C165.71 15.51 164.88 15.89 164.88 16.77C164.88 17.64 165.62 17.89 168.52 18.23C172.65 18.69 173.97 19.77 173.97 22.11C173.97 24.95 171.86 26.22 167.56 26.22Z"></path>
+          <path d="M 181.14 9.73L181.13 13.2H184.79V15.82H181.13L181.13 21.39C181.13 22.79 181.49 23.13 182.87 23.13H185V25.86H181.96C178.89 25.86 177.71 24.81 177.71 21.76L177.71 15.82H175.03V13.19H177.82L178.15 9.73H181.14Z"></path>
+        </g>
+        <!-- PurpleFest Emblem (#822FE6) -->
+        <g style="color: #822FE6">
+          <path d="M 25.91 13.03 C 28.93 17.7 27.81 28.55 26.25 28.98 C 24.68 29.42 23.34 20.63 22.22 20.63 C 21.1 20.63 19.76 29.42 18.42 28.98 C 17.08 28.55 16.63 17.7 20.32 13.03 C 24.79 7.28 32.62 7.61 37.43 12.71" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 8.02 19 C 6.34 26.05 9.47 28.98 10.59 28.55 C 11.71 28.12 9.7 22.04 10.59 21.71 C 11.49 21.39 14.4 28.33 15.51 27.9 C 16.63 27.46 15.07 18.46 9.14 14.88 C 3.21 11.41 0.53 15.2 2.09 17.48 C 3.88 19.87 8.58 17.05 11.04 12.71 C 14.73 6.2 21.44 6.2 25.91 13.03" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 37.43 12.71 C 40.11 15.75 44.59 18.78 46.15 16.62 C 47.49 14.66 44.59 11.62 39.33 14.88 C 34.08 18.13 31.84 27.14 32.96 27.9 C 34.08 28.55 36.98 21.39 37.88 21.71 C 38.77 22.04 36.76 28.12 37.88 28.55 C 39 28.98 41.57 26.05 40.11 19" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 7.45 5.65 C 6.1 4.1 3.55 4.45 3.75 6.45 C 3.95 8.25 6.75 9.5 8.85 10.15 C 9.65 8.25 10.05 5.35 8.45 4.3 C 7.25 3.5 7.05 5.05 7.45 5.65 Z" fill="currentColor"></path>
+          <path d="M 23.65 2.65 C 22.65 0.45 20.15 0.45 20.15 2.65 C 20.15 4.65 22.65 6.05 23.65 7.3 C 24.65 6.05 27.15 4.65 27.15 2.65 C 27.15 0.45 24.65 0.45 23.65 2.65 Z" fill="currentColor"></path>
+          <path d="M 39.55 5.65 C 40.15 5.05 39.95 3.5 38.75 4.3 C 37.15 5.35 37.55 8.25 38.35 10.15 C 40.45 9.5 43.25 8.25 43.45 6.45 C 43.65 4.45 41.1 4.1 39.55 5.65 Z" fill="currentColor"></path>
+        </g>
+      </svg>
+    </a>
+    <nav class="topbar-right-actions" aria-label="Primary Navigation" style="flex-wrap:wrap;gap:10px;">
+      <a href="/events" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Custom Events (/events)</a>
+      <a href="/pass" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Entry Pass (/pass)</a>
+      <a href="/check-in" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Desk Check-In (/check-in)</a>
+      <a href="/admin" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Admin Panel (/admin)</a>
+      <a href="mailto:purplefestvadodara@gmail.com" class="email-us-link" style="text-decoration: underline; text-underline-offset: 4px; font-size:14px;">Email Us</a>
+      <button type="button" class="pf-a11y-header-btn" aria-label="Accessibility features and options" aria-expanded="false" aria-controls="pf-a11y-header-panel" title="Accessibility Features" onclick="toggleA11yPanel()" style="display:inline-flex;align-items:center;gap:6px;min-height:38px;min-width:38px;padding:6px 14px;border-radius:9999px;border:2px solid var(--navy-900);background:var(--bg-white);color:var(--navy-900);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="pf-a11y-icon-svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle>
+          <circle cx="12" cy="6.5" r="1.75" fill="currentColor"></circle>
+          <path d="M7 10.25L12 11.25L17 10.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M12 11.25V14.5M12 14.5L9.75 18.5M12 14.5L14.25 18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="pf-a11y-btn-label">Accessibility</span>
+      </button>
+    </nav>
+  </header>
+
+    <!-- Header Accessibility Features Dialog Panel (purplefestdelhi.com 1:1 Match) -->
+  <div id="pf-talkback-live" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+  <div id="pf-a11y-header-panel" class="pf-a11y-header-panel" role="dialog" aria-modal="false" aria-label="Accessibility options" aria-hidden="true">
+    <div class="pf-a11y-top-row" role="group" aria-label="Text size">
+      <button type="button" class="pf-a11y-step-btn" data-pf-a11y-step="down" aria-label="Decrease text size">A-</button>
+      <div class="pf-a11y-zoom-val" id="pf-a11y-zoom-display" role="status" aria-live="polite" aria-atomic="true">100%</div>
+      <button type="button" class="pf-a11y-step-btn" data-pf-a11y-step="up" aria-label="Increase text size">A+</button>
+    </div>
+    <div class="pf-a11y-section">
+      <div class="pf-a11y-section-title" id="pf-a11y-contrast-heading">Contrast</div>
+      <div class="pf-a11y-card-list" role="radiogroup" aria-labelledby="pf-a11y-contrast-heading">
+        <button type="button" class="pf-a11y-radio-card is-active" role="radio" aria-checked="true" data-pf-contrast="light">
+          <span class="pf-a11y-card-title">Light</span>
+          <span class="pf-a11y-card-sub">Dark purple text on white</span>
+        </button>
+        <button type="button" class="pf-a11y-radio-card" role="radio" aria-checked="false" data-pf-contrast="dark">
+          <span class="pf-a11y-card-title">Dark</span>
+          <span class="pf-a11y-card-sub">Light text on a dark background</span>
+        </button>
+        <button type="button" class="pf-a11y-radio-card" role="radio" aria-checked="false" data-pf-contrast="yellow-black">
+          <span class="pf-a11y-card-title">Yellow on black</span>
+          <span class="pf-a11y-card-sub">High contrast yellow text on black</span>
+        </button>
+      </div>
+    </div>
+    <div class="pf-a11y-section">
+      <div class="pf-a11y-section-title" id="pf-a11y-more-heading">More settings</div>
+      <div class="pf-a11y-card-list" role="group" aria-labelledby="pf-a11y-more-heading">
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-a11y-links">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">Highlight links and buttons</span>
+            <span class="pf-a11y-card-sub">Outlines and underlines every link and button</span>
+          </span>
+        </button>
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-a11y-spacing">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">Wider text spacing</span>
+            <span class="pf-a11y-card-sub">More space between letters, words and lines</span>
+          </span>
+        </button>
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-a11y-reduce-motion">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">Stop animations</span>
+            <span class="pf-a11y-card-sub">Stops the slideshow and all movement on the page</span>
+          </span>
+        </button>
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-talkback-mode">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">TalkBack Screen Reader Audio</span>
+            <span class="pf-a11y-card-sub">Reads focused elements &amp; live status aloud</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <button type="button" class="pf-a11y-reset-all-btn" data-pf-a11y-reset="true">Reset all settings</button>
+  </div>
+
+  <main id="main-content" role="main" tabindex="-1" style="flex: 1; display: flex; flex-direction: column;">
+    <!-- =====================================================================
+         STEP 1: INITIAL CHOICE SCREEN (1:1 Match to apply.battalion.com)
+    ====================================================================== -->
+    <section id="step-choice" aria-labelledby="choice-heading">
+      <div class="choice-container">
+        <h1 id="choice-heading" class="choice-heading">
+          What type of registration are you interested in for Purple Fest Vadodara?
+        </h1>
+
+        <div class="choice-options" role="radiogroup" aria-labelledby="choice-heading">
+          <button
+            type="button"
+            class="choice-card"
+            id="opt-stall"
+            role="radio"
+            aria-checked="false"
+            onclick="selectOption('stall')"
+          >
+            <span>Register as a stall</span>
+            <span class="choice-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            type="button"
+            class="choice-card"
+            id="opt-delegate"
+            role="radio"
+            aria-checked="false"
+            onclick="selectOption('delegate')"
+          >
+            <span>Register as a delegate</span>
+            <span class="choice-check" aria-hidden="true">✓</span>
+          </button>
+        </div>
+
+        <div class="choice-footer">
+          <button
+            type="button"
+            id="choice-next-btn"
+            class="next-btn"
+            onclick="proceedFromChoice()"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         STEP 2A: REGISTER AS A STALL (Minimum ₹8,500 Stall Registration & Payment)
+    ====================================================================== -->
+    <section id="step-stall" aria-labelledby="stall-portal-title">
+      <div class="portal-shell">
+        <button type="button" class="back-btn" onclick="showStep('choice')">
+          ← Back to Registration Choice
+        </button>
+
+        <span class="portal-badge">Purple Pavilion · 14–16 January 2027 · Vadodara</span>
+        <h2 id="stall-portal-title" class="portal-title">
+          Register as a Stall — Exhibition &amp; Pavilion Booking
+        </h2>
+        <p class="portal-subtitle">
+          Book your barrier-free exhibition stall at Purple Fest Vadodara 2027 (MSU Pavilion &amp; Sayaji Nagar Gruh). Select your preferred stall tier below or customize your associated stall payment (minimum ₹8,500).
+        </p>
+
+        <!-- Selectable Stall Tiers (Minimum ₹8,500) -->
+        <div class="stall-tier-grid" role="group" aria-label="Stall Tier Packages">
+          <button type="button" class="tier-option-card active" data-amount="8500" data-tier="Standard DPO / Artisan / Foundation Stall (₹8,500 Minimum)" onclick="selectStallTier(this)">
+            <div class="tier-price">₹8,500</div>
+            <div class="tier-name">Minimum Stall Tier</div>
+            <div class="tier-desc">3m × 2m Octanorm Stall · DPO / NGO / Artisan / Foundation · 2 Badges</div>
+          </button>
+          <button type="button" class="tier-option-card" data-amount="12000" data-tier="Assistive Tech Startup & University R&D Pod (₹12,000)" onclick="selectStallTier(this)">
+            <div class="tier-price">₹12,000</div>
+            <div class="tier-name">Startup &amp; Innovation Pod</div>
+            <div class="tier-desc">3m × 3m Demo Bay · Assistive Tech Startups &amp; Labs · 2 Badges</div>
+          </button>
+          <button type="button" class="tier-option-card" data-amount="15000" data-tier="Standard Institutional Octanorm Stall (₹15,000)" onclick="selectStallTier(this)">
+            <div class="tier-price">₹15,000</div>
+            <div class="tier-name">Standard 3m × 3m Stall</div>
+            <div class="tier-desc">9 sq.m Shell Scheme · Braille Fascia &amp; 760mm Counter · 2 Badges</div>
+          </button>
+          <button type="button" class="tier-option-card" data-amount="35000" data-tier="Prime Corner / Double Bay CSR Pavilion (₹35,000)" onclick="selectStallTier(this)">
+            <div class="tier-price">₹35,000</div>
+            <div class="tier-name">Prime Corner 6m × 3m</div>
+            <div class="tier-desc">18 sq.m Two-Side-Open CSR &amp; OEM Flagship Pavilion · 4 Badges</div>
+          </button>
+        </div>
+
+        <form id="stall-registration-form" class="form-card" onsubmit="submitStallForm(event)">
+          <h2 class="form-section-title">1. Stall Identity, Purpose &amp; Zone Placement</h2>
+
+          <div class="form-group">
+            <label class="form-label" for="stall-name">Stall Name / Exhibitor Fascia Title *</label>
+            <span class="form-hint">This name will be printed in high-contrast lettering and Grade-1 Braille on your stall fascia board.</span>
+            <input type="text" id="stall-name" class="form-input" placeholder="e.g., NeoMotion Assistive Tech / Praangan Artisan Collective" required />
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="stall-category">What the Stall is About (Primary Category) *</label>
+              <select id="stall-category" class="form-select" required>
+                <option value="">Select stall category…</option>
+                <option value="Assistive Technology & AI Hardware">Assistive Technology, Prosthetics &amp; AI Hardware</option>
+                <option value="DPO / NGO / Inclusive Artisan Collective">DPO / NGO / Disabled Artisan &amp; Livelihood Collective</option>
+                <option value="Inclusive Education & EdTech (GIEN / TISS Track)">Inclusive Education, UDL &amp; EdTech (GIEN / TISS Track)</option>
+                <option value="CSR & Institutional Pavilion">Corporate CSR, PSU &amp; Institutional Showcase</option>
+                <option value="Accessible Healthcare, Rehab & Therapy">Accessible Healthcare, Rehabilitation &amp; Therapy</option>
+                <option value="Accessible Food / Cultural Showcase">Accessible Culinary &amp; Cultural Showcase</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="stall-place">Stall Place / Preferred Zone &amp; Bay Location *</label>
+              <select id="stall-place" class="form-select" required>
+                <option value="">Select preferred stall place / zone…</option>
+                <option value="Zone 01 · Assistive Tech & Startup Pavilion (MSU Pavilion — Main Hall)">Zone 01 · Assistive Tech &amp; Startup Pavilion (MSU Pavilion — Main Hall)</option>
+                <option value="Zone 01B · DPO & Inclusive Artisan Marketplace (MSU Ground)">Zone 01B · DPO &amp; Inclusive Artisan Marketplace (MSU Ground)</option>
+                <option value="Zone 02 · GIEN & TISS Inclusive Education Concourse (Sayaji Nagar Gruh)">Zone 02 · GIEN &amp; TISS Inclusive Education Concourse (Sayaji Nagar Gruh)</option>
+                <option value="Zone 03 · Purple Kaleidoscope Cultural Plaza Boulevard">Zone 03 · Purple Kaleidoscope Cultural Plaza Boulevard</option>
+                <option value="Zone 04 · Para-Sports Arena Concourse">Zone 04 · Para-Sports Arena Concourse</option>
+                <option value="Prime Corner / Island Bay (1800mm Main Accessible Corridor)">Prime Corner / Island Bay (1800mm Main Accessible Corridor)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="stall-about">Detailed Description of What the Stall is About *</label>
+            <span class="form-hint">Describe the products, assistive devices, live demonstrations, services, or crafts your stall will showcase to delegates.</span>
+            <textarea id="stall-about" class="form-textarea" placeholder="Tell us what your stall is about, what visitors will experience, and any interactive/tactile demos planned…" required></textarea>
+          </div>
+
+          <h2 class="form-section-title" style="margin-top: 32px;">2. Coordinator Details &amp; Associated Stall Payment (Minimum ₹8,500)</h2>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="stall-contact-name">Coordinator Full Name *</label>
+              <input type="text" id="stall-contact-name" class="form-input" placeholder="Enter coordinator name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="stall-org">Organization / Institution / GST No. (Optional)</label>
+              <input type="text" id="stall-org" class="form-input" placeholder="Organization name &amp; GSTIN if applicable" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="stall-email">Official Email Address *</label>
+              <input type="email" id="stall-email" class="form-input" placeholder="name@organization.org" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="stall-phone">Mobile / WhatsApp Number *</label>
+              <input type="tel" id="stall-phone" class="form-input" placeholder="+91 98250 XXXXX" required />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="stall-amount">Associated Stall Payment Amount (₹) * (Min ₹8,500)</label>
+              <input
+                type="number"
+                id="stall-amount"
+                class="form-input"
+                min="8500"
+                step="500"
+                value="8500"
+                required
+                oninput="updateStallPaymentButton()"
+              />
+              <div id="stall-amount-error" class="error-msg">Minimum stall registration fee is ₹8,500.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="stall-payment-mode">Payment Method *</label>
+              <select id="stall-payment-mode" class="form-select" required>
+                <option value="UPI / QR Instant Payment">UPI / QR Instant Payment</option>
+                <option value="Net Banking / NEFT / RTGS">Net Banking / NEFT / RTGS</option>
+                <option value="Debit / Credit Card">Debit / Credit Card</option>
+                <option value="Institutional CSR / Bank Transfer">Institutional CSR / Bank Transfer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="stall-a11y">Power Load &amp; Accessibility Requirements at Stall (Optional)</label>
+            <input type="text" id="stall-a11y" class="form-input" placeholder="e.g., Lowered 760mm wheelchair counter, 15A power socket, ISL volunteer support" />
+          </div>
+
+          <div class="total-banner">
+            <span>Selected Stall Fee Total</span>
+            <span id="stall-total-display">₹8,500</span>
+          </div>
+
+          <button type="submit" id="stall-submit-btn" class="submit-primary-btn">
+            Pay ₹8,500 &amp; Register Stall
+          </button>
+        </form>
+
+        <!-- Instant Stall Confirmation & QR Credential -->
+        <div id="stall-receipt" class="receipt-box" role="status" aria-live="polite">
+          <div class="receipt-header">
+            <div>
+              <span class="portal-badge" style="background:#D1FAE5;color:#065F46;">Confirmed · Stall Reserved &amp; Razorpay Verified</span>
+              <h3 style="font-size:26px;margin-top:6px;">Purple Fest Vadodara 2027 — Exhibitor Stall Pass</h3>
+              <p style="color:var(--navy-700);margin-top:4px;">Present this SQL-verified QR credential at the Exhibitor Check-In Desk (MSU Pavilion / Sayaji Nagar Gruh) on 13–14 January 2027.</p>
+            </div>
+            <div class="qr-badge" id="stall-qr-badge" aria-label="Exhibitor QR Credential">
+              <svg viewBox="0 0 100 100" width="104" height="104" fill="#1E2952">
+                <rect x="6" y="6" width="28" height="28" fill="none" stroke="#1E2952" stroke-width="6"/>
+                <rect x="14" y="14" width="12" height="12"/>
+                <rect x="66" y="6" width="28" height="28" fill="none" stroke="#1E2952" stroke-width="6"/>
+                <rect x="74" y="14" width="12" height="12"/>
+                <rect x="6" y="66" width="28" height="28" fill="none" stroke="#1E2952" stroke-width="6"/>
+                <rect x="14" y="74" width="12" height="12"/>
+                <rect x="42" y="10" width="8" height="8"/><rect x="52" y="20" width="8" height="14"/>
+                <rect x="10" y="42" width="14" height="8"/><rect x="32" y="42" width="16" height="16" fill="#822FE6"/>
+                <rect x="56" y="44" width="10" height="10"/><rect x="74" y="42" width="18" height="8"/>
+                <rect x="42" y="66" width="12" height="12"/><rect x="62" y="62" width="10" height="28"/>
+                <rect x="78" y="72" width="14" height="18"/>
+              </svg>
+            </div>
+          </div>
+          <div id="stall-receipt-details" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;font-size:15px;"></div>
+          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a id="stall-open-pass-btn" href="/pass" class="back-btn" style="margin:0;background:var(--purple-primary);color:#fff;border:none;text-decoration:none;">🪪 Open Printable Entry Pass (/pass)</a>
+            <button type="button" class="back-btn" style="margin:0;background:var(--navy-900);color:#fff;border:none;" onclick="openApplyEmailPreview()">✉️ Preview Dispatched Resend Email</button>
+            <a id="stall-test-checkin-btn" href="/check-in" class="back-btn" style="margin:0;background:#099F9F;color:#fff;border:none;text-decoration:none;">📲 Test Desk Check-In (/check-in)</a>
+            <button type="button" class="back-btn" style="margin:0;" onclick="window.print()">🖨️ Print Stall Pass</button>
+            <button type="button" class="back-btn" style="margin:0;" onclick="resetStallForm()">Register Another Stall</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         STEP 2B: REGISTER AS A DELEGATE (Complete Purple Fest Vadodara 2027 Spec)
+    ====================================================================== -->
+    <section id="step-delegate" aria-label="Delegate Registration &amp; FAQ">
+      <!-- Top Navigation Bar -->
+      <nav class="delegate-subnav" aria-label="Purple Fest Vadodara 2027 Delegate Navigation">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+          <button type="button" class="back-btn" style="margin:0;" onclick="showStep('choice')">
+            ← Back to Choice
+          </button>
+          <button type="button" class="pf-a11y-header-btn a11y-trigger-btn" onclick="toggleA11yPanel()" aria-expanded="false" aria-controls="pf-a11y-header-panel" id="a11y-toggle-btn" aria-label="Accessibility options">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="pf-a11y-icon-svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle>
+              <circle cx="12" cy="6.5" r="1.75" fill="currentColor"></circle>
+              <path d="M7 10.25L12 11.25L17 10.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 11.25V14.5M12 14.5L9.75 18.5M12 14.5L14.25 18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span>Accessibility options</span>
+          </button>
+        </div>
+
+        <ul class="delegate-nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us">About</a></li>
+          <li><a href="/programs">Events</a></li>
+          <li><a href="/programs">Schedule</a></li>
+          <li><a href="/battalion-tpo">Partners</a></li>
+          <li><a href="/about-us">Team</a></li>
+          <li><a href="#get-in-touch">Get in Touch</a></li>
+          <li><a href="#register" style="color:var(--purple-primary);text-decoration:underline;text-underline-offset:4px;">Register</a></li>
+        </ul>
+      </nav>
+
+      <!-- Delegate Hero Banner -->
+      <div class="delegate-hero">
+        <div class="delegate-container">
+          <div class="delegate-hero-eyebrow">Purple Fest Vadodara 2027</div>
+          <h2 class="delegate-hero-title">Celebrating diversity</h2>
+
+          <div class="delegate-meta-pills">
+            <div class="meta-pill"><strong>Date:</strong> 14 – 16 January 2027</div>
+            <div class="meta-pill"><strong>Fee:</strong> ₹2200</div>
+            <div class="meta-pill"><strong>Venue:</strong> MSU Pavilion &amp; Sayaji Nagar Gruh, Vadodara</div>
+          </div>
+
+          <div class="hero-anchor-btns">
+            <a href="#register" class="anchor-btn-primary">Register</a>
+            <a href="#faq" class="anchor-btn-secondary">FAQ</a>
+          </div>
+
+          <div class="intro-paragraphs">
+            <p>
+              Registration for the <strong>Purple Fest Vadodara 2027</strong> gives you access to the International Conference on Inclusive Education (in partnership with <strong>GIEN &amp; TISS</strong>), Purple Dialogue, Assistive Tech Expo, Paralympic Arena, and the Inaugural and Closing ceremonies on <strong>14, 15, and 16 January 2027</strong>. Join educators, innovators, policymakers, and advocates from around the world in Sanskari Nagari Vadodara as we explore new horizons in inclusive education, universal design, and disability rights across all 21 Benchmark Disabilities (RPwD Act 2016).
+            </p>
+            <p>
+              Once registered, you will receive a confirmation and QR by email. Present the QR at the reception desk to receive your conference kit and ID card.
+            </p>
+            <p>
+              Tea and lunch are included on <strong>14, 15, and 16 January 2027</strong>. After registration, you may attend all events on the three days.
+            </p>
+            <p>
+              The venue is accessible, and volunteers will be available to assist you. Braille materials and Sign Language Interpreters will also be available.
+            </p>
+            <p style="font-weight:600;">
+              Payments and invoicing for the Purple Fest Vadodara 2027 are handled by the Purple Fest Vadodara Organising Secretariat — <strong>Praangan (Vadodara) &amp; We Are Together (Brotherhood)</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frequently Asked Questions (All 17 FAQs Customized for Purple Fest Vadodara 2027) -->
+      <div id="faq" class="delegate-section">
+        <div class="delegate-container">
+          <h2 class="section-h2">Frequently Asked Questions (FAQ) for Purple Fest Vadodara 2027</h2>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-q">1. Where can I find the schedule of events at the Purple Fest Vadodara 2027?</div>
+              <div class="faq-a">You can view the complete schedule on the <a href="/programs">Schedule page</a>, which lists all events taking place during the three-day festival on 14, 15, and 16 January 2027 across all 6 Experience Zones in Vadodara.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">2. When should I arrive at the venue?</div>
+              <div class="faq-a">The festival begins on 14 January 2027 at 9:00 AM. All participants are requested to arrive on time and be seated in the Main Auditorium (Sayaji Nagar Gruh / MSU Pavilion) by 9:30 AM for the Inaugural Function.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">3. How can I participate in events at the Purple Fest Vadodara 2027?</div>
+              <div class="faq-a">During the three-day festival, several parallel events will take place, including the International Conference on Inclusive Education (GIEN &amp; TISS Conclave), Cultural Performances (Purple Kaleidoscope), Sports Events (Para-Sports Arena), Assistive Tech Expo, and Film Screenings with Audio Description and Indian Sign Language Interpretation. After registering, you are welcome to attend any of these events.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">4. Who can I contact if I need assistance during the festival?</div>
+              <div class="faq-a">Trained Sighted-Guide &amp; Inclusion Volunteers will be present at the venue to assist you at any time. You can also reach out to the Reception &amp; Accessibility Desk at the main venue entrance.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">5. Is accommodation provided by the organisers?</div>
+              <div class="faq-a">No, the organisers do not provide free accommodation. Participants are requested to arrange their own stay in Vadodara. Curated accessible hotel recommendations near Sayaji Baug, Alkapuri, and Fatehgunj are available in the <a href="#accommodation-info">Venue Accommodation Information</a> section below.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">6. Are all events held at the same venue, and is it well connected by public transport?</div>
+              <div class="faq-a">Yes, all events will be held across the barrier-free Vadodara Festival Corridor anchored at the Maharaja Sayajirao University (MSU) Pavilion, Sayaji Nagar Gruh, and Sayaji Baug in Vadodara, Gujarat. The venue is 10–15 minutes from Vadodara Junction Railway Station and 20 minutes from Vadodara Airport (BDQ), and is well connected by accessible city transport, cabs, auto-rickshaws, and dedicated festival electric buggy shuttles.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">7. When does the festival conclude?</div>
+              <div class="faq-a">The festival concludes with the adoption of the Vadodara Declaration and the Valedictory Function on 16 January 2027 at 5:00 PM.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">8. Is there a registration fee for attending the Purple Fest?</div>
+              <div class="faq-a">Yes, the registration fee is ₹2200 for the three-day festival (14–16 January 2027).</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">9. Are meals provided during the festival?</div>
+              <div class="faq-a">Yes, registered participants will receive coupons for complimentary lunch and tea on 14, 15, and 16 January 2027.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">10. How can I join the Inclusive Heritage Walk &amp; Rally on 14 January 2027?</div>
+              <div class="faq-a">You may assemble at Gate No. 1 of Sayaji Baug / MSU Pavilion on 14 January 2027 at 9:00 AM to take part in the Inclusive Uttarayan Rally &amp; Heritage Walk.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">11. Do I need to register separately for sports events like Goalball, Boccia, or Wheelchair Basketball?</div>
+              <div class="faq-a">No separate registration is required. Once registered for the Purple Fest, you are welcome to attend and enjoy all adaptive sports matches and Paralympic Champion sessions in Zone 04.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">12. How can I pay the registration fee?</div>
+              <div class="faq-a">You can pay the registration fee online via UPI, Net Banking, or Debit/Credit Card. After completing the payment, you will receive a confirmation email with a QR code. Please present this QR code at the Reception Desk at the venue to collect your festival kit, lunch coupons, and ID card.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">13. Can I visit the exhibition stalls at the Purple Pavilion?</div>
+              <div class="faq-a">Yes, once registered, you can freely visit all 100+ assistive technology, startup, CSR, and DPO artisan exhibition stalls at the Purple Pavilion (Zone 01).</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">14. Why is there a coupon code option in the registration form?</div>
+              <div class="faq-a">Some institutions, universities, and CSR sponsors have covered the registration fees for their students, grassroots DPO delegates, or panellists. Those participants have been provided with a coupon code by the organisers to waive the fee. If you do not have a coupon code, you can simply leave that field blank.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">15. Who is organising Purple Fest Vadodara 2027?</div>
+              <div class="faq-a">The festival is jointly organised by <strong>Praangan (Vadodara)</strong> and <strong>We Are Together (Brotherhood, New Delhi)</strong>, in collaboration with the <strong>Global Inclusive Education Network (GIEN)</strong>, <strong>Tata Institute of Social Sciences (TISS Mumbai)</strong>, <strong>Maharaja Sayajirao University of Baroda (MSU)</strong>, <strong>Department of Empowerment of Persons with Disabilities (DEPwD, Ministry of Social Justice &amp; Empowerment, Govt. of India)</strong>, and the <strong>Office of the State Commissioner for Persons with Disabilities, Government of Goa</strong> as Knowledge &amp; Legacy Partner.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">16. Can we register at the venue on the day of the event?</div>
+              <div class="faq-a">Online registration in advance is strongly recommended so we can prepare your Braille/large-print kit and RPwD accommodations. Limited assisted registration counters will be available at the venue reception desk subject to capacity.</div>
+            </div>
+
+            <div class="faq-item" id="get-in-touch">
+              <div class="faq-q">17. Whom can I contact for more information?</div>
+              <div class="faq-a">
+                For any queries, please contact:<br />
+                <strong>Email:</strong> <a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a><br />
+                <strong>Phone:</strong> <a href="tel:+919825093918">+91 98250 93918</a><br />
+                <strong>Office Address:</strong> Praangan Secretariat, Old Padra Road, Vadodara, Gujarat – 390007
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delegate Registration Form (#register) -->
+      <div id="register" class="delegate-section">
+        <div class="delegate-container">
+          <h2 class="section-h2">Register</h2>
+          <p style="font-size:17px;color:var(--navy-700);margin-bottom:8px;">
+            Early Bird Registration is open. See <a href="#faq" style="color:var(--purple-primary);font-weight:600;">FAQ</a> on this page before registering.
+          </p>
+          <p style="font-size:20px;font-weight:600;color:var(--purple-primary);margin-bottom:28px;">
+            Registration fee: ₹2200
+          </p>
+
+          <form id="delegate-registration-form" class="form-card" onsubmit="submitDelegateForm(event)">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="del-name">Name *</label>
+                <input type="text" id="del-name" class="form-input" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="del-email">Email *</label>
+                <input type="email" id="del-email" class="form-input" placeholder="Enter your email address" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="del-phone">Phone *</label>
+                <input type="tel" id="del-phone" class="form-input" placeholder="+91 98250 XXXXX" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="del-country">Country *</label>
+                <input type="text" id="del-country" class="form-input" value="India" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="del-category">Registration Category *</label>
+                <select id="del-category" class="form-select" required>
+                  <option value="">Select…</option>
+                  <option value="General Delegate">General Delegate</option>
+                  <option value="Exhibitor">Exhibitor</option>
+                  <option value="Presenter">Presenter</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="del-occupation">Occupation / Affiliation *</label>
+                <select id="del-occupation" class="form-select" required>
+                  <option value="">Select…</option>
+                  <option value="Student">Student</option>
+                  <option value="Researcher / Academician">Researcher / Academician</option>
+                  <option value="Industry Professional / Exhibitor">Industry Professional / Exhibitor</option>
+                  <option value="NGO / DPO Representative">NGO / DPO Representative</option>
+                  <option value="Government Official">Government Official</option>
+                  <option value="Caregiver / Escort">Caregiver / Escort</option>
+                  <option value="Parent / Volunteer">Parent / Volunteer</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="del-org">Organization Name &amp; Designation (Optional)</label>
+              <input type="text" id="del-org" class="form-input" placeholder="University / School / NGO / Company &amp; Role" />
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="del-pwd">Are you a person with disability? *</label>
+                <select id="del-pwd" class="form-select" required>
+                  <option value="">Select…</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="del-disability-type">Type of Disability</label>
+                <select id="del-disability-type" class="form-select">
+                  <option value="">Select…</option>
+                  <option value="Locomotor Disability">Locomotor Disability</option>
+                  <option value="Visual Impairment / Blindness">Visual Impairment / Blindness</option>
+                  <option value="Hearing Impairment / Deaf">Hearing Impairment / Deaf</option>
+                  <option value="Intellectual/Developmental Disability">Intellectual/Developmental Disability</option>
+                  <option value="Multiple Disabilities">Multiple Disabilities</option>
+                  <option value="Speech/Language Disability">Speech/Language Disability</option>
+                  <option value="Autism Spectrum Disorder">Autism Spectrum Disorder</option>
+                  <option value="Specific Learning Disabilities">Specific Learning Disabilities</option>
+                  <option value="Mental Illness">Mental Illness</option>
+                  <option value="Cerebral Palsy">Cerebral Palsy</option>
+                  <option value="Muscular Dystrophy">Muscular Dystrophy</option>
+                  <option value="Chronic Neurological Conditions">Chronic Neurological Conditions</option>
+                  <option value="Multiple Sclerosis">Multiple Sclerosis</option>
+                  <option value="Parkinson's Disease">Parkinson's Disease</option>
+                  <option value="Thalassemia / Hemophilia / Sickle Cell">Thalassemia / Hemophilia / Sickle Cell</option>
+                  <option value="Dwarfism">Dwarfism</option>
+                  <option value="Leprosy Cured">Leprosy Cured</option>
+                  <option value="Acid Attack Survivors">Acid Attack Survivors</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="del-accommodation">If you require any accommodation mention it here.</label>
+              <textarea id="del-accommodation" class="form-textarea" placeholder="e.g., Indian Sign Language (ISL) interpreter, Braille schedule, wheelchair charging bay, sighted guide, sensory sanctuary access, dietary needs…"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-row">
+                <input type="checkbox" id="del-ack-harassment" required />
+                <span>I acknowledge a zero-tolerance policy towards harassment and my commitment to maintaining an inclusive environment. *</span>
+              </label>
+
+              <label class="checkbox-row">
+                <input type="checkbox" id="del-ack-media" required />
+                <span>I give my consent for Media / Photography at the event venue. *</span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="del-coupon">Coupon code (optional)</label>
+              <div class="coupon-row">
+                <input type="text" id="del-coupon" class="form-input" placeholder="Enter institutional or student coupon code (e.g., PURPLE2027)" />
+                <button type="button" class="coupon-apply-btn" onclick="applyDelegateCoupon()">Apply</button>
+              </div>
+              <div id="coupon-feedback" style="font-size:14px;font-weight:600;margin-top:6px;"></div>
+            </div>
+
+            <div class="total-banner">
+              <span>Total:</span>
+              <span id="del-total-display">₹2200</span>
+            </div>
+
+            <button type="submit" id="del-submit-btn" class="submit-primary-btn">
+              Pay ₹2200 &amp; register
+            </button>
+          </form>
+
+          <!-- Instant Delegate Registration Confirmation & QR Code Pass -->
+          <div id="delegate-receipt" class="receipt-box" role="status" aria-live="polite">
+            <div class="receipt-header">
+              <div>
+                <span class="portal-badge" style="background:#D1FAE5;color:#065F46;">Confirmed · Delegate Pass Issued &amp; Razorpay Verified</span>
+                <h3 style="font-size:26px;margin-top:6px;">Purple Fest Vadodara 2027 — Official Delegate Pass</h3>
+                <p style="color:var(--navy-700);margin-top:4px;">Present this SQL-verified QR at the Reception Desk (MSU Pavilion / Sayaji Nagar Gruh) on 14 January 2027 at 9:00 AM to collect your conference kit, lunch &amp; tea coupons, and ID card.</p>
+              </div>
+              <div class="qr-badge" id="delegate-qr-badge" aria-label="Delegate QR Code">
+                <svg viewBox="0 0 100 100" width="104" height="104" fill="#1E2952">
+                  <rect x="6" y="6" width="28" height="28" fill="none" stroke="#1E2952" stroke-width="6"/>
+                  <rect x="14" y="14" width="12" height="12"/>
+                  <rect x="66" y="6" width="28" height="28" fill="none" stroke="#1E2952" stroke-width="6"/>
+                  <rect x="74" y="14" width="12" height="12"/>
+                  <rect x="6" y="66" width="28" height="28" fill="none" stroke="#1E2952" stroke-width="6"/>
+                  <rect x="14" y="74" width="12" height="12"/>
+                  <rect x="44" y="12" width="12" height="12"/><rect x="42" y="38" width="18" height="18" fill="#822FE6"/>
+                  <rect x="12" y="44" width="20" height="10"/><rect x="68" y="44" width="22" height="12"/>
+                  <rect x="44" y="68" width="14" height="22"/><rect x="66" y="68" width="24" height="24"/>
+                </svg>
+              </div>
+            </div>
+            <div id="delegate-receipt-details" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;font-size:15px;"></div>
+            <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+              <a id="delegate-open-pass-btn" href="/pass" class="back-btn" style="margin:0;background:var(--purple-primary);color:#fff;border:none;text-decoration:none;">🪪 Open Printable Entry Pass (/pass)</a>
+              <button type="button" class="back-btn" style="margin:0;background:var(--navy-900);color:#fff;border:none;" onclick="openApplyEmailPreview()">✉️ Preview Dispatched Resend Email</button>
+              <a id="delegate-test-checkin-btn" href="/check-in" class="back-btn" style="margin:0;background:#099F9F;color:#fff;border:none;text-decoration:none;">📲 Test Desk Check-In (/check-in)</a>
+              <button type="button" class="back-btn" style="margin:0;" onclick="window.print()">🖨️ Print Delegate Pass</button>
+              <button type="button" class="back-btn" style="margin:0;" onclick="resetDelegateForm()">Register Another Delegate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venue Accommodation Information Section -->
+      <div id="accommodation-info" class="delegate-section" style="background:var(--lavender-soft);">
+        <div class="delegate-container">
+          <h2 class="section-h2">Venue Accommodation Information — Vadodara</h2>
+          <p style="margin-bottom:16px;">
+            Participants arranging their stay in Vadodara for <strong>14–16 January 2027</strong> are encouraged to book wheelchair-accessible hotels along the <strong>Sayaji Baug · Alkapuri · Fatehgunj · Old Padra Road</strong> corridor (within 2–4 km of MSU Pavilion and Sayaji Nagar Gruh).
+          </p>
+          <p>
+            Need assistance verifying step-free hotel rooms or roll-in showers in Vadodara? Email our Accessibility Logistics Desk at <a href="mailto:purplefestvadodara@gmail.com" style="color:var(--purple-primary);font-weight:600;">purplefestvadodara@gmail.com</a> or call <a href="tel:+919825093918" style="color:var(--purple-primary);font-weight:600;">+91 98250 93918</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Delegate Footer -->
+      <footer class="delegate-footer" role="contentinfo">
+        <div class="footer-grid">
+          <div>
+            <h3 style="font-size:20px;margin-bottom:12px;">Praangan (Vadodara) &amp; We Are Together (Brotherhood)</h3>
+            <p style="color:#D5D4F6;font-size:15px;">
+              Praangan and We Are Together (Brotherhood) are non-profit organisations working towards building an inclusive society where people with and without disabilities live, learn, and celebrate together with full human dignity across all 21 Benchmark Disabilities under the RPwD Act 2016.
+            </p>
+          </div>
+          <div>
+            <h4 style="font-size:16px;margin-bottom:12px;">Quick Links</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;">
+              <li><a href="#get-in-touch">Get in Touch</a></li>
+              <li><a href="/programs">Schedule</a></li>
+              <li><a href="/other-services">Accessibility</a></li>
+              <li><a href="#accommodation-info">Venue Accommodation Information</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-size:16px;margin-bottom:12px;">Policies &amp; Secretariat</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;">
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions">Refund Policy</a></li>
+              <li><a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a></li>
+              <li><a href="tel:+919825093918">+91 98250 93918</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="max-width:960px;margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.18);font-size:14px;color:#D5D4F6;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;">
+          <span>© 2026–2027 Purple Fest Vadodara (Praangan &amp; We Are Together Brotherhood). All rights reserved.</span>
+          <span>Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics</span>
+        </div>
+          <button type="button" class="pf-a11y-footer-btn" aria-label="Accessibility options" aria-controls="pf-a11y-header-panel" aria-expanded="false" onclick="toggleA11yPanel()">Accessibility options</button>
+  </footer>
+    </section>
+  </main>
+
+  <!-- Interactive Razorpay Checkout Modal for /apply -->
+  <div id="razorpay-apply-modal" role="dialog" aria-modal="true" aria-labelledby="rzp-apply-title" aria-hidden="true" style="display:none;position:fixed;inset:0;z-index:3500;background:rgba(11,14,23,0.82);align-items:center;justify-content:center;padding:16px;">
+    <div style="width:100%;max-width:440px;background:#FFFFFF;color:#1E2952;border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.5);border:2px solid #6B21A8;">
+      <div style="background:linear-gradient(135deg,#202D59 0%,#6B21A8 100%);color:#FFFFFF;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;opacity:0.85;">Razorpay Secure Checkout · Purple Fest</div>
+          <div id="rzp-apply-title" style="font-size:18px;font-weight:700;margin-top:2px;">Purple Fest Vadodara 2027</div>
+          <div id="rzp-apply-order" style="font-size:12px;opacity:0.9;margin-top:2px;font-family:monospace;">Order: order_PFV27...</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;opacity:0.85;">Payable</div>
+          <div id="rzp-apply-amount" style="font-size:24px;font-weight:700;">₹2,200</div>
+        </div>
+      </div>
+      <div style="padding:20px 22px;">
+        <div id="rzp-apply-user" style="font-size:13px;color:#475569;padding-bottom:12px;border-bottom:1px solid #E2E8F0;margin-bottom:12px;"></div>
+        <div style="background:#F8FAFC;border:1px solid #CBD5E1;padding:14px;border-radius:6px;margin-bottom:16px;font-size:14px;">
+          <label for="rzp-apply-vpa" style="display:block;font-weight:700;font-size:13px;margin-bottom:6px;">UPI / QR / Card / NetBanking Instant Approval</label>
+          <input type="text" id="rzp-apply-vpa" value="participant@okicici" style="width:100%;padding:10px;border:1px solid #94A3B8;border-radius:4px;font-size:14px;" />
+          <div style="font-size:12px;color:#0D8A52;font-weight:600;margin-top:6px;">✓ Verified Secretariat: Praangan (Vadodara) &amp; We Are Together</div>
+        </div>
+        <button type="button" id="rzp-apply-confirm-btn" onclick="verifyApplyRazorpayPayment()" style="width:100%;background:#16A34A;color:#FFFFFF;border:none;padding:14px;font-size:16px;font-weight:700;border-radius:6px;cursor:pointer;">
+          Complete Razorpay Payment &amp; Issue QR Pass →
+        </button>
+        <button type="button" onclick="closeApplyRazorpayModal()" style="width:100%;background:transparent;color:#64748B;border:none;padding:10px;font-size:13px;font-weight:600;cursor:pointer;margin-top:4px;">
+          Cancel Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dispatched Resend Email Preview Modal for /apply -->
+  <div id="apply-email-preview-modal" role="dialog" aria-modal="true" aria-labelledby="apply-email-title" aria-hidden="true" style="display:none;position:fixed;inset:0;z-index:3600;background:rgba(15,23,42,0.82);align-items:center;justify-content:center;padding:20px;">
+    <div style="background:#FFFFFF;color:#1E2952;width:100%;max-width:760px;max-height:90vh;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;border:2px solid #202D59;">
+      <div style="background:#202D59;color:#FFFFFF;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <strong id="apply-email-title" style="font-size:16px;">✉️ Dispatched Resend Confirmation Email Preview</strong>
+          <div id="apply-email-sub" style="font-size:12px;opacity:0.85;">Sent via Resend API with SQL Registration ID &amp; Scannable QR Code</div>
+        </div>
+        <button type="button" onclick="closeApplyEmailPreview()" style="background:#FFFFFF;color:#202D59;border:none;width:32px;height:32px;font-weight:700;cursor:pointer;">✕</button>
+      </div>
+      <iframe id="apply-email-iframe" title="Dispatched Resend Confirmation Email" style="width:100%;height:520px;border:none;background:#FFFFFF;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    let currentChoice = null;
+    let selectedStallTierName = 'Standard DPO / Artisan / Foundation Stall (₹8,500 Minimum)';
+    let delegateFee = 2200;
+    let appliedCouponCode = '';
+    let pendingApplyOrder = null;
+    let lastApplyRegistration = null;
+
+    function selectOption(choice) {
+      currentChoice = choice;
+      const stallBtn = document.getElementById('opt-stall');
+      const delBtn = document.getElementById('opt-delegate');
+      const nextBtn = document.getElementById('choice-next-btn');
+
+      stallBtn.classList.toggle('selected', choice === 'stall');
+      stallBtn.setAttribute('aria-checked', choice === 'stall' ? 'true' : 'false');
+
+      delBtn.classList.toggle('selected', choice === 'delegate');
+      delBtn.setAttribute('aria-checked', choice === 'delegate' ? 'true' : 'false');
+
+      nextBtn.classList.add('ready');
+    }
+
+    function proceedFromChoice() {
+      if (!currentChoice) {
+        selectOption('delegate');
+        return;
+      }
+      showStep(currentChoice);
+    }
+
+    function showStep(step) {
+      const choiceSec = document.getElementById('step-choice');
+      const stallSec = document.getElementById('step-stall');
+      const delSec = document.getElementById('step-delegate');
+
+      choiceSec.style.display = step === 'choice' ? 'flex' : 'none';
+      stallSec.style.display = step === 'stall' ? 'block' : 'none';
+      delSec.style.display = step === 'delegate' ? 'block' : 'none';
+
+      const url = new URL(window.location.href);
+      if (step === 'choice') {
+        url.searchParams.delete('mode');
+      } else {
+        url.searchParams.set('mode', step);
+      }
+      window.history.replaceState({}, '', url.toString());
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Stall Tier & Minimum ₹8,500 Logic
+    function selectStallTier(btn) {
+      document.querySelectorAll('.tier-option-card').forEach((el) => el.classList.remove('active'));
+      btn.classList.add('active');
+      const amount = Number(btn.getAttribute('data-amount')) || 8500;
+      selectedStallTierName = btn.getAttribute('data-tier') || 'Standard Stall';
+      const amountInput = document.getElementById('stall-amount');
+      amountInput.value = amount;
+      updateStallPaymentButton();
+    }
+
+    function updateStallPaymentButton() {
+      const amountInput = document.getElementById('stall-amount');
+      const errorEl = document.getElementById('stall-amount-error');
+      const totalEl = document.getElementById('stall-total-display');
+      const submitBtn = document.getElementById('stall-submit-btn');
+      const rawVal = Number(amountInput.value);
+
+      if (isNaN(rawVal) || rawVal < 8500) {
+        errorEl.style.display = 'block';
+        totalEl.textContent = '₹8,500 (Minimum Required)';
+        submitBtn.textContent = 'Pay ₹8,500 & Register Stall';
+      } else {
+        errorEl.style.display = 'none';
+        const formatted = '₹' + rawVal.toLocaleString('en-IN');
+        totalEl.textContent = formatted;
+        submitBtn.textContent = 'Pay ' + formatted + ' & Register Stall';
+      }
+    }
+
+    async function submitStallForm(e) {
+      e.preventDefault();
+      const amountInput = document.getElementById('stall-amount');
+      const amount = Number(amountInput.value);
+      if (isNaN(amount) || amount < 8500) {
+        document.getElementById('stall-amount-error').style.display = 'block';
+        amountInput.focus();
+        return;
+      }
+
+      const stallName = document.getElementById('stall-name').value.trim();
+      const stallCategory = document.getElementById('stall-category').value;
+      const stallPlace = document.getElementById('stall-place').value;
+      const stallAbout = document.getElementById('stall-about').value.trim();
+      const paymentMode = document.getElementById('stall-payment-mode').value;
+      const coordinatorName = document.getElementById('stall-contact-name').value.trim();
+      const organization = document.getElementById('stall-org').value.trim() || stallName;
+      const email = document.getElementById('stall-email').value.trim();
+      const phone = document.getElementById('stall-phone').value.trim();
+      const a11ySpecs = document.getElementById('stall-a11y').value.trim() || '760mm Accessible Counter & Braille Fascia';
+
+      const initiatePayload = {
+        registration_type: 'STALL',
+        registrationType: 'STALL_REGISTRATION',
+        event_slug: 'assistive-tech-stall-expo',
+        event_title: 'Purple Pavilion Exhibition Stall — ' + stallName,
+        category: 'Exhibition Stall',
+        full_name: coordinatorName,
+        name: coordinatorName,
+        email,
+        phone,
+        mobile: phone,
+        organization,
+        stall_name: stallName,
+        stallName,
+        stall_category: stallCategory,
+        stallCategory,
+        stall_place: stallPlace,
+        stall_location: stallPlace,
+        stallPlace,
+        stall_about: stallAbout,
+        stall_description: stallAbout,
+        stallAbout,
+        stall_tier: selectedStallTierName,
+        stallTier: selectedStallTierName,
+        disability_category: 'Exhibitor Accessibility Support',
+        accessibility_needs: [a11ySpecs],
+        accommodations: [a11ySpecs],
+        accommodations_json: JSON.stringify([a11ySpecs]),
+        accommodation_notes: a11ySpecs,
+        custom_answers: {
+          stall_name: stallName,
+          stall_category: stallCategory,
+          stall_place: stallPlace,
+          stall_tier: selectedStallTierName,
+          payment_mode: paymentMode
+        },
+        custom_responses: {
+          stall_name: stallName,
+          stall_category: stallCategory,
+          stall_place: stallPlace,
+          stall_tier: selectedStallTierName,
+          payment_mode: paymentMode
+        },
+        amount_inr: amount,
+        custom_amount_inr: amount,
+        amount: amount,
+        amountPaid: amount,
+        paymentMode
+      };
+
+      let initResData = null;
+      try {
+        const res = await fetch('/api/registrations/initiate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(initiatePayload)
+        });
+        if (res.ok) initResData = await res.json();
+      } catch (_) {}
+
+      const rec = (initResData && (initResData.registration || initResData.data)) || initResData || {};
+      const regId = rec.registration_id || initResData?.registration_id || ('PFV27-STL-' + Math.floor(100000 + Math.random() * 900000));
+      const orderId = rec.razorpay_order_id || initResData?.razorpay_order?.id || initResData?.razorpay_order_id || ('order_PFV27STL_' + Math.floor(100000 + Math.random() * 900000));
+
+      pendingApplyOrder = {
+        mode: 'stall',
+        registration_id: regId,
+        razorpay_order_id: orderId,
+        amount_inr: amount,
+        payment_required: initResData ? initResData.payment_required !== false : true,
+        prefill_test_payment: initResData?.prefill_test_payment || initResData?.razorpay_order?.prefill_test_payment || null,
+        initResponse: initResData,
+        payload: initiatePayload
+      };
+
+      openApplyRazorpayModal(pendingApplyOrder);
+    }
+
+    function resetStallForm() {
+      document.getElementById('stall-registration-form').reset();
+      document.getElementById('stall-amount').value = 8500;
+      updateStallPaymentButton();
+      document.getElementById('stall-receipt').style.display = 'none';
+    }
+
+    // Delegate Coupon & Form Submission Logic
+    function applyDelegateCoupon() {
+      const codeInput = document.getElementById('del-coupon');
+      const feedback = document.getElementById('coupon-feedback');
+      const totalEl = document.getElementById('del-total-display');
+      const submitBtn = document.getElementById('del-submit-btn');
+      const code = codeInput.value.trim().toUpperCase();
+
+      if (!code) {
+        delegateFee = 2200;
+        appliedCouponCode = '';
+        feedback.style.color = 'var(--navy-700)';
+        feedback.textContent = 'No coupon code entered. Standard registration fee ₹2200 applies.';
+      } else if (['PURPLE2027', 'PURPLEFREE27', 'DIVYANGJAN100', 'STUDENTFREE', 'SPONSOR100', 'PRAANGAN100', 'BROTHERHOOD100'].includes(code)) {
+        delegateFee = 0;
+        appliedCouponCode = code;
+        feedback.style.color = 'var(--success-green)';
+        feedback.textContent = '✓ Coupon "' + code + '" applied! 100% institutional scholarship waiver active (Total: ₹0).';
+      } else if (['EARLYBIRD', 'NABDELHI50', 'GIEN50', 'TISS50'].includes(code)) {
+        delegateFee = 1100;
+        appliedCouponCode = code;
+        feedback.style.color = 'var(--success-green)';
+        feedback.textContent = '✓ Coupon "' + code + '" applied! 50% academic concession active (Total: ₹1100).';
+      } else {
+        delegateFee = 2200;
+        appliedCouponCode = '';
+        feedback.style.color = 'var(--danger-red)';
+        feedback.textContent = 'Invalid coupon code. Try PURPLE2027, PURPLEFREE27, DIVYANGJAN100, or NABDELHI50.';
+      }
+
+      totalEl.textContent = '₹' + delegateFee;
+      submitBtn.textContent = delegateFee === 0 ? 'Complete Free Registration & Get QR Pass' : 'Pay ₹' + delegateFee + ' & register';
+    }
+
+    async function submitDelegateForm(e) {
+      e.preventDefault();
+      const fullName = document.getElementById('del-name').value.trim();
+      const email = document.getElementById('del-email').value.trim();
+      const phone = document.getElementById('del-phone').value.trim();
+      const country = document.getElementById('del-country').value.trim();
+      const category = document.getElementById('del-category').value;
+      const occupation = document.getElementById('del-occupation').value;
+      const organization = document.getElementById('del-org').value.trim() || occupation;
+      const isPwd = document.getElementById('del-pwd').value;
+      const disabilityType = document.getElementById('del-disability-type').value || (isPwd === 'Yes' ? 'Benchmark Disability (RPwD)' : 'None / Non-Disabled Ally');
+      const accommodation = document.getElementById('del-accommodation').value.trim() || 'Standard Barrier-Free Access';
+
+      const initiatePayload = {
+        registration_type: 'DELEGATE',
+        registrationType: 'DELEGATE_REGISTRATION',
+        event_slug: 'purple-fest-delegate-2027',
+        event_title: 'Purple Fest Vadodara 2027 — 3-Day Official Delegate Pass',
+        category: category || 'Full Delegate Pass',
+        full_name: fullName,
+        name: fullName,
+        email,
+        phone,
+        mobile: phone,
+        country,
+        occupation,
+        organization,
+        is_pwd: isPwd,
+        isPwd,
+        disability_category: disabilityType,
+        disabilityType,
+        accessibility_needs: [accommodation],
+        accommodations: [accommodation],
+        accommodations_json: JSON.stringify([accommodation]),
+        accommodation_notes: accommodation,
+        accommodation,
+        coupon_code: appliedCouponCode || '',
+        couponCode: appliedCouponCode || 'None',
+        custom_answers: {
+          registration_category: category,
+          occupation,
+          country,
+          is_pwd: isPwd
+        },
+        custom_responses: {
+          registration_category: category,
+          occupation,
+          country,
+          is_pwd: isPwd
+        },
+        amount_inr: delegateFee,
+        custom_amount_inr: delegateFee,
+        amount: delegateFee,
+        amountPaid: delegateFee
+      };
+
+      let initResData = null;
+      try {
+        const res = await fetch('/api/registrations/initiate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(initiatePayload)
+        });
+        if (res.ok) initResData = await res.json();
+      } catch (_) {}
+
+      const rec = (initResData && (initResData.registration || initResData.data)) || initResData || {};
+      const regId = rec.registration_id || initResData?.registration_id || ('PFV27-DEL-' + Math.floor(100000 + Math.random() * 900000));
+      const orderId = rec.razorpay_order_id || initResData?.razorpay_order?.id || initResData?.razorpay_order_id || ('order_PFV27DEL_' + Math.floor(100000 + Math.random() * 900000));
+
+      pendingApplyOrder = {
+        mode: 'delegate',
+        registration_id: regId,
+        razorpay_order_id: orderId,
+        amount_inr: delegateFee,
+        payment_required: initResData ? initResData.payment_required !== false : true,
+        prefill_test_payment: initResData?.prefill_test_payment || initResData?.razorpay_order?.prefill_test_payment || null,
+        initResponse: initResData,
+        payload: initiatePayload
+      };
+
+      openApplyRazorpayModal(pendingApplyOrder);
+    }
+
+    function openApplyRazorpayModal(order) {
+      document.getElementById('rzp-apply-order').textContent = 'Order: ' + order.razorpay_order_id;
+      document.getElementById('rzp-apply-amount').textContent = '₹' + Number(order.amount_inr).toLocaleString('en-IN');
+      document.getElementById('rzp-apply-user').textContent = `${order.payload.full_name} · ${order.payload.email} · ${order.payload.phone}`;
+      const modal = document.getElementById('razorpay-apply-modal');
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeApplyRazorpayModal() {
+      const modal = document.getElementById('razorpay-apply-modal');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    async function verifyApplyRazorpayPayment() {
+      if (!pendingApplyOrder) return;
+      const btn = document.getElementById('rzp-apply-confirm-btn');
+      btn.disabled = true;
+      btn.textContent = 'Verifying Payment & Issuing SQL QR Pass…';
+
+      const prefill = pendingApplyOrder.prefill_test_payment || {};
+      const payId = prefill.razorpay_payment_id || ('pay_PFV27_' + Math.floor(10000000 + Math.random() * 90000000));
+      const sig = prefill.razorpay_signature || ('sig_pfv27_' + pendingApplyOrder.registration_id.toLowerCase());
+      let verifyData = null;
+
+      if (pendingApplyOrder.payment_required === false && pendingApplyOrder.initResponse?.registration) {
+        verifyData = pendingApplyOrder.initResponse;
+      } else {
+        try {
+          const res = await fetch('/api/registrations/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              registration_id: pendingApplyOrder.registration_id,
+              razorpay_order_id: prefill.razorpay_order_id || pendingApplyOrder.razorpay_order_id,
+              razorpay_payment_id: payId,
+              razorpay_signature: sig,
+              method: 'upi',
+              payment_method: pendingApplyOrder.payload.paymentMode || 'UPI / Razorpay Checkout'
+            })
+          });
+          if (res.ok) verifyData = await res.json();
+        } catch (_) {}
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Complete Razorpay Payment & Issue QR Pass →';
+      closeApplyRazorpayModal();
+
+      const rec = (verifyData && (verifyData.registration || verifyData.data)) || verifyData || {};
+      const finalRegId = rec.registration_id || pendingApplyOrder.registration_id;
+      const finalPayId = rec.razorpay_payment_id || payId;
+      const qrSvg = rec.qr_svg || verifyData?.qr_svg || buildApplyQrSvg(finalRegId);
+
+      lastApplyRegistration = {
+        registration_id: finalRegId,
+        razorpay_payment_id: finalPayId,
+        razorpay_order_id: pendingApplyOrder.razorpay_order_id,
+        amount_inr: pendingApplyOrder.amount_inr,
+        qr_svg: qrSvg,
+        payload: pendingApplyOrder.payload
+      };
+
+      try {
+        localStorage.setItem('pfv27_reg_' + finalRegId, JSON.stringify(lastApplyRegistration));
+        localStorage.setItem('pfv27_last_reg_id', finalRegId);
+      } catch (_) {}
+
+      if (pendingApplyOrder.mode === 'stall') {
+        const p = pendingApplyOrder.payload;
+        document.getElementById('stall-qr-badge').innerHTML = qrSvg;
+        document.getElementById('stall-receipt-details').innerHTML = `
+          <div><strong>SQL Registration ID:</strong><br/><span style="font-family:monospace;color:var(--purple-primary);font-weight:700;">${finalRegId}</span></div>
+          <div><strong>Razorpay Payment ID:</strong><br/><span style="font-family:monospace;color:var(--success-green);font-weight:700;">${finalPayId}</span></div>
+          <div><strong>Stall Name:</strong><br/>${p.stallName}</div>
+          <div><strong>What Stall is About:</strong><br/>${p.stallCategory}</div>
+          <div><strong>Assigned Zone / Place:</strong><br/>${p.stallPlace}</div>
+          <div><strong>Coordinator:</strong><br/>${p.full_name} (${p.phone})</div>
+          <div><strong>Associated Payment:</strong><br/><span style="color:var(--purple-primary);font-weight:700;">₹${Number(p.amount_inr).toLocaleString('en-IN')}</span></div>
+        `;
+        document.getElementById('stall-open-pass-btn').href = `/pass?id=${encodeURIComponent(finalRegId)}`;
+        document.getElementById('stall-test-checkin-btn').href = `/check-in?id=${encodeURIComponent(finalRegId)}`;
+        document.getElementById('stall-receipt').style.display = 'block';
+        document.getElementById('stall-receipt').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const p = pendingApplyOrder.payload;
+        document.getElementById('delegate-qr-badge').innerHTML = qrSvg;
+        document.getElementById('delegate-receipt-details').innerHTML = `
+          <div><strong>SQL Registration ID:</strong><br/><span style="font-family:monospace;color:var(--purple-primary);font-weight:700;">${finalRegId}</span></div>
+          <div><strong>Razorpay Payment ID:</strong><br/><span style="font-family:monospace;color:var(--success-green);font-weight:700;">${finalPayId}</span></div>
+          <div><strong>Delegate Name:</strong><br/>${p.full_name}</div>
+          <div><strong>Category &amp; Affiliation:</strong><br/>${p.category} · ${p.occupation}</div>
+          <div><strong>Email &amp; Phone:</strong><br/>${p.email} · ${p.phone}</div>
+          <div><strong>RPwD Accommodation:</strong><br/>${p.disabilityType} (${p.accommodation})</div>
+          <div><strong>Fee Paid:</strong><br/><span style="color:var(--purple-primary);font-weight:700;">₹${Number(p.amount_inr).toLocaleString('en-IN')}</span> (Includes Tea &amp; Lunch on 14–16 Jan 2027)</div>
+        `;
+        document.getElementById('delegate-open-pass-btn').href = `/pass?id=${encodeURIComponent(finalRegId)}`;
+        document.getElementById('delegate-test-checkin-btn').href = `/check-in?id=${encodeURIComponent(finalRegId)}`;
+        document.getElementById('delegate-receipt').style.display = 'block';
+        document.getElementById('delegate-receipt').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    async function openApplyEmailPreview() {
+      if (!lastApplyRegistration) return;
+      const regId = lastApplyRegistration.registration_id;
+      const modal = document.getElementById('apply-email-preview-modal');
+      const iframe = document.getElementById('apply-email-iframe');
+      document.getElementById('apply-email-sub').textContent = `Dispatched to ${lastApplyRegistration.payload.email} · SQL ID: ${regId}`;
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+
+      try {
+        const res = await fetch(`/api/registrations/${encodeURIComponent(regId)}/email-preview`);
+        if (res.ok) {
+          const ct = res.headers.get('content-type') || '';
+          if (ct.includes('application/json')) {
+            const d = await res.json();
+            iframe.srcdoc = d.html || d.email_html || '';
+          } else {
+            iframe.srcdoc = await res.text();
+          }
+          return;
+        }
+      } catch (_) {}
+
+      iframe.srcdoc = `<!DOCTYPE html><html><body style="font-family:sans-serif;padding:24px;background:#F3F2FE;color:#1E2952;">
+        <div style="max-width:600px;margin:0 auto;background:#fff;border:2px solid #6B21A8;padding:24px;">
+          <h2 style="color:#6B21A8;margin-top:0;">Purple Fest Vadodara 2027 — Official Registration Confirmed</h2>
+          <p>Dear <strong>${lastApplyRegistration.payload.full_name}</strong>,</p>
+          <p>Your registration (<strong>${regId}</strong>) and Razorpay payment (<strong>${lastApplyRegistration.razorpay_payment_id}</strong>) are verified.</p>
+          <div style="text-align:center;margin:20px 0;">${lastApplyRegistration.qr_svg}</div>
+        </div>
+      </` + `body></` + `html>`;
+    }
+
+    function closeApplyEmailPreview() {
+      const modal = document.getElementById('apply-email-preview-modal');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    function buildApplyQrSvg(seed) {
+      let h = 2166136261;
+      for (let i = 0; i < seed.length; i++) {
+        h ^= seed.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      let rects = '';
+      for (let r = 0; r < 11; r++) {
+        for (let c = 0; c < 11; c++) {
+          if ((r < 3 && c < 3) || (r < 3 && c > 7) || (r > 7 && c < 3)) continue;
+          if (((h >>> ((r * 11 + c) % 28)) ^ (r * 5 + c * 11)) & 1) {
+            rects += `<rect x="${12 + c * 7}" y="${12 + r * 7}" width="6" height="6" fill="#1E2952"/>`;
+          }
+        }
+      }
+      return `<svg viewBox="0 0 100 100" width="104" height="104" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR Code for ${seed}">
+        <rect width="100" height="100" fill="#FFFFFF"/>
+        <rect x="6" y="6" width="24" height="24" fill="none" stroke="#1E2952" stroke-width="5"/>
+        <rect x="13" y="13" width="10" height="10" fill="#6B21A8"/>
+        <rect x="70" y="6" width="24" height="24" fill="none" stroke="#1E2952" stroke-width="5"/>
+        <rect x="77" y="13" width="10" height="10" fill="#6B21A8"/>
+        <rect x="6" y="70" width="24" height="24" fill="none" stroke="#1E2952" stroke-width="5"/>
+        <rect x="13" y="77" width="10" height="10" fill="#6B21A8"/>
+        ${rects}
+      </svg>`;
+    }
+
+    function resetDelegateForm() {
+      document.getElementById('delegate-registration-form').reset();
+      delegateFee = 2200;
+      appliedCouponCode = '';
+      document.getElementById('del-total-display').textContent = '₹2200';
+      document.getElementById('del-submit-btn').textContent = 'Pay ₹2200 & register';
+      document.getElementById('coupon-feedback').textContent = '';
+      document.getElementById('delegate-receipt').style.display = 'none';
+    }
+
+    // Accessibility Header Controls
+    function toggleA11yPanel(forceState) {
+      const panel = document.getElementById('pf-a11y-header-panel');
+      if (!panel) return;
+      const isOpen = typeof forceState === 'boolean' ? forceState : !panel.classList.contains('open');
+      panel.classList.toggle('open', isOpen);
+      panel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      document.querySelectorAll('.pf-a11y-header-btn').forEach((btn) => {
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    function setFontScale(px, btn) {
+      document.documentElement.style.setProperty('--base-font-size', px + 'px');
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('.a11y-chip').forEach((c) => {
+          c.classList.remove('active');
+          c.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+      }
+    }
+
+    function toggleContrast() {
+      const active = document.body.classList.toggle('high-contrast');
+      const btn = document.getElementById('btn-contrast');
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    }
+
+    function toggleSpacing() {
+      const active = document.body.classList.toggle('wide-spacing');
+      const btn = document.getElementById('btn-spacing');
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    }
+
+    function speakApplyPageSummary() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(
+        'Purple Fest Vadodara 2027 Official Registration Portal. Choose between Register as an Exhibition Stall starting at 8,500 rupees, or Register as a 3-Day Delegate at 2,200 rupees with Razorpay verification and instant QR Entry Pass.'
+      );
+      u.rate = 0.98;
+      window.speechSynthesis.speak(u);
+    }
+
+    // Support deep-linking via ?mode=stall or ?mode=delegate and keyboard arrow navigation on radiogroup
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const mode = params.get('mode');
+      if (mode === 'stall' || mode === 'delegate') {
+        selectOption(mode);
+        showStep(mode);
+      }
+
+      const stallBtn = document.getElementById('opt-stall');
+      const delBtn = document.getElementById('opt-delegate');
+      [stallBtn, delBtn].forEach((btn) => {
+        if (!btn) return;
+        btn.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const nextChoice = btn.id === 'opt-stall' ? 'delegate' : 'stall';
+            selectOption(nextChoice);
+            (nextChoice === 'stall' ? stallBtn : delBtn).focus();
+          }
+        });
+      });
+    });
+  </script>
+  <footer class="site-footer" role="contentinfo" style="background:#190826;color:#FFFFFF;padding:24px 40px;margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+    <div style="font-size:14px;">Purple Fest Vadodara 2027 (14–16 January 2027) · Praangan &amp; We Are Together · RPwD Act 2016 Barrier-Free Portal</div>
+      <button type="button" class="pf-a11y-footer-btn" aria-label="Accessibility options" aria-controls="pf-a11y-header-panel" aria-expanded="false" onclick="toggleA11yPanel()">Accessibility options</button>
+  </footer>
+  <script src="/pf-a11y-talkback.js"></script>
+</body>
+</html>

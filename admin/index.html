@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Independent Admin CMS &amp; SQLite Secretariat Command Center — Purple Fest Vadodara 2027</title>
+  <meta name="description" content="Independent Admin CMS for Purple Fest Vadodara 2027. Manage custom events, dynamic form fields, SQLite registrations, Razorpay payments, QR check-in logs, Resend email dispatches, coupons, and festival settings." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/777994872ea449fc-s.p.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-cream: #FAF9F5;
+      --bg-white: #FFFFFF;
+      --lavender-hero: #DDDDF9;
+      --lavender-card: #E2E1FC;
+      --lavender-soft: #F3F2FE;
+      --navy-900: #202D59;
+      --navy-700: #33416E;
+      --purple-primary: #6B21A8;
+      --purple-hover: #581C87;
+      --teal-accent: #099F9F;
+      --teal-dark: #067474;
+      --gold-accent: #C89D28;
+      --border-subtle: #B8B6E8;
+      --green-bg: #D1FAE5;
+      --green-border: #059669;
+      --green-text: #065F46;
+      --amber-bg: #FEF3C7;
+      --amber-border: #D97706;
+      --amber-text: #92400E;
+      --red-bg: #FEE2E2;
+      --red-border: #DC2626;
+      --red-text: #991B1B;
+      --base-font-size: 16px;
+      --line-height-mult: 1.55;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); scroll-behavior: smooth; }
+    body {
+      font-family: '__font_7fb336', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--navy-900);
+      line-height: var(--line-height-mult);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.high-contrast {
+      --bg-cream: #0B0E17;
+      --bg-white: #111625;
+      --lavender-hero: #161E35;
+      --lavender-card: #1E2640;
+      --lavender-soft: #141A2E;
+      --navy-900: #FFFFFF;
+      --navy-700: #E2E8F0;
+      --purple-primary: #C084FC;
+      --teal-accent: #2DD4BF;
+      --border-subtle: #64748B;
+      background-color: #0B0E17;
+      color: #FFFFFF;
+    }
+
+    body.wide-spacing {
+      letter-spacing: 0.03em;
+      --line-height-mult: 1.85;
+    }
+
+    .skip-to-content {
+      position: fixed;
+      left: 16px;
+      top: -120px;
+      z-index: 4000;
+      background: #202D59;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #FFFFFF;
+    }
+    .skip-to-content:focus { top: 16px; outline: 3px solid #099F9F !important; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--teal-accent) !important;
+      outline-offset: 2px !important;
+    }
+
+    /* Topbar */
+    .site-topbar {
+      width: 100%;
+      padding: 16px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-white);
+      border-bottom: 2px solid var(--navy-900);
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--navy-900);
+    }
+    .brand-cluster img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple-primary);
+    }
+    .brand-main {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy-900);
+      line-height: 1.2;
+    }
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--navy-900);
+      background: var(--lavender-soft);
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+    }
+    .nav-pill:hover {
+      background: var(--lavender-card);
+    }
+    .nav-pill.active {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      border-color: var(--purple-primary);
+    }
+
+    .a11y-panel {
+      display: none;
+      position: fixed;
+      top: 76px;
+      right: 20px;
+      z-index: 2500;
+      width: min(360px, calc(100vw - 32px));
+      border-radius: 12px;
+      border: 2px solid var(--navy-900);
+      background: var(--bg-white);
+      color: var(--navy-900);
+      padding: 18px;
+      box-shadow: 0 18px 42px rgba(32, 45, 89, 0.25);
+    }
+    .a11y-panel.open { display: block; }
+    .a11y-chip {
+      background: var(--lavender-soft);
+      color: var(--navy-900);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 12px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .a11y-chip.active, .a11y-chip:hover {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+    }
+
+    /* Admin Hero Header */
+    .admin-hero {
+      background: linear-gradient(135deg, #192346 0%, #3B125E 65%, #202D59 100%);
+      color: #FFFFFF;
+      padding: 32px 36px;
+      border-bottom: 4px solid var(--gold-accent);
+    }
+    .admin-hero-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 157, 40, 0.2);
+      border: 1px solid #E5C875;
+      color: #F4DC92;
+      padding: 5px 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .admin-hero h1 {
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 8px;
+    }
+    .admin-hero p {
+      color: #E2DFEC;
+      font-size: 15px;
+      max-width: 760px;
+    }
+    .hero-logos-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 12px 18px;
+      border: 2px solid #C89D28;
+      border-radius: 6px;
+    }
+    .hero-logos-strip img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* KPI Strip */
+    .kpi-grid-wrap {
+      max-width: 1380px;
+      width: 100%;
+      margin: -22px auto 24px;
+      padding: 0 36px;
+      position: relative;
+      z-index: 10;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+    .kpi-card {
+      background: var(--bg-white);
+      border: 2px solid var(--navy-900);
+      padding: 16px 18px;
+      box-shadow: 0 10px 24px rgba(32, 45, 89, 0.08);
+    }
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--navy-700);
+      margin-bottom: 6px;
+    }
+    .kpi-value {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy-900);
+      line-height: 1.1;
+    }
+    .kpi-value.purple { color: var(--purple-primary); }
+    .kpi-value.green { color: #059669; }
+    .kpi-value.teal { color: var(--teal-dark); }
+    .kpi-sub {
+      font-size: 12px;
+      color: var(--navy-700);
+      margin-top: 4px;
+    }
+
+    /* Main Workspace */
+    .admin-main {
+      max-width: 1380px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 36px 72px;
+      flex: 1;
+    }
+
+    /* Tab Bar */
+    .cms-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--navy-900);
+      padding-bottom: 12px;
+    }
+    .cms-tab-btn {
+      background: var(--bg-white);
+      color: var(--navy-900);
+      border: 2px solid var(--navy-900);
+      padding: 10px 18px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cms-tab-btn.active {
+      background: var(--navy-900);
+      color: #FFFFFF;
+    }
+    .cms-tab-btn:hover:not(.active) {
+      background: var(--lavender-card);
+    }
+
+    .cms-section {
+      margin-bottom: 36px;
+    }
+    .cms-section.hidden-tab {
+      display: none;
+    }
+
+    .section-card {
+      background: var(--bg-white);
+      border: 2px solid var(--navy-900);
+      padding: 26px;
+      box-shadow: 0 12px 30px rgba(32, 45, 89, 0.06);
+      margin-bottom: 24px;
+    }
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--lavender-hero);
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy-900);
+    }
+    .section-subtitle {
+      font-size: 13.5px;
+      color: var(--navy-700);
+      margin-top: 2px;
+    }
+
+    /* Two-column layout for Events + Builder */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* Forms */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+    .form-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--navy-900);
+    }
+    .form-input, .form-select, .form-textarea {
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 14px;
+      border: 1.5px solid var(--navy-900);
+      background: var(--bg-white);
+      color: var(--navy-900);
+      width: 100%;
+    }
+    .form-textarea {
+      min-height: 76px;
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid var(--navy-900);
+      text-decoration: none;
+      transition: transform 0.1s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      border-color: var(--navy-900);
+    }
+    .btn-primary:hover { background: var(--purple-hover); }
+    .btn-navy {
+      background: var(--navy-900);
+      color: #FFFFFF;
+    }
+    .btn-teal {
+      background: var(--teal-accent);
+      color: #FFFFFF;
+      border-color: var(--navy-900);
+    }
+    .btn-outline {
+      background: var(--bg-white);
+      color: var(--navy-900);
+    }
+    .btn-outline:hover { background: var(--lavender-soft); }
+    .btn-sm {
+      padding: 6px 11px;
+      font-size: 12px;
+    }
+    .btn-danger {
+      background: var(--red-bg);
+      color: var(--red-text);
+      border-color: var(--red-border);
+    }
+
+    /* Dynamic Custom Fields Builder Box */
+    .custom-fields-builder {
+      background: var(--lavender-soft);
+      border: 1.5px solid var(--navy-900);
+      padding: 16px;
+      margin: 12px 0 16px;
+    }
+    .custom-field-row {
+      background: var(--bg-white);
+      border: 1px solid var(--border-subtle);
+      padding: 12px;
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 0.8fr auto;
+      gap: 10px;
+      align-items: end;
+    }
+    .custom-field-options-row {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* Tables */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      border: 1.5px solid var(--navy-900);
+    }
+    .cms-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      background: var(--bg-white);
+    }
+    .cms-table th {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      text-align: left;
+      padding: 11px 14px;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .cms-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    .cms-table tr:hover td {
+      background: var(--lavender-soft);
+    }
+
+    /* Status Badges */
+    .status-pill {
+      display: inline-block;
+      padding: 3px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+    }
+    .status-paid {
+      background: var(--green-bg);
+      color: var(--green-text);
+      border: 1px solid var(--green-border);
+    }
+    .status-waived {
+      background: var(--lavender-card);
+      color: var(--purple-primary);
+      border: 1px solid var(--purple-primary);
+    }
+    .status-pending {
+      background: var(--amber-bg);
+      color: var(--amber-text);
+      border: 1px solid var(--amber-border);
+    }
+
+    /* Event Cards in Admin */
+    .admin-event-item {
+      border: 1.5px solid var(--navy-900);
+      background: var(--bg-white);
+      padding: 16px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .admin-event-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .admin-event-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--navy-900);
+    }
+    .admin-event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--navy-700);
+    }
+    .meta-tag {
+      background: var(--lavender-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 2px 8px;
+      font-weight: 600;
+    }
+
+    /* Toast Banner */
+    .cms-toast {
+      display: none;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      border: 2px solid var(--green-border);
+      background: var(--green-bg);
+      color: var(--green-text);
+      font-weight: 700;
+      font-size: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cms-toast.show {
+      display: flex;
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 0.8fr 0.8fr auto;
+      gap: 12px;
+      margin-bottom: 18px;
+      align-items: end;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #192346;
+      color: #FFFFFF;
+      padding: 36px;
+      border-top: 4px solid var(--gold-accent);
+      margin-top: auto;
+    }
+    .footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 1100px) {
+      .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+      .split-grid { grid-template-columns: 1fr; }
+      .filter-bar { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .site-topbar, .admin-hero, .kpi-grid-wrap, .admin-main { padding-left: 16px; padding-right: 16px; }
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-grid { grid-template-columns: 1fr; }
+      .filter-bar { grid-template-columns: 1fr; }
+      .custom-field-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to Admin CMS Command Center</a>
+
+  <!-- Top Navigation -->
+  <header class="site-topbar" role="banner">
+    <a href="/" class="brand-cluster" aria-label="Purple Fest Vadodara 2027 Home">
+      <img src="/purple_logo_transparent.png" alt="Purple Fest Vadodara 2027 Logo" />
+      <div class="brand-title-wrap">
+        <span class="brand-eyebrow">Secretariat Command Center · SQLite CMS</span>
+        <span class="brand-main">Purple Fest Vadodara 2027</span>
+      </div>
+    </a>
+
+    <nav class="topbar-nav" aria-label="Portal Navigation">
+      <a href="/" class="nav-pill">Home</a>
+      <a href="/events" class="nav-pill">Events &amp; Registration</a>
+      <a href="/pass?id=PFV27-1001-DEL" class="nav-pill">Digital QR Pass</a>
+      <a href="/check-in" class="nav-pill">Gate Check-In Desk</a>
+      <a href="/admin" class="nav-pill active" aria-current="page">Admin CMS</a>
+      <button type="button" id="a11y-toggle-btn" class="nav-pill" aria-expanded="false" aria-controls="a11y-panel">
+        &#9855; Accessibility
+      </button>
+    </nav>
+  </header>
+
+  <!-- Accessibility Drawer -->
+  <aside id="a11y-panel" class="a11y-panel" aria-label="Accessibility Controls">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <strong>Universal Accessibility (IS 17802)</strong>
+      <button type="button" id="a11y-close-btn" class="a11y-chip">Close</button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <button type="button" class="a11y-chip" id="btn-contrast">High Contrast</button>
+      <button type="button" class="a11y-chip" id="btn-font-up">A+ Larger Text</button>
+      <button type="button" class="a11y-chip" id="btn-font-reset">A Reset Text</button>
+      <button type="button" class="a11y-chip" id="btn-spacing">Wide Spacing</button>
+    </div>
+    <div id="a11y-live-region" aria-live="polite" style="margin-top:10px;font-size:12px;color:var(--navy-700);"></div>
+  </aside>
+
+  <!-- Hero Banner -->
+  <section class="admin-hero">
+    <div class="admin-hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span>&#9679;</span> INDEPENDENT ADMIN CMS &middot; NODE:SQLITE + RAZORPAY + RESEND + QR
+        </div>
+        <h1 id="cms-hero-title">Purple Fest Vadodara 2027 · Secretariat CMS</h1>
+        <p id="cms-hero-subtitle">
+          Create &amp; customize events and dynamic registration form fields, audit verified Razorpay stall (`&ge; ₹8,500`) and delegate (`₹2,200`) payments, preview Resend accreditation emails, and manage Gate QR Check-Ins in real time.
+        </p>
+      </div>
+      <div class="hero-logos-strip" aria-label="Official Festival & Partner Seals">
+        <img src="/purple_logo_transparent.png" alt="Purple Fest Vadodara" />
+        <img src="/uploads/viksit_bharat_2047_logo.png" alt="Viksit Bharat @ 2047" />
+        <img src="/uploads/pf_partner_praangan.png" alt="Praangan Vadodara" />
+        <img src="/uploads/pf_partner_brotherhood.png" alt="Brotherhood" />
+        <img src="/uploads/pf_partner_gien.png" alt="GIEN" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Live SQLite KPI Cards -->
+  <div class="kpi-grid-wrap" aria-label="Real-Time Secretariat Metrics">
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Total SQLite Records</div>
+        <div class="kpi-value" id="kpi-total-regs">0</div>
+        <div class="kpi-sub">Accredited &amp; Pending</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Confirmed (Paid / Waived)</div>
+        <div class="kpi-value green" id="kpi-confirmed-regs">0</div>
+        <div class="kpi-sub">QR Badges Issued</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Gate Checked-In</div>
+        <div class="kpi-value teal" id="kpi-checked-in">0</div>
+        <div class="kpi-sub">Verified at Desk</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Verified Razorpay Revenue</div>
+        <div class="kpi-value purple" id="kpi-revenue">₹0</div>
+        <div class="kpi-sub">HMAC-SHA256 Settled</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Exhibition Stalls Booked</div>
+        <div class="kpi-value" id="kpi-stalls">0</div>
+        <div class="kpi-sub">Zone 01 Pavilion (&ge; ₹8,500)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Resend Emails Dispatched</div>
+        <div class="kpi-value" id="kpi-emails">0</div>
+        <div class="kpi-sub">With Embedded QR Pass</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" class="admin-main" role="main">
+    <div id="cms-toast" class="cms-toast" role="status" aria-live="polite">
+      <span id="cms-toast-text">Changes saved to SQLite database.</span>
+      <button type="button" class="btn btn-sm btn-outline" onclick="document.getElementById('cms-toast').classList.remove('show')">Dismiss</button>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="cms-tabs" role="tablist" aria-label="Admin CMS Modules">
+      <button type="button" class="cms-tab-btn active" data-tab="all" role="tab" aria-selected="true">
+        All Secretariat Modules (Overview)
+      </button>
+      <button type="button" class="cms-tab-btn" data-tab="events" role="tab" aria-selected="false">
+        1. Custom Events &amp; Form Builder (<span id="tab-count-events">0</span>)
+      </button>
+      <button type="button" class="cms-tab-btn" data-tab="registrations" role="tab" aria-selected="false">
+        2. SQLite Registrations, QR &amp; Emails (<span id="tab-count-regs">0</span>)
+      </button>
+      <button type="button" class="cms-tab-btn" data-tab="coupons" role="tab" aria-selected="false">
+        3. Concession Coupons (<span id="tab-count-coupons">0</span>)
+      </button>
+      <button type="button" class="cms-tab-btn" data-tab="settings" role="tab" aria-selected="false">
+        4. Festival Settings &amp; Audit Logs
+      </button>
+      <button type="button" class="btn btn-sm btn-outline" id="btn-refresh-all" style="margin-left:auto;">
+        &#8635; Sync Live SQLite State
+      </button>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- MODULE 1: CUSTOM EVENTS & DYNAMIC FORM FIELD BUILDER               -->
+    <!-- ================================================================== -->
+    <section id="section-events" class="cms-section" aria-labelledby="heading-events">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 id="heading-events" class="section-title">1. Custom Events Catalog &amp; Dynamic Form Field Builder</h2>
+            <p class="section-subtitle">
+              Create new Purple Fest events or customize existing events, pricing tiers, capacity, and custom registration form fields (`select`, `text`, `textarea`). Changes immediately sync to <code>/events</code> and <code>/apply</code>.
+            </p>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <button type="button" class="btn btn-outline btn-sm" id="btn-new-event-template">
+              + Reset Form for New Event
+            </button>
+            <a href="/events" class="btn btn-teal btn-sm">View Public /events Portal &rarr;</a>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <!-- Left: Existing SQLite Events List -->
+          <div>
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em;">
+              Active SQLite Events (<span id="events-list-count">0</span>)
+            </h3>
+            <div id="admin-events-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Right: Event & Dynamic Form Field Editor -->
+          <div style="background:var(--bg-cream);border:2px solid var(--navy-900);padding:20px;">
+            <h3 id="event-editor-heading" style="font-size:16px;font-weight:700;margin-bottom:14px;color:var(--purple-primary);">
+              Create / Customize Event &amp; Registration Form Fields
+            </h3>
+            <form id="admin-event-form">
+              <input type="hidden" id="ev-id" value="" />
+              <div class="form-grid">
+                <div class="form-group full">
+                  <label class="form-label" for="ev-title">Event Official Title *</label>
+                  <input type="text" id="ev-title" class="form-input" required placeholder="e.g. Assistive AI & Braille Robotics Workshop 2027" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-slug">Event URL Slug *</label>
+                  <input type="text" id="ev-slug" class="form-input" required placeholder="e.g. assistive-ai-workshop-2027" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-category">Category *</label>
+                  <select id="ev-category" class="form-select">
+                    <option value="Delegate Accreditation">Delegate Accreditation</option>
+                    <option value="Stall & Exhibition">Stall &amp; Exhibition</option>
+                    <option value="Conclave & Summit">Conclave &amp; Summit</option>
+                    <option value="Para-Sports">Para-Sports</option>
+                    <option value="Cultural Gala">Cultural Gala</option>
+                    <option value="Workshop & Masterclass">Workshop &amp; Masterclass</option>
+                    <option value="Policy Dialogue (Fee Waived)">Policy Dialogue (Fee Waived)</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="ev-subtitle">Subtitle / Tagline</label>
+                  <input type="text" id="ev-subtitle" class="form-input" placeholder="e.g. Hands-On Inclusive Innovation Track at Akota Stadium" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-fee">Standard Fee (INR ₹) *</label>
+                  <input type="number" id="ev-fee" class="form-input" min="0" step="50" value="2200" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-min-fee">Minimum Fee Floor (INR ₹)</label>
+                  <input type="number" id="ev-min-fee" class="form-input" min="0" step="50" value="2200" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-capacity">Seat / Stall Capacity</label>
+                  <input type="number" id="ev-capacity" class="form-input" min="1" value="300" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-date">Event Date(s)</label>
+                  <input type="text" id="ev-date" class="form-input" value="21–23 January 2027" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-time">Session Timing (IST)</label>
+                  <input type="text" id="ev-time" class="form-input" value="10:00 AM – 05:00 PM IST" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ev-venue">Venue Hall / Zone</label>
+                  <input type="text" id="ev-venue" class="form-input" value="Akota Stadium & Sir Sayajirao Nagar Gruh, Vadodara" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="ev-description">Official Event Description</label>
+                  <textarea id="ev-description" class="form-textarea" placeholder="Detailed scope, hospitality entitlements, and RPwD accessibility support..."></textarea>
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="ev-a11y-features">Accessibility Features (Comma-separated)</label>
+                  <input type="text" id="ev-a11y-features" class="form-input" value="ISL Sign Language Interpreter, Braille Handouts, Wheelchair Ramp Bay, Accessible EV Buggy" />
+                </div>
+              </div>
+
+              <!-- Dynamic Custom Registration Fields Builder -->
+              <div class="custom-fields-builder">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <strong style="font-size:13px;text-transform:uppercase;letter-spacing:0.06em;">
+                    Dynamic Custom Registration Form Fields
+                  </strong>
+                  <button type="button" class="btn btn-sm btn-navy" id="btn-add-custom-field">
+                    + Add Custom Form Field
+                  </button>
+                </div>
+                <div id="custom-fields-container">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                <button type="submit" class="btn btn-primary" id="btn-save-event">
+                  Save Event &amp; Custom Fields to SQLite
+                </button>
+                <button type="button" class="btn btn-outline" id="btn-clear-event-form">
+                  Clear Form
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- MODULE 2: REGISTRATIONS LEDGER, QR PASSES, RESEND EMAILS & CHECKIN -->
+    <!-- ================================================================== -->
+    <section id="section-registrations" class="cms-section" aria-labelledby="heading-registrations">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 id="heading-registrations" class="section-title">2. Live SQLite Registrations, Razorpay Proofs, Resend Email &amp; Desk Check-In</h2>
+            <p class="section-subtitle">
+              Inspect every delegate (`₹2,200`), exhibition stall (`&ge; ₹8,500`), and Divyangjan statutory waiver registration. Preview or re-dispatch Resend HTML confirmation emails, open QR passes, or admit attendees at the gate.
+            </p>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-outline btn-sm" id="btn-export-csv">
+              &#8681; Export CSV Ledger
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" id="btn-export-json">
+              &#8681; Export JSON
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-bar">
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="reg-search-input">Search ID, Name, Email, Phone, Org or Stall</label>
+            <input type="search" id="reg-search-input" class="form-input" placeholder="e.g. PFV27-1001, Meera, Bionic Mobility..." />
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="reg-event-filter">Filter by Event</label>
+            <select id="reg-event-filter" class="form-select">
+              <option value="">All Festival Events</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="reg-status-filter">Payment Status</label>
+            <select id="reg-status-filter" class="form-select">
+              <option value="">All Statuses</option>
+              <option value="PAID">PAID (Razorpay Verified)</option>
+              <option value="WAIVED">WAIVED (Coupon / Statutory)</option>
+              <option value="PENDING">PENDING</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="reg-checkin-filter">Gate Check-In</label>
+            <select id="reg-checkin-filter" class="form-select">
+              <option value="">All</option>
+              <option value="true">Checked-In at Gate</option>
+              <option value="false">Not Checked-In Yet</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-navy" id="btn-apply-reg-filters">
+            Filter SQLite
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="cms-table" aria-label="SQLite Registrations Table">
+            <thead>
+              <tr>
+                <th>Reg ID &amp; QR</th>
+                <th>Participant &amp; Organization</th>
+                <th>Event / Stall Details</th>
+                <th>RPwD &amp; Accessibility Needs</th>
+                <th>Razorpay &amp; Fee</th>
+                <th>Gate Status</th>
+                <th>Secretariat Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-registrations-tbody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- MODULE 3: CONCESSION & FELLOWSHIP COUPONS                          -->
+    <!-- ================================================================== -->
+    <section id="section-coupons" class="cms-section" aria-labelledby="heading-coupons">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 id="heading-coupons" class="section-title">3. Concession &amp; Divyangjan Fellowship Coupons (`coupons` SQLite Table)</h2>
+            <p class="section-subtitle">
+              Manage official 100% statutory waivers (<code>PURPLEFREE27</code>, <code>DIVYANGJAN100</code>) and partner concessions (<code>NABDELHI50</code>, <code>EARLYBIRD25</code>).
+            </p>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <div class="table-responsive">
+            <table class="cms-table" aria-label="Coupons Table">
+              <thead>
+                <tr>
+                  <th>Coupon Code</th>
+                  <th>Discount %</th>
+                  <th>Description</th>
+                  <th>Used / Max</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="admin-coupons-tbody">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <div style="background:var(--bg-cream);border:2px solid var(--navy-900);padding:20px;">
+            <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">Create / Update Coupon Code</h3>
+            <form id="admin-coupon-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="cp-code">Coupon Code *</label>
+                  <input type="text" id="cp-code" class="form-input" required placeholder="e.g. VADODARA50" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-discount">Discount Percent (0–100%) *</label>
+                  <input type="number" id="cp-discount" class="form-input" min="0" max="100" value="100" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-max">Max Uses</label>
+                  <input type="number" id="cp-max" class="form-input" min="1" value="500" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-active">Status</label>
+                  <select id="cp-active" class="form-select">
+                    <option value="true">Active</option>
+                    <option value="false">Disabled</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="cp-desc">Official Description</label>
+                  <input type="text" id="cp-desc" class="form-input" placeholder="e.g. Special DPO Delegate Fellowship Grant" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Save Coupon to SQLite</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- MODULE 4: FESTIVAL SETTINGS & AUDIT LOGS                           -->
+    <!-- ================================================================== -->
+    <section id="section-settings" class="cms-section" aria-labelledby="heading-settings">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 id="heading-settings" class="section-title">4. Independent Festival Settings &amp; Secretariat Audit Logs</h2>
+            <p class="section-subtitle">
+              Update global festival metadata stored in the <code>site_settings</code> SQLite table and inspect live Resend email &amp; Gate QR scan logs.
+            </p>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <div style="background:var(--bg-cream);border:2px solid var(--navy-900);padding:20px;">
+            <h3 style="font-size:16px;font-weight:700;margin-bottom:14px;">Global Secretariat Settings (`POST /api/settings`)</h3>
+            <form id="admin-settings-form">
+              <div class="form-grid">
+                <div class="form-group full">
+                  <label class="form-label" for="set-title">Festival Official Title</label>
+                  <input type="text" id="set-title" class="form-input" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="set-subtitle">Festival Subtitle / Mandate</label>
+                  <input type="text" id="set-subtitle" class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="set-dates">Official Festival Dates</label>
+                  <input type="text" id="set-dates" class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="set-phone">Secretariat Helpline</label>
+                  <input type="text" id="set-phone" class="form-input" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="set-venue">Primary Venue Complex</label>
+                  <input type="text" id="set-venue" class="form-input" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="set-email">Secretariat Dispatch Email</label>
+                  <input type="email" id="set-email" class="form-input" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label" for="set-hospitality">Hospitality &amp; Meal Coupon Policy Note</label>
+                  <textarea id="set-hospitality" class="form-textarea"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btn-save-settings">
+                Update Festival Settings in SQLite
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em;">
+              Recent Resend API Email Dispatches (`email_logs`)
+            </h3>
+            <div class="table-responsive" style="margin-bottom:20px;">
+              <table class="cms-table">
+                <thead>
+                  <tr>
+                    <th>Reg ID</th>
+                    <th>Recipient</th>
+                    <th>Resend ID &amp; Status</th>
+                    <th>Preview</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-email-logs-tbody"></tbody>
+              </table>
+            </div>
+
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em;">
+              Recent Gate QR Check-In Scans (`checkins`)
+            </h3>
+            <div class="table-responsive">
+              <table class="cms-table">
+                <thead>
+                  <tr>
+                    <th>Reg ID</th>
+                    <th>Scan Result</th>
+                    <th>Gate &amp; Operator</th>
+                    <th>Timestamp</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-checkin-logs-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:4px;">
+          Purple Fest Vadodara 2027 · Secretariat Admin CMS &amp; SQLite Registry
+        </div>
+        <div style="font-size:13px;color:#C5CAE0;">
+          Convened by Praangan (Vadodara) &middot; Brotherhood (New Delhi) &middot; GIEN &middot; Viksit Bharat @ 2047
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/events" class="btn btn-sm btn-outline">Public Events</a>
+        <a href="/apply" class="btn btn-sm btn-outline">Registration Form</a>
+        <a href="/pass?id=PFV27-1001-DEL" class="btn btn-sm btn-outline">Sample Digital Pass</a>
+        <a href="/check-in" class="btn btn-sm btn-outline">Gate Check-In Terminal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      let state = {
+        stats: {},
+        events: [],
+        coupons: [],
+        settings: {},
+        registrations: [],
+        customFieldsDraft: [
+          {
+            id: 'participant_track',
+            label: 'Preferred Workshop / Session Track',
+            type: 'select',
+            required: true,
+            options: ['Assistive AI & Smart Mobility', 'Braille & Tactile Learning', 'Inclusive Policy & CSR'],
+          },
+          {
+            id: 'special_equipment',
+            label: 'Assistive Device / Demo Requirement',
+            type: 'text',
+            required: false,
+            options: [],
+          },
+        ],
+      };
+
+      function showToast(msg) {
+        const toast = document.getElementById('cms-toast');
+        const text = document.getElementById('cms-toast-text');
+        if (toast && text) {
+          text.textContent = msg;
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 6000);
+        }
+      }
+
+      function escapeHtml(str) {
+        if (str === null || str === undefined) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      // Render Dynamic Custom Fields Builder rows
+      function renderCustomFieldsBuilder() {
+        const container = document.getElementById('custom-fields-container');
+        if (!container) return;
+        if (!state.customFieldsDraft.length) {
+          container.innerHTML = `<div style="font-size:13px;color:var(--navy-700);padding:8px 0;">No custom fields added. Click "+ Add Custom Form Field" to add dynamic inputs.</div>`;
+          return;
+        }
+        container.innerHTML = state.customFieldsDraft
+          .map(
+            (f, idx) => `
+          <div class="custom-field-row" data-idx="${idx}">
+            <div>
+              <label class="form-label">Field Key ID</label>
+              <input type="text" class="form-input cf-id" data-idx="${idx}" value="${escapeHtml(f.id || '')}" placeholder="e.g. dietary_pref" />
+            </div>
+            <div>
+              <label class="form-label">Field Label Shown to User</label>
+              <input type="text" class="form-input cf-label" data-idx="${idx}" value="${escapeHtml(f.label || '')}" placeholder="e.g. Meal Preference" />
+            </div>
+            <div>
+              <label class="form-label">Input Type</label>
+              <select class="form-select cf-type" data-idx="${idx}">
+                <option value="select" ${f.type === 'select' ? 'selected' : ''}>Dropdown Select</option>
+                <option value="text" ${f.type === 'text' ? 'selected' : ''}>Text Input</option>
+                <option value="textarea" ${f.type === 'textarea' ? 'selected' : ''}>Multi-line Text</option>
+              </select>
+            </div>
+            <div>
+              <button type="button" class="btn btn-sm btn-danger cf-remove" data-idx="${idx}">Remove</button>
+            </div>
+            <div class="custom-field-options-row">
+              <label class="form-label" style="white-space:nowrap;">Options (comma-separated):</label>
+              <input type="text" class="form-input cf-options" data-idx="${idx}" value="${escapeHtml(Array.isArray(f.options) ? f.options.join(', ') : f.options || '')}" placeholder="Option 1, Option 2, Option 3 (for select dropdowns)" />
+            </div>
+          </div>
+        `
+          )
+          .join('');
+
+        container.querySelectorAll('.cf-id').forEach((el) => {
+          el.addEventListener('input', (e) => {
+            state.customFieldsDraft[Number(e.target.dataset.idx)].id = e.target.value.trim();
+          });
+        });
+        container.querySelectorAll('.cf-label').forEach((el) => {
+          el.addEventListener('input', (e) => {
+            state.customFieldsDraft[Number(e.target.dataset.idx)].label = e.target.value;
+          });
+        });
+        container.querySelectorAll('.cf-type').forEach((el) => {
+          el.addEventListener('change', (e) => {
+            state.customFieldsDraft[Number(e.target.dataset.idx)].type = e.target.value;
+          });
+        });
+        container.querySelectorAll('.cf-options').forEach((el) => {
+          el.addEventListener('input', (e) => {
+            state.customFieldsDraft[Number(e.target.dataset.idx)].options = e.target.value
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean);
+          });
+        });
+        container.querySelectorAll('.cf-remove').forEach((el) => {
+          el.addEventListener('click', (e) => {
+            const idx = Number(e.target.dataset.idx);
+            state.customFieldsDraft.splice(idx, 1);
+            renderCustomFieldsBuilder();
+          });
+        });
+      }
+
+      document.getElementById('btn-add-custom-field')?.addEventListener('click', () => {
+        state.customFieldsDraft.push({
+          id: `custom_field_${state.customFieldsDraft.length + 1}`,
+          label: 'Custom Accreditation Question',
+          type: 'select',
+          required: true,
+          options: ['Option A', 'Option B'],
+        });
+        renderCustomFieldsBuilder();
+      });
+
+      // Render Events List
+      function renderEventsList() {
+        const listEl = document.getElementById('admin-events-list');
+        const countEl = document.getElementById('events-list-count');
+        const tabCountEl = document.getElementById('tab-count-events');
+        const filterSelect = document.getElementById('reg-event-filter');
+
+        if (countEl) countEl.textContent = state.events.length;
+        if (tabCountEl) tabCountEl.textContent = state.events.length;
+
+        if (filterSelect) {
+          const currentVal = filterSelect.value;
+          filterSelect.innerHTML =
+            `<option value="">All Festival Events</option>` +
+            state.events
+              .map((ev) => `<option value="${escapeHtml(ev.slug)}">${escapeHtml(ev.title)}</option>`)
+              .join('');
+          filterSelect.value = currentVal;
+        }
+
+        if (!listEl) return;
+        listEl.innerHTML = state.events
+          .map((ev) => {
+            const feeText =
+              Number(ev.fee_inr) === 0
+                ? '₹0 (100% Fee Waived)'
+                : Number(ev.min_fee_inr) < Number(ev.fee_inr)
+                ? `₹${Number(ev.fee_inr).toLocaleString('en-IN')} (Min ₹${Number(ev.min_fee_inr).toLocaleString('en-IN')})`
+                : `₹${Number(ev.fee_inr).toLocaleString('en-IN')}`;
+            const cfCount = Array.isArray(ev.custom_fields) ? ev.custom_fields.length : 0;
+            return `
+              <div class="admin-event-item" data-event-slug="${escapeHtml(ev.slug)}">
+                <div class="admin-event-top">
+                  <div>
+                    <span class="status-pill status-waived" style="margin-bottom:4px;">${escapeHtml(ev.category)}</span>
+                    <div class="admin-event-title">${escapeHtml(ev.title)}</div>
+                    <div style="font-size:12.5px;color:var(--navy-700);">${escapeHtml(ev.subtitle || '')}</div>
+                  </div>
+                  <div style="text-align:right;white-space:nowrap;">
+                    <div style="font-size:16px;font-weight:700;color:var(--purple-primary);">${feeText}</div>
+                    <div style="font-size:11.5px;color:var(--navy-700);">${ev.registered_count || 0} / ${ev.capacity} Registered</div>
+                  </div>
+                </div>
+                <div class="admin-event-meta">
+                  <span class="meta-tag">Slug: <code>${escapeHtml(ev.slug)}</code></span>
+                  <span class="meta-tag">${escapeHtml(ev.event_date)}</span>
+                  <span class="meta-tag">${cfCount} Custom Form Fields</span>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+                  <button type="button" class="btn btn-sm btn-navy btn-edit-event" data-slug="${escapeHtml(ev.slug)}">
+                    Edit Event &amp; Form Fields
+                  </button>
+                  <a href="/apply?event=${encodeURIComponent(ev.slug)}" class="btn btn-sm btn-outline">
+                    Open Registration Form &rarr;
+                  </a>
+                </div>
+              </div>
+            `;
+          })
+          .join('');
+
+        listEl.querySelectorAll('.btn-edit-event').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const slug = btn.dataset.slug;
+            const ev = state.events.find((x) => x.slug === slug);
+            if (!ev) return;
+            document.getElementById('ev-id').value = ev.id || '';
+            document.getElementById('ev-title').value = ev.title || '';
+            document.getElementById('ev-slug').value = ev.slug || '';
+            document.getElementById('ev-category').value = ev.category || 'Delegate Accreditation';
+            document.getElementById('ev-subtitle').value = ev.subtitle || '';
+            document.getElementById('ev-fee').value = ev.fee_inr ?? 0;
+            document.getElementById('ev-min-fee').value = ev.min_fee_inr ?? 0;
+            document.getElementById('ev-capacity').value = ev.capacity ?? 500;
+            document.getElementById('ev-date').value = ev.event_date || '';
+            document.getElementById('ev-time').value = ev.event_time || '';
+            document.getElementById('ev-venue').value = ev.venue || '';
+            document.getElementById('ev-description').value = ev.description || '';
+            document.getElementById('ev-a11y-features').value = Array.isArray(ev.accessibility_features)
+              ? ev.accessibility_features.join(', ')
+              : '';
+            state.customFieldsDraft = Array.isArray(ev.custom_fields)
+              ? JSON.parse(JSON.stringify(ev.custom_fields))
+              : [];
+            renderCustomFieldsBuilder();
+            document.getElementById('event-editor-heading').textContent = `Editing Event: ${ev.title}`;
+            showToast(`Loaded "${ev.title}" into Custom Event & Form Builder.`);
+          });
+        });
+      }
+
+      function resetEventForm() {
+        document.getElementById('ev-id').value = '';
+        document.getElementById('ev-title').value = '';
+        document.getElementById('ev-slug').value = '';
+        document.getElementById('ev-subtitle').value = '';
+        document.getElementById('ev-fee').value = '1500';
+        document.getElementById('ev-min-fee').value = '1500';
+        document.getElementById('ev-capacity').value = '300';
+        document.getElementById('ev-description').value = '';
+        document.getElementById('event-editor-heading').textContent =
+          'Create / Customize Event & Registration Form Fields';
+        state.customFieldsDraft = [
+          {
+            id: 'session_track',
+            label: 'Preferred Session Track',
+            type: 'select',
+            required: true,
+            options: ['Assistive Tech Track', 'Universal Design Track'],
+          },
+        ];
+        renderCustomFieldsBuilder();
+      }
+
+      document.getElementById('btn-new-event-template')?.addEventListener('click', resetEventForm);
+      document.getElementById('btn-clear-event-form')?.addEventListener('click', resetEventForm);
+
+      // Auto-generate slug when typing title for new event
+      document.getElementById('ev-title')?.addEventListener('input', (e) => {
+        const idField = document.getElementById('ev-id');
+        const slugField = document.getElementById('ev-slug');
+        if (!idField.value && slugField) {
+          slugField.value = e.target.value
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+        }
+      });
+
+      // Submit Event Form
+      document.getElementById('admin-event-form')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const payload = {
+          id: document.getElementById('ev-id').value || undefined,
+          title: document.getElementById('ev-title').value.trim(),
+          slug: document.getElementById('ev-slug').value.trim(),
+          category: document.getElementById('ev-category').value,
+          subtitle: document.getElementById('ev-subtitle').value.trim(),
+          fee_inr: Number(document.getElementById('ev-fee').value || 0),
+          min_fee_inr: Number(document.getElementById('ev-min-fee').value || 0),
+          capacity: Number(document.getElementById('ev-capacity').value || 300),
+          event_date: document.getElementById('ev-date').value.trim(),
+          event_time: document.getElementById('ev-time').value.trim(),
+          venue: document.getElementById('ev-venue').value.trim(),
+          description: document.getElementById('ev-description').value.trim(),
+          accessibility_features: document
+            .getElementById('ev-a11y-features')
+            .value.split(',')
+            .map((s) => s.trim())
+            .filter(Boolean),
+          custom_fields: state.customFieldsDraft,
+          is_active: true,
+        };
+
+        const res = await fetch('/api/events', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          showToast(`Event "${data.event.title}" (${data.event.slug}) saved to SQLite!`);
+          await loadAllAdminData();
+        } else {
+          alert(data.error || 'Failed to save event');
+        }
+      });
+
+      // Render Registrations Table
+      function renderRegistrationsTable() {
+        const tbody = document.getElementById('admin-registrations-tbody');
+        const tabCount = document.getElementById('tab-count-regs');
+        if (tabCount) tabCount.textContent = state.registrations.length;
+        if (!tbody) return;
+
+        if (!state.registrations.length) {
+          tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:24px;">No matching registrations in SQLite registry.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = state.registrations
+          .map((r) => {
+            const statusClass =
+              r.payment_status === 'PAID'
+                ? 'status-paid'
+                : r.payment_status === 'WAIVED'
+                ? 'status-waived'
+                : 'status-pending';
+            const a11yList = Array.isArray(r.accessibility_needs) ? r.accessibility_needs : [];
+            const stallInfo =
+              r.registration_type === 'STALL' || r.stall_name
+                ? `<div style="margin-top:4px;padding:4px 8px;background:var(--lavender-soft);border-left:3px solid var(--purple-primary);font-size:12px;">
+                     <strong>Stall:</strong> ${escapeHtml(r.stall_name || 'Exhibition Stall')}<br/>
+                     <span>${escapeHtml(r.stall_place || 'Zone 01 Pavilion')}</span>
+                   </div>`
+                : '';
+
+            return `
+              <tr data-reg-id="${escapeHtml(r.registration_id)}">
+                <td>
+                  <div style="font-family:monospace;font-weight:700;font-size:13.5px;color:var(--navy-900);">
+                    ${escapeHtml(r.registration_id)}
+                  </div>
+                  <span class="status-pill ${statusClass}" style="margin-top:4px;">${escapeHtml(r.registration_type || 'DELEGATE')}</span>
+                </td>
+                <td>
+                  <div style="font-weight:700;">${escapeHtml(r.full_name)}</div>
+                  <div style="font-size:12px;color:var(--navy-700);">${escapeHtml(r.email)}</div>
+                  <div style="font-size:12px;color:var(--navy-700);">${escapeHtml(r.phone || '')} &middot; ${escapeHtml(r.organization || 'Individual')}</div>
+                </td>
+                <td>
+                  <div style="font-weight:600;">${escapeHtml(r.event_title)}</div>
+                  ${stallInfo}
+                </td>
+                <td>
+                  <div style="font-weight:600;font-size:12.5px;color:var(--purple-primary);">${escapeHtml(r.disability_category || 'General')}</div>
+                  <div style="font-size:11.5px;color:var(--navy-700);margin-top:3px;">
+                    ${a11yList.map((n) => `&#10003; ${escapeHtml(n)}`).join('<br/>') || 'Standard Barrier-Free Access'}
+                  </div>
+                </td>
+                <td>
+                  <div style="font-weight:700;font-size:15px;">₹${Number(r.amount_inr || 0).toLocaleString('en-IN')}</div>
+                  <span class="status-pill ${statusClass}">${escapeHtml(r.payment_status)}</span>
+                  <div style="font-family:monospace;font-size:11px;color:var(--navy-700);margin-top:4px;">
+                    ${escapeHtml(r.razorpay_payment_id || r.razorpay_order_id || '')}
+                  </div>
+                </td>
+                <td>
+                  ${
+                    r.checked_in
+                      ? `<span class="status-pill status-paid">&#10003; ADMITTED</span>
+                         <div style="font-size:11px;color:var(--navy-700);margin-top:4px;">${escapeHtml(r.checked_in_gate || 'Main Gate')}</div>`
+                      : `<span class="status-pill status-pending">NOT CHECKED IN</span>`
+                  }
+                </td>
+                <td>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <a href="/pass?id=${encodeURIComponent(r.registration_id)}" class="btn btn-sm btn-outline">
+                      QR Pass Badge
+                    </a>
+                    <a href="/api/registrations/${encodeURIComponent(r.registration_id)}/email-preview" target="_blank" class="btn btn-sm btn-outline">
+                      Email Preview
+                    </a>
+                    <button type="button" class="btn btn-sm btn-teal btn-quick-checkin" data-id="${escapeHtml(r.registration_id)}" ${r.checked_in ? 'disabled' : ''}>
+                      ${r.checked_in ? 'Checked In' : 'Check-In Now'}
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            `;
+          })
+          .join('');
+
+        tbody.querySelectorAll('.btn-quick-checkin').forEach((btn) => {
+          btn.addEventListener('click', async () => {
+            const regId = btn.dataset.id;
+            const res = await fetch('/api/check-in/verify', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                registration_id: regId,
+                gate_name: 'Admin CMS Secretariat Desk',
+                operator_name: 'Secretariat Overseer',
+                commit_checkin: true,
+              }),
+            });
+            const data = await res.json();
+            showToast(data.message || `Check-in status updated for ${regId}`);
+            await loadAllAdminData();
+          });
+        });
+      }
+
+      async function fetchFilteredRegistrations() {
+        const params = new URLSearchParams();
+        const search = document.getElementById('reg-search-input')?.value.trim();
+        const event_slug = document.getElementById('reg-event-filter')?.value;
+        const payment_status = document.getElementById('reg-status-filter')?.value;
+        const checked_in = document.getElementById('reg-checkin-filter')?.value;
+
+        if (search) params.set('search', search);
+        if (event_slug) params.set('event_slug', event_slug);
+        if (payment_status) params.set('payment_status', payment_status);
+        if (checked_in !== '') params.set('checked_in', checked_in);
+
+        const res = await fetch(`/api/registrations?${params.toString()}`);
+        const data = await res.json();
+        if (data.ok) {
+          state.registrations = data.registrations || [];
+          renderRegistrationsTable();
+        }
+      }
+
+      document.getElementById('btn-apply-reg-filters')?.addEventListener('click', fetchFilteredRegistrations);
+      document.getElementById('reg-search-input')?.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') fetchFilteredRegistrations();
+      });
+
+      // CSV & JSON Exports
+      document.getElementById('btn-export-json')?.addEventListener('click', () => {
+        const blob = new Blob([JSON.stringify(state.registrations, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `purplefest-vadodara-2027-registrations.json`;
+        a.click();
+      });
+
+      document.getElementById('btn-export-csv')?.addEventListener('click', () => {
+        const headers = [
+          'registration_id',
+          'registration_type',
+          'full_name',
+          'email',
+          'phone',
+          'organization',
+          'event_slug',
+          'stall_name',
+          'disability_category',
+          'amount_inr',
+          'payment_status',
+          'razorpay_payment_id',
+          'checked_in',
+        ];
+        const rows = state.registrations.map((r) =>
+          headers.map((h) => `"${String(r[h] ?? '').replace(/"/g, '""')}"`).join(',')
+        );
+        const csv = [headers.join(','), ...rows].join('\n');
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `purplefest-vadodara-2027-registrations.csv`;
+        a.click();
+      });
+
+      // Render Coupons
+      function renderCoupons() {
+        const tbody = document.getElementById('admin-coupons-tbody');
+        const tabCount = document.getElementById('tab-count-coupons');
+        if (tabCount) tabCount.textContent = state.coupons.length;
+        if (!tbody) return;
+        tbody.innerHTML = state.coupons
+          .map(
+            (c) => `
+          <tr>
+            <td><code style="font-weight:700;font-size:14px;color:var(--purple-primary);">${escapeHtml(c.code)}</code></td>
+            <td><strong>${c.discount_percent}% OFF</strong></td>
+            <td>${escapeHtml(c.description)}</td>
+            <td>${c.used_count} / ${c.max_uses}</td>
+            <td><span class="status-pill ${c.is_active ? 'status-paid' : 'status-pending'}">${c.is_active ? 'ACTIVE' : 'INACTIVE'}</span></td>
+          </tr>
+        `
+          )
+          .join('');
+      }
+
+      document.getElementById('admin-coupon-form')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const payload = {
+          code: document.getElementById('cp-code').value.trim(),
+          discount_percent: Number(document.getElementById('cp-discount').value || 0),
+          max_uses: Number(document.getElementById('cp-max').value || 500),
+          is_active: document.getElementById('cp-active').value === 'true',
+          description: document.getElementById('cp-desc').value.trim(),
+        };
+        const res = await fetch('/api/coupons', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          showToast(`Coupon ${data.coupon.code} (${data.coupon.discount_percent}% OFF) saved to SQLite!`);
+          await loadAllAdminData();
+        }
+      });
+
+      // Render Settings & Logs
+      function renderSettingsAndLogs() {
+        const s = state.settings || {};
+        document.getElementById('set-title').value = s.festival_title || '';
+        document.getElementById('set-subtitle').value = s.festival_subtitle || '';
+        document.getElementById('set-dates').value = s.festival_dates || '';
+        document.getElementById('set-phone').value = s.secretariat_phone || '';
+        document.getElementById('set-venue').value = s.festival_venue || '';
+        document.getElementById('set-email').value = s.secretariat_email || '';
+        document.getElementById('set-hospitality').value = s.hospitality_note || '';
+
+        const emailTbody = document.getElementById('admin-email-logs-tbody');
+        if (emailTbody) {
+          const emails = state.stats.recent_emails || [];
+          emailTbody.innerHTML = emails
+            .slice(0, 8)
+            .map(
+              (em) => `
+            <tr>
+              <td><code>${escapeHtml(em.registration_id)}</code></td>
+              <td>${escapeHtml(em.recipient_email)}</td>
+              <td>
+                <span class="status-pill status-paid">${escapeHtml(em.status)}</span>
+                <div style="font-size:11px;font-family:monospace;">${escapeHtml(em.resend_id)}</div>
+              </td>
+              <td>
+                <a href="${escapeHtml(em.preview_url || `/api/registrations/${em.registration_id}/email-preview`)}" target="_blank" class="btn btn-sm btn-outline">View HTML</a>
+              </td>
+            </tr>
+          `
+            )
+            .join('');
+        }
+
+        const checkinTbody = document.getElementById('admin-checkin-logs-tbody');
+        if (checkinTbody) {
+          const scans = state.stats.recent_checkins || [];
+          checkinTbody.innerHTML = scans
+            .slice(0, 8)
+            .map(
+              (sc) => `
+            <tr>
+              <td><code>${escapeHtml(sc.registration_id)}</code></td>
+              <td><span class="status-pill ${sc.scan_result === 'VERIFIED_ADMITTED' ? 'status-paid' : 'status-pending'}">${escapeHtml(sc.scan_result)}</span></td>
+              <td>${escapeHtml(sc.gate_name)}<br/><small>${escapeHtml(sc.operator_name)}</small></td>
+              <td style="font-size:11.5px;">${escapeHtml(sc.scanned_at ? new Date(sc.scanned_at).toLocaleTimeString('en-IN') : '')}</td>
+            </tr>
+          `
+            )
+            .join('');
+        }
+      }
+
+      document.getElementById('admin-settings-form')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const payload = {
+          festival_title: document.getElementById('set-title').value.trim(),
+          festival_subtitle: document.getElementById('set-subtitle').value.trim(),
+          festival_dates: document.getElementById('set-dates').value.trim(),
+          secretariat_phone: document.getElementById('set-phone').value.trim(),
+          festival_venue: document.getElementById('set-venue').value.trim(),
+          secretariat_email: document.getElementById('set-email').value.trim(),
+          hospitality_note: document.getElementById('set-hospitality').value.trim(),
+        };
+        const res = await fetch('/api/settings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          state.settings = data.settings;
+          showToast('Global Festival CMS Settings updated in SQLite!');
+        }
+      });
+
+      // Load all Admin Data from /api/admin/stats and /api/registrations
+      async function loadAllAdminData() {
+        const [statsRes, regsRes] = await Promise.all([
+          fetch('/api/admin/stats'),
+          fetch('/api/registrations?limit=200'),
+        ]);
+        const statsData = await statsRes.json();
+        const regsData = await regsRes.json();
+
+        if (statsData.ok) {
+          state.stats = statsData.stats || {};
+          state.events = statsData.events || [];
+          state.coupons = statsData.coupons || [];
+          state.settings = statsData.settings || {};
+
+          document.getElementById('kpi-total-regs').textContent = state.stats.total_registrations ?? 0;
+          document.getElementById('kpi-confirmed-regs').textContent = state.stats.confirmed_registrations ?? 0;
+          document.getElementById('kpi-checked-in').textContent = state.stats.checked_in_count ?? 0;
+          document.getElementById('kpi-revenue').textContent =
+            '₹' + Number(state.stats.total_revenue_inr || 0).toLocaleString('en-IN');
+          document.getElementById('kpi-stalls').textContent = state.stats.stalls_booked ?? 0;
+          document.getElementById('kpi-emails').textContent = state.stats.emails_dispatched ?? 0;
+
+          renderEventsList();
+          renderCoupons();
+          renderSettingsAndLogs();
+        }
+        if (regsData.ok) {
+          state.registrations = regsData.registrations || [];
+          renderRegistrationsTable();
+        }
+      }
+
+      // Tabs Switching
+      document.querySelectorAll('.cms-tab-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.cms-tab-btn').forEach((b) => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          const target = btn.dataset.tab;
+          const sections = {
+            events: document.getElementById('section-events'),
+            registrations: document.getElementById('section-registrations'),
+            coupons: document.getElementById('section-coupons'),
+            settings: document.getElementById('section-settings'),
+          };
+          Object.entries(sections).forEach(([key, sec]) => {
+            if (!sec) return;
+            if (target === 'all' || target === key) {
+              sec.classList.remove('hidden-tab');
+            } else {
+              sec.classList.add('hidden-tab');
+            }
+          });
+        });
+      });
+
+      document.getElementById('btn-refresh-all')?.addEventListener('click', async () => {
+        await loadAllAdminData();
+        showToast('Synchronized live SQLite database metrics and records.');
+      });
+
+      // Accessibility Toolbar Controls
+      const a11yBtn = document.getElementById('a11y-toggle-btn');
+      const a11yPanel = document.getElementById('a11y-panel');
+      a11yBtn?.addEventListener('click', () => {
+        const open = a11yPanel.classList.toggle('open');
+        a11yBtn.setAttribute('aria-expanded', String(open));
+      });
+      document.getElementById('a11y-close-btn')?.addEventListener('click', () => {
+        a11yPanel.classList.remove('open');
+        a11yBtn.setAttribute('aria-expanded', 'false');
+      });
+      document.getElementById('btn-contrast')?.addEventListener('click', (e) => {
+        document.body.classList.toggle('high-contrast');
+        e.target.classList.toggle('active');
+      });
+      document.getElementById('btn-spacing')?.addEventListener('click', (e) => {
+        document.body.classList.toggle('wide-spacing');
+        e.target.classList.toggle('active');
+      });
+      document.getElementById('btn-font-up')?.addEventListener('click', () => {
+        document.documentElement.style.setProperty('--base-font-size', '18px');
+      });
+      document.getElementById('btn-font-reset')?.addEventListener('click', () => {
+        document.documentElement.style.setProperty('--base-font-size', '16px');
+      });
+
+      renderCustomFieldsBuilder();
+      loadAllAdminData();
+    })();
+  </script>
+</body>
+</html>

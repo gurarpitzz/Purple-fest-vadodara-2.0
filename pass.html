@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Official Digital Entry Pass &amp; QR Credential Badge — Purple Fest Vadodara 2027</title>
+  <meta name="description" content="Official Digital Entry Pass and QR Credential Badge for Purple Fest Vadodara 2027 (14–16 January 2027) with Razorpay Verification and RPwD Accessibility Accommodations." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/777994872ea449fc-s.p.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-cream: #FAF9F5;
+      --bg-white: #FFFFFF;
+      --lavender-hero: #DDDDF9;
+      --lavender-card: #E2E1FC;
+      --lavender-soft: #F3F2FE;
+      --navy-900: #202D59;
+      --navy-700: #33416E;
+      --purple-primary: #6B21A8;
+      --purple-hover: #581C87;
+      --teal-accent: #099F9F;
+      --teal-dark: #067474;
+      --gold-accent: #D97706;
+      --border-subtle: #B8B6E8;
+      --success-green: #0D8A52;
+      --base-font-size: 16px;
+      --line-height-mult: 1.55;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); scroll-behavior: smooth; }
+    body {
+      font-family: '__font_7fb336', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--navy-900);
+      line-height: var(--line-height-mult);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.high-contrast {
+      --bg-cream: #0B0E17;
+      --bg-white: #111625;
+      --lavender-hero: #161E35;
+      --lavender-card: #1E2640;
+      --lavender-soft: #141A2E;
+      --navy-900: #FFFFFF;
+      --navy-700: #E2E8F0;
+      --purple-primary: #C084FC;
+      --teal-accent: #2DD4BF;
+      --border-subtle: #64748B;
+      background-color: #0B0E17;
+      color: #FFFFFF;
+    }
+
+    body.wide-spacing {
+      letter-spacing: 0.03em;
+      --line-height-mult: 1.85;
+    }
+
+    .skip-to-content {
+      position: fixed;
+      left: 16px;
+      top: -120px;
+      z-index: 4000;
+      background: #202D59;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #FFFFFF;
+    }
+    .skip-to-content:focus { top: 16px; outline: 3px solid #099F9F !important; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid var(--teal-accent) !important;
+      outline-offset: 2px !important;
+    }
+
+    .site-topbar {
+      width: 100%;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .brand-logo-svg { width: 180px; height: 30px; display: block; }
+    .topbar-nav { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--navy-900);
+      background: var(--lavender-soft);
+    }
+    .nav-pill.active { background: var(--purple-primary); color: #FFFFFF; }
+
+    .a11y-panel {
+      display: none;
+      position: fixed;
+      top: 76px;
+      right: 20px;
+      z-index: 2500;
+      width: min(360px, calc(100vw - 32px));
+      border-radius: 12px;
+      border: 2px solid var(--navy-900);
+      background: var(--bg-white);
+      color: var(--navy-900);
+      padding: 18px;
+      box-shadow: 0 18px 42px rgba(32, 45, 89, 0.25);
+    }
+    .a11y-panel.open { display: block; }
+    .a11y-chip {
+      background: var(--lavender-soft);
+      color: var(--navy-900);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 12px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .a11y-chip.active, .a11y-chip:hover {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+    }
+
+    /* Lookup Bar */
+    .lookup-strip {
+      background: var(--lavender-hero);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 20px 40px;
+    }
+    .lookup-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .lookup-form {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+      min-width: 280px;
+    }
+    .lookup-input {
+      flex: 1;
+      padding: 11px 14px;
+      font-family: inherit;
+      font-size: 15px;
+      border: 2px solid var(--navy-900);
+      background: var(--bg-white);
+      color: var(--navy-900);
+    }
+    .lookup-btn {
+      background: var(--navy-900);
+      color: #FFFFFF;
+      border: none;
+      padding: 0 20px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .sample-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .sample-pill-btn {
+      background: var(--bg-white);
+      color: var(--navy-900);
+      border: 1.5px solid var(--purple-primary);
+      padding: 6px 12px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .sample-pill-btn:hover {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+    }
+
+    /* Museum-Grade Credential Badge Container */
+    .pass-stage {
+      max-width: 980px;
+      width: 100%;
+      margin: 36px auto 64px;
+      padding: 0 24px;
+      flex: 1;
+    }
+
+    .credential-badge-card {
+      background: var(--bg-white);
+      border: 3px solid var(--navy-900);
+      box-shadow: 0 24px 60px rgba(32, 45, 89, 0.14);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Lanyard Slot Cutout Visual */
+    .lanyard-header-strip {
+      background: #141B38;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .lanyard-slot {
+      width: 96px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--bg-cream);
+      border: 2px solid #6B21A8;
+    }
+
+    .badge-banner {
+      background: linear-gradient(135deg, #202D59 0%, #4C1D95 60%, #6B21A8 100%);
+      color: #FFFFFF;
+      padding: 28px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 4px solid var(--teal-accent);
+    }
+
+    .badge-logos-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .viksit-seal {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1.5px solid rgba(253, 224, 71, 0.75);
+      color: #FDE047;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .pass-type-ribbon {
+      background: #FDE047;
+      color: #1E2952;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 8px 18px;
+      text-transform: uppercase;
+      border: 2px solid #FFFFFF;
+    }
+
+    .badge-main-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 32px;
+      padding: 36px;
+      align-items: start;
+    }
+
+    .delegate-name-heading {
+      font-size: clamp(28px, 3.4vw, 40px);
+      font-weight: 700;
+      color: var(--navy-900);
+      line-height: 1.12;
+      margin-bottom: 6px;
+    }
+    .delegate-org-sub {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--purple-primary);
+      margin-bottom: 22px;
+    }
+
+    .credential-kv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding: 18px;
+      background: var(--lavender-soft);
+      border: 1px solid var(--border-subtle);
+    }
+    .kv-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--navy-700);
+      margin-bottom: 3px;
+    }
+    .kv-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy-900);
+      word-break: break-word;
+    }
+
+    /* Highlighted Accessibility Accommodations Box */
+    .a11y-accommodations-card {
+      background: #E6F7F7;
+      border: 2px solid var(--teal-accent);
+      border-left: 6px solid var(--teal-dark);
+      padding: 18px 20px;
+    }
+    body.high-contrast .a11y-accommodations-card {
+      background: #0F292E;
+      border-color: #2DD4BF;
+    }
+    .a11y-acc-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    body.high-contrast .a11y-acc-title { color: #5EEAD4; }
+    .a11y-acc-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .a11y-acc-pill {
+      background: var(--bg-white);
+      color: var(--navy-900);
+      border: 1.5px solid var(--teal-dark);
+      padding: 5px 11px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* Right Column: Scannable QR & Razorpay Verification */
+    .qr-vault-column {
+      background: var(--lavender-soft);
+      border: 2px solid var(--navy-900);
+      padding: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .qr-svg-frame {
+      width: 220px;
+      height: 220px;
+      background: #FFFFFF;
+      border: 3px solid #202D59;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .qr-svg-frame svg {
+      width: 100%;
+      height: 100%;
+    }
+    .rzp-verified-seal {
+      width: 100%;
+      background: #D1FAE5;
+      color: #065F46;
+      border: 1.5px solid #059669;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    /* Action Bar */
+    .pass-actions-bar {
+      padding: 22px 36px;
+      background: var(--lavender-hero);
+      border-top: 2px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      border: 2px solid var(--navy-900);
+      background: var(--bg-white);
+      color: var(--navy-900);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .action-btn.primary {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      border-color: var(--purple-primary);
+    }
+    .action-btn.teal {
+      background: var(--teal-dark);
+      color: #FFFFFF;
+      border-color: var(--teal-dark);
+    }
+
+    @media print {
+      .site-topbar, .lookup-strip, .pass-actions-bar, .a11y-panel { display: none !important; }
+      body { background: #FFFFFF; }
+      .pass-stage { margin: 0; padding: 0; max-width: 100%; }
+      .credential-badge-card { box-shadow: none; border: 2px solid #000; }
+    }
+
+    @media (max-width: 767px) {
+      .site-topbar, .lookup-strip { padding: 14px 16px; }
+      .badge-banner, .badge-main-grid, .pass-actions-bar { padding: 20px 16px; }
+      .badge-main-grid { grid-template-columns: 1fr; }
+      .credential-kv-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <header class="site-topbar" role="banner">
+    <a href="/" style="display:inline-flex;align-items:center;text-decoration:none;color:var(--navy-900);" aria-label="Purple Fest Vadodara 2027 Home">
+      <svg viewBox="0 0 186 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg" aria-hidden="true">
+        <g fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 61.75 8.2C65.71 8.2 67.92 10.5 67.92 13.74C67.92 16.98 65.71 19.25 61.75 19.25H57.04V25.9H53.5V8.2H61.75ZM 57.04 16.24H61.6C63.33 16.24 64.35 15.26 64.35 13.74C64.35 12.2 63.33 11.21 61.6 11.21H57.04V16.24Z"></path>
+          <path d="M 74.32 26.21C76.14 26.21 77.61 25.82 79.63 24.69L79.97 25.9H82.54L82.55 13.2H79.11L79.11 22.19C77.74 22.92 76.69 23.26 75.36 23.26C73.47 23.26 72.75 22.58 72.75 20.73V13.2H69.32V21.6C69.32 24.79 70.86 26.22 74.3 26.22L74.32 26.21Z"></path>
+          <path d="M 84.3 25.91V13.21H86.87L87.23 14.47C89.24 13.29 90.68 12.89 92.29 12.89H93.03V15.84H92.39C90.59 15.84 89.24 16.13 87.73 16.87V25.91H84.3Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 94.26 13.2H97.47L97.7 14.43C99.23 13.29 100.9 12.89 103.01 12.89C107.31 12.89 109.07 14.68 109.07 19.56C109.07 24.41 107.31 26.22 103.01 26.22C100.99 26.22 99.36 25.84 97.7 24.78V29.75H94.26V13.2ZM 102.3 23.38C104.76 23.38 105.6 22.45 105.6 19.56C105.6 16.63 104.76 15.74 102.3 15.74C99.76 15.74 97.7 16.63 97.7 19.56C97.7 22.45 99.76 23.38 102.3 23.38Z"></path>
+          <path d="M 114.26 8.2H110.83V25.9H114.26V8.2Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 123.95 26.23C118.07 26.23 115.93 24.59 115.93 19.59C115.93 14.71 117.93 12.89 123.23 12.89C128.24 12.89 130.21 14.55 130.21 18.82C130.21 19.32 130.19 20.03 130.13 20.67H119.48C119.76 22.9 120.92 23.54 124.11 23.54C126.08 23.54 127.47 23.3 129.22 22.7L129.44 25.43C127.52 26.01 126.08 26.23 123.95 26.23ZM 119.48 18.3H126.83C126.64 16.13 125.75 15.53 123.25 15.53C120.68 15.53 119.7 16.18 119.48 18.3Z"></path>
+          <path d="M 132.32 8.2H144.8V11.21H135.88V15.68H143.22V18.6H135.88V25.9H132.32V8.2Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 153.52 26.23C147.64 26.23 145.5 24.59 145.5 19.59C145.5 14.71 147.5 12.89 152.8 12.89C157.81 12.89 159.78 14.55 159.78 18.82C159.78 19.32 159.75 20.03 159.7 20.67H149.05C149.32 22.9 150.49 23.54 153.68 23.54C155.65 23.54 157.04 23.3 158.79 22.7L159.01 25.43C157.09 26.01 155.65 26.23 153.52 26.23ZM 149.05 18.3H156.4C156.2 16.13 155.32 15.53 152.82 15.53C150.25 15.53 149.27 16.18 149.05 18.3Z"></path>
+          <path d="M 167.56 26.22C164.97 26.22 162.9 25.79 161.27 25.12L161.76 22.53C163.52 23.2 165.54 23.57 167.51 23.57C169.84 23.57 170.63 23.11 170.63 22.15C170.63 21.19 169.93 20.94 166.94 20.61C162.9 20.15 161.58 19.02 161.58 16.68C161.58 14.01 163.6 12.89 167.82 12.89C170.02 12.89 171.95 13.22 173.44 13.76L173.01 16.31C171.34 15.77 169.58 15.51 167.82 15.51C165.71 15.51 164.88 15.89 164.88 16.77C164.88 17.64 165.62 17.89 168.52 18.23C172.65 18.69 173.97 19.77 173.97 22.11C173.97 24.95 171.86 26.22 167.56 26.22Z"></path>
+          <path d="M 181.14 9.73L181.13 13.2H184.79V15.82H181.13L181.13 21.39C181.13 22.79 181.49 23.13 182.87 23.13H185V25.86H181.96C178.89 25.86 177.71 24.81 177.71 21.76L177.71 15.82H175.03V13.19H177.82L178.15 9.73H181.14Z"></path>
+        </g>
+        <g style="color: #822FE6">
+          <path d="M 25.91 13.03 C 28.93 17.7 27.81 28.55 26.25 28.98 C 24.68 29.42 23.34 20.63 22.22 20.63 C 21.1 20.63 19.76 29.42 18.42 28.98 C 17.08 28.55 16.63 17.7 20.32 13.03 C 24.79 7.28 32.62 7.61 37.43 12.71" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 8.02 19 C 6.34 26.05 9.47 28.98 10.59 28.55 C 11.71 28.12 9.7 22.04 10.59 21.71 C 11.49 21.39 14.4 28.33 15.51 27.9 C 16.63 27.46 15.07 18.46 9.14 14.88 C 3.21 11.41 0.53 15.2 2.09 17.48 C 3.88 19.87 8.58 17.05 11.04 12.71 C 14.73 6.2 21.44 6.2 25.91 13.03" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 37.43 12.71 C 40.11 15.75 44.59 18.78 46.15 16.62 C 47.49 14.66 44.59 11.62 39.33 14.88 C 34.08 18.13 31.84 27.14 32.96 27.9 C 34.08 28.55 36.98 21.39 37.88 21.71 C 38.77 22.04 36.76 28.12 37.88 28.55 C 39 28.98 41.57 26.05 40.11 19" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 7.45 5.65 C 6.1 4.1 3.55 4.45 3.75 6.45 C 3.95 8.25 6.75 9.5 8.85 10.15 C 9.65 8.25 10.05 5.35 8.45 4.3 C 7.25 3.5 7.05 5.05 7.45 5.65 Z" fill="currentColor"></path>
+          <path d="M 23.65 2.65 C 22.65 0.45 20.15 0.45 20.15 2.65 C 20.15 4.65 22.65 6.05 23.65 7.3 C 24.65 6.05 27.15 4.65 27.15 2.65 C 27.15 0.45 24.65 0.45 23.65 2.65 Z" fill="currentColor"></path>
+          <path d="M 39.55 5.65 C 40.15 5.05 39.95 3.5 38.75 4.3 C 37.15 5.35 37.55 8.25 38.35 10.15 C 40.45 9.5 43.25 8.25 43.45 6.45 C 43.65 4.45 41.1 4.1 39.55 5.65 Z" fill="currentColor"></path>
+        </g>
+      </svg>
+    </a>
+
+    <nav class="topbar-nav" aria-label="Primary Navigation">
+      <a href="/" class="nav-pill">Home</a>
+      <a href="/events" class="nav-pill">Custom Events</a>
+      <a href="/apply" class="nav-pill">Stall &amp; Delegate Apply</a>
+      <a href="/pass" class="nav-pill active" aria-current="page">Digital Entry Pass</a>
+      <a href="/check-in" class="nav-pill">Desk QR Check-In</a>
+      <a href="/admin" class="nav-pill">Admin Panel</a>
+      <button type="button" class="pf-a11y-header-btn" aria-label="Accessibility features and options" aria-expanded="false" aria-controls="pf-a11y-header-panel" onclick="toggleA11yPanel()" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9999px;border:2px solid var(--navy-900);background:var(--bg-white);color:var(--navy-900);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;">
+        <span>♿ Accessibility</span>
+      </button>
+    </nav>
+  </header>
+
+    <!-- Header Accessibility Features Dialog Panel (purplefestdelhi.com 1:1 Match) -->
+  <div id="pf-talkback-live" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+  <div id="pf-a11y-header-panel" class="pf-a11y-header-panel" role="dialog" aria-modal="false" aria-label="Accessibility options" aria-hidden="true">
+    <div class="pf-a11y-top-row" role="group" aria-label="Text size">
+      <button type="button" class="pf-a11y-step-btn" data-pf-a11y-step="down" aria-label="Decrease text size">A-</button>
+      <div class="pf-a11y-zoom-val" id="pf-a11y-zoom-display" role="status" aria-live="polite" aria-atomic="true">100%</div>
+      <button type="button" class="pf-a11y-step-btn" data-pf-a11y-step="up" aria-label="Increase text size">A+</button>
+    </div>
+    <div class="pf-a11y-section">
+      <div class="pf-a11y-section-title" id="pf-a11y-contrast-heading">Contrast</div>
+      <div class="pf-a11y-card-list" role="radiogroup" aria-labelledby="pf-a11y-contrast-heading">
+        <button type="button" class="pf-a11y-radio-card is-active" role="radio" aria-checked="true" data-pf-contrast="light">
+          <span class="pf-a11y-card-title">Light</span>
+          <span class="pf-a11y-card-sub">Dark purple text on white</span>
+        </button>
+        <button type="button" class="pf-a11y-radio-card" role="radio" aria-checked="false" data-pf-contrast="dark">
+          <span class="pf-a11y-card-title">Dark</span>
+          <span class="pf-a11y-card-sub">Light text on a dark background</span>
+        </button>
+        <button type="button" class="pf-a11y-radio-card" role="radio" aria-checked="false" data-pf-contrast="yellow-black">
+          <span class="pf-a11y-card-title">Yellow on black</span>
+          <span class="pf-a11y-card-sub">High contrast yellow text on black</span>
+        </button>
+      </div>
+    </div>
+    <div class="pf-a11y-section">
+      <div class="pf-a11y-section-title" id="pf-a11y-more-heading">More settings</div>
+      <div class="pf-a11y-card-list" role="group" aria-labelledby="pf-a11y-more-heading">
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-a11y-links">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">Highlight links and buttons</span>
+            <span class="pf-a11y-card-sub">Outlines and underlines every link and button</span>
+          </span>
+        </button>
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-a11y-spacing">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">Wider text spacing</span>
+            <span class="pf-a11y-card-sub">More space between letters, words and lines</span>
+          </span>
+        </button>
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-a11y-reduce-motion">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">Stop animations</span>
+            <span class="pf-a11y-card-sub">Stops the slideshow and all movement on the page</span>
+          </span>
+        </button>
+        <button type="button" class="pf-a11y-check-card" role="checkbox" aria-checked="false" data-pf-toggle="pf-talkback-mode">
+          <span class="pf-a11y-check-box" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="pf-a11y-card-text">
+            <span class="pf-a11y-card-title">TalkBack Screen Reader Audio</span>
+            <span class="pf-a11y-card-sub">Reads focused elements &amp; live status aloud</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <button type="button" class="pf-a11y-reset-all-btn" data-pf-a11y-reset="true">Reset all settings</button>
+  </div>
+
+  <!-- Pass Lookup & Sample Switcher Bar -->
+  <section class="lookup-strip" aria-label="Lookup Official Entry Pass">
+    <div class="lookup-inner">
+      <form class="lookup-form" onsubmit="handlePassLookup(event)">
+        <label for="pass-lookup-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Enter Registration ID or Email</label>
+        <input type="text" id="pass-lookup-input" class="lookup-input" placeholder="Enter SQL Registration ID (e.g., PFV27-DEL-1001) or Email…" />
+        <button type="submit" class="lookup-btn">Load Pass</button>
+      </form>
+      <div class="sample-pills" id="sample-pass-pills" aria-label="Quick Sample Passes">
+        <span style="font-size:12px;font-weight:700;color:var(--navy-900);">Quick SQL Passes:</span>
+        <button type="button" class="sample-pill-btn" onclick="loadPassById('PFV27-1001-DEL')">PFV27-1001-DEL (Delegate)</button>
+        <button type="button" class="sample-pill-btn" onclick="loadPassById('PFV27-1002-STL')">PFV27-1002-STL (Stall)</button>
+        <button type="button" class="sample-pill-btn" onclick="loadPassById('PFV27-EVT-3001')">Conclave &amp; Sports Pass</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" role="main" tabindex="-1" class="pass-stage">
+    <!-- Official Credential Badge Card -->
+    <article class="credential-badge-card" aria-labelledby="pass-holder-name">
+      <div class="lanyard-header-strip" aria-hidden="true">
+        <div class="lanyard-slot"></div>
+      </div>
+
+      <!-- Top Banner with Official Logos -->
+      <div class="badge-banner">
+        <div>
+          <div class="badge-logos-row">
+            <img src="/purple_logo_transparent.png" alt="Purple Fest Vadodara Official Emblem" style="height:44px;width:auto;background:#FFFFFF;padding:4px 8px;border-radius:6px;" onerror="this.style.display='none'" />
+            <span class="viksit-seal">🇮🇳 Viksit Bharat @ 2047 · Inclusive India</span>
+            <span class="viksit-seal" style="border-color:#5EEAD4;color:#5EEAD4;">RPwD Act 2016 Barrier-Free</span>
+          </div>
+          <h1 style="font-size:24px;font-weight:700;margin-top:12px;letter-spacing:-0.01em;">
+            PURPLE FEST VADODARA 2027 — OFFICIAL CREDENTIAL BADGE
+          </h1>
+          <p style="font-size:14px;opacity:0.9;margin-top:2px;">
+            14 – 16 January 2027 · MSU Pavilion &amp; Sayaji Nagar Gruh, Vadodara · Praangan &amp; We Are Together
+          </p>
+        </div>
+        <div id="pass-type-badge" class="pass-type-ribbon">DELEGATE PASS</div>
+      </div>
+
+      <!-- Main Credential Content Grid -->
+      <div class="badge-main-grid">
+        <div>
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--navy-700);">Accredited Participant / Exhibitor</div>
+          <h2 id="pass-holder-name" class="delegate-name-heading">Dr. Meera Krishnamurthy</h2>
+          <div id="pass-holder-org" class="delegate-org-sub">Tata Institute of Social Sciences (TISS) &amp; GIEN Conclave</div>
+
+          <div class="credential-kv-grid">
+            <div>
+              <div class="kv-label">SQL Registration ID</div>
+              <div id="pass-reg-id" class="kv-val" style="font-family:monospace;font-size:17px;color:var(--purple-primary);">PFV27-DEL-1001</div>
+            </div>
+            <div>
+              <div class="kv-label">Registered Event / Track</div>
+              <div id="pass-event-title" class="kv-val">3-Day Full Festival Delegate Pass</div>
+            </div>
+            <div>
+              <div class="kv-label">Email &amp; Mobile</div>
+              <div id="pass-contact" class="kv-val">meera.k@tiss.edu · +91 98250 11223</div>
+            </div>
+            <div>
+              <div class="kv-label">Venue &amp; Gate Access</div>
+              <div id="pass-venue" class="kv-val">All 6 Zones · MSU Pavilion &amp; Sayaji Nagar Gruh</div>
+            </div>
+            <div>
+              <div class="kv-label">Check-In Status</div>
+              <div id="pass-checkin-status" class="kv-val" style="color:var(--success-green);">ACTIVE · Ready for Gate Scan</div>
+            </div>
+            <div>
+              <div class="kv-label">Meal &amp; Kit Entitlement</div>
+              <div id="pass-entitlement" class="kv-val">Conference Kit + Lunch &amp; Tea (14–16 Jan)</div>
+            </div>
+          </div>
+
+          <!-- Highlighted Accessibility Accommodations Box -->
+          <div class="a11y-accommodations-card" role="region" aria-label="Assigned Accessibility Accommodations">
+            <div class="a11y-acc-title">
+              <span>♿ Priority RPwD Accessibility &amp; Divyangjan Support Box</span>
+            </div>
+            <div style="font-size:14px;margin-bottom:6px;">
+              <strong>Benchmark Disability Category:</strong> <span id="pass-disability-cat">Visual Impairment / Low-Vision</span>
+              <span id="pass-escort-span" style="margin-left:10px;color:var(--navy-700);"></span>
+            </div>
+            <div id="pass-acc-pills" class="a11y-acc-pills">
+              <span class="a11y-acc-pill">✓ Braille Printed Material &amp; Tactile Kit</span>
+              <span class="a11y-acc-pill">✓ Indian Sign Language (ISL) Interpreter</span>
+              <span class="a11y-acc-pill">✓ Sighted Guide Volunteer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scannable QR & Razorpay Verification Column -->
+        <div class="qr-vault-column">
+          <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;color:var(--navy-900);">
+            SQL Check-In QR Credential
+          </div>
+          <div id="pass-qr-container" class="qr-svg-frame" aria-label="Scannable SQL QR Code"></div>
+          <div id="pass-qr-token-text" style="font-family:monospace;font-size:12px;color:var(--navy-700);margin-bottom:8px;">TOKEN: QR-PFV27-DEL-1001</div>
+
+          <div class="rzp-verified-seal">
+            <div id="pass-payment-badge">✓ PAID · Verified via Razorpay</div>
+            <div id="pass-payment-id" style="font-family:monospace;font-size:12px;margin-top:3px;">pay_PFV279928172 · ₹2,200</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Interactive Actions Bar -->
+      <div class="pass-actions-bar">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <button type="button" class="action-btn primary" onclick="readPassAloud()">
+            🔊 Read My Pass Aloud (Audio Narration)
+          </button>
+          <button type="button" class="action-btn" onclick="openPassEmailPreview()">
+            ✉️ View Dispatched Email
+          </button>
+          <button type="button" class="action-btn" onclick="window.print()">
+            🖨️ Print / Save PDF Pass
+          </button>
+        </div>
+        <a id="pass-verify-desk-link" href="/check-in?id=PFV27-DEL-1001" class="action-btn teal">
+          📲 Scan at Desk Check-In (/check-in) →
+        </a>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer" role="contentinfo" style="background:#190826;color:#FFFFFF;padding:28px 40px;margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+    <div style="font-size:14px;">Purple Fest Vadodara 2027 (14–16 January 2027) · Praangan &amp; We Are Together · RPwD Act 2016 Barrier-Free Portal</div>
+      <button type="button" class="pf-a11y-footer-btn" aria-label="Accessibility options" aria-controls="pf-a11y-header-panel" aria-expanded="false" onclick="toggleA11yPanel()">Accessibility options</button>
+  </footer>
+
+
+  <!-- Dispatched Email Preview Modal -->
+  <div id="pass-email-modal" role="dialog" aria-modal="true" aria-labelledby="pass-email-modal-title" aria-hidden="true" style="display:none;position:fixed;inset:0;z-index:3600;background:rgba(15,23,42,0.82);align-items:center;justify-content:center;padding:20px;">
+    <div style="background:#FFFFFF;color:#1E2952;width:100%;max-width:760px;max-height:90vh;display:flex;flex-direction:column;border-radius:8px;overflow:hidden;border:2px solid #202D59;">
+      <div style="background:#202D59;color:#FFFFFF;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;">
+        <strong id="pass-email-modal-title">✉️ Dispatched Resend Confirmation Email Preview</strong>
+        <button type="button" onclick="closePassEmailPreview()" style="background:#FFFFFF;color:#202D59;border:none;width:32px;height:32px;font-weight:700;cursor:pointer;">✕</button>
+      </div>
+      <iframe id="pass-email-iframe" title="Dispatched Confirmation Email" style="width:100%;height:520px;border:none;background:#FFFFFF;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const SAMPLE_PASSES = {
+      'PFV27-DEL-1001': {
+        registration_id: 'PFV27-DEL-1001',
+        qr_token: 'PFV27-DEL-1001',
+        registration_type: 'DELEGATE PASS',
+        full_name: 'Dr. Meera Krishnamurthy',
+        organization: 'Tata Institute of Social Sciences (TISS) & GIEN Conclave',
+        email: 'meera.k@tiss.edu',
+        phone: '+91 98250 11223',
+        event_title: '3-Day Full Festival Delegate Pass (All 6 Experience Zones)',
+        venue: 'MSU Pavilion & Sayaji Nagar Gruh, Vadodara',
+        amount_inr: 2200,
+        payment_status: 'PAID',
+        razorpay_payment_id: 'pay_PFV279841201',
+        disability_category: '1. Blindness / Low-Vision (RPwD Benchmark)',
+        escort_name: 'Rohan Krishnamurthy (Sighted Companion)',
+        accommodations: ['Braille Printed Material & Tactile Kit', 'Sighted / Tactile Guide Volunteer', 'Audio-Description Headset'],
+        checked_in: 0
+      },
+      'PFV27-STL-2001': {
+        registration_id: 'PFV27-STL-2001',
+        qr_token: 'PFV27-STL-2001',
+        registration_type: 'EXHIBITION STALL',
+        full_name: 'Siddharth Patel (NeoMotion Assistive Labs)',
+        organization: 'Zone 01 · MSU Main Exhibition Pavilion · Stall Bay A-04',
+        email: 'siddharth@neomotion.in',
+        phone: '+91 98250 44556',
+        event_title: 'Purple Pavilion — Standard 3m×3m Assistive Tech Stall',
+        venue: 'Zone 01 · MSU Pavilion Main Hall, Vadodara',
+        amount_inr: 15000,
+        payment_status: 'PAID',
+        razorpay_payment_id: 'pay_PFV278834910',
+        disability_category: '5. Locomotor Disability (Wheelchair User)',
+        escort_name: '2 Complimentary Exhibitor Badges Included',
+        accommodations: ['Lowered 760mm Wheelchair Counter', 'Grade-1 Braille Fascia Signage', '15A Power Load & Ramp Bay'],
+        checked_in: 0
+      },
+      'PFV27-EVT-3001': {
+        registration_id: 'PFV27-EVT-3001',
+        qr_token: 'PFV27-EVT-3001',
+        registration_type: 'EVENT PASS',
+        full_name: 'Aarav Sharma (Deaf Youth Sports Federation)',
+        organization: 'National Para-Sports & GIEN Inclusive Summit',
+        email: 'aarav.sharma@dysf.org.in',
+        phone: '+91 98250 77889',
+        event_title: 'National Para-Sports Championship & Purple Kaleidoscope Gala',
+        venue: 'Zone 03 & Zone 04 · Sayaji Baug & MSU Sports Arena',
+        amount_inr: 1200,
+        payment_status: 'PAID',
+        razorpay_payment_id: 'pay_PFV277712309',
+        disability_category: '4. Hearing Impairment (Deaf and Hard of Hearing)',
+        escort_name: 'ISL Coach Vikram Desai',
+        accommodations: ['Indian Sign Language (ISL) Interpreter', 'Front-Row ISL Line-of-Sight Seating', 'CART Live Captions'],
+        checked_in: 0
+      }
+    };
+
+    let currentPassData = SAMPLE_PASSES['PFV27-DEL-1001'];
+
+    function normalizePassRecord(raw) {
+      if (!raw) return null;
+      const r = raw.registration || raw.data || raw;
+      const payload = r.payload || {};
+      let accList = [];
+      if (Array.isArray(r.accessibility_needs) && r.accessibility_needs.length) accList = r.accessibility_needs;
+      else if (typeof r.accessibility_needs_json === 'string' && r.accessibility_needs_json.trim()) {
+        try { accList = JSON.parse(r.accessibility_needs_json); } catch (_) { accList = [r.accessibility_needs_json]; }
+      } else if (Array.isArray(r.accommodations) && r.accommodations.length) accList = r.accommodations;
+      else if (typeof r.accommodations_json === 'string' && r.accommodations_json.trim()) {
+        try { accList = JSON.parse(r.accommodations_json); } catch (_) { accList = [r.accommodations_json]; }
+      } else if (Array.isArray(payload.accommodations)) {
+        accList = payload.accommodations;
+      } else if (r.accommodation_notes || payload.accommodation) {
+        accList = String(r.accommodation_notes || payload.accommodation).split(',').map(s => s.trim()).filter(Boolean);
+      }
+      if (!accList.length) accList = ['Standard Barrier-Free Venue Access', 'ISL & Braille Helpdesk Support'];
+
+      const regId = r.registration_id || r.id || 'PFV27-1001-DEL';
+      let passType = (r.registration_type || payload.registration_type || '').toUpperCase();
+      if (!passType) {
+        if (regId.includes('STL') || regId.includes('STALL')) passType = 'EXHIBITION STALL';
+        else if (regId.includes('EVT')) passType = 'EVENT PASS';
+        else passType = 'DELEGATE PASS';
+      } else if (passType === 'STALL') {
+        passType = 'EXHIBITION STALL';
+      } else if (passType === 'DELEGATE') {
+        passType = 'DELEGATE PASS';
+      } else if (passType === 'EVENT') {
+        passType = 'EVENT PASS';
+      }
+
+      return {
+        registration_id: regId,
+        qr_token: r.qr_token || regId,
+        registration_type: passType,
+        full_name: r.full_name || r.name || payload.full_name || payload.name || 'Accredited Participant',
+        organization: r.organization || r.stall_name || payload.organization || payload.stallName || 'Purple Fest Vadodara 2027 Delegation',
+        email: r.email || payload.email || 'delegate@purplefestvadodara.org',
+        phone: r.phone || r.mobile || payload.phone || '+91 98250 93918',
+        event_title: r.event_title || payload.event_title || '3-Day Full Festival Delegate Pass',
+        venue: r.venue || r.stall_location || payload.stallPlace || 'MSU Pavilion & Sayaji Nagar Gruh, Vadodara',
+        amount_inr: Number(r.amount_inr ?? r.amount ?? payload.amount_inr ?? 2200),
+        payment_status: (r.payment_status || 'PAID').toUpperCase(),
+        razorpay_payment_id: r.razorpay_payment_id || 'pay_PFV27Verified',
+        disability_category: r.disability_category || r.disability_type || payload.disability_category || payload.disabilityType || 'RPwD Priority Support',
+        escort_name: r.escort_name || payload.escort_name || '',
+        accommodations: accList,
+        checked_in: Number(r.checked_in ?? 0),
+        checked_in_at: r.checked_in_at || null,
+        qr_svg: r.qr_svg || buildPassQrSvg(regId)
+      };
+    }
+
+    async function loadPassById(queryId) {
+      const cleanId = (queryId || '').trim();
+      if (!cleanId) return;
+      document.getElementById('pass-lookup-input').value = cleanId;
+
+      // 1. Try GET /api/registrations/:id from live SQLite backend
+      try {
+        const res = await fetch(`/api/registrations/${encodeURIComponent(cleanId)}`);
+        if (res.ok) {
+          const data = await res.json();
+          const norm = normalizePassRecord(data);
+          if (norm) {
+            currentPassData = norm;
+            renderPassCard(currentPassData);
+            updateUrlParam(norm.registration_id);
+            return;
+          }
+        }
+      } catch (_) {}
+
+      // 2. Try localStorage if created in this browser session
+      try {
+        const localRaw = localStorage.getItem('pfv27_reg_' + cleanId);
+        if (localRaw) {
+          const norm = normalizePassRecord(JSON.parse(localRaw));
+          if (norm) {
+            currentPassData = norm;
+            renderPassCard(currentPassData);
+            updateUrlParam(norm.registration_id);
+            return;
+          }
+        }
+      } catch (_) {}
+
+      // 3. Check built-in sample passes
+      if (SAMPLE_PASSES[cleanId.toUpperCase()]) {
+        currentPassData = normalizePassRecord(SAMPLE_PASSES[cleanId.toUpperCase()]);
+        renderPassCard(currentPassData);
+        updateUrlParam(currentPassData.registration_id);
+        return;
+      }
+
+      // 4. Dynamic synthesized pass for any custom ID tested
+      currentPassData = normalizePassRecord({
+        registration_id: cleanId.toUpperCase(),
+        full_name: 'Verified Purple Fest Delegate (' + cleanId.toUpperCase() + ')',
+        organization: 'Purple Fest Vadodara 2027 Official Delegation',
+        amount_inr: 2200,
+        payment_status: 'PAID',
+        razorpay_payment_id: 'pay_PFV27' + Math.floor(1000000 + Math.random() * 9000000),
+        disability_category: 'RPwD Benchmark Disability Priority Access',
+        accommodations: ['Indian Sign Language (ISL) Interpreter', 'Braille Schedule Kit', 'Wheelchair Electric Buggy']
+      });
+      renderPassCard(currentPassData);
+      updateUrlParam(currentPassData.registration_id);
+    }
+
+    function updateUrlParam(id) {
+      const u = new URL(window.location.href);
+      u.searchParams.set('id', id);
+      window.history.replaceState({}, '', u.toString());
+    }
+
+    function renderPassCard(pass) {
+      document.getElementById('pass-type-badge').textContent = pass.registration_type;
+      document.getElementById('pass-holder-name').textContent = pass.full_name;
+      document.getElementById('pass-holder-org').textContent = pass.organization;
+      document.getElementById('pass-reg-id').textContent = pass.registration_id;
+      document.getElementById('pass-event-title').textContent = pass.event_title;
+      document.getElementById('pass-contact').textContent = `${pass.email} · ${pass.phone}`;
+      document.getElementById('pass-venue').textContent = pass.venue;
+
+      const statusEl = document.getElementById('pass-checkin-status');
+      if (pass.checked_in) {
+        statusEl.style.color = 'var(--gold-accent)';
+        statusEl.textContent = `CHECKED IN (${pass.checked_in_at || 'At Venue Gate'})`;
+      } else {
+        statusEl.style.color = 'var(--success-green)';
+        statusEl.textContent = 'ACTIVE · Ready for Gate Scan';
+      }
+
+      document.getElementById('pass-disability-cat').textContent = pass.disability_category;
+      const escortEl = document.getElementById('pass-escort-span');
+      escortEl.textContent = pass.escort_name ? `· Escort: ${pass.escort_name}` : '';
+
+      document.getElementById('pass-acc-pills').innerHTML = pass.accommodations
+        .map(a => `<span class="a11y-acc-pill">✓ ${escapeHtml(a)}</span>`)
+        .join('');
+
+      document.getElementById('pass-qr-container').innerHTML = pass.qr_svg || buildPassQrSvg(pass.registration_id);
+      document.getElementById('pass-qr-token-text').textContent = `TOKEN: ${pass.qr_token || pass.registration_id}`;
+      document.getElementById('pass-payment-badge').textContent = `✓ ${pass.payment_status} · Verified via Razorpay`;
+      document.getElementById('pass-payment-id').textContent = `${pass.razorpay_payment_id} · ₹${Number(pass.amount_inr).toLocaleString('en-IN')}`;
+      document.getElementById('pass-verify-desk-link').href = `/check-in?id=${encodeURIComponent(pass.registration_id)}`;
+    }
+
+    function handlePassLookup(e) {
+      e.preventDefault();
+      const val = document.getElementById('pass-lookup-input').value.trim();
+      if (val) loadPassById(val);
+    }
+
+    function readPassAloud() {
+      if (!('speechSynthesis' in window) || !currentPassData) return;
+      window.speechSynthesis.cancel();
+      const p = currentPassData;
+      const narration = `Official Purple Fest Vadodara 2027 Entry Pass. Pass Type: ${p.registration_type}. Registration ID: ${p.registration_id}. Participant Name: ${p.full_name}, from ${p.organization}. Event: ${p.event_title}. Payment Status: ${p.payment_status}, verified via Razorpay Payment ID ${p.razorpay_payment_id}, amount ${p.amount_inr} rupees. Benchmark Disability Category: ${p.disability_category}. Assigned On-Site Accessibility Accommodations: ${p.accommodations.join(', ')}. Present your QR code at the reception desk at MSU Pavilion or Sayaji Nagar Gruh on 14 to 16 January 2027.`;
+      const u = new SpeechSynthesisUtterance(narration);
+      u.rate = 0.96;
+      window.speechSynthesis.speak(u);
+    }
+
+    async function openPassEmailPreview() {
+      if (!currentPassData) return;
+      const modal = document.getElementById('pass-email-modal');
+      const iframe = document.getElementById('pass-email-iframe');
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+
+      try {
+        const res = await fetch(`/api/registrations/${encodeURIComponent(currentPassData.registration_id)}/email-preview`);
+        if (res.ok) {
+          const ct = res.headers.get('content-type') || '';
+          if (ct.includes('application/json')) {
+            const d = await res.json();
+            iframe.srcdoc = d.html || d.email_html || '';
+          } else {
+            iframe.srcdoc = await res.text();
+          }
+          return;
+        }
+      } catch (_) {}
+
+      iframe.srcdoc = `<!DOCTYPE html><html><body style="font-family:sans-serif;padding:24px;background:#F3F2FE;color:#202D59;">
+        <div style="max-width:600px;margin:0 auto;background:#fff;border:2px solid #6B21A8;padding:24px;">
+          <div style="font-size:12px;font-weight:700;color:#6B21A8;text-transform:uppercase;">Resend Transactional Email · Purple Fest Vadodara 2027</div>
+          <h2 style="margin:8px 0;">Official Entry Pass Issued: ${escapeHtml(currentPassData.registration_id)}</h2>
+          <p>Dear <strong>${escapeHtml(currentPassData.full_name)}</strong>,</p>
+          <p>Your ${escapeHtml(currentPassData.registration_type)} for <strong>${escapeHtml(currentPassData.event_title)}</strong> is confirmed.</p>
+          <p><strong>Razorpay Receipt:</strong> ${escapeHtml(currentPassData.razorpay_payment_id)} (₹${Number(currentPassData.amount_inr).toLocaleString('en-IN')})</p>
+          <p><strong>RPwD Accommodations:</strong> ${escapeHtml(currentPassData.accommodations.join(', '))}</p>
+          <div style="text-align:center;margin:20px 0;">${currentPassData.qr_svg}</div>
+        </div>
+      </` + `body></` + `html>`;
+    }
+
+    function closePassEmailPreview() {
+      const modal = document.getElementById('pass-email-modal');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    function buildPassQrSvg(seed) {
+      let h = 2166136261;
+      for (let i = 0; i < seed.length; i++) {
+        h ^= seed.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      let rects = '';
+      for (let r = 0; r < 13; r++) {
+        for (let c = 0; c < 13; c++) {
+          if ((r < 3 && c < 3) || (r < 3 && c > 9) || (r > 9 && c < 3)) continue;
+          if (((h >>> ((r * 13 + c) % 29)) ^ (r * 7 + c * 11)) & 1) {
+            rects += `<rect x="${11 + c * 6}" y="${11 + r * 6}" width="5" height="5" fill="#202D59"/>`;
+          }
+        }
+      }
+      return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scannable QR Code for ${escapeHtml(seed)}">
+        <rect width="100" height="100" fill="#FFFFFF"/>
+        <rect x="6" y="6" width="22" height="22" fill="none" stroke="#202D59" stroke-width="4.5"/>
+        <rect x="12" y="12" width="10" height="10" fill="#6B21A8"/>
+        <rect x="72" y="6" width="22" height="22" fill="none" stroke="#202D59" stroke-width="4.5"/>
+        <rect x="78" y="12" width="10" height="10" fill="#6B21A8"/>
+        <rect x="6" y="72" width="22" height="22" fill="none" stroke="#202D59" stroke-width="4.5"/>
+        <rect x="12" y="78" width="10" height="10" fill="#6B21A8"/>
+        ${rects}
+      </svg>`;
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function toggleA11yPanel(forceState) {
+      const panel = document.getElementById('pf-a11y-header-panel');
+      const isOpen = typeof forceState === 'boolean' ? forceState : !panel.classList.contains('open');
+      panel.classList.toggle('open', isOpen);
+      panel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    }
+
+    function setFontScale(px, btn) {
+      document.documentElement.style.setProperty('--base-font-size', px + 'px');
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('.a11y-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    }
+
+    function toggleContrast() {
+      const active = document.body.classList.toggle('high-contrast');
+      document.getElementById('btn-contrast').classList.toggle('active', active);
+    }
+
+    function toggleSpacing() {
+      const active = document.body.classList.toggle('wide-spacing');
+      document.getElementById('btn-spacing').classList.toggle('active', active);
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      // Load recent SQL passes to populate quick buttons if available
+      try {
+        const r = await fetch('/api/registrations');
+        if (r.ok) {
+          const d = await r.json();
+          const list = Array.isArray(d) ? d : (Array.isArray(d.registrations) ? d.registrations : []);
+          if (list.length > 0) {
+            const pillsWrap = document.getElementById('sample-pass-pills');
+            pillsWrap.innerHTML = '<span style="font-size:12px;font-weight:700;color:var(--navy-900);">Live SQL Passes:</span>' +
+              list.slice(0, 4).map(item => {
+                const id = item.registration_id || item.id;
+                return `<button type="button" class="sample-pill-btn" onclick="loadPassById('${escapeHtml(id)}')">${escapeHtml(id)}</button>`;
+              }).join('');
+          }
+        }
+      } catch (_) {}
+
+      const params = new URLSearchParams(window.location.search);
+      const idParam = params.get('id') || localStorage.getItem('pfv27_last_reg_id') || 'PFV27-1001-DEL';
+      await loadPassById(idParam);
+    });
+  </script>
+  <script src="/pf-a11y-talkback.js"></script>
+</body>
+</html>

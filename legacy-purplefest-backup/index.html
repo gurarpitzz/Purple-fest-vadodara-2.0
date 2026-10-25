@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Purple Fest Vadodara 2027 (14–16 January 2027) — Aligned with Viksit Bharat @ 2047. Featuring India's Paralympic Champions, all 21 Benchmark Disabilities under RPwD Act 2016, Assistive Tech Stalls, and Delegate Registration (₹2,200).">
+  <title>Purple Fest Vadodara 2027 — Viksit Bharat @ 2047 · Design, Innovation & Paralympic Excellence</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="purple_logo_transparent.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-standard">
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- ========================================================= -->
+  <!-- PRELOADER (Matches final.mp4 with Interactive Controls) -->
+  <!-- PRESERVED 100% AS-IS PER USER INSTRUCTION -->
+  <!-- ========================================================= -->
+  <aside id="preloader" class="preloader-overlay" aria-label="Purple Fest Vadodara Intro Animation">
+    <canvas id="preloader-canvas" class="preloader-canvas" aria-hidden="true"></canvas>
+
+    <!-- Central Stage for Animation -->
+    <div id="preloader-stage" class="preloader-stage">
+      <!-- High Fidelity Video Player (Plays final.mp4) -->
+      <div id="video-container" class="stage-view active">
+        <div class="video-frame-glow"></div>
+        <video 
+          id="preloader-video" 
+          class="preloader-video-element" 
+          src="final.mp4" 
+          autoplay
+          playsinline 
+          muted 
+          preload="auto"
+          aria-label="Animated Purple Fest Vadodara Logo Drawing">
+        </video>
+      </div>
+
+      <!-- Vector SVG Animated Stroke Player (Alternative Mode) -->
+      <div id="vector-container" class="stage-view">
+        <svg id="vector-svg" viewBox="0 0 800 600" class="vector-svg-element" aria-label="Vector Logo Animation">
+          <defs>
+            <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#430c65" />
+              <stop offset="50%" stop-color="#6a1b9a" />
+              <stop offset="100%" stop-color="#8e24aa" />
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <!-- Dynamic SVG paths mimicking the Purple Fest emblem -->
+          <g class="svg-drawing-group">
+            <!-- Left Figure Loop -->
+            <path class="svg-stroke-path path-left" d="M 310,290 C 270,290 250,260 260,240 C 270,220 310,230 330,260 C 345,285 340,340 330,360 C 320,380 300,380 290,340 C 285,320 280,300 270,330 C 265,345 255,345 250,330" />
+            <!-- Center Figure Arch -->
+            <path class="svg-stroke-path path-center" d="M 330,260 C 370,180 430,180 470,260 C 490,300 500,360 480,380 C 465,395 450,370 440,320 C 430,270 410,270 400,320 C 390,370 375,395 360,380 C 340,360 350,300 370,260" />
+            <!-- Right Figure Loop -->
+            <path class="svg-stroke-path path-right" d="M 470,260 C 490,230 530,220 540,240 C 550,260 530,290 490,290 C 480,300 475,320 470,330 C 465,345 455,345 450,330 C 440,300 435,320 430,340 C 420,380 400,380 390,360" />
+            <!-- Connecting Horizon Ribbon -->
+            <path class="svg-stroke-path path-ribbon" d="M 270,260 C 330,200 470,200 530,260" />
+
+            <!-- Floating Hearts (Only 3 Hearts matching official brand emblem) -->
+            <path class="svg-heart heart-1" d="M 290 190 C 280 170 260 170 250 185 C 240 200 250 215 270 230 L 270 230 C 290 215 300 200 290 185 Z" />
+            <path class="svg-heart heart-2" d="M 400 150 C 390 130 370 130 360 145 C 350 160 360 175 380 190 L 380 190 C 400 175 410 160 400 145 Z" />
+            <path class="svg-heart heart-3" d="M 510 190 C 500 170 480 170 470 185 C 460 200 470 215 490 230 L 490 230 C 510 215 520 200 510 185 Z" />
+          </g>
+
+          <!-- Text Letters in SVG -->
+          <text class="svg-title-text" x="400" y="450" text-anchor="middle">PURPLE FEST</text>
+          <text class="svg-subtitle-text" x="400" y="495" text-anchor="middle">Vadodara</text>
+        </svg>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- DICHROMATIC TACTILE DOT-MATRIX OVERLAY CANVAS             -->
+  <!-- Automatically renders Purple dots on White sections &     -->
+  <!-- White/Lavender dots on Purple Gradient sections           -->
+  <!-- ========================================================= -->
+  <div class="tactile-bg-viewport" aria-hidden="true">
+    <canvas id="tactile-canvas"></canvas>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- ACCESSIBILITY & VIKSIT BHARAT 2047 UTILITY STRIP          -->
+  <!-- ========================================================= -->
+  <div class="a11y-toolbar" role="region" aria-label="Accessibility controls">
+    <div class="a11y-container">
+      <div class="a11y-group">
+        <span class="a11y-label">Access</span>
+        <button id="btn-font-decrease" class="a11y-tool-btn" title="Decrease text size" aria-label="Decrease text size">A−</button>
+        <button id="btn-font-reset" class="a11y-tool-btn" title="Default text size" aria-label="Default text size">A</button>
+        <button id="btn-font-increase" class="a11y-tool-btn" title="Increase text size" aria-label="Increase text size">A+</button>
+        <span class="a11y-divider" aria-hidden="true"></span>
+        <button id="btn-contrast" class="a11y-tool-btn" aria-pressed="false">High Contrast</button>
+        <button id="btn-dyslexia" class="a11y-tool-btn" aria-pressed="false">Dyslexia Font</button>
+        <button id="btn-motion-toggle" class="a11y-tool-btn" aria-pressed="false">Pause Motion</button>
+        <button id="btn-tts-toggle" class="a11y-tool-btn a11y-tts-btn" aria-pressed="false">
+          <span id="tts-status-text">Voice Reader: Off</span>
+        </button>
+      </div>
+
+      <div class="a11y-meta-group">
+        <span class="viksit-pill">VIKSIT BHARAT @ 2047</span>
+        <div class="view-mode-switcher" role="group" aria-label="Reading mode">
+          <button id="mode-scroll-btn" class="mode-switch-btn active" data-mode="scroll" aria-pressed="true">Scroll</button>
+          <button id="mode-menu-btn" class="mode-switch-btn" data-mode="menu" aria-pressed="false">Focus</button>
+        </div>
+        <span class="a11y-date-tag">Delegate Fee: ₹2,200</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MINIMALIST EDITORIAL HEADER                               -->
+  <!-- ========================================================= -->
+  <header id="main-header" class="site-header">
+    <nav class="nav-container" aria-label="Primary Navigation">
+      <a href="#hero" class="brand-logo" data-realm-link="hero" aria-label="Purple Fest Vadodara 2027 Home">
+        <img src="purple_logo_transparent.png" alt="Purple Fest Emblem" class="brand-logo-img" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-title">Purple Fest Vadodara</span>
+          <span class="brand-subtitle">14–16 Jan 2027 · Viksit Bharat</span>
+        </div>
+      </a>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about" class="nav-link" data-realm-link="about"><span class="nav-idx">01</span> Why Purple</a></li>
+        <li><a href="#leadership" class="nav-link" data-realm-link="leadership"><span class="nav-idx">02</span> Committee</a></li>
+        <li><a href="#paralympians" class="nav-link" data-realm-link="paralympians"><span class="nav-idx">03</span> Paralympians</a></li>
+        <li><a href="#disabilities" class="nav-link" data-realm-link="disabilities"><span class="nav-idx">04</span> 21 Disabilities</a></li>
+        <li><a href="#zones" class="nav-link" data-realm-link="zones"><span class="nav-idx">05</span> Zones</a></li>
+        <li><a href="#schedule" class="nav-link" data-realm-link="schedule"><span class="nav-idx">06</span> Programme</a></li>
+        <li><a href="#stalls" class="nav-link" data-realm-link="stalls"><span class="nav-idx">07</span> Stalls</a></li>
+        <li><a href="#register" class="nav-link" data-realm-link="register"><span class="nav-idx">08</span> Register</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="btn-saved-schedule" class="btn-minimal-outline" aria-label="View Saved Itinerary">
+          <span>Itinerary</span>
+          <span id="saved-count-badge" class="badge-count">0</span>
+        </button>
+
+        <button id="btn-spatial-menu" class="btn-minimal-menu" aria-expanded="false" aria-controls="spatial-menu-overlay">
+          <span>Index</span>
+          <span class="menu-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <a href="#stalls" class="btn-minimal-outline d-none d-xl-inline-flex" data-realm-link="stalls">Book Stall</a>
+        <a href="#register" class="btn-minimal-solid" data-realm-link="register">Delegate Pass · ₹2,200</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- MINIMALIST FULLSCREEN INDEX OVERLAY                       -->
+  <!-- ========================================================= -->
+  <aside id="spatial-menu-overlay" class="index-menu-overlay" aria-hidden="true" aria-label="Festival Directory">
+    <div class="index-menu-inner">
+      <div class="index-menu-top">
+        <span class="index-menu-label">Architectural Index · Purple Fest Vadodara 2027 · Viksit Bharat @ 2047</span>
+        <button id="btn-close-spatial-menu" class="btn-minimal-outline">Close [ESC]</button>
+      </div>
+
+      <div class="index-menu-grid">
+        <nav class="index-menu-list" aria-label="Section Directory">
+          <a href="#hero" class="index-menu-row active" data-realm-target="hero">
+            <span class="index-row-num">00</span>
+            <span class="index-row-title">Overview & 3D Emblem</span>
+            <span class="index-row-desc">14–16 January 2027 · Vadodara · Standard Delegate Fee ₹2,200</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#about" class="index-menu-row" data-realm-target="about">
+            <span class="index-row-num">01</span>
+            <span class="index-row-title">Why Purple & Viksit Bharat @ 2047</span>
+            <span class="index-row-desc">National Mandate, 4 Pillars of Inclusive Growth & Event Showcase</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#leadership" class="index-menu-row" data-realm-target="leadership">
+            <span class="index-row-num">02</span>
+            <span class="index-row-title">Organising Committee & Leadership</span>
+            <span class="index-row-desc">National Governance & Vadodara Host Chapter</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#paralympians" class="index-menu-row" data-realm-target="paralympians">
+            <span class="index-row-num">03</span>
+            <span class="index-row-title">Indian Paralympic Icons</span>
+            <span class="index-row-desc">Avani Lekhara, Sumit Antil, Devendra Jhajharia, Sheetal Devi, Deepa Malik, Bhavina Patel</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#disabilities" class="index-menu-row" data-realm-target="disabilities">
+            <span class="index-row-num">04</span>
+            <span class="index-row-title">21 Benchmark Disabilities</span>
+            <span class="index-row-desc">Complete RPwD Act 2016 Statutory Framework & Design Standards</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#zones" class="index-menu-row" data-realm-target="zones">
+            <span class="index-row-num">05</span>
+            <span class="index-row-title">Coalition & Six Experience Zones</span>
+            <span class="index-row-desc">Praangan, Brotherhood, TISS Mumbai, Goa Commission, GIEN & MSU Baroda</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#schedule" class="index-menu-row" data-realm-target="schedule">
+            <span class="index-row-num">06</span>
+            <span class="index-row-title">Three-Day Programme</span>
+            <span class="index-row-desc">14, 15 & 16 January 2027 · Swiss Timetable & Itinerary</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#stalls" class="index-menu-row" data-realm-target="stalls">
+            <span class="index-row-num">07</span>
+            <span class="index-row-title">Exhibition Stalls Booking</span>
+            <span class="index-row-desc">Dedicated Stall Tiers, Technical Specs & Exhibitor Registration</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+          <a href="#register" class="index-menu-row" data-realm-target="register">
+            <span class="index-row-num">08</span>
+            <span class="index-row-title">Event Delegate Registration (₹2,200)</span>
+            <span class="index-row-desc">Mandatory ₹2,200 Delegate Pass · Razorpay Checkout & QR Pass</span>
+            <span class="index-row-arrow">→</span>
+          </a>
+        </nav>
+
+        <div class="index-menu-sidebar">
+          <div class="index-meta-block">
+            <p class="index-meta-heading">Registration Policy</p>
+            <p class="index-meta-value">Standard Delegate Fee: ₹2,200</p>
+            <p class="index-meta-sub">Uniform paid registration across all delegate categories. Separate stall booking for exhibitors.</p>
+          </div>
+          <div class="index-meta-block">
+            <p class="index-meta-heading">Secretariat</p>
+            <p class="index-meta-value">Praangan, Old Padra Road, Vadodara</p>
+            <p class="index-meta-sub">+91 98250 93918 · purplefestvadodara@gmail.com</p>
+          </div>
+          <div class="index-meta-block">
+            <p class="index-meta-heading">Interface Controls</p>
+            <div class="d-flex gap-2 flex-wrap mt-2">
+              <button class="btn-minimal-outline btn-sm menu-a11y-trigger" data-trigger="btn-contrast">High Contrast</button>
+              <button class="btn-minimal-outline btn-sm menu-a11y-trigger" data-trigger="btn-dyslexia">Dyslexia Font</button>
+              <button class="btn-minimal-outline btn-sm menu-a11y-trigger" data-trigger="btn-tts-toggle">Voice Reader</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- SUBTLE BOTTOM SECTION NAVIGATION BAR                      -->
+  <!-- ========================================================= -->
+  <nav id="spatial-dock" class="bottom-index-bar" aria-label="Quick section jump">
+    <div class="bottom-index-inner">
+      <button class="dock-btn active" data-realm-jump="hero">00 Intro</button>
+      <button class="dock-btn" data-realm-jump="about">01 Why Purple</button>
+      <button class="dock-btn" data-realm-jump="leadership">02 Committee</button>
+      <button class="dock-btn" data-realm-jump="paralympians">03 Paralympians</button>
+      <button class="dock-btn" data-realm-jump="disabilities">04 21 Disabilities</button>
+      <button class="dock-btn" data-realm-jump="zones">05 Zones</button>
+      <button class="dock-btn" data-realm-jump="schedule">06 Programme</button>
+      <button class="dock-btn" data-realm-jump="stalls">07 Stalls</button>
+      <button class="dock-btn" data-realm-jump="register">08 Register ₹2,200</button>
+      <div class="dock-progress-track" aria-hidden="true">
+        <div id="dock-progress-fill" class="dock-progress-fill"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- MAIN CONTENT (DICHROMATIC ALTERNATING SECTIONS)           -->
+  <!-- ========================================================= -->
+  <main id="main-content">
+
+    <!-- ======================================================= -->
+    <!-- 00 / HERO: WHITE CANVAS + PURPLE DOT MATRIX             -->
+    <!-- + 3D ANIMATED PURPLE FEST LOGO SCULPTURE                -->
+    <!-- ======================================================= -->
+    <section id="hero" class="editorial-section hero-section theme-band-light active-realm" data-realm="hero" data-band="light" aria-labelledby="hero-heading">
+      <div class="editorial-container">
+        
+        <!-- Top Meta Row -->
+        <div class="hero-top-meta">
+          <span class="meta-index">00 / VIKSIT BHARAT @ 2047 INITIATIVE</span>
+          <span class="meta-separator" aria-hidden="true">—</span>
+          <span class="meta-detail">14, 15 & 16 January 2027 · MSU Pavilion & Sayaji Nagar Gruh, Vadodara</span>
+          <span class="meta-separator" aria-hidden="true">—</span>
+          <span class="meta-detail meta-fee-highlight">Standard Delegate Pass: ₹2,200</span>
+        </div>
+
+        <!-- Monumental Minimalist Title + 3D Animated Logo Header Sculpture -->
+        <div class="hero-title-block">
+          <div class="hero-title-grid">
+            <div>
+              <h1 id="hero-heading" class="hero-minimal-title">
+                Purple Fest <span class="serif-italic">Vadodara.</span>
+              </h1>
+            </div>
+            <div class="hero-viksit-badge">
+              <span class="vb-eyebrow">NATIONAL MANDATE</span>
+              <strong class="vb-title">Viksit Bharat @ 2047</strong>
+              <span class="vb-sub">Design · Deep-Tech · High Performance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Animated Purple Fest Emblem Stage + Scroll-Highlighted Opening Reading Lines -->
+        <div class="hero-reading-spread">
+          
+          <!-- Left Column: Live 3D Sculpture of the Exact 3-Figure + 3-Hearts Logo -->
+          <div class="hero-emblem-column">
+            <div class="logo-3d-sculpture-stage" id="hero-3d-logo-stage" title="Interactive 3D Purple FestVadodara Emblem — Move cursor to tilt">
+              <!-- Real-time Three.js 3D Tubular Logo & Extruded 3D Hearts Canvas -->
+              <canvas id="logo-3d-canvas" class="logo-3d-canvas" width="380" height="300" aria-hidden="true"></canvas>
+
+              <!-- Multi-Depth 3D Extruded Monochromatic SVG Vector Overlay (Matches uploaded 3-heart continuous line logo) -->
+              <div class="logo-3d-svg-layers" id="logo-3d-svg-layers" aria-label="3D Animated Purple Fest Vadodara Three-Heart Continuous Line Emblem">
+                <!-- Extruded Depth Shadow Layer -->
+                <svg viewBox="0 0 500 340" class="logo-layer layer-depth-back" aria-hidden="true">
+                  <path class="emblem-continuous-loop" d="M 105,220 C 90,285 118,312 128,308 C 138,304 120,248 128,245 C 136,242 162,306 172,302 C 182,298 168,215 115,182 C 62,150 38,185 52,206 C 68,228 110,202 132,162 C 165,102 225,102 265,165 C 292,208 282,308 268,312 C 254,316 242,235 232,235 C 222,235 210,316 198,312 C 186,308 182,208 215,165 C 255,112 325,115 368,162 C 392,190 432,218 446,198 C 458,180 432,152 385,182 C 338,212 318,295 328,302 C 338,308 364,242 372,245 C 380,248 362,304 372,308 C 382,312 405,285 392,220" />
+                  <path class="emblem-3d-heart h-left" d="M 102,138 C 86,120 62,124 64,144 C 66,162 94,174 114,180 C 122,162 126,134 110,124 C 98,116 96,132 102,138 Z" />
+                  <path class="emblem-3d-heart h-center" d="M 246,96 C 236,74 212,74 212,96 C 212,116 236,130 246,142 C 256,130 280,116 280,96 C 280,74 256,74 246,96 Z" />
+                  <path class="emblem-3d-heart h-right" d="M 388,138 C 394,132 392,116 380,124 C 364,134 368,162 376,180 C 396,174 424,162 426,144 C 428,124 404,120 388,138 Z" />
+                </svg>
+                <!-- Mid 3D Extrusion Layer -->
+                <svg viewBox="0 0 500 340" class="logo-layer layer-depth-mid" aria-hidden="true">
+                  <path class="emblem-continuous-loop" d="M 105,220 C 90,285 118,312 128,308 C 138,304 120,248 128,245 C 136,242 162,306 172,302 C 182,298 168,215 115,182 C 62,150 38,185 52,206 C 68,228 110,202 132,162 C 165,102 225,102 265,165 C 292,208 282,308 268,312 C 254,316 242,235 232,235 C 222,235 210,316 198,312 C 186,308 182,208 215,165 C 255,112 325,115 368,162 C 392,190 432,218 446,198 C 458,180 432,152 385,182 C 338,212 318,295 328,302 C 338,308 364,242 372,245 C 380,248 362,304 372,308 C 382,312 405,285 392,220" />
+                  <path class="emblem-3d-heart h-left" d="M 102,138 C 86,120 62,124 64,144 C 66,162 94,174 114,180 C 122,162 126,134 110,124 C 98,116 96,132 102,138 Z" />
+                  <path class="emblem-3d-heart h-center" d="M 246,96 C 236,74 212,74 212,96 C 212,116 236,130 246,142 C 256,130 280,116 280,96 C 280,74 256,74 246,96 Z" />
+                  <path class="emblem-3d-heart h-right" d="M 388,138 C 394,132 392,116 380,124 C 364,134 368,162 376,180 C 396,174 424,162 426,144 C 428,124 404,120 388,138 Z" />
+                </svg>
+                <!-- Front Sculptural Highlight Layer -->
+                <svg viewBox="0 0 500 340" class="logo-layer layer-depth-front">
+                  <path class="emblem-continuous-loop animated-loop-draw" d="M 105,220 C 90,285 118,312 128,308 C 138,304 120,248 128,245 C 136,242 162,306 172,302 C 182,298 168,215 115,182 C 62,150 38,185 52,206 C 68,228 110,202 132,162 C 165,102 225,102 265,165 C 292,208 282,308 268,312 C 254,316 242,235 232,235 C 222,235 210,316 198,312 C 186,308 182,208 215,165 C 255,112 325,115 368,162 C 392,190 432,218 446,198 C 458,180 432,152 385,182 C 338,212 318,295 328,302 C 338,308 364,242 372,245 C 380,248 362,304 372,308 C 382,312 405,285 392,220" />
+                  <path class="emblem-3d-heart h-left" d="M 102,138 C 86,120 62,124 64,144 C 66,162 94,174 114,180 C 122,162 126,134 110,124 C 98,116 96,132 102,138 Z" />
+                  <path class="emblem-3d-heart h-center" d="M 246,96 C 236,74 212,74 212,96 C 212,116 236,130 246,142 C 256,130 280,116 280,96 C 280,74 256,74 246,96 Z" />
+                  <path class="emblem-3d-heart h-right" d="M 388,138 C 394,132 392,116 380,124 C 364,134 368,162 376,180 C 396,174 424,162 426,144 C 428,124 404,120 388,138 Z" />
+                </svg>
+              </div>
+
+              <span class="emblem-caption">FIG 01 // 3D Sculptural Emblem — Three Interconnected Figures & Three Hearts</span>
+            </div>
+          </div>
+
+          <div class="hero-narrative-column">
+            <div class="scroll-reading-group" aria-label="Festival Opening Statement">
+              <p class="scroll-line is-active" data-scroll-line>
+                Inclusion is not charity or sentiment — it is precision engineering, statutory law, and human performance.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Aligned with <span class="text-purple-accent">Viksit Bharat @ 2047</span>, Purple Fest Vadodara convenes India's <span class="text-purple-accent">Paralympic Champions</span>, assistive technology founders, policy architects, and educators.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Built across all <span class="text-purple-accent">21 Benchmark Disabilities</span> recognized under the RPwD Act 2016, with dedicated <span class="text-purple-accent">Exhibition Stalls</span> and structured <span class="text-purple-accent">₹2,200 Delegate Registration</span>.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Jointly convened by <span class="text-purple-accent">Praangan</span> and <span class="text-purple-accent">We Are Together (Brotherhood)</span> with TISS Mumbai, the Goa State Commission for PwD, GIEN, and MSU Baroda.
+              </p>
+            </div>
+
+            <!-- Action Row & Countdown -->
+            <div class="hero-action-strip">
+              <div class="hero-cta-group">
+                <a href="#register" class="btn-editorial-primary" data-realm-link="register">
+                  <span>Delegate Registration · ₹2,200</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a href="#stalls" class="btn-editorial-secondary" data-realm-link="stalls">
+                  <span>Book Exhibition Stall</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <div class="minimal-countdown" aria-label="Countdown to 14 January 2027">
+                <div class="cd-unit">
+                  <span id="cd-days" class="cd-val">265</span>
+                  <span class="cd-lbl">Days</span>
+                </div>
+                <span class="cd-sep">:</span>
+                <div class="cd-unit">
+                  <span id="cd-hours" class="cd-val">09</span>
+                  <span class="cd-lbl">Hrs</span>
+                </div>
+                <span class="cd-sep">:</span>
+                <div class="cd-unit">
+                  <span id="cd-mins" class="cd-val">30</span>
+                  <span class="cd-lbl">Min</span>
+                </div>
+                <span class="cd-sep">:</span>
+                <div class="cd-unit">
+                  <span id="cd-secs" class="cd-val">00</span>
+                  <span class="cd-lbl">Sec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Hairline Metrics Strip -->
+        <div class="architectural-metrics-strip" role="list" aria-label="Festival Architecture">
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">01 / Statutory Scope</span>
+            <div class="metric-number"><span class="counter-value" data-target="21">0</span></div>
+            <p class="metric-caption">Benchmark Disabilities under the RPwD Act, 2016 represented with dedicated design protocols</p>
+          </div>
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">02 / Sporting Icons</span>
+            <div class="metric-number"><span class="counter-value" data-target="8">0</span>+</div>
+            <p class="metric-caption">Indian Paralympic gold medalists, world-record holders & Arjuna awardees in attendance</p>
+          </div>
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">03 / Commercial & Tech Expo</span>
+            <div class="metric-number"><span class="counter-value" data-target="60">0</span>+</div>
+            <p class="metric-caption">Dedicated Exhibition Stalls for assistive robotics, AI wearables, prosthetics & DEI enterprises</p>
+          </div>
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">04 / Delegate Standard</span>
+            <div class="metric-number">₹<span class="counter-value" data-target="2200">0</span></div>
+            <p class="metric-caption">Uniform delegate registration fee across all participants with instant Razorpay checkout</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- RUNNING EDITORIAL TEXT STREAM                           -->
+    <!-- ======================================================= -->
+    <div class="kinetic-ribbon-section" aria-hidden="true">
+      <div class="kinetic-ribbon-track" id="kinetic-ribbon-track">
+        <div class="kinetic-ribbon-content">
+          <span>VIKSIT BHARAT @ 2047</span>
+          <span class="ribbon-dot">·</span>
+          <span>21 BENCHMARK DISABILITIES · RPwD ACT 2016</span>
+          <span class="ribbon-dot">·</span>
+          <span>INDIAN PARALYMPIC CHAMPIONS</span>
+          <span class="ribbon-dot">·</span>
+          <span>EXHIBITION STALLS & DELEGATE REGISTRATION (₹2,200)</span>
+          <span class="ribbon-dot">·</span>
+          <span>14–16 JANUARY 2027 · VADODARA</span>
+          <span class="ribbon-dot">·</span>
+        </div>
+        <div class="kinetic-ribbon-content" aria-hidden="true">
+          <span>VIKSIT BHARAT @ 2047</span>
+          <span class="ribbon-dot">·</span>
+          <span>21 BENCHMARK DISABILITIES · RPwD ACT 2016</span>
+          <span class="ribbon-dot">·</span>
+          <span>INDIAN PARALYMPIC CHAMPIONS</span>
+          <span class="ribbon-dot">·</span>
+          <span>EXHIBITION STALLS & DELEGATE REGISTRATION (₹2,200)</span>
+          <span class="ribbon-dot">·</span>
+          <span>14–16 JANUARY 2027 · VADODARA</span>
+          <span class="ribbon-dot">·</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 01 / WHY PURPLE & VIKSIT BHARAT @ 2047                  -->
+    <!-- PURPLE GRADIENT BACKGROUND + LUMINOUS WHITE DOT MATRIX  -->
+    <!-- + 3D ANIMATED WHEELCHAIR & INCLUSION HEADER SVG         -->
+    <!-- + EVENT PHOTOGRAPH SHOWCASE (purple_fest_hero.jpg)      -->
+    <!-- ======================================================= -->
+    <section id="about" class="editorial-section theme-band-purple" data-realm="about" data-band="purple" aria-labelledby="about-heading">
+      <div class="editorial-container">
+        
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">01 / National Mandate & Vision</span>
+            <h2 id="about-heading" class="section-minimal-title">Why Purple & <span class="serif-italic">Viksit Bharat @ 2047.</span></h2>
+          </div>
+
+          <!-- 3D-Layered Animated Monochromatic Vector Sculpture: Wheelchair User & Inclusive Motion -->
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <!-- 3D Back Extrusion Shadow -->
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <circle cx="75" cy="95" r="28" class="mono-stroke" />
+                <path d="M 75,67 C 75,42 95,38 102,52 L 122,72 L 105,95" class="mono-stroke" />
+                <circle cx="92" cy="26" r="10" class="mono-fill" />
+                <path d="M 145,112 C 160,65 190,65 205,112 M 155,82 L 215,58" class="mono-stroke" />
+                <circle cx="178" cy="42" r="9" class="mono-fill" />
+                <path d="M 132,26 C 126,16 114,16 114,26 C 114,34 126,42 132,48 C 138,42 150,34 150,26 C 150,16 138,16 132,26 Z" class="mono-fill" />
+              </g>
+              <!-- 3D Front Kinetic Layer -->
+              <g class="svg-3d-front">
+                <!-- Animated Rotating Wheelchair Wheel & Spokes -->
+                <circle cx="75" cy="95" r="28" class="mono-stroke wheel-outer" />
+                <circle cx="75" cy="95" r="19" class="mono-stroke-thin wheel-pushrim" />
+                <g class="wheel-spokes-spin" style="transform-origin: 75px 95px;">
+                  <line x1="75" y1="67" x2="75" y2="123" class="mono-stroke-thin" />
+                  <line x1="47" y1="95" x2="103" y2="95" class="mono-stroke-thin" />
+                  <line x1="55" y1="75" x2="95" y2="115" class="mono-stroke-thin" />
+                  <line x1="95" y1="75" x2="55" y2="115" class="mono-stroke-thin" />
+                </g>
+                <!-- Continuous-Line Wheelchair Figure -->
+                <path d="M 68,95 L 98,95 L 114,118 M 75,67 C 75,44 95,40 104,54 L 128,68" class="mono-stroke kinetic-path" />
+                <circle cx="92" cy="26" r="9" class="mono-fill" />
+                <!-- Companion Inclusive Figure + Floating Heart -->
+                <path d="M 152,120 C 165,72 195,72 208,120 M 142,84 C 168,66 198,66 222,54" class="mono-stroke kinetic-path" />
+                <circle cx="182" cy="44" r="9" class="mono-fill" />
+                <path d="M 136,24 C 130,14 118,14 118,24 C 118,32 130,40 136,46 C 142,40 154,32 154,24 C 154,14 142,14 136,24 Z" class="mono-fill heart-float-3d" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // ACCESSIBLE MOBILITY</span>
+          </div>
+        </div>
+
+        <!-- Scroll-Highlighted Reading Narrative + Event Image Frame -->
+        <div class="editorial-two-col">
+          <div class="editorial-col-label">
+            <p class="sticky-side-note">
+              01 // ARCHITECTURE OF CAPABILITY<br>
+              Scroll to illuminate each line.
+            </p>
+            <figure class="editorial-event-figure mt-4">
+              <div class="event-img-frame">
+                <img src="purple_fest_hero.jpg" alt="Purple Fest Vadodara Cultural & Wheelchair Performance Stage in front of Baroda Heritage Domes" class="event-photo" loading="lazy">
+              </div>
+              <figcaption class="event-fig-caption">
+                ARCHIVE 01 // Purple Fest Vadodara Main Stage — Inclusive Drummers, Garba Performers & Citizens
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="editorial-col-body">
+            <div class="scroll-reading-group" id="manifesto-text">
+              <p class="scroll-line" data-scroll-line>
+                Globally, the colour <span class="text-purple-accent">Purple</span> symbolises dignity, creative authority, and the economic contribution of over 1.3 billion Persons with Disabilities.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                A developed India by <span class="text-purple-accent">2047 (Viksit Bharat)</span> cannot be engineered while leaving 2.68 crore citizens at the margins of infrastructure and industry.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Purple Fest Vadodara 2027 rejects outdated welfare narratives in favour of <span class="text-purple-accent">industrial design</span>, <span class="text-purple-accent">indigenous assistive hardware</span>, and <span class="text-purple-accent">high-performance athletics</span>.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Following landmark editions in <span class="text-purple-accent">Goa</span> and at <span class="text-purple-accent">Rashtrapati Bhavan, New Delhi</span>, Every delegate registers at a standard <span class="text-purple-accent">₹2,200 pass fee</span> to sustain world-class barrier-free infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Viksit Bharat 2047 Four Structural Pillars -->
+        <div class="architectural-metrics-strip mt-5 pt-5" style="border-top: 1px solid var(--band-hairline);" role="list" aria-label="Viksit Bharat 2047 Pillars">
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">Pillar I / Deep-Tech</span>
+            <h3 class="pillar-heading">Indigenous Assistive R&D</h3>
+            <p class="metric-caption">Make-in-India bionic prosthetics, refreshable Braille hardware, and AI computer-vision wearables built by Indian startups.</p>
+          </div>
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">Pillar II / Urban Systems</span>
+            <h3 class="pillar-heading">Universal Civic Design</h3>
+            <p class="metric-caption">Harmonised barrier-free municipal codes, tactile transit corridors, and zero-step public architecture across Gujarat.</p>
+          </div>
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">Pillar III / Sports Science</span>
+            <h3 class="pillar-heading">Paralympic Powerhouse</h3>
+            <p class="metric-caption">Grassroots para-athletic talent identification, biomechanics labs, and adaptive sports infrastructure for 2028 & 2032 Games.</p>
+          </div>
+          <div class="metric-column" role="listitem">
+            <span class="metric-index">Pillar IV / Economy</span>
+            <h3 class="pillar-heading">DEI Workforce & Enterprise</h3>
+            <p class="metric-caption">Direct corporate recruitment, Divyangjan entrepreneurship stalls, and assistive workplace automation across industry.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 02 / ORGANISING COMMITTEE & LEADERSHIP                  -->
+    <!-- WHITE CANVAS + PURPLE DOT MATRIX                        -->
+    <!-- ======================================================= -->
+    <section id="leadership" class="editorial-section theme-band-light" data-realm="leadership" data-band="light" aria-labelledby="leadership-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">02 / Executive Governance & National Secretariat</span>
+            <h2 id="leadership-heading" class="section-minimal-title">Organising Committee & <span class="serif-italic">Leadership.</span></h2>
+          </div>
+
+          <!-- 3D-Layered Monochromatic Purple SVG: Three-Heart Governance Emblem -->
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <path d="M 35,105 C 25,85 55,68 85,92 C 110,48 150,48 175,92 C 205,68 235,85 225,105" class="mono-stroke" />
+                <path d="M 72,54 C 66,44 54,44 54,54 C 54,62 66,70 72,76 C 78,70 90,62 90,54 C 90,44 78,44 72,54 Z" class="mono-fill" />
+                <path d="M 130,34 C 124,24 112,24 112,34 C 112,42 124,50 130,56 C 136,50 148,42 148,34 C 148,24 136,24 130,34 Z" class="mono-fill" />
+                <path d="M 188,54 C 182,44 170,44 170,54 C 170,62 182,70 188,76 C 194,70 206,62 206,54 C 206,44 194,44 188,54 Z" class="mono-fill" />
+              </g>
+              <g class="svg-3d-front">
+                <path d="M 35,105 C 25,85 55,68 85,92 C 110,48 150,48 175,92 C 205,68 235,85 225,105" class="mono-stroke kinetic-path" />
+                <path d="M 65,122 C 72,95 92,95 98,122 M 115,124 C 124,90 136,90 145,124 M 162,122 C 168,95 188,95 195,122" class="mono-stroke-thin" />
+                <path d="M 72,54 C 66,44 54,44 54,54 C 54,62 66,70 72,76 C 78,70 90,62 90,54 C 90,44 78,44 72,54 Z" class="mono-fill heart-float-3d" />
+                <path d="M 130,34 C 124,24 112,24 112,34 C 112,42 124,50 130,56 C 136,50 148,42 148,34 C 148,24 136,24 130,34 Z" class="mono-fill heart-float-3d" />
+                <path d="M 188,54 C 182,44 170,44 170,54 C 170,62 182,70 188,76 C 194,70 206,62 206,54 C 206,44 194,44 188,54 Z" class="mono-fill heart-float-3d" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // COLLECTIVE LEADERSHIP</span>
+          </div>
+        </div>
+
+        <div class="ruled-ledger" role="table" aria-label="Organising Committee Leadership">
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">01</span>
+            <span class="ledger-cell-role" role="cell">Festival Chairperson</span>
+            <strong class="ledger-cell-name" role="cell">Dr. Satendra Singh</strong>
+            <span class="ledger-cell-org" role="cell">Director-Professor of Physiology, UCMS & GTB Hospital, Delhi · Disability Rights Architect</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">02</span>
+            <span class="ledger-cell-role" role="cell">Chief Executive Officer</span>
+            <strong class="ledger-cell-name" role="cell">Mr. Satish Kapoor</strong>
+            <span class="ledger-cell-org" role="cell">Founder President, We Are Together (Brotherhood) · Director, We Care Film Festival</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">03</span>
+            <span class="ledger-cell-role" role="cell">Principal Coordinator</span>
+            <strong class="ledger-cell-name" role="cell">Prof. Vaishali Kolhe</strong>
+            <span class="ledger-cell-org" role="cell">Chair, Centre for Disability Studies & Action (CDSA), Tata Institute of Social Sciences (TISS), Mumbai</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">04</span>
+            <span class="ledger-cell-role" role="cell">Host Convenor (Vadodara)</span>
+            <strong class="ledger-cell-name" role="cell">Dr. Ashima Deshmukh & Team Praangan</strong>
+            <span class="ledger-cell-org" role="cell">Praangan — Centre for Inclusive Education, Therapy & Empowerment, Vadodara</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">05</span>
+            <span class="ledger-cell-role" role="cell">National Mentor</span>
+            <strong class="ledger-cell-name" role="cell">Shri Guruprasad Pawaskar</strong>
+            <span class="ledger-cell-org" role="cell">State Commissioner for Persons with Disabilities, Government of Goa</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">06</span>
+            <span class="ledger-cell-role" role="cell">Academic & Clinical Leads</span>
+            <strong class="ledger-cell-name" role="cell">Deans & Faculty Heads</strong>
+            <span class="ledger-cell-org" role="cell">The Maharaja Sayajirao University of Baroda (MSU) & GMERS Medical College, Gotri</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 03 / INDIAN PARALYMPIC ICONS & CHAMPIONS               -->
+    <!-- PURPLE GRADIENT BACKGROUND + LUMINOUS WHITE DOT MATRIX  -->
+    <!-- + 3D ANIMATED PARA-SPORTS VECTOR + purple_sports.jpg    -->
+    <!-- ======================================================= -->
+    <section id="paralympians" class="editorial-section theme-band-purple" data-realm="paralympians" data-band="purple" aria-labelledby="paralympians-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">03 / Athletic Mastery & World Records</span>
+            <h2 id="paralympians-heading" class="section-minimal-title">Indian Paralympic <span class="serif-italic">Icons.</span></h2>
+          </div>
+
+          <!-- 3D-Layered Animated Vector: Wheelchair Basketball Player & Para-Javelin Thrower -->
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <circle cx="66" cy="98" r="24" class="mono-stroke" />
+                <path d="M 66,74 C 68,48 88,40 105,28" class="mono-stroke" />
+                <circle cx="118" cy="20" r="9" class="mono-stroke" />
+                <path d="M 162,118 L 182,78 L 204,118 M 182,78 L 194,46 L 232,26" class="mono-stroke" />
+                <line x1="158" y1="54" x2="246" y2="14" class="mono-stroke" />
+              </g>
+              <g class="svg-3d-front">
+                <!-- Wheelchair Basketball Player Shooting -->
+                <circle cx="66" cy="98" r="24" class="mono-stroke wheel-outer" />
+                <g class="wheel-spokes-spin" style="transform-origin: 66px 98px;">
+                  <line x1="66" y1="74" x2="66" y2="122" class="mono-stroke-thin" />
+                  <line x1="42" y1="98" x2="90" y2="98" class="mono-stroke-thin" />
+                </g>
+                <path d="M 66,74 C 68,48 88,40 105,28" class="mono-stroke kinetic-path" />
+                <circle cx="76" cy="38" r="8" class="mono-fill" />
+                <!-- Animated Basketball Arc -->
+                <circle cx="118" cy="20" r="8" class="mono-fill heart-float-3d" />
+                <!-- Para-Javelin / Blade Runner Athlete -->
+                <path d="M 162,118 C 166,98 176,88 182,78 L 194,46 L 228,28" class="mono-stroke kinetic-path" />
+                <path d="M 182,78 C 196,92 204,106 196,118" class="mono-stroke-thin" />
+                <circle cx="188" cy="32" r="8" class="mono-fill" />
+                <!-- Javelin Spear Trajectory -->
+                <line x1="156" y1="54" x2="246" y2="14" class="mono-stroke kinetic-path" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // PARA-SPORTS IN MOTION</span>
+          </div>
+        </div>
+
+        <div class="editorial-two-col mb-5">
+          <div class="editorial-col-label">
+            <p class="sticky-side-note">
+              03 // HALL OF PERFORMANCE<br>
+              Click any athlete row to inspect technical classification & records.
+            </p>
+            <figure class="editorial-event-figure mt-4">
+              <div class="event-img-frame">
+                <img src="purple_sports.jpg" alt="Wheelchair Basketball and Blind Cricket Championship at Purple Fest" class="event-photo" loading="lazy">
+              </div>
+              <figcaption class="event-fig-caption">
+                ARCHIVE 02 // Adaptive & Para-Sports Arena — Wheelchair Basketball & Blind Cricket
+              </figcaption>
+            </figure>
+          </div>
+          <div class="editorial-col-body">
+            <div class="scroll-reading-group">
+              <p class="scroll-line" data-scroll-line>
+                India's historic surge at the <span class="text-purple-accent">Tokyo 2020</span> and <span class="text-purple-accent">Paris 2024 Paralympic Games</span> redefined how the nation perceives human capability, biomechanics, and elite sport.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Purple Fest Vadodara 2027 hosts India's premier <span class="text-purple-accent">Paralympic medalists</span> for live technical clinics, adaptive sports demonstrations, and keynote dialogues at the MSU Sports Complex.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Split Interactive Paralympic Ledger & Spotlight Dossier -->
+        <div class="zones-editorial-layout" id="paralympic-explorer">
+          
+          <div class="zones-selector-list" role="tablist" aria-label="Indian Paralympic Icons">
+            <button class="zone-tab para-tab active" role="tab" aria-selected="true" data-athlete="avani">
+              <span class="zone-tab-num">01</span>
+              <span class="zone-tab-name">Avani Lekhara</span>
+              <span class="zone-tab-loc">Para-Shooting (SH1) · 2× Paralympic Gold (Tokyo & Paris)</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="sumit">
+              <span class="zone-tab-num">02</span>
+              <span class="zone-tab-name">Sumit Antil</span>
+              <span class="zone-tab-loc">Javelin Throw (F64) · 2× Paralympic Gold & World Record</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="devendra">
+              <span class="zone-tab-num">03</span>
+              <span class="zone-tab-name">Devendra Jhajharia</span>
+              <span class="zone-tab-loc">Javelin Throw (F46) · 2× Gold, 1× Silver · President, PCI</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="sheetal">
+              <span class="zone-tab-num">04</span>
+              <span class="zone-tab-name">Sheetal Devi</span>
+              <span class="zone-tab-loc">Compound Para-Archery · Paris 2024 Bronze & Asian Double Gold</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="deepa">
+              <span class="zone-tab-num">05</span>
+              <span class="zone-tab-name">Dr. Deepa Malik</span>
+              <span class="zone-tab-loc">Shot Put (F53) · Rio 2016 Silver · Padma Shri & Khel Ratna</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="bhavina">
+              <span class="zone-tab-num">06</span>
+              <span class="zone-tab-name">Bhavina Patel (Gujarat)</span>
+              <span class="zone-tab-loc">Para-Table Tennis (Class 4) · Tokyo 2020 Paralympic Silver</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="mariyappan">
+              <span class="zone-tab-num">07</span>
+              <span class="zone-tab-name">Mariyappan Thangavelu</span>
+              <span class="zone-tab-loc">High Jump (T42/T63) · 3× Consecutive Paralympic Medalist</span>
+            </button>
+
+            <button class="zone-tab para-tab" role="tab" aria-selected="false" data-athlete="praveen">
+              <span class="zone-tab-num">08</span>
+              <span class="zone-tab-name">Praveen Kumar</span>
+              <span class="zone-tab-loc">High Jump (T64) · Paris 2024 Gold & Asian Record (2.08m)</span>
+            </button>
+          </div>
+
+          <div class="zone-detail-sheet" id="para-detail-panel" role="tabpanel" aria-live="polite">
+            <div class="zone-sheet-top">
+              <span id="para-classification" class="zone-sheet-index">CLASSIFICATION: SH1 · RIFLE 10M & 50M</span>
+              <span id="para-honours" class="zone-sheet-sensory">Padma Shri · Major Dhyan Chand Khel Ratna</span>
+            </div>
+
+            <h3 id="para-name" class="zone-sheet-title">Avani Lekhara</h3>
+            
+            <p id="para-bio" class="zone-sheet-desc">
+              The first Indian woman in history to win two Paralympic Gold medals. Competing in the SH1 wheelchair shooting category, she set a new Paralympic Record of 249.7 in the R2 10m Air Rifle Standing SH1 at Paris 2024, defending her Tokyo 2020 crown with unmatched mechanical precision.
+            </p>
+
+            <div class="zone-sheet-specs">
+              <div class="zone-spec-col">
+                <span class="spec-heading">Career Milestones & Records</span>
+                <ul id="para-records" class="zone-spec-list">
+                  <li>Gold Medal — Paris 2024 Paralympics (10m Air Rifle SH1 · PR 249.7)</li>
+                  <li>Gold Medal — Tokyo 2020 Paralympics (10m Air Rifle SH1 · WR Equalled)</li>
+                  <li>Bronze Medal — Tokyo 2020 Paralympics (50m Rifle 3 Positions SH1)</li>
+                  <li>Gold Medal — 2022 Asian Para Games, Hangzhou</li>
+                </ul>
+              </div>
+              <div class="zone-spec-col">
+                <span class="spec-heading">Purple Fest Vadodara 2027 Feature</span>
+                <p id="para-session" class="zone-access-text">
+                  Keynote Address on "Precision Biomechanics & Women in Para-Sports" + Live Adaptive Shooting & Laser-Target Demonstration at Zone 03 (MSU Sports Complex).
+                </p>
+                <a href="#register" class="zone-sheet-link" data-realm-link="register">
+                  Reserve Delegate Pass (₹2,200) to attend →
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 04 / THE 21 BENCHMARK DISABILITIES (RPwD ACT, 2016)     -->
+    <!-- WHITE CANVAS + PURPLE DOT MATRIX                        -->
+    <!-- + 3D ANIMATED MONOCHROMATIC PURPLE DISABILITY VECTORS   -->
+    <!-- ======================================================= -->
+    <section id="disabilities" class="editorial-section theme-band-light" data-realm="disabilities" data-band="light" aria-labelledby="disabilities-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">04 / Statutory Framework · The Rights of Persons with Disabilities (RPwD) Act, 2016</span>
+            <h2 id="disabilities-heading" class="section-minimal-title">The 21 Benchmark <span class="serif-italic">Disabilities.</span></h2>
+          </div>
+
+          <!-- 3D-Layered Monochromatic Purple Vector: Blind Cane Navigator + Wheelchair + Acoustic Wave -->
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <circle cx="58" cy="98" r="22" class="mono-stroke" />
+                <path d="M 58,76 C 60,52 78,48 92,68" class="mono-stroke" />
+                <path d="M 134,116 L 148,72 L 164,116 M 148,72 L 178,86 L 208,120" class="mono-stroke" />
+                <path d="M 212,42 C 228,54 228,82 212,94 M 224,32 C 246,50 246,86 224,104" class="mono-stroke-thin" />
+              </g>
+              <g class="svg-3d-front">
+                <!-- Wheelchair User -->
+                <circle cx="58" cy="98" r="22" class="mono-stroke wheel-outer" />
+                <g class="wheel-spokes-spin" style="transform-origin: 58px 98px;">
+                  <line x1="58" y1="76" x2="58" y2="120" class="mono-stroke-thin" />
+                  <line x1="36" y1="98" x2="80" y2="98" class="mono-stroke-thin" />
+                </g>
+                <path d="M 58,76 C 60,52 78,48 92,68 L 84,98" class="mono-stroke kinetic-path" />
+                <circle cx="70" cy="36" r="8" class="mono-fill" />
+                <!-- Blind Navigator with White Cane & Tactile Dots -->
+                <path d="M 134,116 L 148,72 L 164,116 M 148,54 L 148,72 L 176,82" class="mono-stroke kinetic-path" />
+                <line x1="176" y1="82" x2="208" y2="120" class="mono-stroke-thin" />
+                <circle cx="148" cy="36" r="8" class="mono-fill" />
+                <circle cx="208" cy="120" r="3.5" class="mono-fill heart-float-3d" />
+                <!-- Acoustic / Sensory Inclusion Waves -->
+                <path d="M 212,42 C 228,54 228,82 212,94 M 224,32 C 246,50 246,86 224,104" class="mono-stroke kinetic-path" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // 21 RPwD CLASSIFICATIONS</span>
+          </div>
+        </div>
+
+        <div class="editorial-two-col mb-5">
+          <div class="editorial-col-label">
+            <p class="sticky-side-note">
+              04 // STATUTORY SCHEDULE<br>
+              Filter all 21 official categories recognized under Indian law.
+            </p>
+          </div>
+          <div class="editorial-col-body">
+            <div class="scroll-reading-group">
+              <p class="scroll-line" data-scroll-line>
+                In 2016, India expanded statutory recognition from 7 conditions to <span class="text-purple-accent">21 Benchmark Disabilities</span> under the <span class="text-purple-accent">RPwD Act</span>.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Purple Fest Vadodara 2027 is architecturally and programmatically engineered across all <span class="text-purple-accent">21 classifications</span> — ensuring specialized assistive technology, clinical panels, and environmental design for every category.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statutory Division Filter Bar -->
+        <div class="timetable-controls mb-0">
+          <div class="category-filters" role="group" aria-label="Filter 21 Benchmark Disabilities by Statutory Division">
+            <button class="filter-pill rpwd-filter active" data-rpwd="all">All 21 Benchmark Disabilities</button>
+            <button class="filter-pill rpwd-filter" data-rpwd="locomotor">Locomotor & Physical (05)</button>
+            <button class="filter-pill rpwd-filter" data-rpwd="sensory">Visual, Hearing & Speech (04)</button>
+            <button class="filter-pill rpwd-filter" data-rpwd="neuro">Intellectual & Neurodevelopmental (03)</button>
+            <button class="filter-pill rpwd-filter" data-rpwd="chronic">Neurological, Blood & Mental (08)</button>
+            <button class="filter-pill rpwd-filter" data-rpwd="multiple">Multiple Disabilities (01)</button>
+          </div>
+          <span class="font-mono small text-muted" id="rpwd-count-label">Showing 21 of 21 Statutory Classifications</span>
+        </div>
+
+        <!-- Complete 21 Benchmark Disabilities Ruled Ledger (Populated by JS) -->
+        <div id="rpwd-ledger-grid" class="ruled-ledger" role="table" aria-label="21 Benchmark Disabilities under RPwD Act 2016">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 05 / COALITION & SIX EXPERIENCE ZONES                   -->
+    <!-- PURPLE GRADIENT BACKGROUND + LUMINOUS WHITE DOT MATRIX  -->
+    <!-- + EVENT PHOTOGRAPHS IN ZONES                            -->
+    <!-- ======================================================= -->
+    <section id="zones" class="editorial-section theme-band-purple" data-realm="zones" data-band="purple" aria-labelledby="zones-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">05 / Institutional Coalition & Spatial Curation</span>
+            <h2 id="zones-heading" class="section-minimal-title">Six Pillars & Six <span class="serif-italic">Zones.</span></h2>
+          </div>
+
+          <!-- 3D-Layered Animated Vector: Bionic Prosthetic & Assistive Kiosk -->
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <circle cx="70" cy="96" r="24" class="mono-stroke" />
+                <path d="M 70,72 C 74,48 92,46 112,64 L 148,54" class="mono-stroke" />
+                <rect x="164" y="34" width="56" height="82" rx="6" class="mono-stroke" />
+              </g>
+              <g class="svg-3d-front">
+                <circle cx="70" cy="96" r="24" class="mono-stroke wheel-outer" />
+                <g class="wheel-spokes-spin" style="transform-origin: 70px 96px;">
+                  <line x1="70" y1="72" x2="70" y2="120" class="mono-stroke-thin" />
+                  <line x1="46" y1="96" x2="94" y2="96" class="mono-stroke-thin" />
+                </g>
+                <path d="M 70,72 C 74,48 92,46 112,64 L 154,54" class="mono-stroke kinetic-path" />
+                <circle cx="84" cy="34" r="8" class="mono-fill" />
+                <!-- Interactive Assistive Tech Kiosk -->
+                <rect x="164" y="34" width="56" height="82" rx="6" class="mono-stroke kinetic-path" />
+                <circle cx="192" cy="58" r="8" class="mono-fill heart-float-3d" />
+                <line x1="176" y1="80" x2="208" y2="80" class="mono-stroke-thin" />
+                <line x1="176" y1="94" x2="200" y2="94" class="mono-stroke-thin" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // ASSISTIVE TECH ZONES</span>
+          </div>
+        </div>
+
+        <!-- 6 Institutional Coalition Rows -->
+        <div class="coalition-list mb-5 pb-4" role="list">
+          <article class="coalition-row" role="listitem">
+            <div class="coalition-idx">01</div>
+            <div class="coalition-tag">Host Organiser · Vadodara</div>
+            <h3 class="coalition-name">Praangan, Vadodara</h3>
+            <p class="coalition-desc">
+              Vadodara's premier centre for inclusive education, developmental therapy, early intervention, and vocational empowerment.
+            </p>
+          </article>
+
+          <article class="coalition-row" role="listitem">
+            <div class="coalition-idx">02</div>
+            <div class="coalition-tag">National Co-Organiser · New Delhi</div>
+            <h3 class="coalition-name">We Are Together (Brotherhood)</h3>
+            <p class="coalition-desc">
+              Founders of the UNESCO-supported <em>We Care Film Festival</em> and national architects of Purple Fest across India.
+            </p>
+          </article>
+
+          <article class="coalition-row" role="listitem">
+            <div class="coalition-idx">03</div>
+            <div class="coalition-tag">Academic & Policy Partner · Mumbai</div>
+            <h3 class="coalition-name">TISS Mumbai (Centre for Disability Studies & Action)</h3>
+            <p class="coalition-desc">
+              Leading the Viksit Bharat @ 2047 policy conclave, RPwD Act 2016 implementation audits, and academic research tracks.
+            </p>
+          </article>
+
+          <article class="coalition-row" role="listitem">
+            <div class="coalition-idx">04</div>
+            <div class="coalition-tag">Founding Mentor Partner · Goa</div>
+            <h3 class="coalition-name">Office of the State Commissioner for PwD, Goa</h3>
+            <p class="coalition-desc">
+              Pioneers of the Purple Fest blueprint providing institutional governance, accessibility engineering standards, and national networks.
+            </p>
+          </article>
+
+          <article class="coalition-row" role="listitem">
+            <div class="coalition-idx">05</div>
+            <div class="coalition-tag">Global Education Partner</div>
+            <h3 class="coalition-name">Global Inclusive Education Network (GIEN)</h3>
+            <p class="coalition-desc">
+              Driving Universal Design for Learning (UDL) across mainstream schools, universities, and teacher-training institutions.
+            </p>
+          </article>
+
+          <article class="coalition-row" role="listitem">
+            <div class="coalition-idx">06</div>
+            <div class="coalition-tag">University & Clinical Partners · Vadodara</div>
+            <h3 class="coalition-name">MSU Baroda & GMERS Medical College</h3>
+            <p class="coalition-desc">
+              Hosting campus venues, assistive engineering labs, clinical assessment clinics, and interdisciplinary research showcases.
+            </p>
+          </article>
+        </div>
+
+        <!-- Six Experience Zones Interactive Split Index with Event Images -->
+        <div class="zones-editorial-layout mt-5">
+          <div class="zones-selector-list" role="tablist" aria-label="Experience Zones">
+            <button class="zone-tab exp-zone-tab active" role="tab" aria-selected="true" data-zone="expo">
+              <span class="zone-tab-num">01</span>
+              <span class="zone-tab-name">Assistive Tech & Commercial Stalls Expo</span>
+              <span class="zone-tab-loc">Main Exhibition Ground · 60+ Stalls</span>
+            </button>
+
+            <button class="zone-tab exp-zone-tab" role="tab" aria-selected="false" data-zone="conclave">
+              <span class="zone-tab-num">02</span>
+              <span class="zone-tab-name">Viksit Bharat Conclave & We Care Cinema</span>
+              <span class="zone-tab-loc">Sayaji Nagar Gruh</span>
+            </button>
+
+            <button class="zone-tab exp-zone-tab" role="tab" aria-selected="false" data-zone="sports">
+              <span class="zone-tab-num">03</span>
+              <span class="zone-tab-name">Paralympic & Adaptive Sports Arena</span>
+              <span class="zone-tab-loc">MSU Sports Complex</span>
+            </button>
+
+            <button class="zone-tab exp-zone-tab" role="tab" aria-selected="false" data-zone="culture">
+              <span class="zone-tab-num">04</span>
+              <span class="zone-tab-name">Kaleidoscope Cultural Amphitheatre</span>
+              <span class="zone-tab-loc">Open-Air Stage</span>
+            </button>
+
+            <button class="zone-tab exp-zone-tab" role="tab" aria-selected="false" data-zone="empathy">
+              <span class="zone-tab-num">05</span>
+              <span class="zone-tab-name">Sensory & Universal Design Lab</span>
+              <span class="zone-tab-loc">Experiential Pavilion</span>
+            </button>
+
+            <button class="zone-tab exp-zone-tab" role="tab" aria-selected="false" data-zone="career">
+              <span class="zone-tab-num">06</span>
+              <span class="zone-tab-name">DEI Corporate Recruitment & Enterprise Hub</span>
+              <span class="zone-tab-loc">Placement Concourse</span>
+            </button>
+          </div>
+
+          <div class="zone-detail-sheet" id="zone-detail-panel" role="tabpanel" aria-live="polite">
+            <div class="zone-sheet-top">
+              <span id="zone-badge" class="zone-sheet-index">Zone 01 / Main Exhibition Ground · 60+ Stalls</span>
+              <span id="zone-sensory" class="zone-sheet-sensory">Sensory Level: Moderate · 3m Step-Free Aisles</span>
+            </div>
+
+            <h3 id="zone-title" class="zone-sheet-title">Assistive Tech & Commercial Stalls Expo</h3>
+            
+            <p id="zone-description" class="zone-sheet-desc">
+              Over 60 modular Octanorm stalls and corporate pavilions showcasing indigenous bionic prosthetics, refreshable Braille displays, AI vision wearables, eye-tracking systems, and mobility hardware across all 21 Benchmark Disabilities.
+            </p>
+
+            <!-- Dynamic Zone Event Image -->
+            <figure class="editorial-event-figure mb-4">
+              <div class="event-img-frame">
+                <img id="zone-event-img" src="purple_expo.jpg" alt="Assistive Tech Innovations Hall at Purple Fest" class="event-photo" loading="lazy">
+              </div>
+              <figcaption id="zone-img-caption" class="event-fig-caption">
+                ZONE VISUAL // Smart Prosthetics, AI Braille Tablets & Eye-Tracking Stalls
+              </figcaption>
+            </figure>
+
+            <div class="zone-sheet-specs">
+              <div class="zone-spec-col">
+                <span class="spec-heading">Zone Specifications</span>
+                <ul id="zone-highlights" class="zone-spec-list">
+                  <li>Live mobility test track for motorized & all-terrain wheelchairs</li>
+                  <li>Refreshable Braille & AI screen-reading hardware demonstrations</li>
+                  <li>ALIMCO assessment desk & prosthetic fitting consultations</li>
+                  <li>Dedicated B2B & institutional procurement lounge</li>
+                </ul>
+              </div>
+              <div class="zone-spec-col">
+                <span class="spec-heading">Exhibitor & Delegate Access</span>
+                <p id="zone-access-note" class="zone-access-text">
+                  3-metre wide step-free aisles, tactile floor routing, ISL interpreters at every pavilion cluster, and dedicated stall booking for exhibitors.
+                </p>
+                <a href="#stalls" class="zone-sheet-link" data-realm-link="stalls">
+                  Book an Exhibition Stall in this zone →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 06 / THREE-DAY PROGRAMME TIMETABLE                      -->
+    <!-- WHITE CANVAS + PURPLE DOT MATRIX                        -->
+    <!-- ======================================================= -->
+    <section id="schedule" class="editorial-section theme-band-light" data-realm="schedule" data-band="light" aria-labelledby="schedule-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">06 / Festival Timetable · 14–16 January 2027</span>
+            <h2 id="schedule-heading" class="section-minimal-title">Three-Day <span class="serif-italic">Programme.</span></h2>
+          </div>
+
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <circle cx="130" cy="70" r="46" class="mono-stroke" />
+                <line x1="130" y1="70" x2="130" y2="38" class="mono-stroke" />
+                <line x1="130" y1="70" x2="158" y2="70" class="mono-stroke" />
+              </g>
+              <g class="svg-3d-front">
+                <circle cx="130" cy="70" r="46" class="mono-stroke kinetic-path" />
+                <line x1="130" y1="70" x2="130" y2="38" class="mono-stroke" />
+                <line x1="130" y1="70" x2="158" y2="70" class="mono-stroke" />
+                <path d="M 130,14 C 125,6 115,6 115,14 C 115,20 125,26 130,32 C 135,26 145,20 145,14 C 145,6 135,6 130,14 Z" class="mono-fill heart-float-3d" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // 72-HOUR CHRONOLOGY</span>
+          </div>
+        </div>
+
+        <div class="timetable-controls">
+          <div class="day-tabs" role="tablist" aria-label="Select Festival Day">
+            <button class="day-tab active" role="tab" aria-selected="true" data-day="1">
+              <span class="day-num">Day 01</span>
+              <span class="day-date">14 Jan 2027 · Thu</span>
+            </button>
+            <button class="day-tab" role="tab" aria-selected="false" data-day="2">
+              <span class="day-num">Day 02</span>
+              <span class="day-date">15 Jan 2027 · Fri</span>
+            </button>
+            <button class="day-tab" role="tab" aria-selected="false" data-day="3">
+              <span class="day-num">Day 03</span>
+              <span class="day-date">16 Jan 2027 · Sat</span>
+            </button>
+          </div>
+
+          <div class="category-filters" role="group" aria-label="Filter by category">
+            <button class="filter-pill sched-filter active" data-category="all">All</button>
+            <button class="filter-pill sched-filter" data-category="conclave">Viksit Bharat & Policy</button>
+            <button class="filter-pill sched-filter" data-category="tech">Stalls & Tech Expo</button>
+            <button class="filter-pill sched-filter" data-category="sports">Paralympians & Sports</button>
+            <button class="filter-pill sched-filter" data-category="culture">Culture</button>
+          </div>
+        </div>
+
+        <div id="schedule-grid" class="swiss-timetable" aria-live="polite">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 07 / EXHIBITION STALLS & PAVILION BOOKING (SEPARATE)    -->
+    <!-- PURPLE GRADIENT BACKGROUND + LUMINOUS WHITE DOT MATRIX  -->
+    <!-- + purple_expo.jpg SHOWCASE                              -->
+    <!-- ======================================================= -->
+    <section id="stalls" class="editorial-section theme-band-purple" data-realm="stalls" data-band="purple" aria-labelledby="stalls-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">07 / Commercial & Institutional Exhibition (Separate from Delegate Pass)</span>
+            <h2 id="stalls-heading" class="section-minimal-title">Exhibition <span class="serif-italic">Stalls.</span></h2>
+          </div>
+
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <polygon points="130,22 210,54 210,114 130,132 50,114 50,54" class="mono-stroke" />
+                <line x1="130" y1="22" x2="130" y2="132" class="mono-stroke-thin" />
+              </g>
+              <g class="svg-3d-front">
+                <polygon points="130,22 210,54 210,114 130,132 50,114 50,54" class="mono-stroke kinetic-path" />
+                <polyline points="50,54 130,82 210,54" class="mono-stroke-thin" />
+                <line x1="130" y1="82" x2="130" y2="132" class="mono-stroke" />
+                <circle cx="130" cy="48" r="7" class="mono-fill heart-float-3d" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // MODULAR OCTANORM BAYS</span>
+          </div>
+        </div>
+
+        <div class="editorial-two-col mb-5">
+          <div class="editorial-col-label">
+            <p class="sticky-side-note">
+              07 // EXHIBITOR ARCHITECTURE<br>
+              Separate stall allotment & booking workflow.
+            </p>
+            <figure class="editorial-event-figure mt-4">
+              <div class="event-img-frame">
+                <img src="purple_expo.jpg" alt="Assistive Tech Exhibition Stalls at Purple Fest" class="event-photo" loading="lazy">
+              </div>
+              <figcaption class="event-fig-caption">
+                ARCHIVE 03 // Assistive Tech Innovations Hall — Modular Stalls & Wheelchair Test Aisles
+              </figcaption>
+            </figure>
+          </div>
+          <div class="editorial-col-body">
+            <div class="scroll-reading-group">
+              <p class="scroll-line" data-scroll-line>
+                Stall booking is structured separately from individual event delegate registration.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Showcase assistive hardware, rehabilitation devices, corporate DEI initiatives, educational frameworks, or Divyangjan-led enterprises across <span class="text-purple-accent">60+ modular barrier-free stalls</span> at the MSU Exhibition Ground.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stall Categories & Technical Specifications Ledger -->
+        <div class="ruled-ledger mb-5" role="table" aria-label="Exhibition Stall Tiers">
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">TIER A</span>
+            <span class="ledger-cell-role" role="cell">₹15,000 · 3m × 3m</span>
+            <strong class="ledger-cell-name" role="cell">Assistive Tech & Startup Shell Stall</strong>
+            <span class="ledger-cell-org" role="cell">Octanorm structure, fascia board, 2 tables, 4 chairs, 15A power socket, step-free ramp apron & 2 Exhibitor Passes</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">TIER B</span>
+            <span class="ledger-cell-role" role="cell">₹35,000 · 6m × 3m</span>
+            <strong class="ledger-cell-name" role="cell">Corporate DEI & Innovation Pavilion</strong>
+            <span class="ledger-cell-org" role="cell">Prime two-side open corner bay, LED screen mount, live demo zone, branding fascia & 4 Exhibitor Passes</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">TIER C</span>
+            <span class="ledger-cell-role" role="cell">₹12,000 · 3m × 3m</span>
+            <strong class="ledger-cell-name" role="cell">University, Clinical & R&D Pavilion</strong>
+            <span class="ledger-cell-org" role="cell">Dedicated for medical colleges, IIT/NIT research labs, special education institutes & therapy centres (includes 2 Exhibitor Passes)</span>
+          </div>
+
+          <div class="ledger-row" role="row">
+            <span class="ledger-cell-idx" role="cell">TIER D</span>
+            <span class="ledger-cell-role" role="cell">₹5,500 · 2m × 2m</span>
+            <strong class="ledger-cell-name" role="cell">Divyangjan Entrepreneur & NGO Micro-Stall</strong>
+            <span class="ledger-cell-org" role="cell">Dedicated counter stall in the Purple Enterprise Concourse for self-employed PwD founders, artisans & registered NGOs</span>
+          </div>
+        </div>
+
+        <!-- Stall Booking Split Form -->
+        <div class="venue-registration-spread">
+          <div class="venue-details-column">
+            <div class="venue-ruled-block" style="border-top: none; padding-top: 0;">
+              <span class="venue-block-label">Stall Infrastructure Standard</span>
+              <h3 class="venue-block-title">Turnkey Barrier-Free Exhibition Bays</h3>
+              <p class="venue-block-text">
+                Every stall is constructed with zero-threshold entry, 3-metre wide wheelchair-turning aisles, tactile corridor numbering, and dedicated power backup. Setup begins 13 January 2027 (02:00 PM).
+              </p>
+            </div>
+
+            <div class="venue-ruled-block">
+              <span class="venue-block-label">Stall Allotment Desk</span>
+              <p class="venue-block-text">
+                Praangan Secretariat, Old Padra Road, Vadodara<br>
+                Direct Exhibitor Desk: <a href="tel:+919825093918">+91 98250 93918</a> · <a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="registration-form-column">
+            <div class="minimal-form-wrapper">
+              <div class="form-top-bar">
+                <span class="form-index-tag">Form 01 // Exhibition Stall Booking</span>
+                <span class="form-free-tag">Razorpay Checkout Enabled</span>
+              </div>
+
+              <form id="stall-booking-form" class="minimal-underline-form" novalidate>
+                <div class="underline-row">
+                  <div class="underline-field">
+                    <label for="stall-org" class="field-label">Organisation / Brand Name *</label>
+                    <input type="text" id="stall-org" class="field-input" placeholder="e.g., Bionic Mobility Labs Pvt Ltd" required>
+                  </div>
+                  <div class="underline-field">
+                    <label for="stall-contact" class="field-label">Authorised Contact Person *</label>
+                    <input type="text" id="stall-contact" class="field-input" placeholder="Full Name" required>
+                  </div>
+                </div>
+
+                <div class="underline-row">
+                  <div class="underline-field">
+                    <label for="stall-email" class="field-label">Official Email *</label>
+                    <input type="email" id="stall-email" class="field-input" placeholder="exhibitor@company.com" required>
+                  </div>
+                  <div class="underline-field">
+                    <label for="stall-phone" class="field-label">Mobile Number *</label>
+                    <input type="tel" id="stall-phone" class="field-input" placeholder="+91 98250 XXXXX" required>
+                  </div>
+                </div>
+
+                <div class="underline-row">
+                  <div class="underline-field">
+                    <label for="stall-tier" class="field-label">Select Stall Category & Fee *</label>
+                    <select id="stall-tier" class="field-input" required>
+                      <option value="15000" data-label="Tier A · Assistive Tech Shell Stall (3m×3m)">Tier A · Assistive Tech Shell (3m×3m) — ₹15,000</option>
+                      <option value="35000" data-label="Tier B · Corporate DEI Pavilion (6m×3m)">Tier B · Corporate DEI Pavilion (6m×3m) — ₹35,000</option>
+                      <option value="12000" data-label="Tier C · University & Clinical R&D (3m×3m)">Tier C · University & Clinical R&D (3m×3m) — ₹12,000</option>
+                      <option value="5500" data-label="Tier D · Divyangjan Entrepreneur / NGO (2m×2m)">Tier D · Divyangjan Entrepreneur / NGO (2m×2m) — ₹5,500</option>
+                    </select>
+                  </div>
+
+                  <div class="underline-field">
+                    <label for="stall-domain" class="field-label">Primary Exhibition Domain</label>
+                    <select id="stall-domain" class="field-input">
+                      <option value="Assistive Hardware & Robotics">Assistive Hardware & Robotics</option>
+                      <option value="AI, Braille & Screen-Reader Tech">AI, Braille & Screen-Reader Tech</option>
+                      <option value="Prosthetics, Orthotics & Mobility">Prosthetics, Orthotics & Mobility</option>
+                      <option value="Corporate DEI & Inclusive Hiring">Corporate DEI & Inclusive Hiring</option>
+                      <option value="Special Education & Therapy Tools">Special Education & Therapy Tools</option>
+                      <option value="Divyangjan Enterprise & Crafts">Divyangjan Enterprise & Crafts</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-submit-row">
+                  <button type="submit" class="btn-editorial-primary w-100 justify-content-between">
+                    <span>Proceed to Stall Fee Payment (Razorpay)</span>
+                    <span id="stall-btn-amount">₹15,000 →</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 08 / EVENT DELEGATE REGISTRATION — STANDARD FEE ₹2,200  -->
+    <!-- WHITE CANVAS + PURPLE DOT MATRIX                        -->
+    <!-- ======================================================= -->
+    <section id="register" class="editorial-section theme-band-light" data-realm="register" data-band="light" aria-labelledby="register-heading">
+      <div class="editorial-container">
+
+        <div class="section-index-header header-with-sculpture">
+          <div class="header-text-col">
+            <span class="section-num">08 / Event Delegate Registration · Standard Fee ₹2,200 (No Free Passes)</span>
+            <h2 id="register-heading" class="section-minimal-title">Delegate <span class="serif-italic">Registration.</span></h2>
+          </div>
+
+          <div class="header-3d-svg-box" aria-hidden="true">
+            <svg viewBox="0 0 260 140" class="header-3d-svg">
+              <g class="svg-3d-shadow" transform="translate(5, 5)">
+                <rect x="55" y="28" width="150" height="86" rx="8" class="mono-stroke" />
+                <circle cx="92" cy="70" r="16" class="mono-stroke" />
+              </g>
+              <g class="svg-3d-front">
+                <rect x="55" y="28" width="150" height="86" rx="8" class="mono-stroke kinetic-path" />
+                <circle cx="92" cy="70" r="16" class="mono-stroke" />
+                <path d="M 92,62 C 88,56 80,56 80,62 C 80,68 88,74 92,78 C 96,74 104,68 104,62 C 104,56 96,56 92,62 Z" class="mono-fill heart-float-3d" />
+                <line x1="124" y1="54" x2="186" y2="54" class="mono-stroke" />
+                <line x1="124" y1="72" x2="174" y2="72" class="mono-stroke-thin" />
+                <line x1="124" y1="88" x2="162" y2="88" class="mono-stroke-thin" />
+              </g>
+            </svg>
+            <span class="header-svg-caption">3D VECTOR // VERIFIED DELEGATE CREDENTIAL</span>
+          </div>
+        </div>
+
+        <div class="venue-registration-spread">
+          
+          <div class="venue-details-column">
+            <div class="scroll-reading-group mb-4">
+              <p class="scroll-line" data-scroll-line>
+                Standard event registration is fixed at <span class="text-purple-accent">₹2,200 per delegate</span> across all categories. There are no complimentary or free passes.
+              </p>
+              <p class="scroll-line" data-scroll-line>
+                Your <span class="text-purple-accent">₹2,200 Delegate Pass</span> grants full 3-day access to all 6 Experience Zones, Paralympic Sessions, Viksit Bharat Conclaves, Delegate Kit, and hospitality across 14–16 January 2027.
+              </p>
+            </div>
+
+            <div class="venue-ruled-block">
+              <span class="venue-block-label">01 / Standard Fee Breakdown</span>
+              <h3 class="venue-block-title">₹2,200 · All-Inclusive 3-Day Delegate Pass</h3>
+              <p class="venue-block-text">
+                Includes: Entry to all Keynotes, Paralympic Clinics, We Care Film Screenings, Tech Expo, Official Delegate Kit, 3-Day Lunch & Refreshments, and Official Participation Certificate.
+              </p>
+            </div>
+
+            <div class="venue-ruled-block">
+              <span class="venue-block-label">02 / Festival Venues (Vadodara)</span>
+              <h3 class="venue-block-title">MSU Baroda Pavilion & Sayaji Nagar Gruh</h3>
+              <p class="venue-block-text">
+                Fatehgunj & Akota, Vadodara, Gujarat. Secretariat: Praangan, B/26 Haribhakti Extension, Opp. ABS Tower, Old Padra Road, Vadodara – 390007.
+              </p>
+            </div>
+
+            <div class="venue-ruled-block">
+              <span class="venue-block-label">03 / Direct Helpline & Email</span>
+              <p class="venue-block-contact">
+                <a href="tel:+919825093918">+91 98250 93918</a> · <a href="tel:+919810040377">+91 98100 40377</a> · <a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="registration-form-column">
+            <div class="minimal-form-wrapper">
+              <div class="form-top-bar">
+                <span class="form-index-tag">Form 02 // Event Delegate Registration</span>
+                <span class="form-free-tag">Standard Fee: ₹2,200 · Razorpay API</span>
+              </div>
+
+              <form id="registration-form" class="minimal-underline-form" novalidate>
+                <div class="underline-field">
+                  <label for="reg-name" class="field-label">Full Name (As on Certificate) *</label>
+                  <input type="text" id="reg-name" class="field-input" placeholder="e.g., Aarav Patel" required autocomplete="name">
+                </div>
+
+                <div class="underline-row">
+                  <div class="underline-field">
+                    <label for="reg-email" class="field-label">Email Address *</label>
+                    <input type="email" id="reg-email" class="field-input" placeholder="name@example.com" required autocomplete="email">
+                  </div>
+                  <div class="underline-field">
+                    <label for="reg-phone" class="field-label">Mobile Number (WhatsApp) *</label>
+                    <input type="tel" id="reg-phone" class="field-input" placeholder="+91 98250 XXXXX" required autocomplete="tel">
+                  </div>
+                </div>
+
+                <div class="underline-row">
+                  <div class="underline-field">
+                    <label for="reg-role" class="field-label">Delegate Category (Uniform Fee ₹2,200) *</label>
+                    <select id="reg-role" class="field-input" required>
+                      <option value="Delegate (Person with Disability)">Delegate (Person with Disability) — ₹2,200</option>
+                      <option value="Professional / Clinician / Educator">Professional / Clinician / Educator — ₹2,200</option>
+                      <option value="Corporate DEI & Industry Delegate">Corporate DEI & Industry Delegate — ₹2,200</option>
+                      <option value="Researcher / University Scholar">Researcher / University Scholar — ₹2,200</option>
+                      <option value="Accompanying Escort / Ally">Accompanying Escort / Citizen Ally — ₹2,200</option>
+                    </select>
+                  </div>
+
+                  <div class="underline-field">
+                    <label for="reg-benchmark" class="field-label">Benchmark Disability (RPwD Act 2016) / Access Setup</label>
+                    <select id="reg-benchmark" class="field-input">
+                      <option value="Not Applicable / Standard Access">Not Applicable / Standard Barrier-Free Access</option>
+                      <option value="01. Blindness (Braille & Audio Guide)">01. Blindness (Braille & Audio Guide)</option>
+                      <option value="02. Low-Vision (Large Print & High Contrast)">02. Low-Vision (Large Print & High Contrast)</option>
+                      <option value="03. Leprosy Cured Persons">03. Leprosy Cured Persons</option>
+                      <option value="04. Hearing Impairment (ISL & Live Captions)">04. Hearing Impairment (ISL & Live Captions)</option>
+                      <option value="05. Locomotor Disability (Wheelchair & Ramp)">05. Locomotor Disability (Wheelchair & Ramp)</option>
+                      <option value="06. Dwarfism (Low-Height Counters)">06. Dwarfism (Accessible Counter Height)</option>
+                      <option value="07. Intellectual Disability (Easy-Read Guide)">07. Intellectual Disability</option>
+                      <option value="08. Mental Illness">08. Mental Illness</option>
+                      <option value="09. Autism Spectrum Disorder (Sensory Quiet Room)">09. Autism Spectrum Disorder (Sensory Quiet Room)</option>
+                      <option value="10. Cerebral Palsy (Mobility & Posture Support)">10. Cerebral Palsy</option>
+                      <option value="11. Muscular Dystrophy">11. Muscular Dystrophy</option>
+                      <option value="12. Chronic Neurological Conditions">12. Chronic Neurological Conditions</option>
+                      <option value="13. Specific Learning Disabilities (Dyslexia)">13. Specific Learning Disabilities</option>
+                      <option value="14. Multiple Sclerosis">14. Multiple Sclerosis</option>
+                      <option value="15. Speech and Language Disability (AAC Support)">15. Speech and Language Disability</option>
+                      <option value="16. Thalassemia (Medical Lounge Access)">16. Thalassemia</option>
+                      <option value="17. Hemophilia (Medical Lounge Access)">17. Hemophilia</option>
+                      <option value="18. Sickle Cell Disease">18. Sickle Cell Disease</option>
+                      <option value="19. Multiple Disabilities (Deaf-Blind Tactile ISL)">19. Multiple Disabilities (incl. Deaf-Blindness)</option>
+                      <option value="20. Acid Attack Victims">20. Acid Attack Victims</option>
+                      <option value="21. Parkinson's Disease">21. Parkinson's Disease</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Fee Summary Strip -->
+                <div class="fee-summary-strip">
+                  <div>
+                    <span class="fee-lbl">MANDATORY DELEGATE FEE</span>
+                    <strong class="fee-amount">₹2,200.00 INR</strong>
+                  </div>
+                  <div class="text-end">
+                    <span class="fee-lbl">GATEWAY</span>
+                    <span class="fee-gateway-badge">Razorpay API Placeholder</span>
+                  </div>
+                </div>
+
+                <div class="form-submit-row">
+                  <button type="submit" class="btn-editorial-primary w-100 justify-content-between">
+                    <span>Pay ₹2,200 via Razorpay & Generate Pass</span>
+                    <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Generated Minimalist Swiss Pass Ticket -->
+              <div id="ticket-output" class="swiss-pass-ticket" hidden aria-live="polite">
+                <div class="pass-ticket-header">
+                  <div>
+                    <span id="pass-eyebrow-text" class="pass-eyebrow">VERIFIED PAID PASS · ₹2,200 · 14–16 JAN 2027</span>
+                    <h4 class="pass-event-title">Purple Fest Vadodara 2027</h4>
+                  </div>
+                  <span id="pass-id-display" class="pass-mono-id">PFV-2027-8841</span>
+                </div>
+
+                <div class="pass-ticket-body">
+                  <div class="pass-details-grid">
+                    <div>
+                      <span class="pass-field-lbl">Name / Organisation</span>
+                      <strong id="pass-name-display" class="pass-field-val">—</strong>
+                    </div>
+                    <div>
+                      <span class="pass-field-lbl">Pass Type</span>
+                      <strong id="pass-role-display" class="pass-field-val">—</strong>
+                    </div>
+                    <div>
+                      <span class="pass-field-lbl">RPwD / Spec</span>
+                      <strong id="pass-a11y-display" class="pass-field-val">—</strong>
+                    </div>
+                    <div>
+                      <span class="pass-field-lbl">Razorpay Payment ID</span>
+                      <strong id="pass-rzp-display" class="pass-field-val">pay_RZP2027XXXX</strong>
+                    </div>
+                  </div>
+
+                  <div class="pass-qr-box">
+                    <canvas id="pass-qr-canvas" width="96" height="96" aria-label="Verified QR Code"></canvas>
+                  </div>
+                </div>
+
+                <div class="pass-ticket-actions">
+                  <button type="button" id="btn-print-pass" class="btn-minimal-outline">Print / Save PDF</button>
+                  <button type="button" id="btn-download-pass" class="btn-minimal-outline">Download QR PNG</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- RAZORPAY API PLACEHOLDER CHECKOUT MODAL                   -->
+  <!-- ========================================================= -->
+  <div id="razorpay-modal" class="rzp-modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="rzp-modal-title">
+    <div class="rzp-modal-sheet">
+      <div class="rzp-modal-header">
+        <div>
+          <span class="rzp-badge">RAZORPAY API PLACEHOLDER · TEST MODE</span>
+          <h3 id="rzp-modal-title" class="rzp-merchant-name">Purple Fest Vadodara 2027</h3>
+          <span id="rzp-order-desc" class="rzp-order-sub">Event Delegate Registration</span>
+        </div>
+        <div class="text-end">
+          <strong id="rzp-amount-display" class="rzp-amount-val">₹2,200</strong>
+          <button type="button" id="btn-rzp-close" class="rzp-close-btn" aria-label="Cancel payment">×</button>
+        </div>
+      </div>
+
+      <div class="rzp-modal-body">
+        <div class="rzp-api-code-box">
+          <div class="d-flex justify-content-between align-items-center mb-1">
+            <span class="font-mono small text-muted">RAZORPAY PAYLOAD PREVIEW</span>
+            <span class="font-mono small text-purple-accent">key: rzp_test_PLACEHOLDER_KEY</span>
+          </div>
+          <pre id="rzp-payload-preview" class="rzp-pre"></pre>
+        </div>
+
+        <div class="rzp-methods-list">
+          <label class="rzp-method-option">
+            <input type="radio" name="rzp_method" value="UPI (GPay / PhonePe / BHIM)" checked>
+            <span>UPI / QR (GPay, PhonePe, Paytm, BHIM)</span>
+          </label>
+          <label class="rzp-method-option">
+            <input type="radio" name="rzp_method" value="Card (Visa / MasterCard / RuPay)">
+            <span>Debit / Credit Card (RuPay, Visa, MasterCard)</span>
+          </label>
+          <label class="rzp-method-option">
+            <input type="radio" name="rzp_method" value="NetBanking / NEFT">
+            <span>NetBanking (All Indian Banks)</span>
+          </label>
+        </div>
+
+        <button type="button" id="btn-rzp-confirm" class="btn-editorial-primary w-100 justify-content-between mt-3">
+          <span id="btn-rzp-confirm-text">Simulate Razorpay Success · Pay ₹2,200</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MINIMALIST ARCHITECTURAL FOOTER                           -->
+  <!-- ========================================================= -->
+  <footer class="editorial-footer">
+    <div class="editorial-container">
+      <div class="footer-top-row">
+        <div class="footer-brand-col">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <img src="purple_logo_transparent.png" alt="Purple Fest Vadodara Logo" width="36" height="36">
+            <span class="footer-brand-name">Purple Fest Vadodara 2027 · Viksit Bharat @ 2047</span>
+          </div>
+          <p class="footer-tagline">
+            14–16 January 2027 · 21 Benchmark Disabilities (RPwD Act 2016) · Standard Delegate Fee ₹2,200
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <a href="#hero" data-realm-link="hero">00 Intro</a>
+          <a href="#about" data-realm-link="about">01 Why Purple</a>
+          <a href="#leadership" data-realm-link="leadership">02 Committee</a>
+          <a href="#paralympians" data-realm-link="paralympians">03 Paralympians</a>
+          <a href="#disabilities" data-realm-link="disabilities">04 21 Disabilities</a>
+          <a href="#zones" data-realm-link="zones">05 Zones</a>
+          <a href="#schedule" data-realm-link="schedule">06 Programme</a>
+          <a href="#stalls" data-realm-link="stalls">07 Stalls</a>
+          <a href="#register" data-realm-link="register">08 Register (₹2,200)</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>© 2027 Purple Fest Vadodara · Praangan & We Are Together (Brotherhood)</span>
+        <span>Built to WCAG 2.2 AA/AAA Universal Design Standards</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- SAVED ITINERARY DRAWER                                    -->
+  <!-- ========================================================= -->
+  <aside id="itinerary-drawer" class="minimal-drawer" aria-hidden="true" aria-labelledby="drawer-title">
+    <div class="drawer-header">
+      <h3 id="drawer-title" class="drawer-heading">Saved Itinerary</h3>
+      <button id="btn-close-drawer" class="btn-minimal-outline btn-sm" aria-label="Close Itinerary">Close</button>
+    </div>
+    <div id="itinerary-list" class="drawer-body">
+      <p class="text-muted small">No sessions saved yet. Click "+ Save" on any programme row to add it here.</p>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- MITRA ACCESSIBILITY CONCIERGE                             -->
+  <!-- ========================================================= -->
+  <div class="mitra-widget">
+    <button id="btn-mitra-toggle" class="mitra-trigger" aria-expanded="false" aria-controls="mitra-panel">
+      <span class="mitra-dot" aria-hidden="true"></span>
+      <span>Ask Mitra</span>
+    </button>
+
+    <div id="mitra-panel" class="mitra-panel" hidden role="dialog" aria-label="Mitra Festival Assistant">
+      <div class="mitra-header">
+        <div>
+          <strong>Mitra · Festival Concierge</strong>
+          <span class="d-block small text-muted">Stalls, ₹2,200 Delegate Fee, Paralympians & 21 Disabilities</span>
+        </div>
+        <button id="btn-mitra-close" class="btn-minimal-outline btn-sm" aria-label="Close Mitra">×</button>
+      </div>
+
+      <div id="mitra-messages" class="mitra-messages" aria-live="polite">
+        <div class="mitra-msg bot">
+          Namaste! Ask me about the ₹2,200 Delegate Registration, Exhibition Stall booking, Indian Paralympic icons, or the 21 Benchmark Disabilities.
+        </div>
+      </div>
+
+      <div class="mitra-quick-chips">
+        <button type="button" class="mitra-chip" data-query="What is the delegate registration fee?">₹2,200 Delegate Fee</button>
+        <button type="button" class="mitra-chip" data-query="How do I book an exhibition stall?">Book a Stall</button>
+        <button type="button" class="mitra-chip" data-query="Which Paralympic champions are featured?">Paralympians</button>
+        <button type="button" class="mitra-chip" data-query="Tell me about the 21 benchmark disabilities">21 Disabilities</button>
+      </div>
+
+      <form id="mitra-form" class="mitra-input-row">
+        <input type="text" id="mitra-input" placeholder="Ask a question..." aria-label="Ask Mitra a question">
+        <button type="submit" class="btn-minimal-solid btn-sm">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-container" class="toast-region" aria-live="polite"></div>
+
+  <!-- Three.js r128 (For the 3D Sculptural Purple Fest Logo) + GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>

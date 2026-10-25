@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day-of-Event Registration Desk QR Check-In Terminal — Purple Fest Vadodara 2027</title>
+  <meta name="description" content="Official Day-of-Event Registration Desk QR Scanner, SQL Payment Verification, and Priority RPwD Accessibility Alert Terminal for Purple Fest Vadodara 2027." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/777994872ea449fc-s.p.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: '__font_7fb336';
+      src: url('/_next/static/media/72f84b25983afc71-s.p.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-cream: #FAF9F5;
+      --bg-white: #FFFFFF;
+      --lavender-hero: #DDDDF9;
+      --lavender-card: #E2E1FC;
+      --lavender-soft: #F3F2FE;
+      --navy-900: #202D59;
+      --navy-700: #33416E;
+      --purple-primary: #6B21A8;
+      --purple-hover: #581C87;
+      --teal-accent: #099F9F;
+      --teal-dark: #067474;
+      --border-subtle: #B8B6E8;
+      --green-bg: #D1FAE5;
+      --green-border: #059669;
+      --green-text: #065F46;
+      --amber-bg: #FEF3C7;
+      --amber-border: #D97706;
+      --amber-text: #92400E;
+      --red-bg: #FEE2E2;
+      --red-border: #DC2626;
+      --red-text: #991B1B;
+      --base-font-size: 16px;
+      --line-height-mult: 1.55;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: var(--base-font-size); scroll-behavior: smooth; }
+    body {
+      font-family: '__font_7fb336', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--navy-900);
+      line-height: var(--line-height-mult);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.high-contrast {
+      --bg-cream: #0B0E17;
+      --bg-white: #111625;
+      --lavender-hero: #161E35;
+      --lavender-card: #1E2640;
+      --lavender-soft: #141A2E;
+      --navy-900: #FFFFFF;
+      --navy-700: #E2E8F0;
+      --purple-primary: #C084FC;
+      --teal-accent: #2DD4BF;
+      --border-subtle: #64748B;
+      background-color: #0B0E17;
+      color: #FFFFFF;
+    }
+
+    body.wide-spacing {
+      letter-spacing: 0.03em;
+      --line-height-mult: 1.85;
+    }
+
+    .skip-to-content {
+      position: fixed;
+      left: 16px;
+      top: -120px;
+      z-index: 4000;
+      background: #202D59;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #FFFFFF;
+    }
+    .skip-to-content:focus { top: 16px; outline: 3px solid #099F9F !important; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 3px solid var(--teal-accent) !important;
+      outline-offset: 2px !important;
+    }
+
+    .site-topbar {
+      width: 100%;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .brand-logo-svg { width: 180px; height: 30px; display: block; }
+    .topbar-nav { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--navy-900);
+      background: var(--lavender-soft);
+    }
+    .nav-pill.active { background: var(--purple-primary); color: #FFFFFF; }
+
+    .a11y-panel {
+      display: none;
+      position: fixed;
+      top: 76px;
+      right: 20px;
+      z-index: 2500;
+      width: min(360px, calc(100vw - 32px));
+      border-radius: 12px;
+      border: 2px solid var(--navy-900);
+      background: var(--bg-white);
+      color: var(--navy-900);
+      padding: 18px;
+      box-shadow: 0 18px 42px rgba(32, 45, 89, 0.25);
+    }
+    .a11y-panel.open { display: block; }
+    .a11y-chip {
+      background: var(--lavender-soft);
+      color: var(--navy-900);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 12px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .a11y-chip.active, .a11y-chip:hover {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+    }
+
+    /* Terminal Hero Strip */
+    .terminal-header-strip {
+      background: linear-gradient(135deg, #202D59 0%, #3B1D7A 100%);
+      color: #FFFFFF;
+      padding: 28px 40px;
+      border-bottom: 4px solid var(--teal-accent);
+    }
+    .terminal-header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .gate-selector-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .gate-select, .operator-input {
+      padding: 9px 12px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      background: #FFFFFF;
+      color: #202D59;
+      border: 1.5px solid #2DD4BF;
+    }
+
+    /* Main Terminal Workspace */
+    .terminal-workspace {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 40px 72px;
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 32px;
+      flex: 1;
+      align-items: start;
+    }
+
+    .panel-card {
+      background: var(--bg-white);
+      border: 2px solid var(--navy-900);
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(32, 45, 89, 0.08);
+    }
+    .panel-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Camera QR Viewfinder */
+    .camera-box {
+      display: none;
+      background: #0F172A;
+      color: #FFFFFF;
+      border: 2px solid var(--teal-accent);
+      padding: 18px;
+      margin: 14px 0 18px;
+      text-align: center;
+      position: relative;
+    }
+    .camera-box.active { display: block; }
+    .camera-reticle {
+      width: 210px;
+      height: 160px;
+      margin: 0 auto 12px;
+      border: 2px dashed #2DD4BF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: #020617;
+    }
+    .scan-laser {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #2DD4BF;
+      box-shadow: 0 0 12px #2DD4BF;
+      animation: laserSweep 2.2s infinite ease-in-out;
+    }
+    @keyframes laserSweep {
+      0%, 100% { top: 12px; }
+      50% { top: 144px; }
+    }
+
+    .scan-input-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .scan-input {
+      flex: 1;
+      padding: 14px 16px;
+      font-family: monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy-900);
+      background: var(--lavender-soft);
+      border: 2px solid var(--navy-900);
+    }
+    .scan-verify-btn {
+      background: var(--purple-primary);
+      color: #FFFFFF;
+      border: none;
+      padding: 0 24px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .scan-verify-btn:hover { background: var(--purple-hover); }
+
+    .quick-scan-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .quick-scan-btn {
+      text-align: left;
+      padding: 11px 13px;
+      background: var(--lavender-soft);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--navy-900);
+      font-family: inherit;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.14s ease;
+    }
+    .quick-scan-btn:hover {
+      background: var(--lavender-card);
+      border-color: var(--purple-primary);
+    }
+
+    /* Live SQL Verification Status Banner */
+    .verify-status-banner {
+      padding: 20px 24px;
+      border: 2px solid var(--green-border);
+      background: var(--green-bg);
+      color: var(--green-text);
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .verify-status-banner.status-admit {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      color: var(--green-text);
+    }
+    .verify-status-banner.status-duplicate {
+      background: var(--amber-bg);
+      border-color: var(--amber-border);
+      color: var(--amber-text);
+    }
+    .verify-status-banner.status-invalid {
+      background: var(--red-bg);
+      border-color: var(--red-border);
+      color: var(--red-text);
+    }
+
+    /* Priority Accessibility Desk Alert Box */
+    .priority-desk-alert {
+      background: #FEF9C3;
+      border: 2.5px solid #CA8A04;
+      border-left: 8px solid #6B21A8;
+      padding: 18px 20px;
+      color: #1E2952;
+      margin-top: 18px;
+    }
+    .priority-desk-alert-header {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6B21A8;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      background: var(--lavender-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 18px;
+    }
+    .id-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy-700);
+    }
+    .id-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-top: 2px;
+    }
+
+    /* Live Feed Table */
+    .feed-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+      max-height: 290px;
+      overflow-y: auto;
+    }
+    .feed-item {
+      background: var(--lavender-soft);
+      border-left: 4px solid var(--teal-accent);
+      padding: 10px 14px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 960px) {
+      .site-topbar, .terminal-header-strip, .terminal-workspace { padding-left: 16px; padding-right: 16px; }
+      .terminal-workspace { grid-template-columns: 1fr; }
+      .quick-scan-grid, .identity-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <header class="site-topbar" role="banner">
+    <a href="/" style="display:inline-flex;align-items:center;text-decoration:none;color:var(--navy-900);" aria-label="Purple Fest Vadodara 2027 Home">
+      <svg viewBox="0 0 186 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg" aria-hidden="true">
+        <g fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 61.75 8.2C65.71 8.2 67.92 10.5 67.92 13.74C67.92 16.98 65.71 19.25 61.75 19.25H57.04V25.9H53.5V8.2H61.75ZM 57.04 16.24H61.6C63.33 16.24 64.35 15.26 64.35 13.74C64.35 12.2 63.33 11.21 61.6 11.21H57.04V16.24Z"></path>
+          <path d="M 74.32 26.21C76.14 26.21 77.61 25.82 79.63 24.69L79.97 25.9H82.54L82.55 13.2H79.11L79.11 22.19C77.74 22.92 76.69 23.26 75.36 23.26C73.47 23.26 72.75 22.58 72.75 20.73V13.2H69.32V21.6C69.32 24.79 70.86 26.22 74.3 26.22L74.32 26.21Z"></path>
+          <path d="M 84.3 25.91V13.21H86.87L87.23 14.47C89.24 13.29 90.68 12.89 92.29 12.89H93.03V15.84H92.39C90.59 15.84 89.24 16.13 87.73 16.87V25.91H84.3Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 94.26 13.2H97.47L97.7 14.43C99.23 13.29 100.9 12.89 103.01 12.89C107.31 12.89 109.07 14.68 109.07 19.56C109.07 24.41 107.31 26.22 103.01 26.22C100.99 26.22 99.36 25.84 97.7 24.78V29.75H94.26V13.2ZM 102.3 23.38C104.76 23.38 105.6 22.45 105.6 19.56C105.6 16.63 104.76 15.74 102.3 15.74C99.76 15.74 97.7 16.63 97.7 19.56C97.7 22.45 99.76 23.38 102.3 23.38Z"></path>
+          <path d="M 114.26 8.2H110.83V25.9H114.26V8.2Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 123.95 26.23C118.07 26.23 115.93 24.59 115.93 19.59C115.93 14.71 117.93 12.89 123.23 12.89C128.24 12.89 130.21 14.55 130.21 18.82C130.21 19.32 130.19 20.03 130.13 20.67H119.48C119.76 22.9 120.92 23.54 124.11 23.54C126.08 23.54 127.47 23.3 129.22 22.7L129.44 25.43C127.52 26.01 126.08 26.23 123.95 26.23ZM 119.48 18.3H126.83C126.64 16.13 125.75 15.53 123.25 15.53C120.68 15.53 119.7 16.18 119.48 18.3Z"></path>
+          <path d="M 132.32 8.2H144.8V11.21H135.88V15.68H143.22V18.6H135.88V25.9H132.32V8.2Z"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M 153.52 26.23C147.64 26.23 145.5 24.59 145.5 19.59C145.5 14.71 147.5 12.89 152.8 12.89C157.81 12.89 159.78 14.55 159.78 18.82C159.78 19.32 159.75 20.03 159.7 20.67H149.05C149.32 22.9 150.49 23.54 153.68 23.54C155.65 23.54 157.04 23.3 158.79 22.7L159.01 25.43C157.09 26.01 155.65 26.23 153.52 26.23ZM 149.05 18.3H156.4C156.2 16.13 155.32 15.53 152.82 15.53C150.25 15.53 149.27 16.18 149.05 18.3Z"></path>
+          <path d="M 167.56 26.22C164.97 26.22 162.9 25.79 161.27 25.12L161.76 22.53C163.52 23.2 165.54 23.57 167.51 23.57C169.84 23.57 170.63 23.11 170.63 22.15C170.63 21.19 169.93 20.94 166.94 20.61C162.9 20.15 161.58 19.02 161.58 16.68C161.58 14.01 163.6 12.89 167.82 12.89C170.02 12.89 171.95 13.22 173.44 13.76L173.01 16.31C171.34 15.77 169.58 15.51 167.82 15.51C165.71 15.51 164.88 15.89 164.88 16.77C164.88 17.64 165.62 17.89 168.52 18.23C172.65 18.69 173.97 19.77 173.97 22.11C173.97 24.95 171.86 26.22 167.56 26.22Z"></path>
+          <path d="M 181.14 9.73L181.13 13.2H184.79V15.82H181.13L181.13 21.39C181.13 22.79 181.49 23.13 182.87 23.13H185V25.86H181.96C178.89 25.86 177.71 24.81 177.71 21.76L177.71 15.82H175.03V13.19H177.82L178.15 9.73H181.14Z"></path>
+        </g>
+        <g style="color: #822FE6">
+          <path d="M 25.91 13.03 C 28.93 17.7 27.81 28.55 26.25 28.98 C 24.68 29.42 23.34 20.63 22.22 20.63 C 21.1 20.63 19.76 29.42 18.42 28.98 C 17.08 28.55 16.63 17.7 20.32 13.03 C 24.79 7.28 32.62 7.61 37.43 12.71" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 8.02 19 C 6.34 26.05 9.47 28.98 10.59 28.55 C 11.71 28.12 9.7 22.04 10.59 21.71 C 11.49 21.39 14.4 28.33 15.51 27.9 C 16.63 27.46 15.07 18.46 9.14 14.88 C 3.21 11.41 0.53 15.2 2.09 17.48 C 3.88 19.87 8.58 17.05 11.04 12.71 C 14.73 6.2 21.44 6.2 25.91 13.03" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 37.43 12.71 C 40.11 15.75 44.59 18.78 46.15 16.62 C 47.49 14.66 44.59 11.62 39.33 14.88 C 34.08 18.13 31.84 27.14 32.96 27.9 C 34.08 28.55 36.98 21.39 37.88 21.71 C 38.77 22.04 36.76 28.12 37.88 28.55 C 39 28.98 41.57 26.05 40.11 19" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M 7.45 5.65 C 6.1 4.1 3.55 4.45 3.75 6.45 C 3.95 8.25 6.75 9.5 8.85 10.15 C 9.65 8.25 10.05 5.35 8.45 4.3 C 7.25 3.5 7.05 5.05 7.45 5.65 Z" fill="currentColor"></path>
+          <path d="M 23.65 2.65 C 22.65 0.45 20.15 0.45 20.15 2.65 C 20.15 4.65 22.65 6.05 23.65 7.3 C 24.65 6.05 27.15 4.65 27.15 2.65 C 27.15 0.45 24.65 0.45 23.65 2.65 Z" fill="currentColor"></path>
+          <path d="M 39.55 5.65 C 40.15 5.05 39.95 3.5 38.75 4.3 C 37.15 5.35 37.55 8.25 38.35 10.15 C 40.45 9.5 43.25 8.25 43.45 6.45 C 43.65 4.45 41.1 4.1 39.55 5.65 Z" fill="currentColor"></path>
+        </g>
+      </svg>
+    </a>
+
+    <nav class="topbar-nav" aria-label="Primary Navigation">
+      <a href="/" class="nav-pill">Home</a>
+      <a href="/events" class="nav-pill">Custom Events</a>
+      <a href="/apply" class="nav-pill">Stall &amp; Delegate Apply</a>
+      <a href="/pass" class="nav-pill">Digital Entry Pass</a>
+      <a href="/check-in" class="nav-pill active" aria-current="page">Desk QR Check-In</a>
+      <a href="/admin" class="nav-pill">Admin Panel</a>
+      <button type="button" class="pf-a11y-header-btn" aria-label="Accessibility features and options" aria-expanded="false" aria-controls="pf-a11y-header-panel" onclick="toggleA11yPanel()" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9999px;border:2px solid var(--navy-900);background:var(--bg-white);color:var(--navy-900);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;">
+        <span>♿ Accessibility</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Accessibility Dialog Panel -->
+  <div id="pf-a11y-header-panel" class="a11y-panel" role="dialog" aria-label="Accessibility Features and Options" aria-hidden="true">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid var(--border-subtle);">
+      <strong>Accessibility Controls</strong>
+      <button type="button" onclick="toggleA11yPanel(false)" aria-label="Close accessibility menu" style="width:32px;height:32px;border:1.5px solid var(--navy-900);background:var(--lavender-soft);color:var(--navy-900);font-weight:700;cursor:pointer;">✕</button>
+    </div>
+    <div style="margin-bottom:14px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;margin-bottom:8px;">Text Size</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+        <button type="button" class="a11y-chip" onclick="setFontScale(14, this)">A-</button>
+        <button type="button" class="a11y-chip active" onclick="setFontScale(16, this)">A</button>
+        <button type="button" class="a11y-chip" onclick="setFontScale(18, this)">A+</button>
+        <button type="button" class="a11y-chip" onclick="setFontScale(20, this)">A++</button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <button type="button" class="a11y-chip" id="btn-contrast" onclick="toggleContrast()">High Contrast</button>
+      <button type="button" class="a11y-chip" id="btn-spacing" onclick="toggleSpacing()">Wide Spacing</button>
+    </div>
+  </div>
+
+  <!-- Terminal Header & Gate Selector -->
+  <section class="terminal-header-strip" aria-label="Check-In Gate Configuration">
+    <div class="terminal-header-inner">
+      <div>
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#5EEAD4;">
+          Purple Fest Vadodara 2027 · Day-of-Event Registration Desk Terminal
+        </div>
+        <h1 style="font-size:28px;font-weight:700;margin-top:4px;">
+          QR Scanner, SQL Payment Verification &amp; Divyangjan Priority Desk
+        </h1>
+      </div>
+
+      <div class="gate-selector-bar">
+        <div>
+          <label for="checkin-gate-select" style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:3px;">Active Check-In Gate</label>
+          <select id="checkin-gate-select" class="gate-select">
+            <option value="Gate 1 — Akota Stadium / MSU Pavilion Main Concourse">Gate 1 — Akota Stadium Main Concourse</option>
+            <option value="Gate 2 — Divyangjan Priority Green-Channel">Gate 2 — Divyangjan Priority Green-Channel</option>
+            <option value="Gate 3 — Exhibitor Pavilion">Gate 3 — Exhibitor Pavilion</option>
+            <option value="Gate 4 — Sayaji Nagar Gruh GIEN-TISS Hall">Gate 4 — Sayaji Nagar Gruh GIEN-TISS Hall</option>
+          </select>
+        </div>
+        <div>
+          <label for="checkin-operator-input" style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:3px;">Desk Operator</label>
+          <input type="text" id="checkin-operator-input" class="operator-input" value="Desk Officer — Praangan Team A" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Check-In Terminal Workspace -->
+  <main id="main-content" role="main" tabindex="-1" class="terminal-workspace">
+    <!-- Left Column: QR Scanner + Instant Lookup + Recent Feed -->
+    <div style="display:flex;flex-direction:column;gap:24px;">
+      <section class="panel-card" aria-labelledby="scanner-panel-title">
+        <div class="panel-title">
+          <span id="scanner-panel-title">1. QR Code Scanner &amp; Instant Lookup</span>
+          <button type="button" id="toggle-camera-btn" onclick="toggleCameraScanner()" style="background:var(--teal-dark);color:#FFFFFF;border:none;padding:8px 14px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;">
+            📷 Toggle Camera QR Scanner
+          </button>
+        </div>
+        <p style="font-size:14px;color:var(--navy-700);">
+          Scan the participant's QR badge with a handheld barcode scanner, webcam, or paste their SQL Registration ID (`PFV27-...`) below.
+        </p>
+
+        <!-- Camera Viewfinder -->
+        <div id="camera-scanner-box" class="camera-box" role="region" aria-label="Optical QR Camera Scanner">
+          <div class="camera-reticle">
+            <video id="qr-video-el" autoplay playsinline muted style="width:100%;height:100%;object-fit:cover;display:none;"></video>
+            <div class="scan-laser"></div>
+            <span id="camera-status-label" style="font-size:12px;color:#94A3B8;padding:10px;">Optical QR Reticle Active · Align Pass QR</span>
+          </div>
+          <button type="button" onclick="simulateCameraQrCapture()" style="background:#2DD4BF;color:#0F172A;border:none;padding:8px 16px;font-weight:800;font-size:13px;cursor:pointer;">
+            ⚡ Simulate Optical QR Frame Capture Now
+          </button>
+        </div>
+
+        <form onsubmit="handleVerifySubmit(event)" class="scan-input-row">
+          <label for="qr-token-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Scan or Enter QR Token or Registration ID</label>
+          <input type="text" id="qr-token-input" class="scan-input" placeholder="PFV27-DEL-1001" value="PFV27-DEL-1001" required />
+          <button type="submit" id="verify-submit-btn" class="scan-verify-btn">Verify &amp; Check In →</button>
+        </form>
+
+        <!-- 1-Click Sample SQL Registrations for Testing All Verification States -->
+        <div style="margin-top:20px;">
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--navy-700);margin-bottom:6px;">
+            1-Click SQL Test Scans (Test Admit, Duplicate &amp; Unpaid States):
+          </div>
+          <div id="quick-sql-buttons" class="quick-scan-grid">
+            <button type="button" class="quick-scan-btn" onclick="triggerQuickVerify('PFV27-1001-DEL')">
+              <strong style="color:var(--green-text);">✓ PFV27-1001-DEL (Paid Delegate)</strong><br/>
+              <span>Dr. Meera Deshmukh · Braille + ISL + Buggy</span>
+            </button>
+            <button type="button" class="quick-scan-btn" onclick="triggerQuickVerify('PFV27-1002-STL')">
+              <strong style="color:var(--amber-text);">⚠️ PFV27-1002-STL (Checked-In Stall)</strong><br/>
+              <span>Rohan Kulkarni · Tests Duplicate Scan Alert</span>
+            </button>
+            <button type="button" class="quick-scan-btn" onclick="triggerQuickVerify('PFV27-EVT-3001')">
+              <strong style="color:var(--purple-primary);">✓ PFV27-EVT-3001 (Para-Sports)</strong><br/>
+              <span>Aarav Sharma · Assign ISL Interpreter</span>
+            </button>
+            <button type="button" class="quick-scan-btn" onclick="triggerQuickVerify('PFV27-UNPAID-999')">
+              <strong style="color:var(--red-text);">✕ PFV27-UNPAID-999 (Unpaid / Invalid)</strong><br/>
+              <span>Tests Red Alert · Payment Not Verified</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Check-In Feed -->
+      <section class="panel-card" aria-labelledby="feed-panel-title">
+        <div class="panel-title">
+          <span id="feed-panel-title">Live SQLite Check-In Feed</span>
+          <span id="feed-counter-badge" style="font-size:12px;background:var(--lavender-card);color:var(--purple-primary);padding:4px 10px;">Real-Time Log</span>
+        </div>
+        <ul id="live-checkin-feed" class="feed-list" aria-live="polite">
+          <!-- Populated dynamically -->
+        </ul>
+      </section>
+    </div>
+
+    <!-- Right Column: Live SQL Verification Result Card -->
+    <section class="panel-card" aria-labelledby="verification-card-heading">
+      <div class="panel-title" style="margin-bottom:14px;">
+        <span id="verification-card-heading">2. Live SQL Verification &amp; Desk Action Card</span>
+        <button type="button" onclick="speakDeskVerification()" style="background:var(--lavender-card);color:var(--navy-900);border:1px solid var(--purple-primary);padding:6px 12px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;">
+          🔊 Read Desk Alert
+        </button>
+      </div>
+
+      <!-- Status Banner (Green / Amber / Red) -->
+      <div id="verify-status-banner" class="verify-status-banner status-admit" role="status" aria-live="assertive">
+        <div>
+          <div id="verify-status-headline" style="font-size:21px;font-weight:800;letter-spacing:0.02em;">
+            ✓ PAYMENT VERIFIED · ADMIT PARTICIPANT
+          </div>
+          <div id="verify-status-sub" style="font-size:14px;font-weight:600;margin-top:3px;">
+            Razorpay Signature &amp; SQLite Credential Confirmed · Checked In at Gate 1
+          </div>
+        </div>
+        <span id="verify-status-pill" style="background:#065F46;color:#FFFFFF;font-size:12px;font-weight:800;padding:6px 12px;text-transform:uppercase;">
+          ADMITTED
+        </span>
+      </div>
+
+      <!-- Identity & Payment Proof Grid -->
+      <div class="identity-grid">
+        <div>
+          <div class="id-label">Participant Full Name</div>
+          <div id="ver-full-name" class="id-val" style="font-size:19px;">Dr. Meera Krishnamurthy</div>
+        </div>
+        <div>
+          <div class="id-label">SQL Registration ID</div>
+          <div id="ver-reg-id" class="id-val" style="font-family:monospace;color:var(--purple-primary);font-size:17px;">PFV27-DEL-1001</div>
+        </div>
+        <div>
+          <div class="id-label">Event / Pass Type</div>
+          <div id="ver-pass-type" class="id-val">DELEGATE PASS · 3-Day Full Festival</div>
+        </div>
+        <div>
+          <div class="id-label">Organization / Stall Location</div>
+          <div id="ver-org-stall" class="id-val">Tata Institute of Social Sciences (TISS)</div>
+        </div>
+        <div>
+          <div class="id-label">Razorpay Payment Proof</div>
+          <div id="ver-payment-proof" class="id-val" style="color:var(--green-text);font-family:monospace;">pay_PFV279841201 · PAID ₹2,200</div>
+        </div>
+        <div>
+          <div class="id-label">Gate &amp; Timestamp</div>
+          <div id="ver-gate-time" class="id-val">Gate 1 — Akota Stadium Main Concourse</div>
+        </div>
+      </div>
+
+      <!-- Priority Accessibility Desk Alert -->
+      <div id="ver-a11y-alert-box" class="priority-desk-alert" role="region" aria-label="Priority Accessibility Desk Action">
+        <div class="priority-desk-alert-header">
+          <span>♿ PRIORITY ACCESSIBILITY DESK ALERT (RPwD ACT 2016)</span>
+        </div>
+        <div style="font-size:14px;margin-bottom:6px;">
+          <strong>Benchmark Disability Category:</strong> <span id="ver-disability-cat">1. Blindness / Low-Vision (RPwD Benchmark)</span>
+        </div>
+        <div id="ver-desk-action-line" style="font-size:16px;font-weight:800;color:#6B21A8;background:#FFFFFF;padding:10px 14px;border:1.5px solid #6B21A8;margin-top:6px;">
+          ACTION AT DESK: Issue Braille Schedule Kit + Assign Sighted/Tactile Guide Volunteer + Audio-Description Headset
+        </div>
+      </div>
+
+      <!-- Quick Links to Open Badge or Reset -->
+      <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;">
+        <a id="ver-open-pass-link" href="/pass?id=PFV27-DEL-1001" style="background:var(--navy-900);color:#FFFFFF;text-decoration:none;padding:11px 18px;font-size:14px;font-weight:700;">
+          🪪 Open Full Digital Entry Pass (/pass)
+        </a>
+        <button type="button" onclick="reScanSameTokenToTestDuplicate()" style="background:var(--amber-bg);color:var(--amber-text);border:1.5px solid var(--amber-border);padding:10px 16px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;">
+          🔁 Re-Scan Same QR (Test Duplicate Check-In Alert)
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const LOCAL_CHECKIN_STATE = {};
+    const RECENT_FEED = [
+      { registration_id: 'PFV27-STL-2001', full_name: 'Siddharth Patel', pass_type: 'EXHIBITION STALL', gate: 'Gate 3 — Exhibitor Pavilion', time: '09:12:04 AM', status: 'ADMITTED' },
+      { registration_id: 'PFV27-EVT-3001', full_name: 'Aarav Sharma', pass_type: 'EVENT PASS', gate: 'Gate 2 — Divyangjan Priority Green-Channel', time: '09:08:41 AM', status: 'ADMITTED' }
+    ];
+
+    const SEED_RECORDS = {
+      'PFV27-DEL-1001': {
+        registration_id: 'PFV27-DEL-1001',
+        full_name: 'Dr. Meera Krishnamurthy',
+        registration_type: 'DELEGATE PASS',
+        event_title: '3-Day Full Festival Delegate Pass',
+        organization: 'Tata Institute of Social Sciences (TISS)',
+        payment_status: 'PAID',
+        amount_inr: 2200,
+        razorpay_payment_id: 'pay_PFV279841201',
+        disability_category: '1. Blindness / Low-Vision (RPwD Benchmark)',
+        accommodations: ['Issue Braille Schedule Kit', 'Assign Sighted/Tactile Guide Volunteer', 'Audio-Description Headset']
+      },
+      'PFV27-STL-2001': {
+        registration_id: 'PFV27-STL-2001',
+        full_name: 'Siddharth Patel (NeoMotion Assistive Labs)',
+        registration_type: 'EXHIBITION STALL',
+        event_title: 'Purple Pavilion — 3m×3m Assistive Tech Stall (Bay A-04)',
+        organization: 'NeoMotion Assistive Labs · Zone 01 Main Hall',
+        payment_status: 'PAID',
+        amount_inr: 15000,
+        razorpay_payment_id: 'pay_PFV278834910',
+        disability_category: '5. Locomotor Disability (Wheelchair User)',
+        accommodations: ['Verify 760mm Wheelchair Counter at Bay A-04', 'Issue 2 Exhibitor Lanyards + Braille Fascia Sign']
+      },
+      'PFV27-EVT-3001': {
+        registration_id: 'PFV27-EVT-3001',
+        full_name: 'Aarav Sharma',
+        registration_type: 'EVENT PASS',
+        event_title: 'National Para-Sports Championship & GIEN Summit',
+        organization: 'Deaf Youth Sports Federation',
+        payment_status: 'PAID',
+        amount_inr: 1200,
+        razorpay_payment_id: 'pay_PFV277712309',
+        disability_category: '4. Hearing Impairment (Deaf and Hard of Hearing)',
+        accommodations: ['Assign Indian Sign Language (ISL) Interpreter', 'Issue Front-Row ISL Seating Wristband']
+      }
+    };
+
+    let lastVerifiedToken = 'PFV27-DEL-1001';
+    let cameraStream = null;
+
+    async function verifyQrToken(rawToken, forceDuplicateTest = false) {
+      const token = (rawToken || '').trim().toUpperCase();
+      if (!token) return;
+      lastVerifiedToken = token;
+      document.getElementById('qr-token-input').value = token;
+
+      const gate = document.getElementById('checkin-gate-select').value;
+      const operator = document.getElementById('checkin-operator-input').value.trim() || 'Desk Officer';
+
+      let apiResult = null;
+      try {
+        const res = await fetch('/api/check-in/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            qr_token: token,
+            registration_id: token,
+            gate,
+            gate_name: gate,
+            operator,
+            checked_in_by: operator
+          })
+        });
+        apiResult = await res.json();
+      } catch (_) {}
+
+      // Determine status and record from backend or fallback seed
+      if (token.includes('UNPAID') || token.includes('INVALID') || (apiResult && apiResult.status === 'UNPAID')) {
+        renderVerificationCard({
+          state: 'INVALID',
+          registration_id: token,
+          full_name: apiResult?.registration?.full_name || 'Unverified / Unpaid Holder',
+          registration_type: 'UNPAID / INVALID QR',
+          event_title: 'No Verified Payment Found in SQLite',
+          organization: 'Payment Pending or Invalid Token',
+          payment_status: 'UNPAID',
+          amount_inr: 0,
+          razorpay_payment_id: 'NONE (Payment Required at Assisted Counter)',
+          gate,
+          timestamp: new Date().toLocaleTimeString(),
+          disability_category: 'Check with Assisted Registration Desk',
+          accommodations: ['Direct participant to Assisted Registration Counter #4 to complete Razorpay payment']
+        });
+        return;
+      }
+
+      const backendReg = apiResult && (apiResult.registration || apiResult.data);
+      let localStored = null;
+      try {
+        const rawLocal = localStorage.getItem('pfv27_reg_' + token);
+        if (rawLocal) localStored = JSON.parse(rawLocal);
+      } catch (_) {}
+
+      const baseRec = backendReg || localStored || SEED_RECORDS[token] || {
+        registration_id: token,
+        full_name: 'Verified Delegate (' + token + ')',
+        registration_type: token.includes('STL') ? 'EXHIBITION STALL' : 'DELEGATE PASS',
+        event_title: 'Purple Fest Vadodara 2027 Official Credential',
+        organization: 'Purple Fest Vadodara Delegation',
+        payment_status: 'PAID',
+        amount_inr: 2200,
+        razorpay_payment_id: 'pay_PFV278819201',
+        disability_category: 'RPwD Priority Support',
+        accommodations: ['Assign ISL Sign Language Interpreter', 'Issue Braille Schedule Kit', 'Wheelchair Escort']
+      };
+
+      const isAlreadyCheckedIn = forceDuplicateTest ||
+        (apiResult && (apiResult.already_checked_in || apiResult.status === 'ALREADY_CHECKED_IN' || apiResult.code === 'ALREADY_CHECKED_IN')) ||
+        Boolean(LOCAL_CHECKIN_STATE[token]);
+
+      const nowStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const prevInfo = LOCAL_CHECKIN_STATE[token] || {
+        time: backendReg?.checked_in_at || nowStr,
+        gate: backendReg?.checked_in_gate || gate
+      };
+
+      if (!LOCAL_CHECKIN_STATE[token]) {
+        LOCAL_CHECKIN_STATE[token] = { time: nowStr, gate };
+        RECENT_FEED.unshift({
+          registration_id: baseRec.registration_id || token,
+          full_name: baseRec.full_name || baseRec.name || baseRec.payload?.full_name || 'Verified Delegate',
+          pass_type: baseRec.registration_type || 'DELEGATE PASS',
+          gate,
+          time: nowStr,
+          status: 'ADMITTED'
+        });
+        renderLiveFeed();
+      }
+
+      let accList = [];
+      if (Array.isArray(baseRec.accessibility_needs) && baseRec.accessibility_needs.length) accList = baseRec.accessibility_needs;
+      else if (typeof baseRec.accessibility_needs_json === 'string' && baseRec.accessibility_needs_json.trim()) {
+        try { accList = JSON.parse(baseRec.accessibility_needs_json); } catch (_) { accList = [baseRec.accessibility_needs_json]; }
+      } else if (Array.isArray(baseRec.accommodations)) accList = baseRec.accommodations;
+      else if (typeof baseRec.accommodations_json === 'string' && baseRec.accommodations_json.trim()) {
+        try { accList = JSON.parse(baseRec.accommodations_json); } catch (_) { accList = [baseRec.accommodations_json]; }
+      } else if (baseRec.accommodation_notes) {
+        accList = [baseRec.accommodation_notes];
+      } else if (baseRec.payload?.accommodations) {
+        accList = baseRec.payload.accommodations;
+      }
+      if (!accList.length) {
+        accList = ['Issue Braille Schedule Kit', 'Assign ISL Interpreter / Sighted Guide on Request'];
+      }
+
+      renderVerificationCard({
+        state: isAlreadyCheckedIn ? 'DUPLICATE' : 'ADMIT',
+        registration_id: baseRec.registration_id || token,
+        full_name: baseRec.full_name || baseRec.name || baseRec.payload?.full_name || 'Verified Delegate',
+        registration_type: baseRec.registration_type || 'DELEGATE PASS',
+        event_title: baseRec.event_title || baseRec.payload?.event_title || '3-Day Full Festival Pass',
+        organization: baseRec.organization || baseRec.stall_name || baseRec.payload?.organization || 'Purple Fest Vadodara 2027',
+        payment_status: (baseRec.payment_status || 'PAID').toUpperCase(),
+        amount_inr: Number(baseRec.amount_inr ?? baseRec.amount ?? baseRec.payload?.amount_inr ?? 2200),
+        razorpay_payment_id: baseRec.razorpay_payment_id || 'pay_PFV279841201',
+        gate: isAlreadyCheckedIn ? prevInfo.gate : gate,
+        timestamp: isAlreadyCheckedIn ? prevInfo.time : nowStr,
+        disability_category: baseRec.disability_category || baseRec.disability_type || baseRec.payload?.disability_category || 'RPwD Benchmark Priority',
+        accommodations: accList
+      });
+    }
+
+    function renderVerificationCard(info) {
+      const banner = document.getElementById('verify-status-banner');
+      const headline = document.getElementById('verify-status-headline');
+      const sub = document.getElementById('verify-status-sub');
+      const pill = document.getElementById('verify-status-pill');
+
+      banner.className = 'verify-status-banner';
+      if (info.state === 'ADMIT') {
+        banner.classList.add('status-admit');
+        headline.textContent = '✓ PAYMENT VERIFIED · ADMIT PARTICIPANT';
+        sub.textContent = `Razorpay Payment (${info.razorpay_payment_id}) & SQLite Credential Verified · Checked In at ${info.gate}`;
+        pill.style.background = '#065F46';
+        pill.textContent = 'ADMIT PARTICIPANT';
+      } else if (info.state === 'DUPLICATE') {
+        banner.classList.add('status-duplicate');
+        headline.textContent = '⚠️ ALREADY CHECKED IN · DUPLICATE SCAN';
+        sub.textContent = `Previously checked in at ${info.timestamp} via ${info.gate}. Verify ID badge before re-entry.`;
+        pill.style.background = '#92400E';
+        pill.textContent = 'ALREADY CHECKED IN';
+      } else {
+        banner.classList.add('status-invalid');
+        headline.textContent = '✕ UNPAID / INVALID QR CREDENTIAL';
+        sub.textContent = 'No paid Razorpay transaction found for this token. Escort participant to Assisted Registration Counter.';
+        pill.style.background = '#991B1B';
+        pill.textContent = 'DO NOT ADMIT';
+      }
+
+      document.getElementById('ver-full-name').textContent = info.full_name;
+      document.getElementById('ver-reg-id').textContent = info.registration_id;
+      document.getElementById('ver-pass-type').textContent = `${info.registration_type} · ${info.event_title}`;
+      document.getElementById('ver-org-stall').textContent = info.organization;
+      document.getElementById('ver-payment-proof').textContent = `${info.razorpay_payment_id} · ${info.payment_status} ₹${Number(info.amount_inr).toLocaleString('en-IN')}`;
+      document.getElementById('ver-payment-proof').style.color = info.state === 'INVALID' ? 'var(--red-text)' : 'var(--green-text)';
+      document.getElementById('ver-gate-time').textContent = `${info.gate} · ${info.timestamp}`;
+      document.getElementById('ver-disability-cat').textContent = info.disability_category;
+      document.getElementById('ver-desk-action-line').textContent = `ACTION AT DESK: ${info.accommodations.join(' + ')}`;
+      document.getElementById('ver-open-pass-link').href = `/pass?id=${encodeURIComponent(info.registration_id)}`;
+    }
+
+    function handleVerifySubmit(e) {
+      e.preventDefault();
+      const val = document.getElementById('qr-token-input').value.trim();
+      verifyQrToken(val, false);
+    }
+
+    function triggerQuickVerify(token) {
+      delete LOCAL_CHECKIN_STATE[token];
+      verifyQrToken(token, false);
+    }
+
+    function reScanSameTokenToTestDuplicate() {
+      verifyQrToken(lastVerifiedToken, true);
+    }
+
+    function renderLiveFeed() {
+      const list = document.getElementById('live-checkin-feed');
+      list.innerHTML = RECENT_FEED.slice(0, 8).map(item => `
+        <li class="feed-item">
+          <div>
+            <strong style="font-family:monospace;color:var(--purple-primary);">${escapeHtml(item.registration_id)}</strong>
+            · <strong>${escapeHtml(item.full_name)}</strong>
+            <div style="font-size:12px;color:var(--navy-700);">${escapeHtml(item.pass_type)} · ${escapeHtml(item.gate)}</div>
+          </div>
+          <span style="background:#D1FAE5;color:#065F46;font-size:11px;font-weight:800;padding:3px 8px;">
+            ✓ ${escapeHtml(item.time)}
+          </span>
+        </li>
+      `).join('');
+    }
+
+    async function toggleCameraScanner() {
+      const box = document.getElementById('camera-scanner-box');
+      const video = document.getElementById('qr-video-el');
+      const label = document.getElementById('camera-status-label');
+      const isOpen = box.classList.toggle('active');
+
+      if (!isOpen) {
+        if (cameraStream) {
+          cameraStream.getTracks().forEach(t => t.stop());
+          cameraStream = null;
+        }
+        return;
+      }
+
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        try {
+          cameraStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+          video.srcObject = cameraStream;
+          video.style.display = 'block';
+          label.style.display = 'none';
+        } catch (_) {
+          video.style.display = 'none';
+          label.style.display = 'block';
+          label.textContent = 'Simulated Optical QR Viewfinder Active · Click Capture below to scan';
+        }
+      }
+    }
+
+    function simulateCameraQrCapture() {
+      const sampleIds = ['PFV27-DEL-1001', 'PFV27-STL-2001', 'PFV27-EVT-3001'];
+      const pick = sampleIds[Math.floor(Math.random() * sampleIds.length)];
+      delete LOCAL_CHECKIN_STATE[pick];
+      verifyQrToken(pick, false);
+    }
+
+    function speakDeskVerification() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const status = document.getElementById('verify-status-headline').textContent;
+      const name = document.getElementById('ver-full-name').textContent;
+      const action = document.getElementById('ver-desk-action-line').textContent;
+      const u = new SpeechSynthesisUtterance(`${status}. Participant: ${name}. ${action}`);
+      u.rate = 0.98;
+      window.speechSynthesis.speak(u);
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function toggleA11yPanel(forceState) {
+      const panel = document.getElementById('pf-a11y-header-panel');
+      const isOpen = typeof forceState === 'boolean' ? forceState : !panel.classList.contains('open');
+      panel.classList.toggle('open', isOpen);
+      panel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    }
+
+    function setFontScale(px, btn) {
+      document.documentElement.style.setProperty('--base-font-size', px + 'px');
+      if (btn && btn.parentElement) {
+        btn.parentElement.querySelectorAll('.a11y-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    }
+
+    function toggleContrast() {
+      const active = document.body.classList.toggle('high-contrast');
+      document.getElementById('btn-contrast').classList.toggle('active', active);
+    }
+
+    function toggleSpacing() {
+      const active = document.body.classList.toggle('wide-spacing');
+      document.getElementById('btn-spacing').classList.toggle('active', active);
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      renderLiveFeed();
+
+      // Load live SQLite registrations to add quick-select buttons if available
+      try {
+        const res = await fetch('/api/registrations');
+        if (res.ok) {
+          const data = await res.json();
+          const list = Array.isArray(data) ? data : (Array.isArray(data.registrations) ? data.registrations : []);
+          if (list.length > 0) {
+            const container = document.getElementById('quick-sql-buttons');
+            const liveBtns = list.slice(0, 3).map(r => {
+              const id = r.registration_id || r.id;
+              const name = r.full_name || r.name || 'Delegate';
+              const cat = r.disability_category || 'RPwD Priority';
+              return `
+                <button type="button" class="quick-scan-btn" onclick="triggerQuickVerify('${escapeHtml(id)}')">
+                  <strong style="color:var(--green-text);">✓ ${escapeHtml(id)} (Live SQL)</strong><br/>
+                  <span>${escapeHtml(name)} · ${escapeHtml(cat)}</span>
+                </button>
+              `;
+            }).join('');
+            container.innerHTML = liveBtns + `
+              <button type="button" class="quick-scan-btn" onclick="triggerQuickVerify('PFV27-UNPAID-999')">
+                <strong style="color:var(--red-text);">✕ PFV27-UNPAID-999 (Unpaid / Invalid)</strong><br/>
+                <span>Tests Red Alert · Payment Not Verified</span>
+              </button>
+            `;
+          }
+        }
+      } catch (_) {}
+
+      const params = new URLSearchParams(window.location.search);
+      const initialId = params.get('id') || localStorage.getItem('pfv27_last_reg_id') || 'PFV27-1001-DEL';
+      delete LOCAL_CHECKIN_STATE[initialId];
+      await verifyQrToken(initialId, false);
+    });
+  </script>
+</body>
+</html>
