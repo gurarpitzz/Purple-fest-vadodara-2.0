@@ -101,19 +101,19 @@ export const NAV_OVERRIDES = {
 export const GLOBAL_PROVIDER_DATA = {
   CEOMessageData: {
     documentId: 'pf_ceo_msg_2027',
-    firstName: 'Dr. Satendra Singh',
+    firstName: 'Radha Tandon',
     lastName: '& Satish Kapoor',
-    position: 'Organising Committee · Praangan & We Are Together (Brotherhood)',
-    content: '<p>To All Delegates, Innovators, Educators & Champions,</p><p>When the International Purple Fest first convened in Goa, it transformed how India experiences disability—moving from charity and welfare to human rights, celebration, accessibility, and pride across all <strong>21 Benchmark Disabilities under the RPwD Act 2016</strong>.</p><p>On <strong>14–16 January 2027</strong>, hosted by <strong>Praangan (Vadodara)</strong> and <strong>We Are Together (Brotherhood, New Delhi)</strong> in academic partnership with the <strong>Global Inclusive Education Network (GIEN)</strong> and <strong>Tata Institute of Social Sciences (TISS)</strong>, Purple Fest arrives in Vadodara—the cultural capital shaped by Maharaja Sayajirao Gaekwad III’s pioneering legacy of universal education and social reform.</p><p>Whether you join as a registered delegate (₹2,200 full 3-day pass), an assistive technology innovator, a Paralympic athlete, an educator, or a CSR partner, you are co-architecting a barrier-free India.</p><p>Nothing About Us, Without Us.</p>',
+    position: 'Festival Director (Praangan) & Festival Coordinator (Brotherhood, Delhi)',
+    content: '<p>To All Delegates, Innovators, Educators & Champions,</p><p>When the International Purple Fest first convened in Goa, it transformed how India experiences disability—moving from charity and welfare to human rights, celebration, accessibility, and pride across all <strong>21 Benchmark Disabilities under the RPwD Act 2016</strong>.</p><p>On <strong>21–23 January 2027</strong>, jointly organised by <strong>Praangan (Vadodara, Gujarat)</strong>, <strong>Brotherhood (Delhi)</strong>, and the <strong>Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (TISS, Mumbai)</strong>, with Knowledge Partner <strong>State Commission for Persons with Disabilities, Goa</strong> and Venue Partners <strong>The Maharaja Sayajirao University, Vadodara</strong> and <strong>GMERS Medical College, Gotri, Vadodara</strong>, Purple Fest arrives in Vadodara—the cultural capital shaped by Maharaja Sayajirao Gaekwad III’s pioneering legacy of universal education and social reform.</p><p>Whether you join as a registered delegate (₹2,200 full 3-day pass), an assistive technology innovator, a Paralympic athlete, an educator, or a CSR partner, you are co-architecting a barrier-free India.</p><p>Nothing About Us, Without Us.</p>',
     createdAt: '2026-01-14T10:00:00.000Z',
     updatedAt: '2026-01-14T10:00:00.000Z',
     publishedAt: '2026-01-14T10:00:00.000Z'
   },
   footerData: {
     documentId: 'pf_footer_2027',
-    email: 'purplefestvadodara@gmail.com',
-    phone: '+91 98250 93918',
-    copyright: '© [[year_now]] Purple Fest Vadodara.',
+    email: 'purplefestivalvadodara@gmail.com',
+    phone: '+91 99743 83920 / +91 98994 72065',
+    copyright: '© [[year_now]] Purple Fest Vadodara · www.purplefestivalvadodara.com',
     createdAt: '2026-01-14T10:00:00.000Z',
     updatedAt: '2026-01-14T10:00:00.000Z',
     publishedAt: '2026-01-14T10:00:00.000Z',
@@ -143,9 +143,9 @@ export const GLOBAL_PROVIDER_DATA = {
   },
   footerTpoData: {
     documentId: 'pf_footer_tpo_2027',
-    email: 'purplefestvadodara@gmail.com',
-    phone: '+91 98250 93918',
-    copyright: '© [[year_now]] Purple Fest Vadodara.',
+    email: 'purplefestivalvadodara@gmail.com',
+    phone: '+91 99743 83920 / +91 98994 72065',
+    copyright: '© [[year_now]] Purple Fest Vadodara · www.purplefestivalvadodara.com',
     createdAt: '2026-01-14T10:00:00.000Z',
     updatedAt: '2026-01-14T10:00:00.000Z',
     publishedAt: '2026-01-14T10:00:00.000Z',
@@ -175,7 +175,7 @@ export const GLOBAL_PROVIDER_DATA = {
   },
   headerData: {
     documentId: 'pf_header_2027',
-    title: '14–16 January 2027 · Vadodara, Gujarat · Mandatory Delegate Registration ₹2,200',
+    title: '21–23 January 2027 · Vadodara, Gujarat · Mandatory Delegate Registration ₹2,200',
     createdAt: '2026-01-14T10:00:00.000Z',
     updatedAt: '2026-01-14T10:00:00.000Z',
     publishedAt: '2026-01-14T10:00:00.000Z',
@@ -242,20 +242,20 @@ export const GLOBAL_PROVIDER_DATA = {
 
 export const ROUTE_METADATA = {
   'index': {
-    title: 'Purple Fest Vadodara 2027 | Celebrating Inclusion, Dignity & Accessibility (14–16 Jan 2027)',
-    description: 'Join Purple Fest Vadodara 2027 (14–16 January 2027) in Sanskari Nagari Vadodara. Hosted by Praangan & We Are Together (Brotherhood) with GIEN & TISS. Mandatory Delegate Pass ₹2,200 · 6 Experience Zones · 21 RPwD Benchmark Disabilities.'
+    title: 'Purple Fest Vadodara 2027 | Celebrating Inclusion, Dignity & Accessibility (21–23 Jan 2027)',
+    description: 'Join Purple Fest Vadodara 2027 (21–23 January 2027) in Sanskari Nagari Vadodara. Organised by Praangan, Brotherhood & TISS Mumbai with Knowledge Partner State Commission for PwD Goa at MSU Vadodara & GMERS Gotri. Mandatory Delegate Pass ₹2,200 · 6 Experience Zones · 21 RPwD Benchmark Disabilities.'
   },
   'about-us': {
     title: 'About Purple Fest Vadodara 2027 | From Goa’s Global Mandate to Maharaja Sayajirao’s Vadodara',
-    description: 'Discover the movement behind Purple Fest Vadodara 2027: the Goa Purple Fest heritage, Maharaja Sayajirao Gaekwad III’s reform legacy, Viksit Bharat @ 2047 alignment, our 6-institution coalition, and Organising Committee leadership.'
+    description: 'Discover the movement behind Purple Fest Vadodara 2027 (21–23 January 2027): the Goa Purple Fest heritage, Maharaja Sayajirao Gaekwad III’s reform legacy, Viksit Bharat @ 2047 alignment, our multi-institutional coalition, and Organising Committee leadership.'
   },
   'viksit-bharat': {
     title: 'Viksit Bharat @ 2047 & Sugamya Bharat Abhiyan | Hon’ble PM Shri Narendra Modi’s Vision for Divyangjan | Purple Fest Vadodara 2027',
     description: 'Inspired by Hon’ble Prime Minister Shri Narendra Modi’s national vision of Viksit Bharat @ 2047 and Sugamya Bharat Abhiyan—transforming India from welfare to human dignity, assistive deep-tech, and Paralympic excellence across all 21 Benchmark Disabilities.'
   },
   'programs': {
-    title: '3-Day Programme & 6 Experience Zones | Purple Fest Vadodara 2027 (14–16 Jan 2027)',
-    description: 'Explore the complete 3-Day Festival Schedule (14–16 January 2027) and all 6 Barrier-Free Experience Zones: Assistive Tech Expo, GIEN & TISS Summit, Purple Kaleidoscope, Para-Sports Arena, Sensory Sanctuary & Birding Trail.'
+    title: '3-Day Programme & 6 Experience Zones | Purple Fest Vadodara 2027 (21–23 Jan 2027)',
+    description: 'Explore the complete 3-Day Festival Schedule (21–23 January 2027) and all 6 Barrier-Free Experience Zones: Assistive Tech Expo, GIEN & TISS Summit, Purple Kaleidoscope, Para-Sports Arena, Sensory Sanctuary & Birding Trail.'
   },
   'tier-1-program': {
     title: 'Indian Paralympic Champions & Purple Sports | Purple Fest Vadodara 2027',
@@ -279,27 +279,27 @@ export const ROUTE_METADATA = {
   },
   'careers': {
     title: 'Volunteer Brigades, Cultural Performers & GIEN Paper Call | Purple Fest Vadodara 2027',
-    description: 'Join 500+ Inclusive Volunteers, ISL Interpreters, Purple Kaleidoscope disabled artists, and GIEN & TISS research presenters at Purple Fest Vadodara 2027 (14–16 January 2027).'
+    description: 'Join 500+ Inclusive Volunteers, ISL Interpreters, Purple Kaleidoscope disabled artists, and GIEN & TISS research presenters at Purple Fest Vadodara 2027 (21–23 January 2027).'
   },
   'contact': {
     title: 'Register Delegate Pass (₹2,200) & Accessibility Desk | Purple Fest Vadodara 2027',
-    description: 'Register for your mandatory ₹2,200 Delegate Pass, request RPwD Act 2016 accommodations across all 21 Benchmark Disabilities, or contact Praangan Vadodara (+91 98250 93918 · purplefestvadodara@gmail.com).'
+    description: 'Register for your mandatory ₹2,200 Delegate Pass, request RPwD Act 2016 accommodations across all 21 Benchmark Disabilities, or contact Praangan Vadodara (Radha Tandon: +91 99743 83920 · Satish Kapoor: +91 98994 72065, +91 92117 60202 · purplefestivalvadodara@gmail.com).'
   },
   'battalion-tpo': {
     title: 'Institutional, CSR, University & Exhibitor Portal | Purple Fest Vadodara 2027',
-    description: 'Partner with Praangan, We Are Together (Brotherhood), GIEN, and TISS at Purple Fest Vadodara 2027. Book Tier A–D Assistive Tech & NGO Pavilions or sponsor delegate cohorts under Schedule VII CSR.'
+    description: 'Partner with Praangan, Brotherhood, GIEN, and TISS Mumbai at Purple Fest Vadodara 2027 (21–23 January 2027). Book Tier A–D Assistive Tech & NGO Pavilions or sponsor delegate cohorts under Schedule VII CSR.'
   },
   'programs-tpo': {
     title: 'Exhibition Stall Tiers (Tier A–D) & Institutional Tracks | Purple Fest Vadodara 2027',
-    description: 'Compare Tier A (₹15,000 Standard 3m×3m), Tier B (₹35,000 Corner 6m×3m), Tier C (₹12,000 Startup/University), and Tier D (₹5,500 DPO/Grassroots NGO) exhibition stalls for 14–16 January 2027.'
+    description: 'Compare Tier A (₹15,000 Standard 3m×3m), Tier B (₹35,000 Corner 6m×3m), Tier C (₹12,000 Startup/University), and Tier D (₹5,500 DPO/Grassroots NGO) exhibition stalls for 21–23 January 2027.'
   },
   'contact-tpo': {
     title: 'Book Exhibition Stall (Tier A–D) & CSR Sponsorship Desk | Purple Fest Vadodara 2027',
-    description: 'Direct institutional booking desk for Tier A–D Exhibition Stalls, CSR Schedule VII sponsorships, and university delegations at Purple Fest Vadodara 2027.'
+    description: 'Direct institutional booking desk for Tier A–D Exhibition Stalls, CSR Schedule VII sponsorships, and university delegations at Purple Fest Vadodara 2027 (21–23 January 2027).'
   },
   'terms-and-conditions': {
     title: 'Terms & Conditions · Mandatory ₹2,200 Delegate Pass & Stall Rules | Purple Fest Vadodara 2027',
-    description: 'Official Terms & Conditions for Purple Fest Vadodara 2027 (14–16 January 2027), including the Mandatory ₹2,200 Delegate Registration Policy (no free visitors), Tier A–D Exhibitor Rules, and RPwD Act 2016 Charter.'
+    description: 'Official Terms & Conditions for Purple Fest Vadodara 2027 (21–23 January 2027), including the Mandatory ₹2,200 Delegate Registration Policy (no free visitors), Tier A–D Exhibitor Rules, and RPwD Act 2016 Charter.'
   },
   'privacy-policy': {
     title: 'Privacy Policy · DPDP Act 2023 & RPwD Accommodation Data | Purple Fest Vadodara 2027',
@@ -308,13 +308,13 @@ export const ROUTE_METADATA = {
 };
 
 export const TERMS_HTML = `
-<p>Welcome to the official portal of <strong>Purple Fest Vadodara 2027</strong>, scheduled for <strong>14–16 January 2027</strong> in <strong>Vadodara, Gujarat (Sanskari Nagari)</strong>. Purple Fest Vadodara 2027 is jointly convened by <strong>Praangan (Vadodara)</strong> and <strong>We Are Together (Brotherhood, New Delhi)</strong> in collaboration with the <strong>Global Inclusive Education Network (GIEN)</strong>, <strong>Tata Institute of Social Sciences (TISS)</strong>, <strong>Department of Empowerment of Persons with Disabilities (DEPwD, Ministry of Social Justice &amp; Empowerment, Govt. of India)</strong>, and the <strong>Office of the State Commissioner for Persons with Disabilities, Government of Goa</strong>.</p>
+<p>Welcome to the official portal of <strong>Purple Fest Vadodara 2027</strong> (<a href="https://www.purplefestivalvadodara.com" target="_blank" rel="noopener">www.purplefestivalvadodara.com</a>), scheduled for <strong>21–23 January 2027</strong> in <strong>Vadodara, Gujarat (Sanskari Nagari)</strong>. Purple Fest Vadodara 2027 is jointly organised by <strong>Praangan (Vadodara, Gujarat)</strong>, <strong>Brotherhood (Delhi)</strong>, and the <strong>Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (TISS, Mumbai)</strong>, with Knowledge Partner <strong>State Commission for Persons with Disabilities, Goa</strong> and Venue Partners <strong>The Maharaja Sayajirao University, Vadodara</strong> and <strong>GMERS Medical College, Gotri, Vadodara</strong>.</p>
 <p>By accessing this portal, registering for a Delegate Pass, booking an Exhibition Stall, or submitting an abstract/performance proposal, you agree to be bound by these Terms &amp; Conditions and our Barrier-Free Dignity Charter.</p>
 
 <h2>1. Mandatory Delegate Registration &amp; Strict No-Free-Visitor Policy (₹2,200)</h2>
 <p>In accordance with the Organising Committee’s crowd-safety, sensory-comfort, and universal accessibility mandate:</p>
 <ul>
-  <li><strong>Mandatory Registration Fee:</strong> Every adult delegate, accompanying professional, academic participant, corporate representative, and general attendee must hold a valid, pre-registered <strong>Delegate Pass priced at ₹2,200 (Indian Rupees Two Thousand Two Hundred Only)</strong> for the full 3-day festival (14–16 January 2027).</li>
+  <li><strong>Mandatory Registration Fee:</strong> Every adult delegate, accompanying professional, academic participant, corporate representative, and general attendee must hold a valid, pre-registered <strong>Delegate Pass priced at ₹2,200 (Indian Rupees Two Thousand Two Hundred Only)</strong> for the full 3-day festival (21–23 January 2027).</li>
   <li><strong>No Free Casual Walk-In Visitors:</strong> To prevent overcrowding of wheelchair turning radii (1500 mm minimum under IS 4963), tactile paving corridors, and low-sensory zones, <strong>there is no free casual visitor or walk-in public entry</strong>. Entry to all 6 Experience Zones is strictly controlled via QR/Braille-embossed Delegate Badges.</li>
   <li><strong>What the ₹2,200 Delegate Pass Covers:</strong> Full 3-day access to all 6 Experience Zones, keynote plenaries, GIEN &amp; TISS Inclusive Education sessions, Purple Kaleidoscope cultural evenings, Para-Sports Arena championships, accessible festival kit (Braille/large-print/digital), and on-site ISL interpretation &amp; electric buggy shuttles.</li>
   <li><strong>Escort / Personal Assistant Policy:</strong> Registered delegates with high-support benchmark disabilities requiring a dedicated personal care attendant or sign-language interpreter must declare their escort during registration so a linked Companion Credential can be issued under the Accessibility Desk protocol.</li>
@@ -360,7 +360,7 @@ export const TERMS_HTML = `
 
 <h2>4. Cancellations, Substitutions &amp; Force Majeure</h2>
 <ul>
-  <li><strong>Delegate Pass Substitutions:</strong> A registered ₹2,200 Delegate Pass may be transferred to another named delegate from the same organization up to <strong>7 January 2027</strong> by emailing <strong>purplefestvadodara@gmail.com</strong>.</li>
+  <li><strong>Delegate Pass Substitutions:</strong> A registered ₹2,200 Delegate Pass may be transferred to another named delegate from the same organization up to <strong>18 January 2027</strong> by emailing <strong>purplefestivalvadodara@gmail.com</strong>.</li>
   <li><strong>Stall Cancellation:</strong> Cancellations received in writing before <strong>15 December 2026</strong> are eligible for a 50% refund net of bank/processing charges; cancellations after 15 December 2026 are non-refundable as octanorm fabrication and tactile/Braille directories are finalized.</li>
 </ul>
 
@@ -368,15 +368,15 @@ export const TERMS_HTML = `
 <p>Keynote plenaries, Purple Kaleidoscope performances, and Para-Sports matches are photographed and livestreamed with real-time Indian Sign Language (ISL) and closed captions for educational and advocacy archives by Praangan, Brotherhood, GIEN, and TISS. Delegates who prefer not to be photographed in close-up may request a distinct lanyard indicator at the Registration Desk.</p>
 
 <h2>6. Governing Law &amp; Secretariat Contact</h2>
-<p>These Terms &amp; Conditions are governed by the laws of India, with exclusive jurisdiction in the courts of <strong>Vadodara, Gujarat</strong>. For all official correspondence, contact the Purple Fest Vadodara 2027 Secretariat at <strong>purplefestvadodara@gmail.com</strong> or <strong>+91 98250 93918</strong>.</p>
+<p>These Terms &amp; Conditions are governed by the laws of India, with exclusive jurisdiction in the courts of <strong>Vadodara, Gujarat</strong>. For all official correspondence, contact the Purple Fest Vadodara 2027 Secretariat at <strong>Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat</strong> · Email: <strong>purplefestivalvadodara@gmail.com</strong> · Phone: <strong>Radha Tandon: +91 99743 83920 | Satish Kapoor: +91 98994 72065, +91 92117 60202</strong> · Website: <strong>www.purplefestivalvadodara.com</strong>.</p>
 `;
 
 export const PRIVACY_HTML = `
-<p><strong>Effective Date:</strong> January 2026 &nbsp;|&nbsp; <strong>Festival Dates:</strong> 14–16 January 2027 (Vadodara, Gujarat)<br/><strong>Data Fiduciary:</strong> Purple Fest Vadodara 2027 Secretariat — <strong>Praangan (Vadodara)</strong> &amp; <strong>We Are Together (Brotherhood, New Delhi)</strong>.</p>
+<p><strong>Effective Date:</strong> January 2026 &nbsp;|&nbsp; <strong>Festival Dates:</strong> 21–23 January 2027 (Vadodara, Gujarat)<br/><strong>Data Fiduciary:</strong> Purple Fest Vadodara 2027 Secretariat — <strong>Praangan Education Trust (Vadodara, Gujarat)</strong>, <strong>Brotherhood (Delhi)</strong> &amp; <strong>Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (TISS, Mumbai)</strong>.</p>
 <p>Purple Fest Vadodara 2027 is committed to protecting the privacy, autonomy, and dignity of every delegate, speaker, Paralympic athlete, artist, exhibitor, student, and volunteer in full compliance with India’s <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong> and Section 3 (Equality and Non-Discrimination) of the <strong>Rights of Persons with Disabilities (RPwD) Act, 2016</strong>.</p>
 
 <h2>1. Scope of This Privacy Notice</h2>
-<p>This Privacy Notice applies to all personal and accessibility accommodation data collected through the Purple Fest Vadodara 2027 digital portal, the Delegate Pass (₹2,200) registration workflow, the Tier A–D Exhibition Stall booking desk, the GIEN &amp; TISS Academic Abstract portal, and on-ground registration counters in Vadodara.</p>
+<p>This Privacy Notice applies to all personal and accessibility accommodation data collected through the Purple Fest Vadodara 2027 digital portal (<a href="https://www.purplefestivalvadodara.com" target="_blank" rel="noopener">www.purplefestivalvadodara.com</a>), the Delegate Pass (₹2,200) registration workflow, the Tier A–D Exhibition Stall booking desk, the GIEN &amp; TISS Academic Abstract portal, and on-ground registration counters at <strong>The Maharaja Sayajirao University, Vadodara</strong> and <strong>GMERS Medical College, Gotri, Vadodara</strong>.</p>
 
 <h2>2. Categories of Personal Data We Collect</h2>
 <ul>
@@ -386,7 +386,7 @@ export const PRIVACY_HTML = `
 </ul>
 
 <h2>3. Strict Purpose Limitation for Disability &amp; Accommodation Data</h2>
-<p>Your voluntary accessibility disclosures are used <strong>exclusively</strong> by the Purple Fest Accessibility &amp; Inclusion Logistics Desk to provision reasonable accommodations during 14–16 January 2027. We <strong>never</strong> sell, rent, monetize, or share individual disability or health-accommodation records with commercial sponsors, advertisers, or unauthorized third parties.</p>
+<p>Your voluntary accessibility disclosures are used <strong>exclusively</strong> by the Purple Fest Accessibility &amp; Inclusion Logistics Desk to provision reasonable accommodations during 21–23 January 2027. We <strong>never</strong> sell, rent, monetize, or share individual disability or health-accommodation records with commercial sponsors, advertisers, or unauthorized third parties.</p>
 
 <h2>4. Browser LocalStorage &amp; Accessibility Preferences</h2>
 <p>Our website stores your accessibility preferences (such as reduced-motion settings, high-contrast mode, Deal Sizer / Stall Calculator scenarios, and saved festival itinerary) locally in your browser’s <code>localStorage</code> so your experience remains barrier-free across sessions without tracking you across external websites.</p>
@@ -401,7 +401,7 @@ export const PRIVACY_HTML = `
 <p>All registration records and accommodation requests are stored in encrypted access-controlled databases restricted to authorized Secretariat personnel who have signed the Purple Fest Confidentiality &amp; Dignity Pledge.</p>
 
 <h2>8. Data Retention &amp; Post-Festival Archiving</h2>
-<p>Specific on-ground accommodation requests (such as dietary, sensory, or medical support notes) are permanently purged within <strong>60 days</strong> after the conclusion of Purple Fest Vadodara 2027 (by 17 March 2027), while participation certificates and statutory accounting records for ₹2,200 Delegate Passes and Tier A–D Stalls are retained as required by Indian tax and audit laws.</p>
+<p>Specific on-ground accommodation requests (such as dietary, sensory, or medical support notes) are permanently purged within <strong>60 days</strong> after the conclusion of Purple Fest Vadodara 2027 (by 24 March 2027), while participation certificates and statutory accounting records for ₹2,200 Delegate Passes and Tier A–D Stalls are retained as required by Indian tax and audit laws.</p>
 
 <h2>9. Your Rights as a Data Principal</h2>
 <p>Under the DPDP Act 2023, you have the right to access a summary of your personal data, correct or update your badge/accommodation details, withdraw consent, or request erasure by writing to our Data Protection &amp; Accessibility Officer.</p>
@@ -413,5 +413,5 @@ export const PRIVACY_HTML = `
 <p>Upon request, this Privacy Notice and all consent forms are available in <strong>Accessible PDF (Screen-Reader Tagged), Grade-1 English/Gujarati Braille, Large Print (18pt+), and Indian Sign Language (ISL) video summary</strong>.</p>
 
 <h2>12. Contact the Data Protection &amp; Accessibility Desk</h2>
-<p><strong>Purple Fest Vadodara 2027 Secretariat (Praangan &amp; We Are Together)</strong><br/>Email: <a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a><br/>Phone / WhatsApp / Helpline: <a href="tel:+919825093918">+91 98250 93918</a><br/>Venue City: Vadodara, Gujarat, India.</p>
+<p><strong>Purple Fest Vadodara 2027 Secretariat</strong><br/><strong>Address:</strong> Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat<br/><strong>Organisers:</strong> Praangan (Vadodara, Gujarat) · Brotherhood (Delhi) · Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (Mumbai)<br/><strong>Knowledge Partner:</strong> State Commission for Persons with Disabilities, Goa &nbsp;|&nbsp; <strong>Venue Partners:</strong> The Maharaja Sayajirao University, Vadodara &amp; GMERS Medical College, Gotri, Vadodara<br/><strong>Email:</strong> <a href="mailto:purplefestivalvadodara@gmail.com">purplefestivalvadodara@gmail.com</a> &nbsp;|&nbsp; <strong>Website:</strong> <a href="https://www.purplefestivalvadodara.com" target="_blank" rel="noopener">www.purplefestivalvadodara.com</a><br/><strong>Contact Persons &amp; Helpline:</strong> Radha Tandon (<a href="tel:+919974383920">+91 99743 83920</a>) &nbsp;|&nbsp; Satish Kapoor (<a href="tel:+919899472065">+91 98994 72065</a>, <a href="tel:+919211760202">+91 92117 60202</a>)</p>
 `;

@@ -401,9 +401,10 @@ export function buildConfirmationEmailHtml(reg, options = {}) {
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td>
-                    <strong style="color: #FFFFFF;">Purple Fest Vadodara 2027 Secretariat</strong><br />
-                    Akota Stadium &amp; Sir Sayajirao Nagar Gruh, Akota, Vadodara, Gujarat 390020<br />
-                    Helpline (ISL Video &amp; Voice): +91 265 234 2027 &middot; secretariat@purplefestvadodara.org
+                    <strong style="color: #FFFFFF;">Purple Fest Vadodara 2027 Secretariat (21–23 January 2027)</strong><br />
+                    Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat<br />
+                    Venue Partners: The Maharaja Sayajirao University, Vadodara &amp; GMERS Medical College, Gotri, Vadodara<br />
+                    Helpline: Radha Tandon (+91 99743 83920) &middot; Satish Kapoor (+91 98994 72065, +91 92117 60202) &middot; purplefestivalvadodara@gmail.com &middot; www.purplefestivalvadodara.com
                   </td>
                   <td align="right" valign="bottom" style="font-family: 'Courier New', Courier, monospace; font-size: 10px; color: #E5C875;">
                     DISPATCHED VIA RESEND<br />

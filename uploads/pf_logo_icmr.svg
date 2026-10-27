@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" role="img" aria-label="Indian Council of Medical Research (ICMR), New Delhi Emblem">
+  <!-- Matches the exact ICMR lockup shown in the reference screenshot (blue circular seal + icmr wordmark + orange rule) -->
+  <!-- Left ICMR Circular Seal -->
+  <g transform="translate(86, 80)">
+    <circle cx="0" cy="0" r="56" fill="#FFFFFF" stroke="#1E3A78" stroke-width="2.6"/>
+    <circle cx="0" cy="0" r="49" fill="none" stroke="#1E3A78" stroke-width="1.3" stroke-dasharray="3 2"/>
+    <circle cx="0" cy="0" r="35" fill="#F4F7FC" stroke="#1E3A78" stroke-width="1.8"/>
+
+    <!-- Top Hindi/Sanskrit Arc Text Simulation -->
+    <text x="0" y="-38" text-anchor="middle" fill="#1E3A78" font-family="serif" font-size="7.5" font-weight="700" letter-spacing="0.4">भारतीय आयुर्विज्ञान अनुसंधान परिषद</text>
+
+    <!-- Sacred Lamp of Knowledge (Diya) on Pedestal -->
+    <path d="M-16,4 Q0,16 16,4 L12,-1 H-12 Z" fill="#1E3A78"/>
+    <path d="M0,-22 C-6,-13 -5,-5 0,-1 C5,-5 6,-13 0,-22 Z" fill="#E86C1F"/>
+    <path d="M0,-17 C-3,-11 -2,-6 0,-3 C2,-6 3,-11 0,-17 Z" fill="#FFC845"/>
+    <rect x="-3" y="9" width="6" height="10" fill="#1E3A78"/>
+    <rect x="-12" y="18" width="24" height="3.5" rx="1.5" fill="#1E3A78"/>
+
+    <!-- Side Laurel Leaves -->
+    <path d="M-24,10 C-29,0 -27,-12 -19,-20" fill="none" stroke="#1E3A78" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M24,10 C29,0 27,-12 19,-20" fill="none" stroke="#1E3A78" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- Bottom Motto Ribbon -->
+    <path d="M-47,33 L47,33 L42,46 L-42,46 Z" fill="#FFFFFF" stroke="#1E3A78" stroke-width="1.5"/>
+    <text x="0" y="42" text-anchor="middle" fill="#1E3A78" font-family="serif" font-size="7.2" font-weight="700">परीक्ष्यकारिणो हि कुशला भवन्ति</text>
+  </g>
+
+  <!-- Right ICMR Official Wordmark Lockup -->
+  <g transform="translate(164, 28)">
+    <!-- Bold lowercase 'icmr' in official Navy -->
+    <text x="0" y="44" fill="#1B3668" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" letter-spacing="1">icmr</text>
+    <!-- Signature Orange Accent Bar -->
+    <rect x="0" y="55" width="232" height="3.5" rx="1.75" fill="#F26722"/>
+    <text x="0" y="75" fill="#1B3668" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" font-weight="800" letter-spacing="0.45">INDIAN COUNCIL OF</text>
+    <text x="0" y="92" fill="#1B3668" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" font-weight="800" letter-spacing="0.45">MEDICAL RESEARCH</text>
+    <text x="0" y="109" fill="#E86C1F" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.5">NEW DELHI · SERVING THE NATION SINCE 1911</text>
+  </g>
+</svg>

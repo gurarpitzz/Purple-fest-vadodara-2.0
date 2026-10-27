@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" role="img" aria-label="The Maharaja Sayajirao University of Baroda, Vadodara Emblem">
+  <defs>
+    <linearGradient id="msuGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D99B26"/>
+      <stop offset="50%" stop-color="#F2C94C"/>
+      <stop offset="100%" stop-color="#B37710"/>
+    </linearGradient>
+    <linearGradient id="msuNavy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3264"/>
+      <stop offset="100%" stop-color="#111D3B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Crest Seal -->
+  <g transform="translate(82, 80)">
+    <!-- Outer Scalloped Gold Sunburst Ring -->
+    <circle cx="0" cy="0" r="64" fill="url(#msuGold)" opacity="0.18"/>
+    <circle cx="0" cy="0" r="60" fill="#FFFFFF" stroke="url(#msuGold)" stroke-width="3"/>
+    <circle cx="0" cy="0" r="54" fill="none" stroke="#1E3264" stroke-width="2"/>
+    <circle cx="0" cy="0" r="42" fill="#F6F8FC" stroke="#1E3264" stroke-width="1.5"/>
+
+    <!-- Sun Rays inside seal -->
+    <g stroke="#D99B26" stroke-width="1.4" stroke-linecap="round" opacity="0.85">
+      <line x1="0" y1="-38" x2="0" y2="-28"/>
+      <line x1="-14" y1="-35" x2="-10" y2="-26"/>
+      <line x1="14" y1="-35" x2="10" y2="-26"/>
+      <line x1="-26" y1="-26" x2="-19" y2="-19"/>
+      <line x1="26" y1="-26" x2="19" y2="-19"/>
+    </g>
+
+    <!-- Iconic MSU Indo-Saracenic Dome Silhouette -->
+    <path d="M-22,-4 C-22,-19 -12,-27 0,-29 C12,-27 22,-19 22,-4 Z" fill="url(#msuNavy)"/>
+    <line x1="0" y1="-35" x2="0" y2="-28" stroke="#1E3264" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="-32" r="2" fill="#D99B26"/>
+    <!-- Side Chhatris -->
+    <path d="M-31,0 C-31,-7 -26,-11 -22,-11 C-18,-11 -15,-7 -15,0 Z" fill="#2A4480"/>
+    <path d="M15,0 C15,-7 18,-11 22,-11 C26,-11 31,-7 31,0 Z" fill="#2A4480"/>
+    <!-- Archways -->
+    <rect x="-28" y="-1" width="56" height="8" rx="1" fill="#1E3264"/>
+    <path d="M-18,7 V2 A4,4 0 0,1 -10,2 V7 M-4,7 V1 A4,4 0 0,1 4,1 V7 M10,7 V2 A4,4 0 0,1 18,2 V7" fill="#F6F8FC"/>
+
+    <!-- Sacred Lotus in Foreground -->
+    <path d="M0,6 C-5,13 -6,21 0,26 C6,21 5,13 0,6 Z" fill="#D99B26" stroke="#1E3264" stroke-width="1"/>
+    <path d="M-2,10 C-11,13 -15,20 -8,25 C-4,24 -2,18 -2,10 Z" fill="#F2C94C" stroke="#1E3264" stroke-width="1"/>
+    <path d="M2,10 C11,13 15,20 8,25 C4,24 2,18 2,10 Z" fill="#F2C94C" stroke="#1E3264" stroke-width="1"/>
+    <path d="M-6,15 C-17,16 -22,22 -14,26 C-9,26 -6,22 -6,15 Z" fill="#E5A93B" stroke="#1E3264" stroke-width="1"/>
+    <path d="M6,15 C17,16 22,22 14,26 C9,26 6,22 6,15 Z" fill="#E5A93B" stroke="#1E3264" stroke-width="1"/>
+
+    <!-- Water Waves -->
+    <path d="M-26,30 Q-13,27 0,30 T26,30" fill="none" stroke="#1E3264" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M-20,34 Q-10,31 0,34 T20,34" fill="none" stroke="#2A5C9A" stroke-width="1.4" stroke-linecap="round"/>
+
+    <!-- Motto Ribbon Banner -->
+    <path d="M-48,38 L48,38 L42,52 L-42,52 Z" fill="#1E3264" stroke="url(#msuGold)" stroke-width="1.2"/>
+    <text x="0" y="48" text-anchor="middle" fill="#FFD97D" font-family="serif" font-size="9.5" font-weight="700" letter-spacing="0.4">सत्यं शिवं सुन्दरम्</text>
+  </g>
+
+  <!-- Right Institutional Lockup -->
+  <g transform="translate(162, 34)">
+    <text x="0" y="24" fill="#1E3264" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="800" letter-spacing="0.8">MSU BARODA</text>
+    <rect x="0" y="34" width="236" height="3" rx="1.5" fill="url(#msuGold)"/>
+    <text x="0" y="54" fill="#1E3264" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13.5" font-weight="800" letter-spacing="0.3">THE MAHARAJA SAYAJIRAO</text>
+    <text x="0" y="72" fill="#1E3264" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13.5" font-weight="800" letter-spacing="0.3">UNIVERSITY OF BARODA</text>
+    <text x="0" y="92" fill="#9E6B12" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.1">VADODARA · GUJARAT · EST. 1949</text>
+  </g>
+</svg>

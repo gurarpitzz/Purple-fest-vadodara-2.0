@@ -1,7 +1,7 @@
 # Purple Fest Vadodara 2027
 
 > **India's Landmark Festival of Inclusion, Human Dignity, Assistive Technology, Paralympic Sport, and Universal Design**  
-> *14–16 January 2027 · Vadodara, Gujarat · In Alignment with Viksit Bharat @ 2047*
+> *21–23 January 2027 · Vadodara, Gujarat · In Alignment with Viksit Bharat @ 2047*
 
 ---
 
@@ -10,6 +10,27 @@
 **Purple Fest Vadodara 2027** brings India's premier festival of inclusion into the cultural and educational capital of Gujarat. Designed to unite persons with disabilities, innovators, researchers, grassroots organizations, caregivers, and policymakers, the festival champions universal accessibility and full inclusion across all **21 Benchmark Disabilities** recognized under India's **Rights of Persons with Disabilities (RPwD) Act 2016**.
 
 This platform provides an editorial-grade, accessible web experience featuring 3D interactive canvases, responsive motion choreography, customizable event registration, automated cryptographic QR credentialing, real-time gate check-ins, and an independent administrative CMS.
+
+### Official Festival Dates, Coalition & Secretariat Metadata
+- **Festival Dates**: **21–23 January 2027** (`January 21–23, 2027` · Day 1: `21 Jan 2027`, Day 2: `22 Jan 2027`, Day 3: `23 Jan 2027`)
+- **Organisers**:
+  - **Praangan**, Vadodara, Gujarat
+  - **Brotherhood**, Delhi
+  - **Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences**, Mumbai
+- **Knowledge Partner**: **State Commission for Persons with Disabilities, Goa**
+- **Venue Partners**: **The Maharaja Sayajirao University, Vadodara** & **GMERS Medical College, Gotri, Vadodara**
+- **Secretariat Address**: `Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat`
+- **Contact Persons & Helpline**:
+  - **Radha Tandon**: `+91 99743 83920`
+  - **Satish Kapoor**: `+91 98994 72065`, `+91 92117 60202`
+- **Official Email**: `purplefestivalvadodara@gmail.com`
+- **Official Website**: `www.purplefestivalvadodara.com` (`Purplefestivalvadodara.com`)
+- **Organising Committee**:
+  - **Chairperson**: To Be Confirmed (TBC)
+  - **Director**: Radha Tandon, Founder and Director of Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat
+  - **Coordinator**: Satish Kapoor, Founding President, Brotherhood, Global Inclusive Education Network, We Care Film Festival on Disabilities and Brotherhood Development Initiative, Delhi
+  - **Advisors**: Dr. Nitin Malik, Registrar, Gujarat National Law University, Gandhinagar & Dr. Ravinder Singh, Director, ICMR, Delhi
+  - **Media Advisor**: Deepak Parvatiyaar, Founder and Chief Editor of Global Bihari, Delhi
 
 ---
 
@@ -58,7 +79,7 @@ This platform provides an editorial-grade, accessible web experience featuring 3
 | `/` | Festival Homepage: Hero, 6 Experience Zones, Impact Metrics, and Community Voices |
 | `/about-us` | Festival Foundation, Goa-to-Vadodara Journey, and Leadership Committee |
 | `/viksit-bharat` | Viksit Bharat @ 2047 National Inclusion Vision & Paralympic Hall of Fame |
-| `/programs` | 3-Day Daily Itinerary (14–16 January 2027) & Zone Guides |
+| `/programs` | 3-Day Daily Itinerary (21–23 January 2027) & Zone Guides |
 | `/tier-1-program` | National Para-Sports Championships & Athlete Profiles |
 | `/other-services` | The 21 RPwD Benchmark Disabilities Directory & On-Ground Accommodations |
 | `/composyte` | GIEN & TISS Inclusive Education Conclave & Universal Design for Learning (UDL) |
@@ -103,7 +124,8 @@ node tests/full-system-test-suite.mjs
 
 ## Credits & Attribution
 
-- **Organized By**: Purple Fest Vadodara 2027 Secretariat, in partnership with Praangan, Brotherhood, Global Inclusive Education Network (GIEN), and Goa State Commission for Persons with Disabilities.
+- **Organised By**: Praangan, Vadodara, Gujarat | Brotherhood, Delhi | Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences, Mumbai · Knowledge Partner: State Commission for Persons with Disabilities, Goa · Venue Partners: The Maharaja Sayajirao University, Vadodara & GMERS Medical College, Gotri, Vadodara.
+- **Secretariat Contacts**: Radha Tandon (`+91 99743 83920`) · Satish Kapoor (`+91 98994 72065`, `+91 92117 60202`) · `purplefestivalvadodara@gmail.com` · `www.purplefestivalvadodara.com`
 - **Designed & Developed By**: Gurarpit Singh and Mehardeep Singh · Ajeet Graphics.
 
 ---

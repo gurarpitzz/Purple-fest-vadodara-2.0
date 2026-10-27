@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" role="img" aria-label="GMERS Medical College and Hospital, Gotri, Vadodara Emblem">
+  <defs>
+    <linearGradient id="gmersTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B6E78"/>
+      <stop offset="100%" stop-color="#074852"/>
+    </linearGradient>
+    <linearGradient id="gmersGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2A42B"/>
+      <stop offset="100%" stop-color="#B57A12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Medical Seal -->
+  <g transform="translate(82, 80)">
+    <circle cx="0" cy="0" r="60" fill="#FFFFFF" stroke="url(#gmersTeal)" stroke-width="3.2"/>
+    <circle cx="0" cy="0" r="53" fill="#F2FAFA" stroke="url(#gmersGold)" stroke-width="1.8" stroke-dasharray="4 2"/>
+    <!-- Inner Shield -->
+    <path d="M-32,-32 H32 V-2 C32,22 0,38 0,38 C0,38 -32,22 -32,-2 Z" fill="url(#gmersTeal)" stroke="url(#gmersGold)" stroke-width="2"/>
+    <!-- Medical Cross Backdrop -->
+    <path d="M-7,-24 H7 V-11 H20 V3 H7 V16 H-7 V3 H-20 V-11 H-7 Z" fill="#FFFFFF" opacity="0.18"/>
+    <!-- Caduceus / Rod of Asclepius Wings -->
+    <path d="M-3,-16 C-14,-24 -24,-20 -26,-11 C-18,-10 -10,-10 -3,-8" fill="#F6C453"/>
+    <path d="M3,-16 C14,-24 24,-20 26,-11 C18,-10 10,-10 3,-8" fill="#F6C453"/>
+    <!-- Central Staff -->
+    <line x1="0" y1="-25" x2="0" y2="26" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="-26" r="4" fill="#F6C453"/>
+    <!-- Intertwined Serpents -->
+    <path d="M-10,-8 C-2,-2 8,2 8,9 C8,15 -6,18 -6,23" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M10,-8 C2,-2 -8,2 -8,9 C-8,15 6,18 6,23" fill="none" stroke="#F6C453" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Bottom Banner -->
+    <path d="M-46,40 L46,40 L40,53 L-40,53 Z" fill="#074852" stroke="url(#gmersGold)" stroke-width="1.2"/>
+    <text x="0" y="49.5" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.9">GOTRI · VADODARA</text>
+  </g>
+
+  <!-- Right Institutional Lockup -->
+  <g transform="translate(162, 32)">
+    <text x="0" y="28" fill="#074852" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="32" font-weight="900" letter-spacing="1.5">GMERS</text>
+    <rect x="0" y="37" width="236" height="3" rx="1.5" fill="url(#gmersGold)"/>
+    <text x="0" y="57" fill="#13334C" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14" font-weight="800" letter-spacing="0.3">MEDICAL COLLEGE &amp; HOSPITAL</text>
+    <text x="0" y="75" fill="#0B6E78" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" letter-spacing="0.4">GOTRI, VADODARA · GUJARAT</text>
+    <text x="0" y="94" fill="#8C5D0B" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" letter-spacing="0.8">GOVT. OF GUJARAT MEDICAL EDUCATION</text>
+  </g>
+</svg>

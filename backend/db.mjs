@@ -463,12 +463,23 @@ const INITIAL_SETTINGS = {
   festival_title: 'Purple Fest Vadodara 2027',
   festival_subtitle: 'National Festival of Inclusion · Viksit Bharat @ 2047',
   festival_dates: '21–23 January 2027',
-  festival_venue: 'Akota Stadium & Sir Sayajirao Nagar Gruh, Vadodara, Gujarat',
+  festival_venue: 'The Maharaja Sayajirao University, Vadodara & GMERS Medical College, Gotri, Vadodara',
   registration_open: true,
   hospitality_note: 'Complimentary Tea & Lunch Coupons included for all accredited delegates and stall crew.',
-  secretariat_email: 'secretariat@purplefestvadodara.org',
-  secretariat_phone: '+91 265 234 2027',
-  organizers: ['Praangan (Vadodara)', 'Brotherhood (New Delhi)', 'GIEN', 'Purple Fest Goa Legacy'],
+  secretariat_email: 'purplefestivalvadodara@gmail.com',
+  secretariat_phone: 'Radha Tandon: +91 99743 83920 | Satish Kapoor: +91 98994 72065, +91 92117 60202',
+  secretariat_address: 'Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat',
+  secretariat_website: 'www.purplefestivalvadodara.com',
+  organizers: [
+    'Praangan, Vadodara, Gujarat',
+    'Brotherhood, Delhi',
+    'Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences, Mumbai',
+  ],
+  knowledge_partner: 'State Commission for Persons with Disabilities, Goa',
+  venue_partners: [
+    'The Maharaja Sayajirao University, Vadodara',
+    'GMERS Medical College, Gotri, Vadodara',
+  ],
 };
 
 function seedEvents() {
@@ -479,6 +490,9 @@ function seedEvents() {
       fee_inr, min_fee_inr, capacity, description,
       custom_fields_json, accessibility_features_json, is_active, updated_at
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?)
+  `);
+  const syncEventDateStmt = db.prepare(`
+    UPDATE events SET event_date = ?, custom_fields_json = ?, updated_at = ? WHERE slug = ?
   `);
 
   for (const ev of INITIAL_EVENTS) {
@@ -498,7 +512,9 @@ function seedEvents() {
       JSON.stringify(ev.accessibility_features || []),
       now
     );
+    syncEventDateStmt.run(ev.event_date, JSON.stringify(ev.custom_fields || []), now, ev.slug);
   }
+  db.prepare(`UPDATE events SET event_date = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(event_date, '14–16 January 2027', '21–23 January 2027'), '14–15 January 2027', '21–22 January 2027'), '15–16 January 2027', '22–23 January 2027'), '15 January 2027', '22 January 2027'), '16 January 2027', '23 January 2027'), '13 Jan 2027', '20 Jan 2027') WHERE event_date LIKE '%14%' OR event_date LIKE '%15%' OR event_date LIKE '%16%' OR event_date LIKE '%13%'`).run();
 }
 
 function seedCoupons() {
@@ -513,12 +529,15 @@ function seedCoupons() {
 
 function seedSettings() {
   const now = new Date().toISOString();
-  const insertStmt = db.prepare(`
-    INSERT OR IGNORE INTO site_settings (key, value_json, updated_at)
+  const upsertStmt = db.prepare(`
+    INSERT INTO site_settings (key, value_json, updated_at)
     VALUES (?, ?, ?)
+    ON CONFLICT(key) DO UPDATE SET
+      value_json = excluded.value_json,
+      updated_at = excluded.updated_at
   `);
   for (const [k, v] of Object.entries(INITIAL_SETTINGS)) {
-    insertStmt.run(k, JSON.stringify(v), now);
+    upsertStmt.run(k, JSON.stringify(v), now);
   }
 }
 

@@ -8,6 +8,30 @@ import {
   PRIVACY_HTML
 } from './purplefest-content-data.mjs';
 import { transformRouteSections } from './purplefest-route-transformers.mjs';
+import {
+  FOOTER_CSS,
+  applyFooterToLayoutChunk,
+  applyFooterToSsrHtml,
+  applyFooterToStandaloneHtml
+} from './tasks/task1-footer.mjs';
+import {
+  SPONSORS_SECTION_CSS,
+  applySponsorsTo317Chunk,
+  applySponsorsToLayoutEnhancer,
+  applySponsorsToSsrHtml
+} from './tasks/task2-sponsors.mjs';
+import {
+  PHONE_QR_ANIMATION_CSS,
+  HOME_TECH_CONTENT,
+  applyPhoneQrTo317Chunk,
+  applyPhoneQrToSsrHtml
+} from './tasks/task3-phone-qr.mjs';
+import { applyDatesAndDocxReplacements } from './tasks/task4-dates.mjs';
+import {
+  JOIN_US_MAP_CSS,
+  applyJoinUsMapTo317Chunk,
+  applyJoinUsMapToSsrHtml
+} from './tasks/task5-joinus-map.mjs';
 
 const ORIG_DIR = 'd:/argon trial rea/battalion-original';
 const TARGET_DIR = 'd:/argon trial rea/purple fest vadodara';
@@ -189,17 +213,19 @@ function transformFlightStream(rawStream, slug, isHtmlStream = false) {
     return line;
   });
 
-  return outLines.join('\n').replace(/https:\/\/battalion-cms\.onrender\.com\/uploads\//g, '/uploads/');
+  return applyDatesAndDocxReplacements(
+    outLines.join('\n').replace(/https:\/\/battalion-cms\.onrender\.com\/uploads\//g, '/uploads/')
+  );
 }
 
 // SSR HTML replacements so view-source and curl also show PurpleFest Vadodara 2027
 const SSR_REPLACEMENTS = [
   // Global Header / Footer / Nav
-  ['Ready to actively finance your investments?', '14–16 January 2027 · Vadodara, Gujarat · Mandatory Delegate Registration ₹2,200'],
-  ['info@batallion.com', 'purplefestvadodara@gmail.com'],
-  ['(718) 208-2000', '+91 98250 93918'],
-  ['tel:7182082000', 'tel:+919825093918'],
-  ['Battalion Lending LLC', 'Purple Fest Vadodara 2027 · Praangan &amp; We Are Together (Brotherhood)'],
+  ['Ready to actively finance your investments?', '21–23 January 2027 · Vadodara, Gujarat · Mandatory Delegate Registration ₹2,200'],
+  ['info@batallion.com', 'purplefestivalvadodara@gmail.com'],
+  ['(718) 208-2000', '+91 99743 83920'],
+  ['tel:7182082000', 'tel:+919974383920'],
+  ['Battalion Lending LLC', 'Purple Fest Vadodara 2027 · Praangan &amp; Brotherhood'],
   ['class="w-full mt-[4.8rem] text-center md:text-left lg:whitespace-nowrap lg:text-right"><p class="mb-0 text-gray-300">Designed by<!-- --> <a class="link link--underline" target="_blank" href="https://noomoagency.com/">Noomo Agency</a></p>', 'class="w-full mt-[4.8rem] md:mt-auto text-center md:text-left lg:text-right"><p class="mb-0 text-gray-300">Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics</p>'],
   ['<p class="mb-0 text-gray-300">Designed by<!-- --> <a class="link link--underline" target="_blank" href="https://noomoagency.com/">Noomo Agency</a></p>', '<p class="mb-0 text-gray-300">Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics</p>'],
   ['Designed by<!-- --> <a class="link link--underline" target="_blank" href="https://noomoagency.com/">Noomo Agency</a>', 'Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics'],
@@ -221,8 +247,8 @@ const SSR_REPLACEMENTS = [
 
   // Home (index)
   ['Certainty, executed.', 'Inclusion, celebrated.'],
-  ['Next-level business purpose lending.', 'Purple Fest Vadodara 2027 · 14–16 January 2027 · Sanskari Nagari Vadodara · Hosted by Praangan &amp; We Are Together (Brotherhood) with GIEN &amp; TISS.'],
-  ['We combine institutional capital with deep real estate expertise—structuring smart, reliable financing for serious investors.', 'Born from the International Purple Fest in Goa and carried into Maharaja Sayajirao Gaekwad III’s reform capital Vadodara, Purple Fest 2027 unites 6 Experience Zones, 21 Benchmark Disabilities under the RPwD Act 2016, Indian Paralympic Champions, and global inclusive education leaders.'],
+  ['Next-level business purpose lending.', 'Purple Fest Vadodara 2027 · 21–23 January 2027 · Sanskari Nagari Vadodara · Organised by Praangan (Vadodara), Brotherhood (Delhi) &amp; TISS Mumbai · Venue Partners: MSU Vadodara &amp; GMERS Gotri.'],
+  ['We combine institutional capital with deep real estate expertise—structuring smart, reliable financing for serious investors.', 'Join Us — Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat'],
   ['Why Battalion', 'Why Purple Fest Vadodara 2027'],
   ['Direct lender', 'All 21 RPwD Disabilities'],
   ['Common-sense underwriting', 'Goa Legacy Meets Sanskari Nagari'],
@@ -231,7 +257,17 @@ const SSR_REPLACEMENTS = [
   ['Proven results, real impact', 'A National Convergence of Inclusion in Vadodara'],
   ['Simple by design', 'Four Steps to Join Purple Fest Vadodara 2027'],
   ['What our clients say', 'Voices of the Purple Movement'],
-  ['Powered by tech, driven by people', 'Engineered for Universal Accessibility'],
+  ['Powered by tech, driven by people', HOME_TECH_CONTENT.title],
+  ['Proprietary tools, powerful results', HOME_TECH_CONTENT.title],
+  ['Tech that informs your decision-making and gives you the strategic advantage.', HOME_TECH_CONTENT.description],
+  ['Wide-ranging search', HOME_TECH_CONTENT.homeTechBlocks[0].title],
+  ['Enter any residential address and get a full property breakdown in seconds.', HOME_TECH_CONTENT.homeTechBlocks[0].description],
+  ['Tailored insights', HOME_TECH_CONTENT.homeTechBlocks[1].title],
+  ['Tap proprietary algorithms and data-driven insights for smarter decision-making.', HOME_TECH_CONTENT.homeTechBlocks[1].description],
+  ['Results that are relevant', HOME_TECH_CONTENT.homeTechBlocks[2].title],
+  ['Instantly pinpoint top comparable properties, ranked by our proprietary scoring model.', HOME_TECH_CONTENT.homeTechBlocks[2].description],
+  ['Comprehensive analysis', HOME_TECH_CONTENT.homeTechBlocks[3].title],
+  ['Access sales history, construction details, flood and crime info, and more.', HOME_TECH_CONTENT.homeTechBlocks[3].description],
   ['Ready to upgrade your financing?', 'Ready to Join Purple Fest Vadodara 2027?'],
 
   // About Us
@@ -241,9 +277,9 @@ const SSR_REPLACEMENTS = [
 
   // Programs
   ['Financing that fits your strategy', '3-Day Festival Schedule &amp; 6 Experience Zones'],
-  ['R30™ Prime', 'Day 1 · 14 Jan 2027 (Uttarayan): Grand Inauguration &amp; Assistive Tech Launch'],
-  ['R30™ Flex', 'Day 2 · 15 Jan 2027: Paralympic Champions Conclave, GIEN Labs &amp; Startup Pitch'],
-  ['PrimeBridge™', 'Day 3 · 16 Jan 2027: Accessible Birding Trail, Vadodara Declaration &amp; Finale'],
+  ['R30™ Prime', 'Day 1 · 21 Jan 2027: Grand Inauguration &amp; Assistive Tech Launch'],
+  ['R30™ Flex', 'Day 2 · 22 Jan 2027: Paralympic Champions Conclave, GIEN Labs &amp; Startup Pitch'],
+  ['PrimeBridge™', 'Day 3 · 23 Jan 2027: Accessible Birding Trail, Vadodara Declaration &amp; Finale'],
   ['InvestorLOC™', 'All 6 Barrier-Free Experience Zones (Included in ₹2,200 Pass)'],
 
   // Tier 1 Program
@@ -257,7 +293,7 @@ const SSR_REPLACEMENTS = [
   // Composyte
   ['Know more. Invest smarter.', 'GIEN &amp; TISS Inclusive Education Conclave.'],
   ['Composyte puts critical property data at your fingertips—because better insights lead to better investments.', 'Co-curated by the Global Inclusive Education Network (GIEN) and Tata Institute of Social Sciences (TISS)—uniting Universal Design for Learning (UDL), assistive technology, and barrier-free architecture.'],
-  ['Try Composyte', 'Register for Conclave · ₹2,200'],
+  ['Try Composyte', 'Register for Your QR Pass · ₹2,200'],
 
   // Careers
   ['Build the future of lending', 'Co-Create Purple Fest Vadodara 2027'],
@@ -274,7 +310,7 @@ const SSR_REPLACEMENTS = [
 
   // Battalion TPO & Programs TPO
   ['Certainty from the start.', 'Institutional, CSR &amp; Exhibitor Portal.'],
-  ['Wholesale business purpose lending built for brokers who close.', 'Partner with Praangan, We Are Together (Brotherhood), GIEN &amp; TISS in Vadodara (14–16 Jan 2027). Book Tier A–D Exhibition Stalls or sponsor Schedule VII CSR Pavilions.'],
+  ['Wholesale business purpose lending built for brokers who close.', 'Partner with Praangan, Brotherhood, GIEN &amp; TISS in Vadodara (21–23 Jan 2027). Book Tier A–D Exhibition Stalls or sponsor Schedule VII CSR Pavilions.'],
   ['Programs built to perform', 'Exhibition Stall Tiers (A–D) &amp; Institutional Tracks'],
 
   // Media replacements in SSR HTML
@@ -498,6 +534,15 @@ function transformSsrHtml(ssrHtml, slug) {
     /<textarea name="([^"]+)" class="([^"]+)" placeholder="([^"]+)"><\/textarea><label class="form-label">([^<]+)<\/label>/g,
     '<textarea id="contact-field-$1" aria-label="$3" name="$1" class="$2" placeholder="$3"></textarea><label for="contact-field-$1" class="form-label">$4</label>'
   );
+
+  // Apply Tasks 1–5 SSR HTML transformations
+  out = applyDatesAndDocxReplacements(out);
+  out = applyJoinUsMapToSsrHtml(out, slug);
+  if (slug === 'index') {
+    out = applyPhoneQrToSsrHtml(out);
+  }
+  out = applySponsorsToSsrHtml(out);
+  out = applyFooterToSsrHtml(out);
 
   return out;
 }
@@ -730,7 +775,7 @@ console.log('--- Transforming Client JS Chunks ---');
   );
 
   const pricerReplacements = [
-    ['title:"Property"', 'title:"1. Delegate & Exhibitor Profile (14–16 Jan 2027 · Vadodara)"'],
+    ['title:"Property"', 'title:"1. Delegate & Exhibitor Profile (21–23 Jan 2027 · Vadodara)"'],
     ['title:"Loan"', 'title:"2. Exhibition Stall Tier (A–D) & Pass Configuration"'],
     ['title:"Borrower"', 'title:"3. RPwD Act 2016 (21 Benchmark Disabilities) Accommodations"'],
     ['children:"Get Rates"', 'children:"Calculate Fee"'],
@@ -741,15 +786,21 @@ console.log('--- Transforming Client JS Chunks ---');
     c = c.split(from).join(to);
   }
 
+  // Apply Tasks 2, 3, 4, 5 to 317 chunk
+  c = applyJoinUsMapTo317Chunk(c);
+  c = applyPhoneQrTo317Chunk(c);
+  c = applySponsorsTo317Chunk(c);
+  c = applyDatesAndDocxReplacements(c);
+
   fs.writeFileSync(path.join(TARGET_DIR, rel), c, 'utf8');
-  console.log('  [OK] Updated 317 chunk (TierOneSection, Calculator, Pricer, ContactSection)');
+  console.log('  [OK] Updated 317 chunk (TierOneSection, Calculator, Pricer, ContactSection, JoinUsMap, PhoneQr, Sponsors, Dates)');
 }
 
 // 3c. app/layout-cacaa35457036801.js (Hand-Drawn Preloader: Left Line -> PurpleFest 3-Figure Emblem + Hearts -> Right Line + PURPLE FEST / Vadodara -> Fly to Header)
 {
   const rel = '_next/static/chunks/app/layout-cacaa35457036801.js';
   let c = fs.readFileSync(path.join(ORIG_DIR, rel), 'utf8');
-  c = c.replace(/Battalion Lending LLC/g, 'Purple Fest Vadodara 2027 · Praangan & We Are Together (Brotherhood)');
+  c = c.replace(/Battalion Lending LLC/g, 'Purple Fest Vadodara 2027 · Praangan & Brotherhood');
   c = c.replace(
     /className:"w-full mt-\[4\.8rem\] text-center md:text-left lg:whitespace-nowrap lg:text-right(\s*md:mt-auto)?"/g,
     'className:"w-full mt-[4.8rem] md:mt-auto text-center md:text-left lg:text-right"'
@@ -758,9 +809,9 @@ console.log('--- Transforming Client JS Chunks ---');
     /\(0,a\.jsxs\)\("p",\{className:"mb-0 text-gray-300",children:\["Designed by"," ",\(0,a\.jsx\)\(c\.default,\{className:"link link--underline",target:"_blank",href:"https:\/\/noomoagency\.com\/",children:"Noomo Agency"\}\)\]\}\)/g,
     '(0,a.jsx)("p",{className:"mb-0 text-gray-300",children:"Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics"})'
   );
-  c = c.replace(/info@batallion\.com/g, 'purplefestvadodara@gmail.com');
-  c = c.replace(/\(718\) 208-2000/g, '+91 98250 93918');
-  c = c.replace('Ready to actively finance your investments?', '14–16 January 2027 · Vadodara, Gujarat · Mandatory Delegate Registration ₹2,200');
+  c = c.replace(/info@batallion\.com/g, 'purplefestivalvadodara@gmail.com');
+  c = c.replace(/\(718\) 208-2000/g, '+91 99743 83920');
+  c = c.replace('Ready to actively finance your investments?', '21–23 January 2027 · Vadodara, Gujarat · Mandatory Delegate Registration ₹2,200');
   c = c.replace('https://pricer.battaliontpo.com/', '/pricer');
   c = c.replace(
     'let I=[{title:"Programs",slug:"programs"},{title:"Services",slug:"services",items:[{title:"Battalion TPO",slug:"battalion-tpo"},{title:"Tier 1 Program",slug:"tier-1-program"}]},{title:"Company",slug:"company",items:[{title:"About Us",slug:"about"},{title:"Careers",slug:"careers"}]},{title:"Contact Us",slug:"contact"},{title:"Composyte",externalPath:"https://composyte.com/",external:!0}]',
@@ -1206,9 +1257,9 @@ console.log('--- Transforming Client JS Chunks ---');
       }
     });
 
-    // 4. Ensure Footer contains the PurpleFest Delhi "Accessibility options" section & trigger button
+    // 4. Ensure Footer contains the PurpleFest Delhi "Accessibility options" section & trigger button (unless .pf-boccia-footer already provides .pf-a11y-footer-link)
     document.querySelectorAll("footer").forEach(function(ft){
-      if(ft.querySelector(".pf-a11y-footer-btn"))return;
+      if(ft.querySelector(".pf-a11y-footer-btn, .pf-a11y-footer-link")||ft.classList.contains("pf-boccia-footer"))return;
       var box=document.createElement("div");
       box.className="pf-footer-a11y-block container";
       box.innerHTML='<div class="pf-footer-a11y-inner">'+
@@ -1299,8 +1350,13 @@ console.log('--- Transforming Client JS Chunks ---');
 })();`;
   c += wcagEnhancerJs;
 
+  // Apply Tasks 1, 2, 4 to app/layout chunk
+  c = applyFooterToLayoutChunk(c);
+  c = applySponsorsToLayoutEnhancer(c);
+  c = applyDatesAndDocxReplacements(c);
+
   fs.writeFileSync(path.join(TARGET_DIR, rel), c, 'utf8');
-  console.log('  [OK] Updated app/layout chunk');
+  console.log('  [OK] Updated app/layout chunk (Preloader, Footer, SponsorsEnhancer, Dates)');
 }
 
 // 3c-bis. 751-4ba22589dbd220d5.js (Keyboard operability for HomeSteps cards)
@@ -1331,7 +1387,7 @@ console.log('--- Transforming Client JS Chunks ---');
     const manifest = {
       name: 'Purple Fest Vadodara 2027 | Celebrating Inclusion, Dignity & Accessibility',
       short_name: 'PurpleFest 2027',
-      description: '14–16 January 2027 · Vadodara, Gujarat · Hosted by Praangan & We Are Together (Brotherhood) with GIEN & TISS.',
+      description: '21–23 January 2027 · Vadodara, Gujarat · Organised by Praangan (Vadodara), Brotherhood (Delhi) & TISS Mumbai.',
       icons: [
         { src: '/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
         { src: '/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
@@ -1817,17 +1873,27 @@ textarea:focus-visible,
     const wcagReg = new RegExp(`\\n?/\\* WCAG-22-AA-COMPLIANCE-START \\*/[\\s\\S]*?/\\* WCAG-22-AA-COMPLIANCE-END \\*/\\n?`, 'g');
     css = css.replace(wcagReg, '') + wcagCssBlock;
 
+    const tasksCssMarkerStart = '/* TASKS-1-TO-5-INTEGRATED-CSS-START */';
+    const tasksCssMarkerEnd = '/* TASKS-1-TO-5-INTEGRATED-CSS-END */';
+    const tasksCssBlock = `\n${tasksCssMarkerStart}\n${FOOTER_CSS}\n${SPONSORS_SECTION_CSS}\n${PHONE_QR_ANIMATION_CSS}\n${JOIN_US_MAP_CSS}\n${tasksCssMarkerEnd}\n`;
+    const tasksCssReg = new RegExp(`\\n?/\\* TASKS-1-TO-5-INTEGRATED-CSS-START \\*/[\\s\\S]*?/\\* TASKS-1-TO-5-INTEGRATED-CSS-END \\*/\\n?`, 'g');
+    css = css.replace(tasksCssReg, '') + tasksCssBlock;
+
     fs.writeFileSync(cssPath1, css, 'utf8');
-    console.log('  [OK] Updated 0fa3ad3e26d5da69.css with CalculatorDscr rule, preloader styles, mobile-phone-fixes & WCAG 2.2 AA+ rules');
+    console.log('  [OK] Updated 0fa3ad3e26d5da69.css with CalculatorDscr rule, preloader styles, mobile-phone-fixes, WCAG 2.2 AA+ rules & Tasks 1–5 CSS');
   }
+
+  const tasksCssBlockShared = `\n/* TASKS-1-TO-5-INTEGRATED-CSS-START */\n${FOOTER_CSS}\n${SPONSORS_SECTION_CSS}\n${PHONE_QR_ANIMATION_CSS}\n${JOIN_US_MAP_CSS}\n/* TASKS-1-TO-5-INTEGRATED-CSS-END */\n`;
+  const tasksCssRegShared = new RegExp(`\\n?/\\* TASKS-1-TO-5-INTEGRATED-CSS-START \\*/[\\s\\S]*?/\\* TASKS-1-TO-5-INTEGRATED-CSS-END \\*/\\n?`, 'g');
 
   const cssPath2 = path.join(TARGET_DIR, '_next/static/css/dc7cdf09db0feb00.css');
   if (fs.existsSync(cssPath2)) {
     let css2 = fs.readFileSync(cssPath2, 'utf8');
     const reg = new RegExp(`\\n?/\\* MOBILE-PHONE-FIXES-START \\*/[\\s\\S]*?/\\* MOBILE-PHONE-FIXES-END \\*/\\n?`, 'g');
     css2 = css2.replace(reg, '') + wrappedMobileCss;
+    css2 = css2.replace(tasksCssRegShared, '') + tasksCssBlockShared;
     fs.writeFileSync(cssPath2, css2, 'utf8');
-    console.log('  [OK] Updated dc7cdf09db0feb00.css with preloader styles & mobile-phone-fixes');
+    console.log('  [OK] Updated dc7cdf09db0feb00.css with preloader styles, mobile-phone-fixes & Tasks 1–5 CSS');
   }
 
   const cssPath3 = path.join(TARGET_DIR, '_next/static/css/c4582b4cde9209e3.css');
@@ -1835,8 +1901,22 @@ textarea:focus-visible,
     let css3 = fs.readFileSync(cssPath3, 'utf8');
     const reg = new RegExp(`\\n?/\\* MOBILE-PHONE-FIXES-START \\*/[\\s\\S]*?/\\* MOBILE-PHONE-FIXES-END \\*/\\n?`, 'g');
     css3 = css3.replace(reg, '') + `\n${markerStart}\n${preloaderCss}\n${markerEnd}\n`;
+    css3 = css3.replace(tasksCssRegShared, '') + tasksCssBlockShared;
     fs.writeFileSync(cssPath3, css3, 'utf8');
-    console.log('  [OK] Updated c4582b4cde9209e3.css with preloader styles');
+    console.log('  [OK] Updated c4582b4cde9209e3.css with preloader styles & Tasks 1–5 CSS');
+  }
+
+  // Update standalone portal HTML files (apply.html, events.html, pass.html, check-in.html, admin.html) with Task 1 Footer & Task 4 Dates
+  const standaloneFiles = ['apply.html', 'events.html', 'pass.html', 'check-in.html', 'admin.html'];
+  for (const file of standaloneFiles) {
+    const filePath = path.join(TARGET_DIR, file);
+    if (fs.existsSync(filePath)) {
+      let html = fs.readFileSync(filePath, 'utf8');
+      html = applyDatesAndDocxReplacements(html);
+      html = applyFooterToStandaloneHtml(html);
+      fs.writeFileSync(filePath, html, 'utf8');
+      console.log(`  [OK] Updated standalone portal page: ${file}`);
+    }
   }
 
   const applyHtmlPath = path.join(TARGET_DIR, 'apply.html');
@@ -1856,4 +1936,4 @@ textarea:focus-visible,
   }
 }
 
-console.log('=== ALL 15 ROUTES + RSC + HTML + CLIENT CHUNKS BUILT SUCCESSFULLY ===');
+console.log('=== ALL 16 ROUTES + RSC + HTML + CLIENT CHUNKS + TASKS 1–5 BUILT SUCCESSFULLY ===');

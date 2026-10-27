@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PurpleFest Apply | Stall &amp; Delegate Registration — Purple Fest Vadodara 2027</title>
-  <meta name="description" content="Official Registration Portal for Purple Fest Vadodara 2027 (14–16 January 2027). Register as an Exhibition Stall (Starting at ₹8,500) or Register as a Delegate (₹2,200)." />
+  <meta name="description" content="Official Registration Portal for Purple Fest Vadodara 2027 (21–23 January 2027). Register as an Exhibition Stall (Starting at ₹8,500) or Register as a Delegate (₹2,200)." />
   <link rel="icon" href="/favicon.ico" />
   <style>
     @font-face {
@@ -870,6 +870,522 @@
     }
   </style>
   <link rel="stylesheet" href="/_next/static/css/mobile-phone-fixes.css" />
+<style id="pf-task1-footer-css">
+/* ==========================================================================
+   PURPLE FEST VADODARA 2027 — 4-COLUMN BOCCIA-STYLE FOOTER (.pf-boccia-footer)
+   ========================================================================== */
+.pf-boccia-footer {
+  position: relative !important;
+  margin-top: auto !important;
+  z-index: 1 !important;
+  background: linear-gradient(135deg, #190E36 0%, #1B1438 52%, #202D59 100%) !important;
+  color: #FFFFFF !important;
+  padding: 64px 0 36px !important;
+  border-top: 3px solid #A459FF !important;
+  overflow: hidden !important;
+  font-family: '__font_7fb336', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pf-boccia-footer::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.14) 0%, rgba(164, 89, 255, 0.06) 55%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pf-boccia-footer::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  right: -110px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(9, 159, 159, 0.18) 0%, rgba(32, 45, 89, 0.25) 60%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Suppress any legacy injected footer blocks */
+.pf-boccia-footer .pf-footer-a11y-block,
+.pf-boccia-footer > div:not(.pf-boccia-footer__container) {
+  display: none !important;
+}
+
+.pf-boccia-footer__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1340px !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+}
+
+.pf-boccia-footer__grid {
+  display: grid !important;
+  grid-template-columns: 1.35fr 0.85fr 1.15fr 1.05fr !important;
+  gap: 40px !important;
+  align-items: start !important;
+  padding-bottom: 44px !important;
+}
+
+.pf-boccia-footer__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+/* Column 1: Partner Logo Strip */
+.pf-boccia-footer__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.pf-boccia-footer__logo-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 4px 10px;
+  background-color: #FFFFFF !important;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 3px 10px rgba(9, 5, 24, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.pf-boccia-footer__logo-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(164, 89, 255, 0.32);
+}
+
+.pf-boccia-footer__logo-pill img {
+  height: 34px !important;
+  width: auto !important;
+  max-width: 96px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Column 1: Brand Title & Description */
+.pf-boccia-footer__brand-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.01em !important;
+  color: #FFFFFF !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.pf-boccia-footer__brand-desc {
+  font-size: 14.5px !important;
+  line-height: 1.68 !important;
+  color: #DDD9F4 !important;
+  margin: 0 0 24px 0 !important;
+  max-width: 420px;
+}
+
+/* Follow Us & Socials */
+.pf-boccia-footer__follow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pf-boccia-footer__follow-title,
+.pf-boccia-footer__col-title {
+  position: relative;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: #FFFFFF !important;
+  margin: 0 0 22px 0 !important;
+  padding-bottom: 10px !important;
+  letter-spacing: -0.01em !important;
+}
+
+.pf-boccia-footer__follow-title::after,
+.pf-boccia-footer__col-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 34px;
+  height: 3.5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #F59E0B 0%, #099F9F 100%);
+}
+
+.pf-boccia-footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.pf-boccia-footer__social-btn {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.pf-boccia-footer__social-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  filter: brightness(1.1);
+}
+
+.pf-boccia-footer__social-btn--fb {
+  background-color: #1877F2 !important;
+}
+
+.pf-boccia-footer__social-btn--x {
+  background-color: #0F1419 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.28) !important;
+}
+
+.pf-boccia-footer__social-btn--ig {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+
+.pf-boccia-footer__social-btn--yt {
+  background-color: #FF0000 !important;
+}
+
+/* Column 2: Quick Links */
+.pf-boccia-footer__links-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 11px !important;
+  width: 100%;
+}
+
+.pf-boccia-footer__links-list li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pf-boccia-footer__nav-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  color: #EAE6FF !important;
+  text-decoration: none !important;
+  transition: color 0.16s ease, transform 0.16s ease !important;
+}
+
+.pf-boccia-footer__nav-link:hover {
+  color: #FBBF24 !important;
+  transform: translateX(3px);
+}
+
+.pf-boccia-footer__link-arrow {
+  color: #F59E0B !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  flex-shrink: 0;
+  transition: transform 0.16s ease, color 0.16s ease;
+}
+
+.pf-boccia-footer__nav-link:hover .pf-boccia-footer__link-arrow {
+  color: #099F9F !important;
+  transform: translate(2px, -2px);
+}
+
+/* Column 3: Addresses */
+.pf-boccia-footer__address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+
+.pf-boccia-footer__address-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pf-boccia-footer__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.pf-boccia-footer__icon--amber {
+  color: #F59E0B !important;
+  background: rgba(245, 158, 11, 0.14);
+}
+
+.pf-boccia-footer__icon--teal {
+  color: #14B8A6 !important;
+  background: rgba(20, 184, 166, 0.16);
+}
+
+.pf-boccia-footer__icon--purple {
+  color: #C084FC !important;
+  background: rgba(192, 132, 252, 0.16);
+}
+
+.pf-boccia-footer__address-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pf-boccia-footer__address-label {
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #FFFFFF !important;
+}
+
+.pf-boccia-footer__address-text {
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+  color: #DDD9F4 !important;
+  margin: 0 !important;
+}
+
+/* Column 4: Contact Us */
+.pf-boccia-footer__contact-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  width: 100%;
+}
+
+.pf-boccia-footer__contact-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pf-boccia-footer__contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #EAE6FF !important;
+  word-break: break-word;
+}
+
+.pf-boccia-footer__contact-name {
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+}
+
+.pf-boccia-footer__phone-group {
+  display: inline;
+}
+
+.pf-boccia-footer__contact-link {
+  color: #EAE6FF !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease !important;
+}
+
+.pf-boccia-footer__contact-link:hover {
+  color: #FBBF24 !important;
+  text-decoration: underline !important;
+}
+
+/* Bottom Horizontal Divider & Copyright Bar */
+.pf-boccia-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+  padding-top: 26px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.pf-boccia-footer__copyright {
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  color: #EAE6FF !important;
+  margin: 0 !important;
+}
+
+.pf-boccia-footer__copyright a,
+.pf-boccia-footer .pf-a11y-footer-link {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 2px !important;
+  margin: 0 !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  cursor: pointer !important;
+  display: inline !important;
+  transition: color 0.15s ease !important;
+}
+
+.pf-boccia-footer__copyright a:hover,
+.pf-boccia-footer .pf-a11y-footer-link:hover {
+  color: #FBBF24 !important;
+}
+
+.pf-boccia-footer__recognition {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #CBC5E8 !important;
+  margin: 0 !important;
+  max-width: 1120px;
+}
+
+.pf-boccia-footer__credit {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #DDD9F4 !important;
+  font-weight: 600 !important;
+  margin: 2px 0 0 0 !important;
+}
+
+/* Responsive Breakpoints: 2 columns on tablet, 1 column on mobile */
+@media (max-width: 1080px) {
+  .pf-boccia-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 36px 32px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .pf-boccia-footer {
+    padding: 44px 0 28px !important;
+  }
+  .pf-boccia-footer__container {
+    padding: 0 20px !important;
+  }
+  .pf-boccia-footer__grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .pf-boccia-footer__logo-pill {
+    height: 40px;
+    padding: 4px 8px;
+  }
+  .pf-boccia-footer__logo-pill img {
+    height: 30px !important;
+  }
+}
+
+/* High Contrast Mode: Dark (html.pf-contrast-dark & body.high-contrast) */
+html.pf-contrast-dark .pf-boccia-footer,
+body.high-contrast .pf-boccia-footer {
+  background: #0D0517 !important;
+  color: #F5EEFC !important;
+  border-top: 3px solid #B388EB !important;
+}
+
+html.pf-contrast-dark .pf-boccia-footer__brand-desc,
+html.pf-contrast-dark .pf-boccia-footer__address-text,
+html.pf-contrast-dark .pf-boccia-footer__contact-body,
+html.pf-contrast-dark .pf-boccia-footer__recognition,
+html.pf-contrast-dark .pf-boccia-footer__credit,
+html.pf-contrast-dark .pf-boccia-footer__copyright,
+body.high-contrast .pf-boccia-footer__brand-desc,
+body.high-contrast .pf-boccia-footer__address-text,
+body.high-contrast .pf-boccia-footer__contact-body,
+body.high-contrast .pf-boccia-footer__recognition,
+body.high-contrast .pf-boccia-footer__credit,
+body.high-contrast .pf-boccia-footer__copyright {
+  color: #F5EEFC !important;
+}
+
+html.pf-contrast-dark .pf-boccia-footer__nav-link,
+html.pf-contrast-dark .pf-boccia-footer__contact-link,
+html.pf-contrast-dark .pf-boccia-footer__copyright a,
+html.pf-contrast-dark .pf-boccia-footer .pf-a11y-footer-link,
+body.high-contrast .pf-boccia-footer__nav-link,
+body.high-contrast .pf-boccia-footer__contact-link,
+body.high-contrast .pf-boccia-footer__copyright a,
+body.high-contrast .pf-boccia-footer .pf-a11y-footer-link {
+  color: #5EEAD4 !important;
+}
+
+/* High Contrast Mode: Yellow on Black (html.pf-contrast-yellow-black) */
+html.pf-contrast-yellow-black .pf-boccia-footer {
+  background: #000000 !important;
+  color: #FFFF00 !important;
+  border-top: 3px solid #FFFF00 !important;
+}
+
+html.pf-contrast-yellow-black .pf-boccia-footer::before,
+html.pf-contrast-yellow-black .pf-boccia-footer::after {
+  display: none !important;
+}
+
+html.pf-contrast-yellow-black .pf-boccia-footer__logo-pill {
+  background-color: #FFFFFF !important;
+  border: 2px solid #FFFF00 !important;
+}
+
+html.pf-contrast-yellow-black .pf-boccia-footer__follow-title::after,
+html.pf-contrast-yellow-black .pf-boccia-footer__col-title::after {
+  background: #FFFF00 !important;
+}
+
+html.pf-contrast-yellow-black .pf-boccia-footer__nav-link,
+html.pf-contrast-yellow-black .pf-boccia-footer__contact-link,
+html.pf-contrast-yellow-black .pf-boccia-footer__copyright a,
+html.pf-contrast-yellow-black .pf-boccia-footer .pf-a11y-footer-link,
+html.pf-contrast-yellow-black .pf-boccia-footer__social-btn {
+  background-color: #000000 !important;
+  color: #00FFFF !important;
+  border: 2px solid #FFFF00 !important;
+}
+
+html.pf-contrast-yellow-black .pf-boccia-footer__nav-link {
+  padding: 2px 6px !important;
+}
+</style>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -907,7 +1423,7 @@
       <a href="/pass" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Entry Pass (/pass)</a>
       <a href="/check-in" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Desk Check-In (/check-in)</a>
       <a href="/admin" class="email-us-link" style="background:var(--lavender-soft);padding:7px 13px;border-radius:6px;border:1px solid var(--border-subtle);text-decoration:none;font-size:14px;">Admin Panel (/admin)</a>
-      <a href="mailto:purplefestvadodara@gmail.com" class="email-us-link" style="text-decoration: underline; text-underline-offset: 4px; font-size:14px;">Email Us</a>
+      <a href="mailto:purplefestivalvadodara@gmail.com" class="email-us-link" style="text-decoration: underline; text-underline-offset: 4px; font-size:14px;">Email Us</a>
       <button type="button" class="pf-a11y-header-btn" aria-label="Accessibility features and options" aria-expanded="false" aria-controls="pf-a11y-header-panel" title="Accessibility Features" onclick="toggleA11yPanel()" style="display:inline-flex;align-items:center;gap:6px;min-height:38px;min-width:38px;padding:6px 14px;border-radius:9999px;border:2px solid var(--navy-900);background:var(--bg-white);color:var(--navy-900);font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="pf-a11y-icon-svg">
           <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle>
@@ -1039,12 +1555,12 @@
           ← Back to Registration Choice
         </button>
 
-        <span class="portal-badge">Purple Pavilion · 14–16 January 2027 · Vadodara</span>
+        <span class="portal-badge">Purple Pavilion · 21–23 January 2027 · Vadodara</span>
         <h2 id="stall-portal-title" class="portal-title">
           Register as a Stall — Exhibition &amp; Pavilion Booking
         </h2>
         <p class="portal-subtitle">
-          Book your barrier-free exhibition stall at Purple Fest Vadodara 2027 (MSU Pavilion &amp; Sayaji Nagar Gruh). Select your preferred stall tier below or customize your associated stall payment (minimum ₹8,500).
+          Book your barrier-free exhibition stall at Purple Fest Vadodara 2027 (The Maharaja Sayajirao University, Vadodara &amp; GMERS Medical College, Gotri, Vadodara). Select your preferred stall tier below or customize your associated stall payment (minimum ₹8,500).
         </p>
 
         <!-- Selectable Stall Tiers (Minimum ₹8,500) -->
@@ -1186,7 +1702,7 @@
             <div>
               <span class="portal-badge" style="background:#D1FAE5;color:#065F46;">Confirmed · Stall Reserved &amp; Razorpay Verified</span>
               <h3 style="font-size:26px;margin-top:6px;">Purple Fest Vadodara 2027 — Exhibitor Stall Pass</h3>
-              <p style="color:var(--navy-700);margin-top:4px;">Present this SQL-verified QR credential at the Exhibitor Check-In Desk (MSU Pavilion / Sayaji Nagar Gruh) on 13–14 January 2027.</p>
+              <p style="color:var(--navy-700);margin-top:4px;">Present this SQL-verified QR credential at the Exhibitor Check-In Desk (MSU Vadodara / GMERS Gotri) on 20–21 January 2027.</p>
             </div>
             <div class="qr-badge" id="stall-qr-badge" aria-label="Exhibitor QR Credential">
               <svg viewBox="0 0 100 100" width="104" height="104" fill="#1E2952">
@@ -1256,9 +1772,9 @@
           <h2 class="delegate-hero-title">Celebrating diversity</h2>
 
           <div class="delegate-meta-pills">
-            <div class="meta-pill"><strong>Date:</strong> 14 – 16 January 2027</div>
+            <div class="meta-pill"><strong>Date:</strong> 21 – 23 January 2027</div>
             <div class="meta-pill"><strong>Fee:</strong> ₹2200</div>
-            <div class="meta-pill"><strong>Venue:</strong> MSU Pavilion &amp; Sayaji Nagar Gruh, Vadodara</div>
+            <div class="meta-pill"><strong>Venue:</strong> The Maharaja Sayajirao University, Vadodara &amp; GMERS Medical College, Gotri, Vadodara</div>
           </div>
 
           <div class="hero-anchor-btns">
@@ -1268,19 +1784,19 @@
 
           <div class="intro-paragraphs">
             <p>
-              Registration for the <strong>Purple Fest Vadodara 2027</strong> gives you access to the International Conference on Inclusive Education (in partnership with <strong>GIEN &amp; TISS</strong>), Purple Dialogue, Assistive Tech Expo, Paralympic Arena, and the Inaugural and Closing ceremonies on <strong>14, 15, and 16 January 2027</strong>. Join educators, innovators, policymakers, and advocates from around the world in Sanskari Nagari Vadodara as we explore new horizons in inclusive education, universal design, and disability rights across all 21 Benchmark Disabilities (RPwD Act 2016).
+              Registration for the <strong>Purple Fest Vadodara 2027</strong> gives you access to the International Conference on Inclusive Education (in partnership with <strong>GIEN &amp; TISS Mumbai</strong>), Purple Dialogue, Assistive Tech Expo, Paralympic Arena, and the Inaugural and Closing ceremonies on <strong>21, 22, and 23 January 2027</strong>. Join educators, innovators, policymakers, and advocates from around the world in Sanskari Nagari Vadodara as we explore new horizons in inclusive education, universal design, and disability rights across all 21 Benchmark Disabilities (RPwD Act 2016).
             </p>
             <p>
               Once registered, you will receive a confirmation and QR by email. Present the QR at the reception desk to receive your conference kit and ID card.
             </p>
             <p>
-              Tea and lunch are included on <strong>14, 15, and 16 January 2027</strong>. After registration, you may attend all events on the three days.
+              Tea and lunch are included on <strong>21, 22, and 23 January 2027</strong>. After registration, you may attend all events on the three days.
             </p>
             <p>
               The venue is accessible, and volunteers will be available to assist you. Braille materials and Sign Language Interpreters will also be available.
             </p>
             <p style="font-weight:600;">
-              Payments and invoicing for the Purple Fest Vadodara 2027 are handled by the Purple Fest Vadodara Organising Secretariat — <strong>Praangan (Vadodara) &amp; We Are Together (Brotherhood)</strong>.
+              Payments and invoicing for the Purple Fest Vadodara 2027 are handled by the Purple Fest Vadodara Organising Secretariat — <strong>Praangan (Vadodara, Gujarat), Brotherhood (Delhi) &amp; Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (Mumbai)</strong>.
             </p>
           </div>
         </div>
@@ -1294,12 +1810,12 @@
           <div class="faq-list">
             <div class="faq-item">
               <div class="faq-q">1. Where can I find the schedule of events at the Purple Fest Vadodara 2027?</div>
-              <div class="faq-a">You can view the complete schedule on the <a href="/programs">Schedule page</a>, which lists all events taking place during the three-day festival on 14, 15, and 16 January 2027 across all 6 Experience Zones in Vadodara.</div>
+              <div class="faq-a">You can view the complete schedule on the <a href="/programs">Schedule page</a>, which lists all events taking place during the three-day festival on 21, 22, and 23 January 2027 across all 6 Experience Zones in Vadodara.</div>
             </div>
 
             <div class="faq-item">
               <div class="faq-q">2. When should I arrive at the venue?</div>
-              <div class="faq-a">The festival begins on 14 January 2027 at 9:00 AM. All participants are requested to arrive on time and be seated in the Main Auditorium (Sayaji Nagar Gruh / MSU Pavilion) by 9:30 AM for the Inaugural Function.</div>
+              <div class="faq-a">The festival begins on 21 January 2027 at 9:00 AM. All participants are requested to arrive on time and be seated in the Main Auditorium (The Maharaja Sayajirao University, Vadodara / GMERS Medical College, Gotri) by 9:30 AM for the Inaugural Function.</div>
             </div>
 
             <div class="faq-item">
@@ -1319,27 +1835,27 @@
 
             <div class="faq-item">
               <div class="faq-q">6. Are all events held at the same venue, and is it well connected by public transport?</div>
-              <div class="faq-a">Yes, all events will be held across the barrier-free Vadodara Festival Corridor anchored at the Maharaja Sayajirao University (MSU) Pavilion, Sayaji Nagar Gruh, and Sayaji Baug in Vadodara, Gujarat. The venue is 10–15 minutes from Vadodara Junction Railway Station and 20 minutes from Vadodara Airport (BDQ), and is well connected by accessible city transport, cabs, auto-rickshaws, and dedicated festival electric buggy shuttles.</div>
+              <div class="faq-a">Yes, all events will be held across the barrier-free Vadodara Festival Corridor anchored at our Official Venue Partners — <strong>The Maharaja Sayajirao University, Vadodara</strong> and <strong>GMERS Medical College, Gotri, Vadodara</strong>. The venues are well connected from Vadodara Junction Railway Station and Vadodara Airport (BDQ) via accessible city transport, cabs, auto-rickshaws, and dedicated festival electric buggy shuttles.</div>
             </div>
 
             <div class="faq-item">
               <div class="faq-q">7. When does the festival conclude?</div>
-              <div class="faq-a">The festival concludes with the adoption of the Vadodara Declaration and the Valedictory Function on 16 January 2027 at 5:00 PM.</div>
+              <div class="faq-a">The festival concludes with the adoption of the Vadodara Declaration and the Valedictory Function on 23 January 2027 at 5:00 PM.</div>
             </div>
 
             <div class="faq-item">
               <div class="faq-q">8. Is there a registration fee for attending the Purple Fest?</div>
-              <div class="faq-a">Yes, the registration fee is ₹2200 for the three-day festival (14–16 January 2027).</div>
+              <div class="faq-a">Yes, the registration fee is ₹2200 for the three-day festival (21–23 January 2027).</div>
             </div>
 
             <div class="faq-item">
               <div class="faq-q">9. Are meals provided during the festival?</div>
-              <div class="faq-a">Yes, registered participants will receive coupons for complimentary lunch and tea on 14, 15, and 16 January 2027.</div>
+              <div class="faq-a">Yes, registered participants will receive coupons for complimentary lunch and tea on 21, 22, and 23 January 2027.</div>
             </div>
 
             <div class="faq-item">
-              <div class="faq-q">10. How can I join the Inclusive Heritage Walk &amp; Rally on 14 January 2027?</div>
-              <div class="faq-a">You may assemble at Gate No. 1 of Sayaji Baug / MSU Pavilion on 14 January 2027 at 9:00 AM to take part in the Inclusive Uttarayan Rally &amp; Heritage Walk.</div>
+              <div class="faq-q">10. How can I join the Inclusive Heritage Walk &amp; Rally on 21 January 2027?</div>
+              <div class="faq-a">You may assemble at Gate No. 1 of Sayaji Baug / The Maharaja Sayajirao University (MSU) Pavilion on 21 January 2027 at 9:00 AM to take part in the Inclusive Welcome Rally &amp; Heritage Walk.</div>
             </div>
 
             <div class="faq-item">
@@ -1364,7 +1880,7 @@
 
             <div class="faq-item">
               <div class="faq-q">15. Who is organising Purple Fest Vadodara 2027?</div>
-              <div class="faq-a">The festival is jointly organised by <strong>Praangan (Vadodara)</strong> and <strong>We Are Together (Brotherhood, New Delhi)</strong>, in collaboration with the <strong>Global Inclusive Education Network (GIEN)</strong>, <strong>Tata Institute of Social Sciences (TISS Mumbai)</strong>, <strong>Maharaja Sayajirao University of Baroda (MSU)</strong>, <strong>Department of Empowerment of Persons with Disabilities (DEPwD, Ministry of Social Justice &amp; Empowerment, Govt. of India)</strong>, and the <strong>Office of the State Commissioner for Persons with Disabilities, Government of Goa</strong> as Knowledge &amp; Legacy Partner.</div>
+              <div class="faq-a">The festival is jointly organised by <strong>Praangan, Vadodara, Gujarat</strong>, <strong>Brotherhood, Delhi</strong>, and the <strong>Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences, Mumbai</strong>, with Knowledge Partner <strong>State Commission for Persons with Disabilities, Goa</strong> and Venue Partners <strong>The Maharaja Sayajirao University, Vadodara</strong> and <strong>GMERS Medical College, Gotri, Vadodara</strong>.<br /><strong>Organising Committee:</strong> Chairperson: To Be Confirmed (TBC) · Director: Radha Tandon (Founder &amp; Director, Praangan Education Trust) · Coordinator: Satish Kapoor (Founding President, Brotherhood, GIEN &amp; We Care Film Festival, Delhi) · Advisors: Dr. Nitin Malik (Registrar, GNLU Gandhinagar) &amp; Dr. Ravinder Singh (Director, ICMR Delhi) · Media Advisor: Deepak Parvatiyaar (Founder &amp; Chief Editor, Global Bihari, Delhi).</div>
             </div>
 
             <div class="faq-item">
@@ -1376,9 +1892,9 @@
               <div class="faq-q">17. Whom can I contact for more information?</div>
               <div class="faq-a">
                 For any queries, please contact:<br />
-                <strong>Email:</strong> <a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a><br />
-                <strong>Phone:</strong> <a href="tel:+919825093918">+91 98250 93918</a><br />
-                <strong>Office Address:</strong> Praangan Secretariat, Old Padra Road, Vadodara, Gujarat – 390007
+                <strong>Contact Persons &amp; Phone:</strong> Radha Tandon (<a href="tel:+919974383920">+91 99743 83920</a>) &nbsp;|&nbsp; Satish Kapoor (<a href="tel:+919899472065">+91 98994 72065</a>, <a href="tel:+919211760202">+91 92117 60202</a>)<br />
+                <strong>Email:</strong> <a href="mailto:purplefestivalvadodara@gmail.com">purplefestivalvadodara@gmail.com</a> &nbsp;|&nbsp; <strong>Website:</strong> <a href="https://www.purplefestivalvadodara.com" target="_blank" rel="noopener">www.purplefestivalvadodara.com</a><br />
+                <strong>Secretariat Address:</strong> Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat
               </div>
             </div>
           </div>
@@ -1531,7 +2047,7 @@
               <div>
                 <span class="portal-badge" style="background:#D1FAE5;color:#065F46;">Confirmed · Delegate Pass Issued &amp; Razorpay Verified</span>
                 <h3 style="font-size:26px;margin-top:6px;">Purple Fest Vadodara 2027 — Official Delegate Pass</h3>
-                <p style="color:var(--navy-700);margin-top:4px;">Present this SQL-verified QR at the Reception Desk (MSU Pavilion / Sayaji Nagar Gruh) on 14 January 2027 at 9:00 AM to collect your conference kit, lunch &amp; tea coupons, and ID card.</p>
+                <p style="color:var(--navy-700);margin-top:4px;">Present this SQL-verified QR at the Reception Desk (MSU Vadodara / GMERS Gotri) on 21 January 2027 at 9:00 AM to collect your conference kit, lunch &amp; tea coupons, and ID card.</p>
               </div>
               <div class="qr-badge" id="delegate-qr-badge" aria-label="Delegate QR Code">
                 <svg viewBox="0 0 100 100" width="104" height="104" fill="#1E2952">
@@ -1564,48 +2080,15 @@
         <div class="delegate-container">
           <h2 class="section-h2">Venue Accommodation Information — Vadodara</h2>
           <p style="margin-bottom:16px;">
-            Participants arranging their stay in Vadodara for <strong>14–16 January 2027</strong> are encouraged to book wheelchair-accessible hotels along the <strong>Sayaji Baug · Alkapuri · Fatehgunj · Old Padra Road</strong> corridor (within 2–4 km of MSU Pavilion and Sayaji Nagar Gruh).
+            Participants arranging their stay in Vadodara for <strong>21–23 January 2027</strong> are encouraged to book wheelchair-accessible hotels along the <strong>Sayaji Baug · Alkapuri · Fatehgunj · Gotri</strong> corridor (near Official Venue Partners <strong>The Maharaja Sayajirao University, Vadodara</strong> and <strong>GMERS Medical College, Gotri, Vadodara</strong>).
           </p>
           <p>
-            Need assistance verifying step-free hotel rooms or roll-in showers in Vadodara? Email our Accessibility Logistics Desk at <a href="mailto:purplefestvadodara@gmail.com" style="color:var(--purple-primary);font-weight:600;">purplefestvadodara@gmail.com</a> or call <a href="tel:+919825093918" style="color:var(--purple-primary);font-weight:600;">+91 98250 93918</a>.
+            Need assistance verifying step-free hotel rooms or roll-in showers in Vadodara? Email our Accessibility Logistics Desk at <a href="mailto:purplefestivalvadodara@gmail.com" style="color:var(--purple-primary);font-weight:600;">purplefestivalvadodara@gmail.com</a> or call Radha Tandon (<a href="tel:+919974383920" style="color:var(--purple-primary);font-weight:600;">+91 99743 83920</a>) / Satish Kapoor (<a href="tel:+919899472065" style="color:var(--purple-primary);font-weight:600;">+91 98994 72065</a>, <a href="tel:+919211760202" style="color:var(--purple-primary);font-weight:600;">+91 92117 60202</a>).
           </p>
         </div>
       </div>
 
-      <!-- Delegate Footer -->
-      <footer class="delegate-footer" role="contentinfo">
-        <div class="footer-grid">
-          <div>
-            <h3 style="font-size:20px;margin-bottom:12px;">Praangan (Vadodara) &amp; We Are Together (Brotherhood)</h3>
-            <p style="color:#D5D4F6;font-size:15px;">
-              Praangan and We Are Together (Brotherhood) are non-profit organisations working towards building an inclusive society where people with and without disabilities live, learn, and celebrate together with full human dignity across all 21 Benchmark Disabilities under the RPwD Act 2016.
-            </p>
-          </div>
-          <div>
-            <h4 style="font-size:16px;margin-bottom:12px;">Quick Links</h4>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;">
-              <li><a href="#get-in-touch">Get in Touch</a></li>
-              <li><a href="/programs">Schedule</a></li>
-              <li><a href="/other-services">Accessibility</a></li>
-              <li><a href="#accommodation-info">Venue Accommodation Information</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 style="font-size:16px;margin-bottom:12px;">Policies &amp; Secretariat</h4>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;">
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
-              <li><a href="/terms-and-conditions">Refund Policy</a></li>
-              <li><a href="mailto:purplefestvadodara@gmail.com">purplefestvadodara@gmail.com</a></li>
-              <li><a href="tel:+919825093918">+91 98250 93918</a></li>
-            </ul>
-          </div>
-        </div>
-        <div style="max-width:960px;margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.18);font-size:14px;color:#D5D4F6;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;">
-          <span>© 2026–2027 Purple Fest Vadodara (Praangan &amp; We Are Together Brotherhood). All rights reserved.</span>
-          <span>Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics</span>
-        </div>
-          <button type="button" class="pf-a11y-footer-btn" aria-label="Accessibility options" aria-controls="pf-a11y-header-panel" aria-expanded="false" onclick="toggleA11yPanel()">Accessibility options</button>
-  </footer>
+      
     </section>
   </main>
 
@@ -2053,7 +2536,7 @@
           <div><strong>Category &amp; Affiliation:</strong><br/>${p.category} · ${p.occupation}</div>
           <div><strong>Email &amp; Phone:</strong><br/>${p.email} · ${p.phone}</div>
           <div><strong>RPwD Accommodation:</strong><br/>${p.disabilityType} (${p.accommodation})</div>
-          <div><strong>Fee Paid:</strong><br/><span style="color:var(--purple-primary);font-weight:700;">₹${Number(p.amount_inr).toLocaleString('en-IN')}</span> (Includes Tea &amp; Lunch on 14–16 Jan 2027)</div>
+          <div><strong>Fee Paid:</strong><br/><span style="color:var(--purple-primary);font-weight:700;">₹${Number(p.amount_inr).toLocaleString('en-IN')}</span> (Includes Tea &amp; Lunch on 21–23 Jan 2027)</div>
         `;
         document.getElementById('delegate-open-pass-btn').href = `/pass?id=${encodeURIComponent(finalRegId)}`;
         document.getElementById('delegate-test-checkin-btn').href = `/check-in?id=${encodeURIComponent(finalRegId)}`;
@@ -2210,10 +2693,234 @@
       });
     });
   </script>
-  <footer class="site-footer" role="contentinfo" style="background:#190826;color:#FFFFFF;padding:24px 40px;margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
-    <div style="font-size:14px;">Purple Fest Vadodara 2027 (14–16 January 2027) · Praangan &amp; We Are Together · RPwD Act 2016 Barrier-Free Portal</div>
-      <button type="button" class="pf-a11y-footer-btn" aria-label="Accessibility options" aria-controls="pf-a11y-header-panel" aria-expanded="false" onclick="toggleA11yPanel()">Accessibility options</button>
-  </footer>
+  <footer role="contentinfo" class="relative footer mt-auto z-1 pf-boccia-footer"><div class="pf-boccia-footer__container container">
+  <div class="pf-boccia-footer__grid">
+    <!-- Column 1: Brand, Partner Emblems & Follow Us -->
+    <div class="pf-boccia-footer__col pf-boccia-footer__col--brand">
+      <div class="pf-boccia-footer__logos" aria-label="Official Partner Emblems">
+        <span class="pf-boccia-footer__logo-pill">
+          <img src="/uploads/pf_logo_emblem.png" alt="Purple Fest Vadodara" width="88" height="36" loading="lazy" />
+        </span>
+        <span class="pf-boccia-footer__logo-pill">
+          <img src="/uploads/pf_logo_praangan.jpg" alt="Praangan" width="84" height="36" loading="lazy" />
+        </span>
+        <span class="pf-boccia-footer__logo-pill">
+          <img src="/uploads/pf_logo_brotherhood.jpg" alt="Brotherhood" width="84" height="36" loading="lazy" />
+        </span>
+        <span class="pf-boccia-footer__logo-pill">
+          <img src="/uploads/pf_logo_tiss_cdsa.jpg" alt="TISS Mumbai CDSA" width="92" height="36" loading="lazy" />
+        </span>
+        <span class="pf-boccia-footer__logo-pill">
+          <img src="/uploads/pf_logo_goa_commission.png" alt="Goa PwD Commission" width="84" height="36" loading="lazy" />
+        </span>
+        <span class="pf-boccia-footer__logo-pill">
+          <img src="/uploads/pf_logo_gien.jpg" alt="GIEN" width="84" height="36" loading="lazy" />
+        </span>
+      </div>
+
+      <h2 class="pf-boccia-footer__brand-title">Purple Fest Vadodara</h2>
+
+      <p class="pf-boccia-footer__brand-desc">
+        Gujarat's landmark national festival for Persons with Disabilities (21–23 January 2027), uniting all 21 Benchmark Disabilities under the RPwD Act 2016 with assistive technology, Paralympic sports, and inclusive education.
+      </p>
+
+      <div class="pf-boccia-footer__follow">
+        <h3 class="pf-boccia-footer__follow-title">Follow Us</h3>
+        <div class="pf-boccia-footer__socials" role="list" aria-label="Social Media Links">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="pf-boccia-footer__social-btn pf-boccia-footer__social-btn--fb" role="listitem">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M13.5 21v-7.5h2.5l.38-3h-2.88V8.63c0-.87.24-1.46 1.49-1.46h1.59V4.5c-.28-.04-1.22-.12-2.32-.12-2.3 0-3.87 1.4-3.87 3.98v2.14H8v3h2.39V21h3.11Z"/>
+            </svg>
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="pf-boccia-footer__social-btn pf-boccia-footer__social-btn--x" role="listitem">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="pf-boccia-footer__social-btn pf-boccia-footer__social-btn--ig" role="listitem">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4.2"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="pf-boccia-footer__social-btn pf-boccia-footer__social-btn--yt" role="listitem">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M21.58 7.19a2.75 2.75 0 0 0-1.94-1.95C17.93 4.78 12 4.78 12 4.78s-5.93 0-7.64.46a2.75 2.75 0 0 0-1.94 1.95C1.96 8.9 1.96 12 1.96 12s0 3.1.46 4.81a2.75 2.75 0 0 0 1.94 1.95c1.71.46 7.64.46 7.64.46s5.93 0 7.64-.46a2.75 2.75 0 0 0 1.94-1.95c.46-1.71.46-4.81.46-4.81s0-3.1-.46-4.81ZM10 15.25v-6.5L15.75 12 10 15.25Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="pf-boccia-footer__col pf-boccia-footer__col--links">
+      <h2 class="pf-boccia-footer__col-title">Quick Links</h2>
+      <ul class="pf-boccia-footer__links-list">
+        <li>
+          <a href="/" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/about-us" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>About Us</span>
+          </a>
+        </li>
+        <li>
+          <a href="/viksit-bharat" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Viksit Bharat @ 2047</span>
+          </a>
+        </li>
+        <li>
+          <a href="/programs" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Programme &amp; 6 Zones</span>
+          </a>
+        </li>
+        <li>
+          <a href="/tier-1-program" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Paralympic Champions</span>
+          </a>
+        </li>
+        <li>
+          <a href="/other-services" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>21 Disabilities (RPwD)</span>
+          </a>
+        </li>
+        <li>
+          <a href="/events" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Events &amp; Passes</span>
+          </a>
+        </li>
+        <li>
+          <a href="/apply" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Apply / Register</span>
+          </a>
+        </li>
+        <li>
+          <a href="/contact" class="pf-boccia-footer__nav-link">
+            <span class="pf-boccia-footer__link-arrow" aria-hidden="true">↗</span>
+            <span>Contact Us</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Addresses -->
+    <div class="pf-boccia-footer__col pf-boccia-footer__col--addresses">
+      <h2 class="pf-boccia-footer__col-title">Addresses</h2>
+      <div class="pf-boccia-footer__address-list">
+        <div class="pf-boccia-footer__address-item">
+          <span class="pf-boccia-footer__icon pf-boccia-footer__icon--amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </span>
+          <div class="pf-boccia-footer__address-body">
+            <strong class="pf-boccia-footer__address-label">Registered / Secretariat Address</strong>
+            <p class="pf-boccia-footer__address-text">
+              Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat
+            </p>
+          </div>
+        </div>
+
+        <div class="pf-boccia-footer__address-item">
+          <span class="pf-boccia-footer__icon pf-boccia-footer__icon--teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </span>
+          <div class="pf-boccia-footer__address-body">
+            <strong class="pf-boccia-footer__address-label">Venue Partners</strong>
+            <p class="pf-boccia-footer__address-text">
+              The Maharaja Sayajirao University, Vadodara &amp; GMERS Medical College, Gotri, Vadodara
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 4: Contact Us -->
+    <div class="pf-boccia-footer__col pf-boccia-footer__col--contact">
+      <h2 class="pf-boccia-footer__col-title">Contact Us</h2>
+      <ul class="pf-boccia-footer__contact-list">
+        <li class="pf-boccia-footer__contact-item">
+          <span class="pf-boccia-footer__icon pf-boccia-footer__icon--amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false">
+              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
+            </svg>
+          </span>
+          <div class="pf-boccia-footer__contact-body">
+            <span class="pf-boccia-footer__contact-name">Radha Tandon:</span>
+            <a href="tel:+919974383920" class="pf-boccia-footer__contact-link">+91 99743 83920</a>
+          </div>
+        </li>
+
+        <li class="pf-boccia-footer__contact-item">
+          <span class="pf-boccia-footer__icon pf-boccia-footer__icon--amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false">
+              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
+            </svg>
+          </span>
+          <div class="pf-boccia-footer__contact-body">
+            <span class="pf-boccia-footer__contact-name">Satish Kapoor:</span>
+            <span class="pf-boccia-footer__phone-group">
+              <a href="tel:+919899472065" class="pf-boccia-footer__contact-link">+91 98994 72065</a>,
+              <a href="tel:+919211760202" class="pf-boccia-footer__contact-link">+91 92117 60202</a>
+            </span>
+          </div>
+        </li>
+
+        <li class="pf-boccia-footer__contact-item">
+          <span class="pf-boccia-footer__icon pf-boccia-footer__icon--teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" focusable="false">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/>
+            </svg>
+          </span>
+          <div class="pf-boccia-footer__contact-body">
+            <span class="pf-boccia-footer__contact-name">Email:</span>
+            <a href="mailto:purplefestivalvadodara@gmail.com" class="pf-boccia-footer__contact-link">purplefestivalvadodara@gmail.com</a>
+          </div>
+        </li>
+
+        <li class="pf-boccia-footer__contact-item">
+          <span class="pf-boccia-footer__icon pf-boccia-footer__icon--purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </span>
+          <div class="pf-boccia-footer__contact-body">
+            <span class="pf-boccia-footer__contact-name">Website:</span>
+            <a href="https://purplefestivalvadodara.com" target="_blank" rel="noopener noreferrer" class="pf-boccia-footer__contact-link">www.purplefestivalvadodara.com</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Horizontal Divider & Copyright Bar -->
+  <div class="pf-boccia-footer__bottom">
+    <p class="pf-boccia-footer__copyright">
+      © 2027 Purple Fest Vadodara. All Rights Reserved. | <button type="button" class="pf-a11y-footer-link" data-pf-open-a11y="true" aria-controls="pf-a11y-header-panel" aria-expanded="false" onclick="if(typeof toggleA11yPanel==='function'){toggleA11yPanel();}">Accessibility Statement &amp; Options</button> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+    </p>
+    <p class="pf-boccia-footer__recognition">
+      Organised by Praangan, Vadodara, Gujarat | Brotherhood, Delhi | Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences, Mumbai · Knowledge Partner: State Commission for Persons with Disabilities, Goa
+    </p>
+    <p class="pf-boccia-footer__credit">
+      Designed by Gurarpit Singh and Mehardeep Singh. Ajeet Graphics
+    </p>
+  </div>
+</div></footer>
   <script src="/pf-a11y-talkback.js"></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 import { makeMedia, makePageRef, TERMS_HTML, PRIVACY_HTML } from './purplefest-content-data.mjs';
+import { applyHomeTechContent } from './tasks/task3-phone-qr.mjs';
+import { PRAANGAN_VENUE_ADDRESS, PRAANGAN_GOOGLE_MAP_EXTERNAL_URL } from './tasks/task5-joinus-map.mjs';
 
 export function transformRouteSections(slug, sections) {
   switch (slug) {
@@ -7,7 +9,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[0]?.[3]?.data) {
         const d = sections[0][3].data;
         d.title = 'Inclusion, celebrated.';
-        d.subtitle = 'Purple Fest Vadodara 2027 · 14–16 January 2027 · Sanskari Nagari Vadodara, Gujarat · Hosted by Praangan & We Are Together (Brotherhood) with GIEN & TISS.';
+        d.subtitle = 'Purple Fest Vadodara 2027 · 21–23 January 2027 · Sanskari Nagari Vadodara, Gujarat · Organised by Praangan (Vadodara), Brotherhood (Delhi) & TISS Mumbai · Venue Partners: MSU Vadodara & GMERS Gotri.';
         d.description = 'India’s landmark festival of inclusion, human dignity, assistive technology, Paralympic sport, and universal design across all 21 Benchmark Disabilities (RPwD Act 2016).';
         d.programs = [
           {
@@ -52,14 +54,22 @@ export function transformRouteSections(slug, sections) {
       // [1] ComponentSectionsDefaultMessage
       if (sections[1]?.[3]?.data) {
         const d = sections[1][3].data;
-        d.message = 'Born from the International Purple Fest in Goa and carried into Maharaja Sayajirao Gaekwad III’s reform capital Vadodara, Purple Fest 2027 unites 6 Experience Zones, 21 Benchmark Disabilities under the RPwD Act 2016, Indian Paralympic Champions, and global inclusive education leaders.';
+        d.message = `Join Us — ${PRAANGAN_VENUE_ADDRESS}`;
         d.links = [
           {
             id: '1350',
-            title: 'Explore 3-Day Schedule & 6 Zones',
+            title: 'Apply Now',
             theme: 'link',
-            page: makePageRef('programs', '3-Day Programme & 6 Zones'),
-            externalPage: null,
+            page: null,
+            externalPage: '/apply',
+            modal: false
+          },
+          {
+            id: '13501',
+            title: 'Open in Google Maps',
+            theme: 'link',
+            page: null,
+            externalPage: PRAANGAN_GOOGLE_MAP_EXTERNAL_URL,
             modal: false
           }
         ];
@@ -100,7 +110,7 @@ export function transformRouteSections(slug, sections) {
         const d = sections[3][3].data;
         d.title = 'A National Convergence of Inclusion in Vadodara';
         d.blocks = [
-          { id: '536', title: '10,000+', description: 'Registered Delegates, Educators, Innovators & Leaders across 3 Days (14–16 January 2027)' },
+          { id: '536', title: '10,000+', description: 'Registered Delegates, Educators, Innovators & Leaders across 3 Days (21–23 January 2027)' },
           { id: '537', title: '21', description: 'Benchmark Disabilities under the RPwD Act 2016 represented with full accessibility' },
           { id: '538', title: '6 Zones', description: 'Immersive Barrier-Free Experience Zones spanning Tech, Education, Arts, Sports & Nature' },
           { id: '539', title: '100+', description: 'Assistive Technology Exhibitors, DPO Collectives, Universities & CSR Pavilions' }
@@ -260,7 +270,7 @@ export function transformRouteSections(slug, sections) {
           {
             id: '549',
             label: '04',
-            title: 'Converge in Vadodara (14–16 Jan 2027)',
+            title: 'Converge in Vadodara (21–23 Jan 2027)',
             description: 'Experience 3 unforgettable days of assistive innovation, GIEN & TISS dialogues, Paralympic sport, and Purple Kaleidoscope cultural nights in Sanskari Nagari.'
           }
         ];
@@ -281,27 +291,27 @@ export function transformRouteSections(slug, sections) {
         d.testimonialBlocks = [
           {
             id: '550',
-            author: 'Dr. Satendra Singh',
-            title: '“Purple Fest is not about sympathy or charity; it is a declaration of human dignity, joyful rebellion, and constitutional equality under the RPwD Act 2016.”',
-            authorInfo: 'Co-Chair, Scientific Committee · Founder, Doctors with Disabilities'
+            author: 'Radha Tandon',
+            title: '“Purple Fest is not about sympathy or charity; it is a declaration of human dignity, joyful celebration, and constitutional equality under the RPwD Act 2016 in Sanskari Nagari Vadodara.”',
+            authorInfo: 'Festival Director · Founder and Director of Praangan Education Trust, Vadodara'
           },
           {
             id: '551',
             author: 'Satish Kapoor',
-            title: '“From New Delhi and Goa to Maharaja Sayajirao’s Vadodara, We Are Together (Brotherhood) and Praangan are proving that true inclusion leaves none of the 21 disabilities behind.”',
-            authorInfo: 'Founder President, We Are Together (Brotherhood) · National Convenor'
+            title: '“From New Delhi and Goa to Maharaja Sayajirao’s Vadodara, Brotherhood, Praangan, and TISS Mumbai are proving that true inclusion leaves none of the 21 disabilities behind.”',
+            authorInfo: 'Festival Coordinator · Founding President, Brotherhood, GIEN & We Care Film Festival, Delhi'
           },
           {
             id: '552',
-            author: 'Prof. Anita Julka',
-            title: '“When educators, assistive technologists, and disabled youth sit as equals in the same pavilion, Universal Design for Learning stops being a theory and becomes lived reality.”',
-            authorInfo: 'President, Global Inclusive Education Network (GIEN) · Former Dean, NCERT'
+            author: 'Dr. Nitin Malik & Dr. Ravinder Singh',
+            title: '“When legal scholars, medical researchers, assistive technologists, and disabled youth sit as equals in the same pavilion, Universal Design stops being a theory and becomes lived reality.”',
+            authorInfo: 'Festival Advisors · Registrar, GNLU Gandhinagar & Director, ICMR Delhi'
           },
           {
             id: '553',
-            author: 'Guruprasad Pawaskar',
-            title: '“The International Purple Fest in Goa ignited a national flame. Seeing Vadodara carry that torch with uncompromising barrier-free standards is a milestone for India.”',
-            authorInfo: 'State Commissioner for Persons with Disabilities, Government of Goa'
+            author: 'State Commission for PwD, Goa',
+            title: '“The International Purple Fest in Goa ignited a national flame. Serving as Knowledge Partner as Vadodara carries that torch at MSU Vadodara and GMERS Gotri is a milestone for India.”',
+            authorInfo: 'Knowledge Partner · State Commission for Persons with Disabilities, Goa'
           }
         ];
       }
@@ -309,46 +319,14 @@ export function transformRouteSections(slug, sections) {
       // [8] ComponentSectionsHomeTech
       if (sections[8]?.[3]?.data) {
         const d = sections[8][3].data;
-        d.title = 'Engineered for Universal Accessibility';
-        d.description = 'Built to WCAG 2.1 AA+, IS 4963, and Harmonised Guidelines 2021 so every physical and digital space works effortlessly for all 21 Benchmark Disabilities.';
-        d.homeTechBlocks = [
-          {
-            id: '554',
-            title: 'IS 4963 1:12 Ramps & Tactile Corridors',
-            description: 'Zero-step thresholds, 1500 mm wheelchair turning circles, dual-height handrails, and continuous blister/corduroy tactile paving across all 6 zones.'
-          },
-          {
-            id: '555',
-            title: 'Live ISL, Open Captions & Audio Description',
-            description: 'Dedicated spotlighted Indian Sign Language (ISL) interpreters, real-time speech-to-text LED captioning, and FM audio description on every stage.'
-          },
-          {
-            id: '556',
-            title: 'Zone 05 · Sensory Sanctuary & Neuro-Affirming Pods',
-            description: 'Acoustically buffered <45 dB decompression suites with dimmable circadian lighting, weighted blankets, and AAC communication boards.'
-          },
-          {
-            id: '557',
-            title: ' Zone 06 · Accessible Heritage & Birding Trail',
-            description: 'Wheelchair-accessible eco-trails with 3D-printed tactile bird models, ornithological audio guides, and Laxmi Vilas / Sayaji Baug heritage circuits.'
-          }
-        ];
-        d.button = {
-          id: '1356',
-          title: 'Explore All 21 RPwD Accommodations',
-          theme: 'primary',
-          page: makePageRef('other-services', '21 RPwD Disabilities'),
-          externalPage: null,
-          modal: false
-        };
-        d.media = makeMedia('final.mp4', 'Purple Fest Vadodara 2027 Official Film');
+        applyHomeTechContent(d, makeMedia);
       }
 
       // [9] ComponentSectionsCta
       if (sections[9]?.[3]?.data) {
         const d = sections[9][3].data;
         d.title = 'Ready to Join Purple Fest Vadodara 2027?';
-        d.description = 'Secure your mandatory ₹2,200 3-Day Delegate Pass or book your Tier A–D Exhibition Stall for 14–16 January 2027 in Sanskari Nagari Vadodara.';
+        d.description = 'Secure your mandatory ₹2,200 3-Day Delegate Pass or book your Tier A–D Exhibition Stall for 21–23 January 2027 in Sanskari Nagari Vadodara.';
         d.buttons = [
           {
             id: '1357',
@@ -368,7 +346,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[0]?.[3]?.data) {
         const d = sections[0][3].data;
         d.title = 'From Goa’s Global Mandate to Sanskari Nagari Vadodara';
-        d.description = 'Purple Fest Vadodara 2027 (14–16 January 2027) unites Praangan (Vadodara), We Are Together (Brotherhood), GIEN, TISS, DEPwD (Govt. of India), and the Goa State Commissioner’s Office to build a barrier-free India.';
+        d.description = 'Purple Fest Vadodara 2027 (21–23 January 2027) unites Organisers Praangan (Vadodara, Gujarat), Brotherhood (Delhi), and Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (TISS, Mumbai), with Knowledge Partner State Commission for Persons with Disabilities, Goa and Venue Partners The Maharaja Sayajirao University, Vadodara & GMERS Medical College, Gotri, Vadodara.';
         d.button = {
           id: '1361',
           title: 'Apply Now',
@@ -414,7 +392,7 @@ export function transformRouteSections(slug, sections) {
       // [2] ComponentSectionsDefaultMessage
       if (sections[2]?.[3]?.data) {
         const d = sections[2][3].data;
-        d.message = 'What began in Panaji, Goa as India’s first international celebration of persons with disabilities now expands to Western India’s cultural & academic hub—bringing 10,000+ delegates, 21 RPwD categories, and 6 Experience Zones to Vadodara on 14–16 January 2027 in alignment with Hon’ble PM Shri Narendra Modi’s vision of Viksit Bharat @ 2047.';
+        d.message = 'What began in Panaji, Goa as India’s first international celebration of persons with disabilities now expands to Western India’s cultural & academic hub—bringing 10,000+ delegates, 21 RPwD categories, and 6 Experience Zones to Vadodara on 21–23 January 2027 in alignment with Hon’ble PM Shri Narendra Modi’s vision of Viksit Bharat @ 2047.';
         d.links = [
           {
             id: '13619',
@@ -447,7 +425,7 @@ export function transformRouteSections(slug, sections) {
             id: '564',
             label: '2023 · Panaji, Goa',
             title: 'Inaugural Purple Fest Goa Ignites a National Movement',
-            description: 'The Office of the State Commissioner for Persons with Disabilities, Goa, together with We Are Together (Brotherhood) and DEPwD, launches India’s first large-scale celebration of disability pride, sport, and culture.'
+            description: 'The State Commission for Persons with Disabilities, Goa, together with Brotherhood (Delhi) and DEPwD, launches India’s first large-scale celebration of disability pride, sport, and culture.'
           },
           {
             id: '565',
@@ -458,14 +436,14 @@ export function transformRouteSections(slug, sections) {
           {
             id: '566',
             label: '2025–2026 · Vadodara Coalition',
-            title: 'Praangan, Brotherhood, GIEN & TISS Forge the Vadodara Charter',
-            description: 'Praangan (Vadodara) and We Are Together (Brotherhood) unite with the Global Inclusive Education Network (GIEN) and Tata Institute of Social Sciences (TISS) to bring Purple Fest to Gujarat.'
+            title: 'Praangan, Brotherhood & TISS Mumbai Forge the Vadodara Charter',
+            description: 'Praangan (Vadodara, Gujarat), Brotherhood (Delhi), and the Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (TISS, Mumbai) unite with Knowledge Partner State Commission for Persons with Disabilities, Goa and Venue Partners MSU Vadodara & GMERS Medical College Gotri.'
           },
           {
             id: '567',
-            label: '14–16 Jan 2027 · Vadodara',
+            label: '21–23 Jan 2027 · Vadodara',
             title: 'Purple Fest Vadodara 2027: Celebrating Inclusion, Dignity & Accessibility',
-            description: 'Three historic days across 6 Experience Zones in Vadodara—featuring 100+ assistive tech & DPO stalls (Tiers A–D), Indian Paralympic Champions, GIEN & TISS plenaries, and Purple Kaleidoscope.'
+            description: 'Three historic days across 6 Experience Zones in Vadodara (21–23 January 2027)—featuring 100+ assistive tech & DPO stalls (Tiers A–D), Indian Paralympic Champions, GIEN & TISS plenaries, and Purple Kaleidoscope.'
           }
         ];
       }
@@ -473,89 +451,89 @@ export function transformRouteSections(slug, sections) {
       // [4] ComponentSectionsTeam
       if (sections[4]?.[3]?.data) {
         const d = sections[4][3].data;
-        d.title = 'Organising Committee & 6-Institution Coalition';
-        d.description = 'Guided by disabled clinician-activists, national disability rights pioneers, inclusive education scholars, and institutional partners.';
+        d.title = 'Organising Committee & Institutional Coalition';
+        d.description = 'Official Organising Committee, Advisors, Knowledge Partner, and Venue Partners of Purple Fest Vadodara 2027 (21–23 January 2027).';
         d.media = makeMedia('indian_pwd_group_transparent.png', 'Indian Persons with Disabilities — Purple Fest Vadodara 2027', 2380, 886);
         d.teamBlocks = [
           {
             id: '568',
-            firstName: 'Dr. Satendra',
-            lastName: 'Singh',
-            position: 'Co-Chair, Scientific & Academic Committee · Director-Professor, UCMS Delhi · Henry Viscardi Achievement Awardee',
-            socials: [{ id: '579', link: 'https://www.linkedin.com/', type: 'linkedin' }],
-            media: makeMedia('purple_logo_transparent.png', 'Dr. Satendra Singh', 800, 1000)
+            firstName: 'Chairperson',
+            lastName: 'To Be Confirmed (TBC)',
+            position: 'Chairperson, Organising Committee · Purple Fest Vadodara 2027 (21–23 January 2027)',
+            socials: [],
+            media: makeMedia('purple_logo_transparent.png', 'Chairperson · To Be Confirmed', 800, 1000)
           },
           {
             id: '569',
-            firstName: 'Satish',
-            lastName: 'Kapoor',
-            position: 'National Convenor · Founder President, We Are Together (Brotherhood, New Delhi) · Co-Architect of Purple Fest',
-            socials: [{ id: '580', link: 'https://www.linkedin.com/', type: 'linkedin' }],
-            media: makeMedia('BH LOGO.jpg.jpeg', 'Satish Kapoor · Brotherhood', 800, 1000)
+            firstName: 'Radha',
+            lastName: 'Tandon',
+            position: 'Festival Director · Founder and Director of Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat · +91 99743 83920',
+            socials: [{ id: '581', link: 'https://www.instagram.com/', type: 'instagram' }],
+            media: makeMedia('PARANGAN LOGO.jpg.jpeg', 'Radha Tandon · Director, Praangan Education Trust', 800, 1000)
           },
           {
             id: '570',
-            firstName: 'Praangan',
-            lastName: 'Vadodara Secretariat',
-            position: 'Host Institution · Inclusive Education, Cultural & Community Action Collective, Vadodara, Gujarat',
-            socials: [{ id: '581', link: 'https://www.instagram.com/', type: 'instagram' }],
-            media: makeMedia('PARANGAN LOGO.jpg.jpeg', 'Praangan Vadodara', 800, 1000)
+            firstName: 'Satish',
+            lastName: 'Kapoor',
+            position: 'Festival Coordinator · Founding President, Brotherhood, Global Inclusive Education Network, We Care Film Festival on Disabilities and Brotherhood Development Initiative, Delhi · +91 98994 72065, +91 92117 60202',
+            socials: [{ id: '580', link: 'https://www.linkedin.com/', type: 'linkedin' }],
+            media: makeMedia('BH LOGO.jpg.jpeg', 'Satish Kapoor · Coordinator, Brotherhood Delhi', 800, 1000)
           },
           {
             id: '571',
-            firstName: 'Prof. Anita',
-            lastName: 'Julka',
-            position: 'Academic Chair · President, Global Inclusive Education Network (GIEN) · Former Dean of Research, NCERT',
+            firstName: 'Dr. Nitin',
+            lastName: 'Malik',
+            position: 'Advisor, Organising Committee · Registrar, Gujarat National Law University (GNLU), Gandhinagar',
             socials: [{ id: '582', link: 'https://www.linkedin.com/', type: 'linkedin' }],
-            media: makeMedia('GIEN FINAL LOGO.jpg.jpeg', 'Prof. Anita Julka · GIEN', 800, 1000)
+            media: makeMedia('GIEN FINAL LOGO.jpg.jpeg', 'Dr. Nitin Malik · Registrar, GNLU Gandhinagar', 800, 1000)
           },
           {
             id: '572',
-            firstName: 'Prof. Bipin',
-            lastName: 'Jojo',
-            position: 'Academic Partner Lead · Tata Institute of Social Sciences (TISS Mumbai) · Inclusive Policy & Social Justice',
+            firstName: 'Dr. Ravinder',
+            lastName: 'Singh',
+            position: 'Advisor, Organising Committee · Director, Indian Council of Medical Research (ICMR), Delhi',
             socials: [{ id: '583', link: 'https://www.linkedin.com/', type: 'linkedin' }],
-            media: makeMedia('gien_logo_rgb.jpg', 'Prof. Bipin Jojo · TISS', 800, 1000)
+            media: makeMedia('LOGO 2 (1).jpg.jpeg', 'Dr. Ravinder Singh · Director, ICMR Delhi', 800, 1000)
           },
           {
             id: '573',
-            firstName: 'Guruprasad',
-            lastName: 'Pawaskar',
-            position: 'State Commissioner for Persons with Disabilities, Govt. of Goa · International Purple Fest Goa Mentor',
+            firstName: 'Deepak',
+            lastName: 'Parvatiyaar',
+            position: 'Media Advisor, Organising Committee · Founder and Chief Editor of Global Bihari, Delhi',
             socials: [{ id: '584', link: 'https://www.linkedin.com/', type: 'linkedin' }],
-            media: makeMedia('GOA_BH_LOGO-removebg-preview.png', 'Guruprasad Pawaskar · Goa Commissioner', 800, 1000)
+            media: makeMedia('purple_logo_transparent.png', 'Deepak Parvatiyaar · Media Advisor', 800, 1000)
           },
           {
             id: '574',
-            firstName: 'Taha',
-            lastName: 'Haaziq',
-            position: 'Secretary, Office of the State Commissioner for PwDs, Goa · Accessibility & Assistive Tech Advisor',
+            firstName: 'TISS Mumbai',
+            lastName: '(CDSA · School of Social Work)',
+            position: 'Co-Organiser · Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences, Mumbai',
             socials: [{ id: '585', link: 'https://www.linkedin.com/', type: 'linkedin' }],
-            media: makeMedia('GOA_BH_LOGO-removebg-preview.png', 'Taha Haaziq', 800, 1000)
+            media: makeMedia('gien_logo_rgb.jpg', 'Centre for Disabilities Studies and Action, TISS Mumbai', 800, 1000)
           },
           {
             id: '575',
-            firstName: 'DEPwD',
-            lastName: 'Ministry of Social Justice',
-            position: 'National Policy Alignment · Department of Empowerment of Persons with Disabilities, Government of India',
+            firstName: 'State Commission for PwD',
+            lastName: 'Goa (Knowledge Partner)',
+            position: 'Official Knowledge Partner · State Commission for Persons with Disabilities, Goa',
             socials: [],
-            media: makeMedia('LOGO 2 (1).jpg.jpeg', 'DEPwD National Alignment', 800, 1000)
+            media: makeMedia('GOA_BH_LOGO-removebg-preview.png', 'State Commission for Persons with Disabilities, Goa', 800, 1000)
           },
           {
             id: '576',
+            firstName: 'MSU Vadodara &',
+            lastName: 'GMERS Medical College Gotri',
+            position: 'Official Venue Partners · The Maharaja Sayajirao University, Vadodara & GMERS Medical College, Gotri, Vadodara',
+            socials: [],
+            media: makeMedia('PARANGAN LOGO.jpg.jpeg', 'The Maharaja Sayajirao University Vadodara & GMERS Medical College Gotri', 800, 1000)
+          },
+          {
+            id: '577',
             firstName: 'Shri Narendra',
             lastName: 'Modi (Viksit Bharat @ 2047)',
             position: 'National Inspiration · Hon’ble Prime Minister of India · Chief Architect of Viksit Bharat @ 2047, Sugamya Bharat Abhiyan & Divyangjan Dignity',
             socials: [],
             media: makeMedia('pm_narendra_modi_official.jpg', 'Hon’ble Prime Minister Shri Narendra Modi', 800, 1000)
-          },
-          {
-            id: '577',
-            firstName: 'Viksit Bharat',
-            lastName: '@ 2047 Sankalp',
-            position: 'National Centenary Mandate (1947–2047) · 100% Barrier-Free Infrastructure, Assistive Deep-Tech & Paralympic Excellence Across All 21 RPwD Disabilities',
-            socials: [],
-            media: makeMedia('viksit_bharat_2047_logo.png', 'Viksit Bharat @ 2047 Official Emblem', 800, 1000)
           }
         ];
       }
@@ -564,7 +542,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[5]?.[3]?.data) {
         const d = sections[5][3].data;
         d.title = 'Be Part of History in Sanskari Nagari Vadodara';
-        d.description = 'Register your ₹2,200 3-Day Delegate Pass or book an Exhibition Stall (Tier A–D) to join 10,000+ changemakers on 14–16 January 2027.';
+        d.description = 'Register your ₹2,200 3-Day Delegate Pass or book an Exhibition Stall (Tier A–D) to join 10,000+ changemakers on 21–23 January 2027.';
         d.buttons = [
           {
             id: '1362',
@@ -630,7 +608,7 @@ export function transformRouteSections(slug, sections) {
       // [2] ComponentSectionsDefaultMessage
       if (sections[2]?.[3]?.data) {
         const d = sections[2][3].data;
-        d.message = '“Sabka Saath, Sabka Vikas, Sabka Vishwas, Sabka Prayas”—under Hon’ble Prime Minister Shri Narendra Modi’s leadership, Divyangjan Sashaktikaran stands at the core of Viksit Bharat @ 2047, uniting Sugamya Bharat Abhiyan, the RPwD Act 2016 (21 Benchmark Disabilities), and Purple Fest Vadodara 2027 (14–16 January 2027).';
+        d.message = '“Sabka Saath, Sabka Vikas, Sabka Vishwas, Sabka Prayas”—under Hon’ble Prime Minister Shri Narendra Modi’s leadership, Divyangjan Sashaktikaran stands at the core of Viksit Bharat @ 2047, uniting Sugamya Bharat Abhiyan, the RPwD Act 2016 (21 Benchmark Disabilities), and Purple Fest Vadodara 2027 (21–23 January 2027).';
         d.links = [
           {
             id: '13611',
@@ -680,8 +658,8 @@ export function transformRouteSections(slug, sections) {
           {
             id: '1567',
             label: '2027 → 2047 · Purple Fest Vadodara to Viksit Bharat @ 100',
-            title: 'Sanskari Nagari Vadodara Hosts Purple Fest (14–16 Jan 2027) Toward 2047',
-            description: 'Sanskari Nagari Vadodara hosts Purple Fest (14–16 Jan 2027) across 6 Barrier-Free Experience Zones as a flagship national milestone toward a 100% inclusive Developed India by 2047.'
+            title: 'Sanskari Nagari Vadodara Hosts Purple Fest (21–23 Jan 2027) Toward 2047',
+            description: 'Sanskari Nagari Vadodara hosts Purple Fest (21–23 Jan 2027) across 6 Barrier-Free Experience Zones as a flagship national milestone toward a 100% inclusive Developed India by 2047.'
           }
         ];
       }
@@ -753,7 +731,7 @@ export function transformRouteSections(slug, sections) {
             id: '1575',
             firstName: 'Vadodara’s Sankalp',
             lastName: 'for 2047',
-            position: 'Purple Fest Vadodara 2027 (14–16 January 2027) · Praangan, We Are Together (Brotherhood), GIEN & TISS Co-Architecting an Inclusive India',
+            position: 'Purple Fest Vadodara 2027 (21–23 January 2027) · Praangan, Brotherhood, GIEN & TISS Mumbai Co-Architecting an Inclusive India',
             socials: [],
             media: makeMedia('PARANGAN LOGO.jpg.jpeg', 'Purple Fest Vadodara 2027 Sankalp for 2047', 800, 1000)
           }
@@ -764,7 +742,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[5]?.[3]?.data) {
         const d = sections[5][3].data;
         d.title = 'Advance Viksit Bharat @ 2047 at Purple Fest Vadodara 2027';
-        d.description = 'Register your mandatory ₹2,200 3-Day Delegate Pass or book an Exhibition Stall (Tier A–D) to join 10,000+ changemakers in Sanskari Nagari Vadodara on 14–16 January 2027.';
+        d.description = 'Register your mandatory ₹2,200 3-Day Delegate Pass or book an Exhibition Stall (Tier A–D) to join 10,000+ changemakers in Sanskari Nagari Vadodara on 21–23 January 2027.';
         d.buttons = [
           {
             id: '13612',
@@ -784,7 +762,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[0]?.[3]?.data) {
         const d = sections[0][3].data;
         d.title = '3-Day Festival Schedule & 6 Experience Zones';
-        d.description = '14–16 January 2027 · Vadodara, Gujarat. Every ₹2,200 Delegate Pass unlocks all 3 festival days and all 6 barrier-free Experience Zones.';
+        d.description = '21–23 January 2027 · Vadodara, Gujarat. Every ₹2,200 Delegate Pass unlocks all 3 festival days and all 6 barrier-free Experience Zones.';
         d.button = {
           id: '1369',
           title: 'Apply Now',
@@ -802,14 +780,14 @@ export function transformRouteSections(slug, sections) {
         const blocksData = [
           {
             documentId: 'pf_prog_day1',
-            title: 'Day 1 · 14 Jan 2027 (Uttarayan): Grand Inauguration & Assistive Tech Launch',
+            title: 'Day 1 · 21 Jan 2027: Grand Inauguration & Assistive Tech Launch',
             requirementsList: [
               { id: '173', title: '09:00 AM Registration & Braille Kits' },
               { id: '174', title: '10:30 AM Grand Inaugural Plenary' },
               { id: '175', title: '06:30 PM Purple Kaleidoscope Opening Night' }
             ],
             features: [
-              { id: '1983', title: '09:00 AM – 10:30 AM', description: 'Delegate Credentialing (₹2,200 Pass), Braille/ISL Kit Distribution & Inclusive Uttarayan Kite Utsav' },
+              { id: '1983', title: '09:00 AM – 10:30 AM', description: 'Delegate Credentialing (₹2,200 Pass), Braille/ISL Kit Distribution & Inclusive Welcome Rally' },
               { id: '1984', title: '10:30 AM – 01:00 PM', description: 'Grand Inauguration: Goa-to-Vadodara Torch Relay & Opening of Zone 01 Assistive Tech Expo (100+ Stalls)' },
               { id: '1985', title: '02:00 PM – 05:00 PM', description: 'GIEN & TISS Plenary I: RPwD Act 2016 at 10 Years — Universal Design for Learning (UDL) in Indian Schools' },
               { id: '1986', title: '03:30 PM – 06:00 PM', description: 'Zone 04 Para-Sports Arena Kickoff: National Wheelchair Basketball & Boccia Opening Rounds' },
@@ -821,7 +799,7 @@ export function transformRouteSections(slug, sections) {
           },
           {
             documentId: 'pf_prog_day2',
-            title: 'Day 2 · 15 Jan 2027: Paralympic Champions Conclave, GIEN Labs & Startup Pitch',
+            title: 'Day 2 · 22 Jan 2027: Paralympic Champions Conclave, GIEN Labs & Startup Pitch',
             requirementsList: [
               { id: '176', title: '09:30 AM GIEN & TISS Paper Tracks' },
               { id: '177', title: '11:30 AM Paralympic Champions Dialogue' },
@@ -840,7 +818,7 @@ export function transformRouteSections(slug, sections) {
           },
           {
             documentId: 'pf_prog_day3',
-            title: 'Day 3 · 16 Jan 2027: Accessible Birding Trail, Vadodara Declaration & Finale',
+            title: 'Day 3 · 23 Jan 2027: Accessible Birding Trail, Vadodara Declaration & Finale',
             requirementsList: [
               { id: '179', title: '07:00 AM Accessible Birding & Heritage' },
               { id: '180', title: '11:00 AM Inclusive Youth Parliament' },
@@ -1223,7 +1201,7 @@ export function transformRouteSections(slug, sections) {
           {
             id: '586',
             title: 'What we do',
-            description: '<p>We convene <strong>10,000+ delegates, 100+ assistive technology &amp; DPO exhibitors, Paralympic champions, and global educators</strong> across 6 barrier-free Experience Zones in Vadodara on <strong>14–16 January 2027</strong>.</p>',
+            description: '<p>We convene <strong>10,000+ delegates, 100+ assistive technology &amp; DPO exhibitors, Paralympic champions, and global educators</strong> across 6 barrier-free Experience Zones in Vadodara on <strong>21–23 January 2027</strong>.</p>',
             media: makeMedia('pf_doc_miracle_on_wheels_india.jpg', 'Indian Classical Wheelchair & Crutches Stage Dance — Miracle on Wheels at Purple Fest', 2560, 1440),
             mediaMobile: makeMedia('pf_doc_miracle_on_wheels_mobile.jpg', 'Indian Classical Wheelchair & Crutches Stage Dance — Miracle on Wheels at Purple Fest', 750, 1300)
           },
@@ -1258,7 +1236,7 @@ export function transformRouteSections(slug, sections) {
             {
               documentId: 'pf_role_1',
               title: 'Inclusive Accessibility & Sighted-Guide Volunteer Brigade',
-              description: 'Support delegates across all 21 RPwD categories at venue gates, tactile corridors, wheelchair buggy shuttles, and Zone 01–06 helpdesks (14–16 Jan 2027). Joint Praangan & Brotherhood certification provided.',
+              description: 'Support delegates across all 21 RPwD categories at venue gates, tactile corridors, wheelchair buggy shuttles, and Zone 01–06 helpdesks (21–23 Jan 2027). Joint Praangan & Brotherhood certification provided.',
               position: 'Volunteer Brigade (500+ Seats)',
               location: 'Vadodara, Gujarat',
               link: { id: '4', title: 'Apply / Register Now', externalPage: '/contact', modal: null }
@@ -1300,7 +1278,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[4]?.[3]?.data) {
         const d = sections[4][3].data;
         d.title = 'Bring Your University, School or DPO Cohort to Vadodara';
-        d.description = 'Write to purplefestvadodara@gmail.com or call +91 98250 93918 to coordinate group volunteer brigades, student delegations, or cultural ensembles.';
+        d.description = 'Write to purplefestivalvadodara@gmail.com or call Radha Tandon (+91 99743 83920) / Satish Kapoor (+91 98994 72065, +91 92117 60202) to coordinate group volunteer brigades, student delegations, or cultural ensembles.';
         d.button = {
           id: '1364',
           title: 'Contact Organising Secretariat',
@@ -1319,9 +1297,9 @@ export function transformRouteSections(slug, sections) {
       if (sections[0]?.[3]?.data) {
         const d = sections[0][3].data;
         d.title = 'Register Your ₹2,200 Delegate Pass & Accessibility Needs';
-        d.description = 'Mandatory 3-Day Delegate Registration is ₹2,200 per person (strictly no free walk-in visitors). Use this desk to register delegates, declare accommodations across all 21 RPwD Benchmark Disabilities, or reach Praangan Vadodara (+91 98250 93918 · purplefestvadodara@gmail.com).';
+        d.description = 'Mandatory 3-Day Delegate Registration is ₹2,200 per person (strictly no free walk-in visitors). Use this desk to register delegates, declare accommodations across all 21 RPwD Benchmark Disabilities, or reach the Secretariat at Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat (Radha Tandon: +91 99743 83920 · Satish Kapoor: +91 98994 72065, +91 92117 60202 · purplefestivalvadodara@gmail.com · www.purplefestivalvadodara.com).';
         d.buttonLabel = 'Submit Registration / Inquiry';
-        d.successMessage = '<h4>Registration Request Received</h4><p>Thank you for registering with <strong>Purple Fest Vadodara 2027 (14–16 January 2027)</strong>. Our Secretariat at <strong>Praangan &amp; We Are Together (Brotherhood)</strong> will send your ₹2,200 Delegate Pass payment link / invoice and confirm your RPwD accessibility accommodations shortly.</p>';
+        d.successMessage = '<h4>Registration Request Received</h4><p>Thank you for registering with <strong>Purple Fest Vadodara 2027 (21–23 January 2027)</strong>. Our Secretariat at <strong>Praangan (Vadodara), Brotherhood (Delhi) &amp; TISS Mumbai</strong> will send your ₹2,200 Delegate Pass payment link / invoice and confirm your RPwD accessibility accommodations shortly.</p>';
         d.successButtonLabel = 'Submit Another Registration';
         d.dropdown = [
           { id: '1375', title: '3-Day Delegate Pass Registration (₹2,200 Mandatory)' },
@@ -1353,7 +1331,7 @@ export function transformRouteSections(slug, sections) {
           }
           if (headerChildren[1]?.[3]?.children?.[3]?.dangerouslySetInnerHTML) {
             headerChildren[1][3].children[3].dangerouslySetInnerHTML.__html =
-              'Partner with Praangan, We Are Together (Brotherhood), GIEN & TISS in Vadodara (14–16 Jan 2027). Book Tier A–D Exhibition Stalls or sponsor Schedule VII CSR Pavilions.';
+              'Partner with Praangan, Brotherhood, GIEN & TISS Mumbai in Vadodara (21–23 Jan 2027). Book Tier A–D Exhibition Stalls or sponsor Schedule VII CSR Pavilions.';
           }
           const btnArr = headerChildren[2]?.[3]?.children;
           if (Array.isArray(btnArr) && btnArr[0]?.[3]) {
@@ -1525,12 +1503,12 @@ export function transformRouteSections(slug, sections) {
       if (sections[7]?.[3]?.data) {
         const d = sections[7][3].data;
         d.title = 'Simple 4-Step Exhibitor Onboarding';
-        d.description = 'From stall selection in Zone 01 to barrier-free setup in Vadodara on 13 January 2027.';
+        d.description = 'From stall selection in Zone 01 to barrier-free setup in Vadodara on 20 January 2027.';
         d.homeStepsTpoBlocks = [
           { id: '619', label: '01', title: 'Select Stall Tier (A–D)', description: 'Choose Tier A (₹15,000), Tier B (₹35,000), Tier C (₹12,000), or Tier D (₹5,500) and additional ₹2,200 Delegate Passes.' },
           { id: '620', label: '02', title: 'Submit Exhibitor Profile', description: 'Provide your organization details, Braille fascia text, power requirements, and badge names.' },
           { id: '621', label: '03', title: 'Accessibility & Audio-Tactile Brief', description: 'Receive our Exhibitor Accessibility Kit to ensure 1200 mm clear aisles and tactile/audio product demos.' },
-          { id: '622', label: '04', title: 'Exhibit across 14–16 Jan 2027', description: 'Move in on 13 January 2027 and engage 10,000+ delegates across 3 transformative days in Vadodara.' }
+          { id: '622', label: '04', title: 'Exhibit across 21–23 Jan 2027', description: 'Move in on 20 January 2027 and engage 10,000+ delegates across 3 transformative days in Vadodara.' }
         ];
         d.button = {
           id: '1401',
@@ -1551,13 +1529,13 @@ export function transformRouteSections(slug, sections) {
             id: '623',
             author: 'Satish Kapoor',
             title: '“Our 4-tier exhibition model ensures that a grassroots DPO artisan collective (₹5,500) and a global assistive robotics leader (₹35,000) share the exact same barrier-free floor.”',
-            authorInfo: 'Founder President, We Are Together (Brotherhood)'
+            authorInfo: 'Festival Coordinator · Founding President, Brotherhood, GIEN & We Care Film Festival, Delhi'
           },
           {
             id: '624',
-            author: 'Prof. Bipin Jojo',
-            title: '“University departments and CSR foundations partnering with Purple Fest Vadodara directly advance the UNCRPD and RPwD Act 2016 mandate on the ground.”',
-            authorInfo: 'Tata Institute of Social Sciences (TISS Mumbai)'
+            author: 'Radha Tandon',
+            title: '“University departments, medical colleges, and CSR foundations partnering with Purple Fest Vadodara directly advance the UNCRPD and RPwD Act 2016 mandate on the ground.”',
+            authorInfo: 'Festival Director · Founder and Director of Praangan Education Trust, Vadodara'
           }
         ];
       }
@@ -1608,7 +1586,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[0]?.[3]?.data) {
         const d = sections[0][3].data;
         d.title = 'Exhibition Stall Tiers (A–D) & Institutional Tracks';
-        d.description = 'Official 3-Day Exhibition Tariff (14–16 January 2027 · Vadodara) for Assistive Tech OEMs, CSR Flagships, Startups, Universities, and Grassroots DPOs.';
+        d.description = 'Official 3-Day Exhibition Tariff (21–23 January 2027 · Vadodara) for Assistive Tech OEMs, CSR Flagships, Startups, Universities, and Grassroots DPOs.';
         d.button = {
           id: '1380',
           title: 'Book Exhibition Stall',
@@ -1633,7 +1611,7 @@ export function transformRouteSections(slug, sections) {
               { id: '192', title: 'CSR Flagships, Ministries & OEMs' }
             ],
             features: [
-              { id: '2010', title: '3-Day Stall Tariff', description: '₹35,000 (Full 3-Day Festival: 14–16 January 2027)' },
+              { id: '2010', title: '3-Day Stall Tariff', description: '₹35,000 (Full 3-Day Festival: 21–23 January 2027)' },
               { id: '2011', title: 'Dimensions & Layout', description: '6m × 3m (18 sq.m) Prime Corner Octanorm Pavilion with two open sides on main 1800 mm accessible boulevard' },
               { id: '2012', title: 'Complimentary Passes', description: 'Includes 4 Exhibitor Badges (Additional delegates register at mandatory ₹2,200 Delegate Pass rate)' },
               { id: '2013', title: 'Accessibility & Power Specs', description: 'Braille + high-contrast fascia board, 2 lowered 760 mm accessible counters, 6 chairs, six 15A sockets & LED floodlights' },
@@ -1652,7 +1630,7 @@ export function transformRouteSections(slug, sections) {
               { id: '195', title: 'Assistive Tech, Rehab & Corporates' }
             ],
             features: [
-              { id: '2015', title: '3-Day Stall Tariff', description: '₹15,000 (Full 3-Day Festival: 14–16 January 2027)' },
+              { id: '2015', title: '3-Day Stall Tariff', description: '₹15,000 (Full 3-Day Festival: 21–23 January 2027)' },
               { id: '2016', title: 'Dimensions & Layout', description: '3m × 3m (9 sq.m) Standard Octanorm Shell Scheme in Zone 01 Assistive Tech & Inclusion Expo' },
               { id: '2017', title: 'Complimentary Passes', description: 'Includes 2 Exhibitor Badges (Additional team members register at mandatory ₹2,200 Delegate Pass rate)' },
               { id: '2018', title: 'Accessibility & Power Specs', description: 'Braille + high-contrast fascia board, 1 accessible counter (760 mm knee clearance), 2 chairs, three 15A sockets & 3 LED spotlights' },
@@ -1671,7 +1649,7 @@ export function transformRouteSections(slug, sections) {
               { id: '198', title: 'Startups, IIT/NIT/MSU Labs & Incubators' }
             ],
             features: [
-              { id: '2020', title: '3-Day Stall Tariff', description: '₹12,000 (Subsidized Innovation Tariff for 14–16 January 2027)' },
+              { id: '2020', title: '3-Day Stall Tariff', description: '₹12,000 (Subsidized Innovation Tariff for 21–23 January 2027)' },
               { id: '2021', title: 'Dimensions & Layout', description: '3m × 2.5m Innovation Demo Pod in the Assistive Tech Startup & GIEN Research Pavilion' },
               { id: '2022', title: 'Complimentary Passes', description: 'Includes 2 Exhibitor Badges + eligibility for Day 2 Assistive Tech Startup Pitch before CSR & VC jury' },
               { id: '2023', title: 'Accessibility & Power Specs', description: 'Branded backdrop, accessible demo desk, 2 chairs, 15A power strip for hardware/AI demos & Braille QR card' },
@@ -1690,7 +1668,7 @@ export function transformRouteSections(slug, sections) {
               { id: '201', title: '100% Direct Sales Retained by Artisans' }
             ],
             features: [
-              { id: '2025', title: '3-Day Stall Tariff', description: '₹5,500 (Highly Subsidized Grassroots Tariff for 14–16 January 2027)' },
+              { id: '2025', title: '3-Day Stall Tariff', description: '₹5,500 (Highly Subsidized Grassroots Tariff for 21–23 January 2027)' },
               { id: '2026', title: 'Dimensions & Layout', description: '3m × 2m Community & Livelihood Marketplace Stall with step-free roll-in access' },
               { id: '2027', title: 'Complimentary Passes', description: 'Includes 2 Exhibitor Badges for disabled artisans / NGO coordinators (0% commission on craft sales)' },
               { id: '2028', title: 'Accessibility & Power Specs', description: 'Octanorm stall with fascia nameboard, display table, 2 chairs, LED lighting, 5A/15A socket & volunteer support' },
@@ -1728,7 +1706,7 @@ export function transformRouteSections(slug, sections) {
       if (sections[2]?.[3]?.data) {
         const d = sections[2][3].data;
         d.title = 'Ready to Book Your Tier A, B, C or D Stall?';
-        d.description = 'Contact the Purple Fest Vadodara 2027 Exhibition Desk at purplefestvadodara@gmail.com or +91 98250 93918 to lock your stall location.';
+        d.description = 'Contact the Purple Fest Vadodara 2027 Exhibition Desk at purplefestivalvadodara@gmail.com or Radha Tandon (+91 99743 83920) / Satish Kapoor (+91 98994 72065, +91 92117 60202) to lock your stall location.';
         d.buttons = [
           {
             id: '1381',
@@ -1748,9 +1726,9 @@ export function transformRouteSections(slug, sections) {
       if (sections[0]?.[3]?.data) {
         const d = sections[0][3].data;
         d.title = 'Book Exhibition Stall (Tier A–D) & CSR Partnerships';
-        d.description = 'Official Institutional Desk for Zone 01 Exhibition Stalls (Tier A ₹15,000 · Tier B ₹35,000 · Tier C ₹12,000 · Tier D ₹5,500), CSR Schedule VII sponsorships, and bulk ₹2,200 Delegate Pass cohorts.';
+        d.description = 'Official Institutional Desk for Zone 01 Exhibition Stalls (Tier A ₹15,000 · Tier B ₹35,000 · Tier C ₹12,000 · Tier D ₹5,500), CSR Schedule VII sponsorships, and bulk ₹2,200 Delegate Pass cohorts · Secretariat: Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat (Radha Tandon: +91 99743 83920 · Satish Kapoor: +91 98994 72065, +91 92117 60202 · purplefestivalvadodara@gmail.com).';
         d.buttonLabel = 'Submit Stall / CSR Booking';
-        d.successMessage = '<h4>Stall / Institutional Inquiry Received</h4><p>Thank you for partnering with <strong>Purple Fest Vadodara 2027 (14–16 January 2027)</strong>. Our Exhibition &amp; CSR Secretariat (<strong>purplefestvadodara@gmail.com · +91 98250 93918</strong>) will send your stall floorplan allocation and proforma invoice within 24 hours.</p>';
+        d.successMessage = '<h4>Stall / Institutional Inquiry Received</h4><p>Thank you for partnering with <strong>Purple Fest Vadodara 2027 (21–23 January 2027)</strong>. Our Exhibition &amp; CSR Secretariat (<strong>purplefestivalvadodara@gmail.com · Radha Tandon: +91 99743 83920 · Satish Kapoor: +91 98994 72065, +91 92117 60202</strong>) will send your stall floorplan allocation and proforma invoice within 24 hours.</p>';
         d.successButtonLabel = 'Submit Another Institutional Request';
         d.dropdown = [
           { id: '1385', title: 'Tier B · Corner / Prime Pavilion 6m×3m (₹35,000 · 4 Badges)' },

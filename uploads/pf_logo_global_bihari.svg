@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="420" height="160" role="img" aria-label="Global Bihari, New Delhi Strategic Media Partner Emblem">
+  <defs>
+    <linearGradient id="gbPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#202D59"/>
+      <stop offset="100%" stop-color="#4A1575"/>
+    </linearGradient>
+    <linearGradient id="gbSaffron" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E85D04"/>
+      <stop offset="100%" stop-color="#F48C06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Meridian Globe & Editorial Quill Emblem -->
+  <g transform="translate(82, 80)">
+    <circle cx="0" cy="0" r="56" fill="#FFFFFF" stroke="url(#gbPurple)" stroke-width="3"/>
+    <circle cx="0" cy="0" r="46" fill="#F5F7FF" stroke="#E85D04" stroke-width="1.8"/>
+    <!-- Globe Grid Lines -->
+    <ellipse cx="0" cy="0" rx="24" ry="45" fill="none" stroke="#202D59" stroke-width="1.6" opacity="0.65"/>
+    <ellipse cx="0" cy="0" rx="45" ry="20" fill="none" stroke="#202D59" stroke-width="1.6" opacity="0.65"/>
+    <line x1="-45" y1="0" x2="45" y2="0" stroke="#202D59" stroke-width="1.6" opacity="0.65"/>
+    <line x1="0" y1="-45" x2="0" y2="45" stroke="#202D59" stroke-width="1.6" opacity="0.65"/>
+    <!-- Rising Sun / Editorial Fountain Nib -->
+    <path d="M0,-30 L16,4 L6,22 H-6 L-16,4 Z" fill="url(#gbSaffron)" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="0" y1="-30" x2="0" y2="-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="-2" r="3" fill="#FFFFFF"/>
+    <!-- Bottom Banner -->
+    <path d="M-44,36 L44,36 L39,49 L-39,49 Z" fill="#202D59"/>
+    <text x="0" y="45.5" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="800" letter-spacing="1.2">GLOBAL MEDIA</text>
+  </g>
+
+  <!-- Right Editorial Masthead Lockup -->
+  <g transform="translate(158, 34)">
+    <text x="0" y="26" fill="#202D59" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="900" letter-spacing="0.8">GLOBAL</text>
+    <text x="128" y="26" fill="#E85D04" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="900" letter-spacing="0.8">BIHARI</text>
+    <rect x="0" y="36" width="240" height="3.2" rx="1.6" fill="url(#gbSaffron)"/>
+    <text x="0" y="56" fill="#202D59" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13.5" font-weight="800" letter-spacing="0.4">GLOBAL BIHARI · NEW DELHI</text>
+    <text x="0" y="75" fill="#4A1575" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" letter-spacing="0.4">STRATEGIC MEDIA &amp; OUTREACH PARTNER</text>
+    <text x="0" y="93" fill="#B84A00" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.8">VOICE OF INCLUSION &amp; GLOBAL DIASPORA</text>
+  </g>
+</svg>

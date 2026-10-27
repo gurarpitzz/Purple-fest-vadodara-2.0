@@ -3,6 +3,12 @@ const fs = require('node:fs');
 const fsp = require('node:fs/promises');
 const path = require('node:path');
 
+// Purple Fest Vadodara 2027 · Official Dates: 21–23 January 2027 · www.purplefestivalvadodara.com
+// Secretariat: Praangan Education Trust, 1st Floor, Trimurti Apartments, Baroda Imaging Lab Lane, Near Mahalakshmi Store, Alkapuri, Vadodara, Gujarat
+// Contacts: Radha Tandon (+91 99743 83920) | Satish Kapoor (+91 98994 72065, +91 92117 60202) | purplefestivalvadodara@gmail.com
+// Organisers: Praangan (Vadodara, Gujarat), Brotherhood (Delhi), Centre for Disabilities Studies and Action, School of Social Work, Tata Institute of Social Sciences (Mumbai)
+// Knowledge Partner: State Commission for Persons with Disabilities, Goa | Venue Partners: The Maharaja Sayajirao University, Vadodara & GMERS Medical College, Gotri, Vadodara
+
 const PORT = Number(process.env.PORT) || 3000;
 const ROOT_DIR = __dirname;
 const UPSTREAM_ORIGIN = 'https://www.battalion.com';
