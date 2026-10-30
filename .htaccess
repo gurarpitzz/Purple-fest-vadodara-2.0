@@ -45,7 +45,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
     # Aggressive browser caching for image sequences and static assets
-    <FilesMatch "\.(jpg|jpeg|png|webp|svg|gif|mp4|woff2|js|css)$">
+    <FilesMatch "\.(jpg|jpeg|png|webp|svg|gif|mp4|woff2|js|css|bin)$">
         Header set Cache-Control "max-age=31536000, public, immutable"
     </FilesMatch>
 </IfModule>
