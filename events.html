@@ -1297,7 +1297,22 @@ html.pf-contrast-yellow-black .pf-boccia-footer__nav-link {
   padding: 2px 6px !important;
 }
 </style>
-</head>
+<script>
+(function(){
+  var isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  var maxWait = isMobile ? 1800 : 3000;
+  setTimeout(function(){
+    var p = document.querySelector('.styles_preloader__JmvRd') || document.querySelector('[class*="styles_preloader"]');
+    if (p) {
+      p.style.transition = 'opacity 0.35s ease';
+      p.style.opacity = '0';
+      p.style.pointerEvents = 'none';
+      setTimeout(function(){ try { p.remove(); } catch(e){} }, 350);
+    }
+    document.documentElement.classList.remove('is-loading');
+  }, maxWait);
+})();
+</script></head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
 

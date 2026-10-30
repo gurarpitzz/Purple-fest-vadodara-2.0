@@ -1160,14 +1160,29 @@ html.pf-contrast-yellow-black .pf-boccia-footer__nav-link {
   padding: 2px 6px !important;
 }
 </style>
-</head>
+<script>
+(function(){
+  var isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  var maxWait = isMobile ? 1800 : 3000;
+  setTimeout(function(){
+    var p = document.querySelector('.styles_preloader__JmvRd') || document.querySelector('[class*="styles_preloader"]');
+    if (p) {
+      p.style.transition = 'opacity 0.35s ease';
+      p.style.opacity = '0';
+      p.style.pointerEvents = 'none';
+      setTimeout(function(){ try { p.remove(); } catch(e){} }, 350);
+    }
+    document.documentElement.classList.remove('is-loading');
+  }, maxWait);
+})();
+</script></head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to Admin CMS Command Center</a>
 
   <!-- Top Navigation -->
   <header class="site-topbar" role="banner">
     <a href="/" class="brand-cluster" aria-label="Purple Fest Vadodara 2027 Home">
-      <img src="/purple_logo_transparent.png" alt="Purple Fest Vadodara 2027 Logo" />
+      <img loading="lazy" decoding="async" src="/purple_logo_transparent.png" alt="Purple Fest Vadodara 2027 Logo" />
       <div class="brand-title-wrap">
         <span class="brand-eyebrow">Secretariat Command Center · SQLite CMS</span>
         <span class="brand-main">Purple Fest Vadodara 2027</span>
@@ -1260,11 +1275,11 @@ html.pf-contrast-yellow-black .pf-boccia-footer__nav-link {
         </p>
       </div>
       <div class="hero-logos-strip" aria-label="Official Festival & Partner Seals">
-        <img src="/purple_logo_transparent.png" alt="Purple Fest Vadodara" />
-        <img src="/uploads/viksit_bharat_2047_logo.png" alt="Viksit Bharat @ 2047" />
-        <img src="/uploads/pf_partner_praangan.png" alt="Praangan Vadodara" />
-        <img src="/uploads/pf_partner_brotherhood.png" alt="Brotherhood" />
-        <img src="/uploads/pf_partner_gien.png" alt="GIEN" />
+        <img loading="lazy" decoding="async" src="/purple_logo_transparent.png" alt="Purple Fest Vadodara" />
+        <img loading="lazy" decoding="async" src="/uploads/viksit_bharat_2047_logo.png" alt="Viksit Bharat @ 2047" />
+        <img loading="lazy" decoding="async" src="/uploads/pf_partner_praangan.png" alt="Praangan Vadodara" />
+        <img loading="lazy" decoding="async" src="/uploads/pf_partner_brotherhood.png" alt="Brotherhood" />
+        <img loading="lazy" decoding="async" src="/uploads/pf_partner_gien.png" alt="GIEN" />
       </div>
     </div>
   </section>
